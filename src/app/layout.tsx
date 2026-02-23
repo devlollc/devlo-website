@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -41,6 +42,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );
