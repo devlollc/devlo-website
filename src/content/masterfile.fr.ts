@@ -827,8 +827,26 @@ export const conditionsContent = {
 };
 
 export const footerContent = {
-  badge: "/images/service_badge_lemlist-2025.webp",
-  badge2: "/images/service_badge_lemlist_2026.webp",
+  badges: [
+    {
+      src: "/images/service_badge_outbound_expert_2024.svg",
+      alt: "Badge Outbound Expert 2024",
+      width: 932,
+      height: 416,
+    },
+    {
+      src: "/images/service_badge_lemlist_2025.webp",
+      alt: "Badge Lemlist 2025",
+      width: 1024,
+      height: 443,
+    },
+    {
+      src: "/images/service_badge_lemlist_2026.webp",
+      alt: "Badge Lemlist 2026",
+      width: 300,
+      height: 115,
+    },
+  ],
   linkedin: "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
   navigation: [
     { label: "Accueil", href: "/" },
@@ -838,7 +856,7 @@ export const footerContent = {
   ] as NavLink[],
   caseLinks: [
     { label: "Étude de cas : CareerLunch (HR-tech)", href: "/etudes-de-cas/hr-54-rendez-vous-dach" },
-    { label: "Étude de cas : Propreté urbaine (client confidentiel)", href: "/etudes-de-cas/proprete-urbaine-71-rendez-vous" },
+    { label: "Étude de cas : Propreté urbaine", href: "/etudes-de-cas/proprete-urbaine-71-rendez-vous" },
     { label: "Étude de cas : SquareCo (Biocarburants)", href: "/etudes-de-cas/biocarburants-52-rendez-vous" },
     { label: "Étude de cas : Cegos (Formation)", href: "/etudes-de-cas/formation-14-rendez-vous" },
     { label: "Étude de cas : Lemanvisio (Audiovisuel)", href: "/etudes-de-cas/audiovisuel-16-rendez-vous" },

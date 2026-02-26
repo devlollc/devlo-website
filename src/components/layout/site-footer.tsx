@@ -52,7 +52,7 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3">
+          <div className="mt-6 flex items-center gap-3">
             <Link
               href={footerContent.linkedin}
               target="_blank"
@@ -61,22 +61,21 @@ export function SiteFooter() {
             >
               <Linkedin className="h-4 w-4" />
             </Link>
-            <Image
-              src={footerContent.badge}
-              alt="Badge Lemlist 2025"
-              width={211}
-              height={91}
-              className="h-9 w-auto bg-transparent object-contain md:h-10"
-              loading="lazy"
-            />
-            <Image
-              src={footerContent.badge2}
-              alt="Badge Lemlist 2026"
-              width={211}
-              height={91}
-              className="h-9 w-auto bg-transparent object-contain md:h-10"
-              loading="lazy"
-            />
+          </div>
+
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            {footerContent.badges.map((badge) => (
+              <Image
+                key={badge.src}
+                src={badge.src}
+                alt={badge.alt}
+                width={badge.width}
+                height={badge.height}
+                className="h-[72px] w-auto max-w-full bg-transparent object-contain md:h-[80px]"
+                loading="lazy"
+                unoptimized={badge.src.endsWith(".svg")}
+              />
+            ))}
           </div>
         </div>
 
