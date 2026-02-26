@@ -829,10 +829,10 @@ export const conditionsContent = {
 export const footerContent = {
   badges: [
     {
-      src: "/images/service_badge_outbound_expert_2024.svg",
-      alt: "Badge Outbound Expert 2024",
-      width: 932,
-      height: 416,
+      src: "/images/service_badge_lemlist_2024.webp",
+      alt: "Badge Lemlist 2024",
+      width: 899,
+      height: 391,
     },
     {
       src: "/images/service_badge_lemlist_2025.webp",
