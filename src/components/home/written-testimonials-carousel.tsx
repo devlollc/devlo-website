@@ -33,8 +33,29 @@ function TestimonialCard({ t }: { t: WrittenTestimonial }) {
 }
 
 export function WrittenTestimonialsCarousel({ testimonials }: { testimonials: WrittenTestimonial[] }) {
-  const groupA = testimonials.filter((_, index) => index % 2 === 0);
-  const groupB = testimonials.filter((_, index) => index % 2 === 1);
+  const mixTestimonials = (items: WrittenTestimonial[]) => {
+    if (items.length <= 2) return [...items];
+
+    const mixed: WrittenTestimonial[] = [];
+    const used = new Array(items.length).fill(false);
+    const step = 3;
+    let cursor = 0;
+
+    for (let i = 0; i < items.length; i += 1) {
+      while (used[cursor]) {
+        cursor = (cursor + 1) % items.length;
+      }
+
+      mixed.push(items[cursor]);
+      used[cursor] = true;
+      cursor = (cursor + step) % items.length;
+    }
+
+    return mixed;
+  };
+
+  const groupA = mixTestimonials(testimonials).filter((_, index) => index % 2 === 0);
+  const groupB = mixTestimonials(testimonials).filter((_, index) => index % 2 === 1);
 
   const ensureMinItems = (items: WrittenTestimonial[], minItems = 6) => {
     if (items.length === 0) return [];
@@ -42,7 +63,20 @@ export function WrittenTestimonialsCarousel({ testimonials }: { testimonials: Wr
     let cursor = 0;
 
     while (filled.length < minItems) {
-      filled.push(items[cursor % items.length]);
+      let attempts = 0;
+      let candidate = items[cursor % items.length];
+
+      while (
+        attempts < items.length &&
+        (candidate.author === filled[filled.length - 1]?.author ||
+          (filled.length + 1 === minItems && candidate.author === filled[0]?.author && items.length > 1))
+      ) {
+        cursor += 1;
+        candidate = items[cursor % items.length];
+        attempts += 1;
+      }
+
+      filled.push(candidate);
       cursor += 1;
     }
 
