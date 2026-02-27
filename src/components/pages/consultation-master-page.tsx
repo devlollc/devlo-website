@@ -8,18 +8,18 @@ export function ConsultationMasterPage() {
 
   return (
     <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,430px)] lg:items-start">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:items-start xl:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)]">
         <div className="min-w-0">
           {/* ── H1 ──────────────────────────────────────────────────────── */}
           <FadeInOnScroll>
-            <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.1] text-devlo-900 md:text-5xl lg:text-[52px]">
+            <h1 className="max-w-[560px] text-4xl font-extrabold leading-[1.1] text-devlo-900 md:text-5xl lg:text-[52px]">
               {c.h1}
             </h1>
           </FadeInOnScroll>
 
           {/* ── Reassurance badges ─────────────────────────────────────── */}
           <FadeInOnScroll delay={0.05}>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex max-w-[560px] flex-wrap gap-3">
               {c.reassurance.map((badge) => (
                 <span
                   key={badge}
@@ -34,7 +34,7 @@ export function ConsultationMasterPage() {
 
           {/* ── Intro paragraph ────────────────────────────────────────── */}
           <FadeInOnScroll delay={0.1}>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
+            <p className="mt-6 max-w-[560px] text-lg leading-8 text-neutral-600">
               {c.intro}
             </p>
           </FadeInOnScroll>
