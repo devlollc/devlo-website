@@ -79,7 +79,6 @@ export function ServiceLeadPanel({ service }: ServiceLeadPanelProps) {
             <HubSpotForm
               serviceInterest={service.configuratorServiceLabel}
               configuratorData={configuratorData}
-              ctaLabel="Recevoir mon plan stratégique →"
               onSuccess={() => setStep(2)}
             />
           </div>

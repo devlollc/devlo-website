@@ -39,23 +39,23 @@ export default function ServicesHubPage() {
       />
 
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-b from-devlo-50/70 via-white to-white pt-20 md:pt-24">
+        <section className="relative overflow-hidden bg-gradient-to-b from-devlo-50/70 via-white to-white pt-12 md:pt-14">
           <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-devlo-100/45 blur-3xl" />
           <div className="pointer-events-none absolute -right-20 top-16 h-56 w-56 rounded-full bg-devlo-100/35 blur-3xl" />
 
-          <SectionWrapper background="white" className="relative !bg-transparent !pb-6 !pt-0 md:!pb-8">
+          <SectionWrapper background="white" className="relative !bg-transparent !pb-4 !pt-0 md:!pb-5">
             <div className="max-w-4xl">
               <ServicesSectionHeader
                 eyebrow="DEVLO.CH — AGENCE B2B SUISSE"
                 title="Services de prospection et génération de leads B2B"
-                description="devlo aide startups, PMEs et scale-ups européennes à générer des rendez-vous qualifiés via des campagnes outbound multicanales, l'activation des signaux d'intention et une data commerciale exploitable."
+                description="devlo aide startups, PMEs et scale-ups à générer des rendez-vous qualifiés via des campagnes outbound multicanales, l'activation des signaux d'intention et une data commerciale exploitable."
               />
 
               <p className="mt-4 max-w-3xl text-sm leading-7 text-neutral-500">
                 Chaque service ci-dessous inclut un configurateur et un formulaire pour cadrer votre stratégie avant votre call.
               </p>
 
-              <div className="mt-7 flex flex-wrap items-center gap-3">
+              <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a href="#nos-services" className={buttonClassName("secondary", "px-7 py-3.5 text-sm")}>
                   Découvrir les services ↓
                 </a>
@@ -68,7 +68,7 @@ export default function ServicesHubPage() {
               </div>
             </div>
 
-            <div className="relative mt-8 -mx-6 overflow-hidden md:-mx-12 lg:-mx-16">
+            <div className="relative mt-6 -mx-6 overflow-hidden md:-mx-12 lg:-mx-16">
               <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
               <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
               <InfiniteLogoRail logos={TRUSTED_LOGOS_STRIP} duration="slow" pauseOnHover />
@@ -76,16 +76,7 @@ export default function ServicesHubPage() {
           </SectionWrapper>
         </section>
 
-        <SectionWrapper id="nos-services" background="white" className="pt-2 md:pt-3">
-          <div className="flex items-center justify-between gap-4">
-            <ServicesSectionHeader
-              title="Nos services"
-              description="10 offres complémentaires pour couvrir l'ensemble du cycle outbound."
-            />
-          </div>
-        </SectionWrapper>
-
-        <SectionWrapper background="white" className="pt-2 md:pt-3">
+        <SectionWrapper id="nos-services" background="white" className="!pt-0">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {SERVICE_HUB_CARDS.map((service) => (
               <Link key={service.href} href={service.href} className="group">

@@ -95,14 +95,23 @@ export function SiteHeader() {
                     onMouseLeave={() => setIsServicesMenuOpen(false)}
                     onFocusCapture={() => setIsServicesMenuOpen(true)}
                   >
-                    <div className="flex items-center gap-1">
+                    <div
+                      className={[
+                        "group flex items-center gap-1 rounded-full border px-2 py-0.5 transition-colors",
+                        isServicesMenuOpen
+                          ? "border-devlo-700 bg-devlo-700 text-white"
+                          : "border-transparent bg-transparent text-devlo-900 hover:border-devlo-700 hover:bg-devlo-700",
+                      ].join(" ")}
+                    >
                       <Link
                         href={item.href}
                         className={[
-                          "inline-flex min-h-[44px] items-center border-b-2 text-[14px] font-semibold uppercase tracking-[0.08em] transition-colors",
+                          "inline-flex min-h-[44px] items-center rounded-full px-2 text-[14px] font-semibold uppercase tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
                           servicesActive
-                            ? "border-devlo-600 text-devlo-700"
-                            : "border-transparent text-devlo-900 hover:text-devlo-600",
+                            ? (isServicesMenuOpen ? "text-white" : "text-devlo-700")
+                            : isServicesMenuOpen
+                              ? "text-white"
+                              : "text-devlo-900 hover:text-white group-hover:text-white",
                         ].join(" ")}
                       >
                         {item.label}
@@ -112,7 +121,12 @@ export function SiteHeader() {
                         aria-label="Ouvrir le menu services"
                         aria-expanded={isServicesMenuOpen}
                         onClick={() => setIsServicesMenuOpen((prev) => !prev)}
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-full text-devlo-700 transition hover:bg-devlo-100"
+                        className={[
+                          "inline-flex h-8 w-8 items-center justify-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+                          isServicesMenuOpen
+                            ? "text-white hover:bg-white/15"
+                            : "text-devlo-700 group-hover:text-white hover:bg-white/15",
+                        ].join(" ")}
                       >
                         <ChevronDown className={["h-4 w-4 transition-transform", isServicesMenuOpen ? "rotate-180" : ""].join(" ")} />
                       </button>
@@ -125,10 +139,10 @@ export function SiteHeader() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 6 }}
                           transition={{ duration: 0.16, ease: "easeOut" }}
-                          className="absolute right-0 top-[calc(100%+8px)] z-[70] w-[760px] overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4 shadow-panel"
+                          className="absolute right-0 top-[calc(100%+8px)] z-[70] w-[760px] overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-4 text-white shadow-panel"
                         >
                           <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-devlo-700">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/80">
                               Tous les services
                             </p>
                             <div className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -136,17 +150,17 @@ export function SiteHeader() {
                                 <Link
                                   key={`desktop-menu-${service.href}`}
                                   href={service.href}
-                                  className="rounded-xl border border-neutral-200 bg-white px-3 py-2 transition hover:border-devlo-700/30 hover:bg-devlo-50/45"
+                                  className="rounded-xl border border-white/20 bg-white/10 px-3 py-2 transition hover:border-white/40 hover:bg-white/15"
                                 >
-                                  <p className="text-sm font-semibold text-devlo-900">{service.title}</p>
-                                  <p className="mt-1 text-xs leading-5 text-neutral-500">{service.subtitle}</p>
+                                  <p className="text-sm font-semibold text-white">{service.title}</p>
+                                  <p className="mt-1 text-xs leading-5 text-white/75">{service.subtitle}</p>
                                 </Link>
                               ))}
                             </div>
-                            <div className="mt-4 border-t border-neutral-200 pt-3">
+                            <div className="mt-4 border-t border-white/20 pt-3">
                               <Link
                                 href="/services"
-                                className="inline-flex rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-devlo-700 transition hover:border-devlo-700/30"
+                                className="inline-flex rounded-full border border-white/30 bg-white px-3 py-1.5 text-xs font-semibold text-devlo-700 transition hover:bg-devlo-50"
                               >
                                 Voir tous les services →
                               </Link>

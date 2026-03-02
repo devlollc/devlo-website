@@ -3,13 +3,13 @@ import { CaseStudyBadge } from "@/components/shared/case-study-badge";
 import { CaseStudyGrid } from "@/components/shared/case-study-grid";
 import { CTASection } from "@/components/shared/cta-section";
 import { FAQSection } from "@/components/shared/faq-section";
+import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { RelatedServices } from "@/components/shared/related-services";
 import { ServiceBenefits } from "@/components/shared/service-benefits";
 import { ServiceHero } from "@/components/shared/service-hero";
 import { ServiceLeadPanel } from "@/components/shared/service-lead-panel";
 import { ServiceProcess } from "@/components/shared/service-process";
-import { ServiceSwitcher } from "@/components/shared/service-switcher";
-import { ServicesSectionHeader, ServicesSurfaceCard, TrustedLogosRow } from "@/components/services/services-ui";
+import { ServicesSectionHeader, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { ALL_CASE_STUDIES, type ServicePageData } from "@/content/services";
 import { toAbsoluteUrl } from "@/lib/seo/metadata";
@@ -73,22 +73,14 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
       <JsonLd schema={schemas} />
       <main>
         <ServiceHero
+          currentSlug={service.slug}
           title={service.pageTitle}
           subtitle={service.pageSubtitle}
-          breadcrumbLabel={service.navTitle}
           paragraphs={service.heroParagraphs}
           quickFacts={quickFacts}
         />
 
-        <section className="border-b border-neutral-200 bg-white py-4">
-          <div className="mx-auto w-full max-w-[1400px] px-6 md:px-8">
-            <div className="max-w-md">
-              <ServiceSwitcher currentSlug={service.slug} />
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white py-12 md:py-16">
+        <section className="bg-white py-10 md:py-14">
           <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-6 md:px-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:items-start lg:gap-10">
             <div className="space-y-6">
               <div id="ce-que-couvre" className="scroll-mt-32">
@@ -99,10 +91,10 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
               </div>
 
               <ServicesSurfaceCard className="p-6 md:p-8">
-                <h2 className="text-3xl font-extrabold leading-[1.15] tracking-tight text-devlo-900 md:text-4xl">{service.editorialTitle}</h2>
+                <h2 className="text-2xl font-extrabold leading-[1.2] tracking-tight text-devlo-900 md:text-3xl">{service.editorialTitle}</h2>
                 <div className="mt-5 space-y-4 text-neutral-600">
                   {service.editorialParagraphs.map((paragraph, index) => (
-                    <p key={`${service.slug}-editorial-${index}`} className="text-base leading-8 md:text-lg md:leading-9">
+                    <p key={`${service.slug}-editorial-${index}`} className="text-sm leading-7 md:text-base md:leading-8">
                       {paragraph}
                     </p>
                   ))}
@@ -132,7 +124,11 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
         <section className="border-t border-neutral-200 bg-devlo-50 py-14 md:py-16">
           <div className="mx-auto w-full max-w-[1400px] px-6 md:px-8">
             <div className="space-y-8">
-              <TrustedLogosRow logos={TRUSTED_LOGOS_STRIP} />
+              <div className="relative -mx-6 overflow-hidden md:-mx-12 lg:-mx-16">
+                <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-devlo-50 to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-devlo-50 to-transparent" />
+                <InfiniteLogoRail logos={TRUSTED_LOGOS_STRIP} duration="slow" pauseOnHover />
+              </div>
               <ServicesSectionHeader
                 eyebrow="Études de cas"
                 title="Preuves terrain sur ce service"
