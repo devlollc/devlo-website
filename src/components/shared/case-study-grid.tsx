@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
+import { CountryFlags, ServicesSurfaceCard } from "@/components/services/services-ui";
+import { buildClientMonogram, getCaseStudyBrandAsset } from "@/content/service-brand-assets";
 import { ALL_CASE_STUDIES, type ServiceTag } from "@/content/services";
 
 type CaseStudyGridProps = {
@@ -29,35 +32,61 @@ export function CaseStudyGrid({ filterTag, limit }: CaseStudyGridProps) {
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {displayed.map((caseStudy) => (
-        <Link
-          key={caseStudy.slug}
-          href={caseStudy.href}
-          className="rounded-2xl border border-gray-100 bg-white p-5 transition-all duration-200 hover:border-[var(--primary)]/35 hover:shadow-md"
-        >
-          <div className="mb-3 flex items-center justify-between gap-2">
-            <span
-              className={`inline-flex items-center rounded-full border px-2 py-1 text-[11px] font-semibold ${tagColors[caseStudy.tags[0]]}`}
-            >
-              {caseStudy.sector.split("/")[0].trim()}
-            </span>
-            <span className="text-xs text-gray-400">{caseStudy.region}</span>
-          </div>
-          <h3 className="font-service-display text-lg font-bold leading-snug text-gray-900">{caseStudy.headline}</h3>
-          <div className="mt-3 space-y-1">
-            {caseStudy.kpis.map((kpi) => (
-              <p key={`${caseStudy.slug}-${kpi}`} className="flex items-center gap-1.5 text-xs text-gray-500">
-                <span className="font-bold text-[var(--primary)]">·</span>
-                {kpi}
-              </p>
-            ))}
-          </div>
-          <div className="mt-4 border-t border-gray-50 pt-3">
-            <p className="text-sm font-semibold text-gray-800">{caseStudy.client}</p>
-            <p className="mt-0.5 text-xs text-gray-400">{caseStudy.sector}</p>
-          </div>
-        </Link>
-      ))}
+      {displayed.map((caseStudy) => {
+        const brand = getCaseStudyBrandAsset(caseStudy.slug);
+
+        return (
+          <Link key={caseStudy.slug} href={caseStudy.href} className="group">
+            <ServicesSurfaceCard className="h-full p-5 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-devlo-600/35 group-hover:shadow-panel">
+              <div className="mb-4 flex items-start justify-between gap-3">
+                <span
+                  className={`inline-flex items-center rounded-full border px-2 py-1 text-[11px] font-semibold ${tagColors[caseStudy.tags[0]]}`}
+                >
+                  {caseStudy.sector.split("/")[0].trim()}
+                </span>
+                <CountryFlags countries={brand?.countries ?? ["EU"]} showMore={Boolean(brand?.showMoreCountries)} />
+              </div>
+
+              <h3 className="font-service-display text-lg font-bold leading-snug text-devlo-900">{caseStudy.headline}</h3>
+
+              <div className="mt-3 space-y-1.5">
+                {caseStudy.kpis.map((kpi) => (
+                  <p key={`${caseStudy.slug}-${kpi}`} className="flex items-center gap-1.5 text-xs text-neutral-600">
+                    <span className="font-bold text-devlo-700">·</span>
+                    {kpi}
+                  </p>
+                ))}
+              </div>
+
+              <div className="mt-5 border-t border-neutral-100 pt-4">
+                <div className="flex items-center gap-3">
+                  {brand?.logo ? (
+                    <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-neutral-200 bg-white">
+                      <Image
+                        src={brand.logo}
+                        alt={`${caseStudy.client} logo`}
+                        fill
+                        className="object-contain p-1.5"
+                        sizes="40px"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 bg-devlo-50 text-xs font-bold text-devlo-800">
+                      {buildClientMonogram(caseStudy.client)}
+                    </div>
+                  )}
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-devlo-900">{caseStudy.client}</p>
+                    <p className="truncate text-xs text-neutral-500">{caseStudy.region}</p>
+                  </div>
+                  <span className="ml-auto text-sm font-semibold text-devlo-700 transition group-hover:translate-x-0.5">→</span>
+                </div>
+              </div>
+            </ServicesSurfaceCard>
+          </Link>
+        );
+      })}
     </div>
   );
 }

@@ -8,6 +8,8 @@ import { ServiceBenefits } from "@/components/shared/service-benefits";
 import { ServiceHero } from "@/components/shared/service-hero";
 import { ServiceLeadPanel } from "@/components/shared/service-lead-panel";
 import { ServiceProcess } from "@/components/shared/service-process";
+import { ServicesSectionHeader, ServicesSurfaceCard, TrustedLogosRow } from "@/components/services/services-ui";
+import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { ALL_CASE_STUDIES, type ServicePageData } from "@/content/services";
 import { toAbsoluteUrl } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
@@ -60,7 +62,7 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
   return (
     <>
       <JsonLd schema={schemas} />
-      <main className="font-service-body text-[var(--text-primary)]">
+      <main>
         <ServiceHero
           title={service.pageTitle}
           subtitle={service.pageSubtitle}
@@ -68,27 +70,25 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
           paragraphs={service.heroParagraphs}
         />
 
-        <section className="bg-[var(--bg-white)] py-16 md:py-20">
-          <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)] lg:gap-10">
+        <section className="bg-white py-16 md:py-24">
+          <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-6 md:px-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:items-start lg:gap-10">
             <div className="space-y-6">
               <ServiceBenefits title={service.coverageTitle} items={service.coverageItems} />
               <ServiceProcess title={service.processTitle} steps={service.processSteps} />
 
-              <section className="rounded-3xl border border-[var(--border)] bg-white p-6 md:p-8">
-                <h2 className="font-service-display text-3xl font-bold leading-tight text-[var(--text-primary)]">
-                  {service.editorialTitle}
-                </h2>
-                <div className="mt-5 space-y-4 text-[var(--text-secondary)]">
+              <ServicesSurfaceCard className="p-6 md:p-8">
+                <h2 className="text-3xl font-extrabold leading-[1.15] tracking-tight text-devlo-900 md:text-4xl">{service.editorialTitle}</h2>
+                <div className="mt-5 space-y-4 text-neutral-600">
                   {service.editorialParagraphs.map((paragraph, index) => (
                     <p key={`${service.slug}-editorial-${index}`} className="text-base leading-8 md:text-lg md:leading-9">
                       {paragraph}
                     </p>
                   ))}
                 </div>
-              </section>
+              </ServicesSurfaceCard>
 
-              <section className="rounded-3xl border border-[var(--border)] bg-[var(--bg-subtle)] p-6 md:p-8">
-                <h2 className="font-service-display text-3xl font-bold text-[var(--text-primary)]">{service.socialProofTitle}</h2>
+              <ServicesSurfaceCard className="p-6 md:p-8">
+                <ServicesSectionHeader title={service.socialProofTitle} />
                 <div className="mt-6 grid gap-4 md:grid-cols-2">
                   {service.socialProofItems.map((item) => (
                     <CaseStudyBadge
@@ -100,26 +100,22 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
                     />
                   ))}
                 </div>
-              </section>
+              </ServicesSurfaceCard>
             </div>
 
             <ServiceLeadPanel service={service} />
           </div>
         </section>
 
-        <section className="border-t border-[var(--border)] bg-[var(--bg-subtle)] py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <p className="font-service-mono text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
-              Études de cas
-            </p>
-            <h2 className="mt-3 font-service-display text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
-              Preuves terrain sur ce service
-            </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-[var(--text-secondary)] md:text-base">
-              Découvrez des campagnes réelles menées par devlo en Suisse, Belgique, France et DACH. Chaque étude de cas montre
-              les résultats obtenus, la méthode utilisée et les enseignements opérationnels.
-            </p>
-            <div className="mt-8">
+        <section className="border-t border-neutral-200 bg-devlo-50 py-20">
+          <div className="mx-auto w-full max-w-[1400px] px-6 md:px-8">
+            <div className="space-y-8">
+              <TrustedLogosRow logos={TRUSTED_LOGOS_STRIP} />
+              <ServicesSectionHeader
+                eyebrow="Études de cas"
+                title="Preuves terrain sur ce service"
+                description="Découvrez des campagnes réelles menées par devlo en Suisse, Belgique, France et DACH. Chaque étude de cas montre les résultats obtenus, la méthode utilisée et les enseignements opérationnels."
+              />
               <CaseStudyGrid filterTag={service.caseStudyTag} />
             </div>
           </div>

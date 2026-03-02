@@ -9,34 +9,36 @@ type ServiceHeroProps = {
 
 export function ServiceHero({ title, subtitle, breadcrumbLabel, paragraphs }: ServiceHeroProps) {
   return (
-    <section className="border-b border-[var(--border)] bg-[var(--bg-white)]">
-      <div className="mx-auto max-w-7xl px-6 py-14 md:py-18">
+    <section className="border-b border-neutral-200 bg-white">
+      <div className="mx-auto w-full max-w-[1400px] px-6 pb-14 pt-12 md:px-8 md:pb-18 md:pt-16">
         <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex flex-wrap items-center gap-2 text-sm text-[var(--text-muted)]">
+          <ol className="flex flex-wrap items-center gap-2 text-sm text-neutral-500">
             <li>
-              <Link href="/" className="transition hover:text-[var(--primary)]">
+              <Link href="/" className="transition hover:text-devlo-700">
                 devlo.ch
               </Link>
             </li>
             <li>/</li>
             <li>
-              <Link href="/services" className="transition hover:text-[var(--primary)]">
+              <Link href="/services" className="transition hover:text-devlo-700">
                 Services
               </Link>
             </li>
             <li>/</li>
-            <li className="font-medium text-[var(--text-primary)]">{breadcrumbLabel}</li>
+            <li className="font-semibold text-devlo-900">{breadcrumbLabel}</li>
           </ol>
         </nav>
 
-        <p className="font-service-mono text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+        <p className="inline-flex items-center rounded-full bg-devlo-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.09em] text-devlo-700">
           DEVLO.CH — AGENCE B2B SUISSE
         </p>
-        <h1 className="mt-4 max-w-5xl font-service-display text-4xl font-bold leading-[1.05] text-[var(--text-primary)] md:text-5xl lg:text-6xl">
+
+        <h1 className="mt-5 max-w-5xl text-4xl font-extrabold leading-[1.08] tracking-tight text-devlo-900 md:text-5xl lg:text-[56px]">
           {title}
         </h1>
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--text-secondary)]">{subtitle}</p>
-        <div className="mt-7 max-w-4xl space-y-4 text-base leading-8 text-[var(--text-secondary)] md:text-lg md:leading-9">
+        <p className="mt-5 max-w-3xl text-xl font-semibold leading-relaxed text-devlo-700 md:text-2xl">{subtitle}</p>
+
+        <div className="mt-6 max-w-4xl space-y-4 text-base leading-8 text-neutral-600 md:text-lg md:leading-9">
           {paragraphs.map((paragraph, index) => (
             <p key={`${title}-paragraph-${index}`}>{paragraph}</p>
           ))}

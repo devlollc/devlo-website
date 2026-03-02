@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { JsonLd } from "@/components/seo/json-ld";
+import { ServicesSectionHeader, ServicesSurfaceCard, TrustedLogosRow } from "@/components/services/services-ui";
 import { CaseStudyGrid } from "@/components/shared/case-study-grid";
+import { SectionWrapper } from "@/components/shared/section-wrapper";
+import { buttonClassName } from "@/components/ui/button";
+import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { SERVICE_HUB_CARDS } from "@/content/services";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
@@ -33,54 +37,66 @@ export default function ServicesHubPage() {
         ])}
       />
 
-      <main className="font-service-body text-[var(--text-primary)]">
-        <section className="mx-auto max-w-4xl px-6 py-24 text-center">
-          <p className="font-service-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--primary)]">
-            DEVLO.CH — AGENCE B2B SUISSE
-          </p>
-          <h1 className="mt-4 font-service-display text-5xl font-bold leading-[1.05] text-[var(--text-primary)] lg:text-6xl">
-            Services de prospection et génération de leads B2B
-          </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[var(--text-secondary)]">
-            devlo aide startups, PMEs et scale-ups européennes à générer des rendez-vous qualifiés via des campagnes
-            outbound multicanales, l&apos;activation des signaux d&apos;intention et une data commerciale exploitable.
-          </p>
-          <p className="mt-4 text-sm text-[var(--text-muted)]">
+      <main>
+        <SectionWrapper background="white" className="pt-24 md:pt-32">
+          <ServicesSectionHeader
+            eyebrow="DEVLO.CH — AGENCE B2B SUISSE"
+            title="Services de prospection et génération de leads B2B"
+            description="devlo aide startups, PMEs et scale-ups européennes à générer des rendez-vous qualifiés via des campagnes outbound multicanales, l'activation des signaux d'intention et une data commerciale exploitable."
+            align="center"
+          />
+
+          <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-7 text-neutral-500">
             Chaque service ci-dessous inclut un configurateur et un formulaire pour cadrer votre stratégie avant votre call.
           </p>
-        </section>
 
-        <section className="mx-auto max-w-7xl px-6 pb-24">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/consultation" className={buttonClassName("primary", "px-7 py-3.5 text-sm")}>
+              Planifier votre consultation gratuite →
+            </Link>
+            <Link href="/etudes-de-cas" className={buttonClassName("secondary", "px-7 py-3.5 text-sm")}>
+              Voir nos résultats →
+            </Link>
+          </div>
+        </SectionWrapper>
+
+        <SectionWrapper background="white" className="pt-6 md:pt-8">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {SERVICE_HUB_CARDS.map((service) => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="group rounded-2xl border border-gray-100 bg-white p-6 transition-all duration-300 hover:border-[var(--primary)]/30 hover:shadow-lg"
-              >
-                <div className="text-3xl">{service.icon}</div>
-                <h2 className="mt-4 font-service-display text-2xl font-bold text-[var(--text-primary)] transition-colors group-hover:text-[var(--primary)]">
-                  {service.title}
-                </h2>
-                <p className="mt-1 text-xs font-semibold text-[var(--primary)]">{service.subtitle}</p>
-                <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">{service.description}</p>
-                <div className="mt-4 border-t border-gray-50 pt-4">
-                  <p className="text-xs font-semibold text-[var(--service-accent)]">✓ {service.kpi}</p>
-                </div>
+              <Link key={service.href} href={service.href} className="group">
+                <ServicesSurfaceCard className="h-full p-6 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-devlo-600/35 group-hover:shadow-panel">
+                  <div className="flex items-center justify-between">
+                    <span className="text-3xl" aria-hidden>
+                      {service.icon}
+                    </span>
+                    <span className="text-sm font-semibold text-devlo-700 transition group-hover:translate-x-0.5">→</span>
+                  </div>
+
+                  <h2 className="mt-4 font-service-display text-2xl font-bold leading-tight text-devlo-900">{service.title}</h2>
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.08em] text-devlo-700">{service.subtitle}</p>
+                  <p className="mt-4 text-sm leading-7 text-neutral-600">{service.description}</p>
+
+                  <div className="mt-5 border-t border-neutral-100 pt-4">
+                    <p className="text-xs font-semibold text-devlo-700">✓ {service.kpi}</p>
+                  </div>
+                </ServicesSurfaceCard>
               </Link>
             ))}
           </div>
-        </section>
+        </SectionWrapper>
 
-        <section className="border-t border-[var(--border)] bg-[var(--bg-subtle)] py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <h2 className="font-service-display text-3xl font-bold text-[var(--text-primary)]">Ils nous ont fait confiance</h2>
-            <p className="mb-10 mt-2 text-sm text-[var(--text-muted)]">
-              Résultats obtenus en Suisse, Belgique, France et DACH sur des environnements B2B exigeants.
-            </p>
+        <SectionWrapper background="light" className="border-t border-neutral-200">
+          <div className="space-y-8">
+            <TrustedLogosRow logos={TRUSTED_LOGOS_STRIP} />
+
+            <ServicesSectionHeader
+              title="Ils nous ont fait confiance"
+              description="Résultats obtenus en Suisse, Belgique, France et DACH sur des environnements B2B exigeants."
+            />
+
             <CaseStudyGrid />
           </div>
-        </section>
+        </SectionWrapper>
       </main>
     </>
   );

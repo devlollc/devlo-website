@@ -34,12 +34,20 @@ type HubspotPayload = {
 };
 
 function buildNote(payload: HubspotPayload): string {
+  const serviceHeader = `=== SERVICE: ${payload.service_interest.toUpperCase()} ===`;
+  const rawConfiguration = payload.configurator_data?.trim() || "";
+  const configurationBody = rawConfiguration.startsWith("===")
+    ? rawConfiguration.split("\n").slice(1).join("\n").trim()
+    : rawConfiguration;
+  const configuration = configurationBody || "Configuration: Non défini";
+
   return [
-    `=== LEAD — ${payload.page_name.toUpperCase()} ===`,
-    `Service d'intérêt : ${payload.service_interest}`,
-    payload.configurator_data ? `\nConfiguration :\n${payload.configurator_data}` : "",
-    `\nPage source : ${payload.page_url}`,
-    `Date : ${new Date().toLocaleDateString("fr-CH")}`,
+    serviceHeader,
+    configuration,
+    `Service: ${payload.service_interest}`,
+    `Page: ${payload.page_url || "Non défini"}`,
+    `Page Name: ${payload.page_name || "Non défini"}`,
+    `Date: ${new Date().toLocaleDateString("fr-CH")}`,
   ]
     .filter(Boolean)
     .join("\n");
