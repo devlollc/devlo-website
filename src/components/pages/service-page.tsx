@@ -83,8 +83,13 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
         <section className="bg-white py-10 md:py-14">
           <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-6 md:px-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:items-start lg:gap-10">
             <div className="space-y-6">
-              <div id="ce-que-couvre" className="scroll-mt-32">
+              <div id="ce-que-couvre" className="scroll-mt-32 space-y-5">
                 <ServiceBenefits title={service.coverageTitle} items={service.coverageItems} />
+                <div className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-2">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
+                  <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
+                  <InfiniteLogoRail logos={TRUSTED_LOGOS_STRIP} duration="slow" pauseOnHover />
+                </div>
               </div>
               <div id="processus" className="scroll-mt-32">
                 <ServiceProcess title={service.processTitle} steps={service.processSteps} />
@@ -121,14 +126,9 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
           </div>
         </section>
 
-        <section className="border-t border-neutral-200 bg-devlo-50 py-14 md:py-16">
+        <section className="border-t border-neutral-200 bg-white py-14 md:py-16">
           <div className="mx-auto w-full max-w-[1400px] px-6 md:px-8">
             <div className="space-y-8">
-              <div className="relative -mx-6 overflow-hidden md:-mx-12 lg:-mx-16">
-                <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-devlo-50 to-transparent" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-devlo-50 to-transparent" />
-                <InfiniteLogoRail logos={TRUSTED_LOGOS_STRIP} duration="slow" pauseOnHover />
-              </div>
               <ServicesSectionHeader
                 eyebrow="Études de cas"
                 title="Preuves terrain sur ce service"

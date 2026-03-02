@@ -26,7 +26,7 @@ export function RelatedServices({ currentSlug, relatedSlugs }: RelatedServicesPr
               <Link
                 key={slug}
                 href={related.path}
-                className="rounded-2xl border border-[var(--border)] bg-[var(--bg-subtle)] p-5 transition hover:border-[var(--primary)]/40 hover:bg-white"
+                className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--primary)]/40 hover:bg-white"
               >
                 <h3 className="text-xl font-semibold text-[var(--text-primary)]">{related.navTitle}</h3>
                 <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{related.pageSubtitle}</p>

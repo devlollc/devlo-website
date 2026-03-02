@@ -68,18 +68,22 @@ export function SiteFooter() {
       <WaveDivider variant="layered-top" />
       <footer className="relative bg-devlo-900 pb-20 pt-16 text-white md:pt-20">
         <div className="mx-auto w-full max-w-[1320px] px-6 md:px-8">
-          <div className="mb-8 flex flex-wrap items-center gap-3 md:mb-10 lg:mb-12">
+          <div className="mb-8 flex flex-wrap items-center gap-3 md:mb-10 md:flex-nowrap md:gap-4 lg:mb-12">
             {footerContent.badges.map((badge) => (
-              <Image
+              <div
                 key={badge.src}
-                src={badge.src}
-                alt={badge.alt}
-                width={badge.width}
-                height={badge.height}
-                className="h-[72px] w-auto max-w-full bg-transparent object-contain md:h-[80px]"
-                loading="lazy"
-                unoptimized={badge.src.endsWith(".svg")}
-              />
+                className="relative flex h-[74px] w-[170px] shrink-0 items-center justify-center rounded-xl border border-devlo-800 bg-white/5 p-2"
+              >
+                <Image
+                  src={badge.src}
+                  alt={badge.alt}
+                  width={badge.width}
+                  height={badge.height}
+                  className="h-full w-full object-contain"
+                  loading="lazy"
+                  unoptimized={badge.src.endsWith(".svg")}
+                />
+              </div>
             ))}
           </div>
         </div>

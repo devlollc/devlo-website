@@ -29,7 +29,7 @@ export function CaseStudyBadge({ client, result, details, href }: CaseStudyBadge
             <Image src={brand.logo} alt={`${client} logo`} fill className="object-contain p-1" sizes="28px" loading="lazy" />
           </div>
         ) : (
-          <div className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-neutral-200 bg-devlo-50 text-[10px] font-bold text-devlo-800">
+          <div className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-neutral-200 bg-white text-[10px] font-bold text-devlo-800">
             {buildClientMonogram(client)}
           </div>
         )}

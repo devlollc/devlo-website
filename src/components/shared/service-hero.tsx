@@ -18,7 +18,7 @@ const sectionAnchors = [
 
 export function ServiceHero({ currentSlug, title, subtitle, paragraphs, quickFacts }: ServiceHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-neutral-200 bg-gradient-to-b from-devlo-50/70 via-white to-white">
+    <section className="relative overflow-hidden border-b border-neutral-200 bg-white">
       <div className="pointer-events-none absolute -left-16 top-10 h-44 w-44 rounded-full bg-devlo-100/40 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 top-20 h-52 w-52 rounded-full bg-devlo-100/30 blur-3xl" />
 

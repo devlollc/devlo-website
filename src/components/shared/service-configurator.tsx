@@ -73,7 +73,7 @@ export function ServiceConfigurator({
 
   return (
     <ServicesSurfaceCard className="overflow-hidden p-5 md:p-6">
-      <div className="rounded-xl border border-devlo-100 bg-devlo-50/70 p-4">
+      <div className="rounded-xl border border-devlo-100 bg-white p-4">
         <div className="flex items-center justify-between">
           <p className="text-xs font-semibold uppercase tracking-[0.08em] text-devlo-700">Étape 1/2 — Configurez</p>
           <p className="text-xs font-semibold text-devlo-700">50%</p>
@@ -135,7 +135,7 @@ export function ServiceConfigurator({
         ))}
       </div>
 
-      <div className="mt-6 rounded-2xl border border-neutral-200 bg-devlo-50 p-4">
+      <div className="mt-6 rounded-2xl border border-neutral-200 bg-white p-4">
         <p className="text-[11px] font-semibold uppercase tracking-[0.09em] text-devlo-700">Aperçu de votre configuration</p>
         <div className="mt-2 space-y-1.5">
           {lines.map((line) => (

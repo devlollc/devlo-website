@@ -110,7 +110,7 @@ export function ServiceSwitcher({ currentSlug }: ServiceSwitcherProps) {
                   "rounded-xl border px-3 py-2 text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
                   selected
                     ? "border-devlo-700 bg-devlo-700 text-white"
-                    : "border-neutral-200 bg-white text-devlo-900 hover:border-devlo-700/35 hover:bg-devlo-50/60",
+                    : "border-neutral-200 bg-white text-devlo-900 hover:border-devlo-700/35 hover:bg-white",
                 ].join(" ")}
               >
                 <span className="font-semibold">{service.title}</span>

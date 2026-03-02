@@ -20,7 +20,7 @@ const tagColors: Record<ServiceTag, string> = {
   "cold-email": "bg-sky-50 text-sky-700 border-sky-100",
   "cold-calling": "bg-red-50 text-red-700 border-red-100",
   "linkedin-outreach": "bg-indigo-50 text-indigo-700 border-indigo-100",
-  "crm-delivrabilite": "bg-gray-50 text-gray-700 border-gray-200",
+  "crm-delivrabilite": "bg-white text-gray-700 border-gray-200",
 };
 
 export function CaseStudyGrid({ filterTag, limit }: CaseStudyGridProps) {
@@ -72,7 +72,7 @@ export function CaseStudyGrid({ filterTag, limit }: CaseStudyGridProps) {
                       />
                     </div>
                   ) : (
-                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 bg-devlo-50 text-xs font-bold text-devlo-800">
+                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 bg-white text-xs font-bold text-devlo-800">
                       {buildClientMonogram(caseStudy.client)}
                     </div>
                   )}

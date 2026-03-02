@@ -39,7 +39,7 @@ export default function ServicesHubPage() {
       />
 
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-b from-devlo-50/70 via-white to-white pt-12 md:pt-14">
+        <section className="relative overflow-hidden bg-white pt-12 md:pt-14">
           <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-devlo-100/45 blur-3xl" />
           <div className="pointer-events-none absolute -right-20 top-16 h-56 w-56 rounded-full bg-devlo-100/35 blur-3xl" />
 
@@ -101,7 +101,7 @@ export default function ServicesHubPage() {
           </div>
         </SectionWrapper>
 
-        <SectionWrapper background="light" className="border-t border-neutral-200">
+        <SectionWrapper background="white" className="border-t border-neutral-200">
           <div className="space-y-8">
             <ServicesSectionHeader
               title="Ils nous ont fait confiance"
