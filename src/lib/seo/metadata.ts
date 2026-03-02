@@ -8,14 +8,18 @@ export const defaultOgImagePath = "/images/devlo_OG_Banner.webp";
 
 type SupportedLang = "fr" | "en" | "de" | "nl";
 
-function normalizePath(path: string): string {
+export function normalizeRoute(path: string): string {
   if (!path || path === "/") return "/";
   const withLeadingSlash = path.startsWith("/") ? path : `/${path}`;
   return withLeadingSlash.replace(/\/+$/, "");
 }
 
+export function stripDevloSuffix(title: string): string {
+  return title.replace(/\s*\|\s*devlo\s*$/i, "").trim();
+}
+
 function localizedPath(lang: SupportedLang, path: string): string {
-  const normalized = normalizePath(path);
+  const normalized = normalizeRoute(path);
   if (lang === "fr") return normalized;
   return normalized === "/" ? `/${lang}` : `/${lang}${normalized}`;
 }
@@ -30,7 +34,7 @@ export function buildLanguageAlternates(path: string): NonNullable<Metadata["alt
 }
 
 export function toAbsoluteUrl(path: string): string {
-  return `${siteConfig.url}${normalizePath(path)}`;
+  return `${siteConfig.url}${normalizeRoute(path)}`;
 }
 
 export function resolveOgImagePath(candidate?: string): string {
@@ -57,7 +61,7 @@ export function buildPageMetadata({
   type = "website",
   imagePath,
 }: BuildPageMetadataInput): Metadata {
-  const canonicalPath = normalizePath(path);
+  const canonicalPath = normalizeRoute(path);
   const ogImage = resolveOgImagePath(imagePath);
   const ogImageAbsoluteUrl = toAbsoluteUrl(ogImage);
 
