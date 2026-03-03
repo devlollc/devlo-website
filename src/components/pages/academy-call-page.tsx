@@ -19,7 +19,7 @@ export function AcademyCallPage() {
           <li>5. Planification des rendez-vous</li>
         </ul>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-[0.95fr_1.05fr]">
           <article className="rounded-lg bg-[#3f5f80] p-6 text-white">
             <p className="text-sm uppercase tracking-[0.12em] text-cyan-100/85">Discovery meeting</p>
             <p className="mt-2 text-2xl font-semibold">avec Charles</p>

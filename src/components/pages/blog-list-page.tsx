@@ -112,13 +112,13 @@ export function BlogListPage() {
       </section>
 
       <section className="mx-auto w-full max-w-screen-xl px-6 py-12 lg:px-10">
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
           {featured.map((post) => (
             <PostCard key={post.title} post={post} />
           ))}
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {regular.map((post) => (
             <PostCard key={post.title} post={post} />
           ))}

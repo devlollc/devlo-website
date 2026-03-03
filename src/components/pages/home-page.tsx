@@ -66,7 +66,7 @@ export function HomePage() {
   return (
     <>
       <section className="bg-white pb-10 pt-12 md:pt-20 lg:pt-24">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 md:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-12">
+        <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-10 px-6 md:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-12">
           <div>
             <FadeInOnScroll eager>
               <p className="inline-flex items-center gap-2 rounded-full bg-devlo-100 px-4 py-1.5 text-sm font-semibold text-devlo-700">

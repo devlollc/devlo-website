@@ -342,7 +342,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
   return (
     <>
       <SectionWrapper background="white" className="py-[56px] pt-[94px] md:py-[72px] md:pt-[118px] lg:py-[88px]">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start lg:gap-10">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start lg:gap-10">
           <div className="min-w-0">
             <FadeInOnScroll eager>
               <Link href="/etudes-de-cas" className="inline-flex items-center rounded-full border border-devlo-100 bg-devlo-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-devlo-700 hover:text-devlo-900">
@@ -372,7 +372,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                   href={`#${anchorIds.contactForm}`}
                   data-case-study-cta=""
                   data-case-study-cta-variant="hero"
-                  className={buttonClassName("primary", "px-5 py-3 text-sm")}
+                  className={buttonClassName("primary", "w-full whitespace-normal px-5 py-3 text-left text-sm leading-6 sm:w-auto sm:text-center")}
                 >
                   {unifiedCtaLabel}
                 </Link>
@@ -384,16 +384,16 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                 {study.metrics.map((metric) => (
                   <span
                     key={`${study.slug}-${metric}`}
-                    className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 shadow-[0_4px_12px_rgba(15,43,60,0.04)]"
+                    className="inline-flex max-w-full items-center rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 shadow-[0_4px_12px_rgba(15,43,60,0.04)]"
                   >
-                    {metric}
+                    <span className="break-words whitespace-normal leading-5">{metric}</span>
                   </span>
                 ))}
               </div>
             </FadeInOnScroll>
           </div>
 
-          <FadeInOnScroll delay={0.12} direction="right" eager>
+          <FadeInOnScroll delay={0.12} direction="right" eager className="min-w-0">
             <div className="overflow-hidden rounded-[20px] border border-neutral-200 bg-white shadow-panel">
               <div className="flex items-center justify-between border-b border-neutral-200/80 bg-gradient-to-r from-white to-devlo-50 px-4 py-3">
                 <div className="flex min-w-0 items-center gap-3">
@@ -427,7 +427,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
 
         <FadeInOnScroll delay={0.28}>
           <section className="mt-8 rounded-[22px] border border-neutral-200 bg-gradient-to-b from-white to-devlo-50/60 p-5 shadow-soft md:mt-10 md:p-6">
-            <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
               <article className="rounded-panel border border-neutral-200 bg-white p-5 shadow-[0_10px_24px_rgba(15,43,60,0.05)]">
                 <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-devlo-700">Détails de campagne</h2>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -489,7 +489,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
             ctaLabel={unifiedCtaLabel}
           />
 
-          <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_300px] xl:items-start">
+          <div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_300px] xl:items-start">
           <div className="min-w-0 space-y-7">
             {aboutSection ? (
               <FadeInOnScroll>
@@ -530,7 +530,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                   )}
 
                   {methodSteps.length ? (
-                    <div className="mt-6 grid gap-4 lg:grid-cols-3">
+                    <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
                       {methodSteps.map((stepSection, index) => (
                         <article key={stepSection.heading} className="rounded-2xl border border-neutral-200 bg-gradient-to-b from-white to-devlo-50/60 p-5">
                           <div className="flex items-center gap-3">
@@ -707,7 +707,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
       <SectionWrapper background="light" className="py-[80px] md:py-[110px]" id={anchorIds.contact}>
         <FadeInOnScroll>
           <div className="mx-auto max-w-[980px] rounded-[22px] border border-neutral-200 bg-white p-6 shadow-panel md:p-8">
-            <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
               <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">Contact</p>
                 <h2 className="mt-2 text-2xl font-semibold tracking-tight text-devlo-900 md:text-3xl">
@@ -736,7 +736,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                     href={`#${anchorIds.contactForm}`}
                     data-case-study-cta=""
                     data-case-study-cta-variant="final"
-                    className={buttonClassName("primary", "px-5 py-3 text-sm")}
+                    className={buttonClassName("primary", "w-full whitespace-normal px-5 py-3 text-left text-sm leading-6 sm:w-auto sm:text-center")}
                   >
                     {unifiedCtaLabel}
                   </Link>

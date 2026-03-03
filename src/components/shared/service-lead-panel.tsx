@@ -27,7 +27,7 @@ export function ServiceLeadPanel({ service }: ServiceLeadPanelProps) {
   const summaryTitle = useMemo(() => `Étape 2 — Recevez le plan`, []);
 
   return (
-    <div className="space-y-5 lg:sticky lg:top-28">
+    <div className="min-w-0 w-full space-y-5 lg:sticky lg:top-28">
       <div className={step === 1 ? "block" : "hidden"}>
         <ServiceConfigurator
           title={service.configuratorTitle}

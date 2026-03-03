@@ -51,7 +51,7 @@ export function CaseStudyPage({ slug }: { slug: string }) {
       </section>
 
       <section className="mx-auto w-full max-w-screen-xl px-6 pb-12 lg:px-10">
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <article className="rounded-xl border border-stroke bg-white p-7 shadow-soft">
             <h2 className="text-xl font-semibold text-[#173a54]">Contexte client</h2>
 

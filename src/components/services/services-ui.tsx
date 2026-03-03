@@ -42,7 +42,10 @@ export function ServicesSurfaceCard({
   ...props
 }: HTMLAttributes<HTMLElement> & { className?: string; children: ReactNode }) {
   return (
-    <section {...props} className={`rounded-2xl border border-neutral-200 bg-white shadow-soft ${className}`.trim()}>
+    <section
+      {...props}
+      className={`min-w-0 w-full rounded-2xl border border-neutral-200 bg-white shadow-soft ${className}`.trim()}
+    >
       {children}
     </section>
   );

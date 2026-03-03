@@ -81,8 +81,8 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
         />
 
         <section className="bg-white py-10 md:py-14">
-          <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-6 md:px-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:items-start lg:gap-10">
-            <div className="space-y-6">
+          <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-8 px-4 sm:px-5 md:px-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:items-start lg:gap-10">
+            <div className="min-w-0 space-y-6">
               <div id="ce-que-couvre" className="scroll-mt-32 space-y-5">
                 <ServiceBenefits title={service.coverageTitle} items={service.coverageItems} />
                 <div className="relative my-[2cm] overflow-hidden rounded-2xl border border-neutral-200 bg-white p-2">
@@ -127,7 +127,7 @@ export function ServicePageTemplate({ service }: ServicePageProps) {
         </section>
 
         <section className="border-t border-neutral-200 bg-white py-14 md:py-16">
-          <div className="mx-auto w-full max-w-[1400px] px-6 md:px-8">
+          <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-5 md:px-8">
             <div className="space-y-8">
               <ServicesSectionHeader
                 eyebrow="Études de cas"

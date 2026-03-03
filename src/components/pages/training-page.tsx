@@ -20,7 +20,7 @@ const benefits = [
 export function TrainingPage() {
   return (
     <>
-      <section className="mx-auto grid w-full max-w-screen-xl gap-8 px-6 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
+      <section className="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-8 px-6 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#6c879a]">Agence B2B</p>
           <h1 className="mt-3 text-4xl font-semibold leading-tight text-[#153a54] md:text-5xl">
@@ -59,7 +59,7 @@ export function TrainingPage() {
               </div>
             ))}
           </div>
-          <div className="mt-6 grid gap-4 lg:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
             <Image
               src={homeVisuals.academyRoadmap}
               alt="Roadmap de la methode outbound"

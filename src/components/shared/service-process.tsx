@@ -9,7 +9,7 @@ type ServiceProcessProps = {
 export function ServiceProcess({ title, steps }: ServiceProcessProps) {
   return (
     <ServicesSurfaceCard className="p-6 md:p-8">
-      <h2 className="text-3xl font-extrabold leading-[1.15] tracking-tight text-devlo-900 md:text-4xl">{title}</h2>
+      <h2 className="break-words text-3xl font-extrabold leading-[1.15] tracking-tight text-devlo-900 md:text-4xl">{title}</h2>
       <ol className="mt-6 space-y-3">
         {steps.map((step, index) => (
           <li key={step.title} className="rounded-2xl border border-neutral-200 bg-white p-4 md:p-5">
@@ -17,9 +17,9 @@ export function ServiceProcess({ title, steps }: ServiceProcessProps) {
               <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-devlo-700 text-[11px] font-bold text-white">
                 {index + 1}
               </span>
-              <h3 className="text-lg font-semibold text-devlo-900 md:text-xl">{step.title}</h3>
+              <h3 className="break-words text-lg font-semibold text-devlo-900 md:text-xl">{step.title}</h3>
             </div>
-            <p className="mt-2 text-sm leading-7 text-neutral-600 md:text-base">{step.description}</p>
+            <p className="mt-2 break-words text-sm leading-7 text-neutral-600 md:text-base">{step.description}</p>
           </li>
         ))}
       </ol>

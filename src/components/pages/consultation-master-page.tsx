@@ -8,7 +8,7 @@ export function ConsultationMasterPage() {
 
   return (
     <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:items-start xl:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)]">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:items-start xl:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)]">
         <div className="min-w-0">
           {/* ── H1 ──────────────────────────────────────────────────────── */}
           <FadeInOnScroll>
