@@ -411,7 +411,7 @@ export const caseStudySlides: CaseStudySlide[] = [
     href: "/resultats/logiciel-comptable-200k-ca",
     hero: "/images/case-studies/heroes/logiciel-comptable-200k-ca-hero.jpg",
     heroAlt: "Horus",
-    logo: "/images/Horus.webp",
+    logo: "/images/Horus_logo.webp",
     logoAlt: "horus_logo",
   },
 ];
