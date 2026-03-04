@@ -7,7 +7,7 @@ command -v curl >/dev/null 2>&1 || { echo "curl required"; exit 1; }
 BASE_URL="${1:-https://devlo.ch}"
 SLUG_MAP="${2:-src/lib/i18n/slug-map.json}"
 STAMP="$(date +%Y%m%dT%H%M%S)"
-OUT_DIR="docs/i18n_sanity_migration/audit_full_${STAMP}"
+OUT_DIR="docs/i18n_sanity_migration/phase3_audit_${STAMP}"
 RAW_DIR="${OUT_DIR}/raw"
 mkdir -p "${RAW_DIR}"
 
@@ -37,7 +37,7 @@ sample_paths_for_locale() {
       | map(select(.value[$locale] != null))
       | map(.value[$locale])) as $all |
     ($must + ($all - $must))
-      | .[:7]
+      | .[:10]
       | .[]
   ' "$SLUG_MAP"
 }
@@ -145,8 +145,8 @@ for locale in fr en de nl; do
   done < <(sample_paths_for_locale "$locale")
 done
 
-SITEMAP_URL="https://devlo.ch/sitemap.xml"
-ROBOTS_URL="https://devlo.ch/robots.txt"
+SITEMAP_URL="${BASE_URL%/}/sitemap.xml"
+ROBOTS_URL="${BASE_URL%/}/robots.txt"
 
 curl -sI --max-time 20 "$SITEMAP_URL" > "${RAW_DIR}/sitemap_headers.txt"
 curl -sL --max-time 20 "$SITEMAP_URL" > "${RAW_DIR}/sitemap.xml"
