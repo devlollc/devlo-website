@@ -1,10 +1,11 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Component, useEffect, useRef, useState } from "react";
+import { Component, useContext, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useLovalingo } from "@lovalingo/lovalingo";
 
+import { LovalingoAvailabilityContext } from "@/components/providers/lovalingo-next-provider";
 import { buttonClassName } from "@/components/ui/button";
 
 const SUPPORTED_LANGS = ["fr", "en", "de", "nl"] as const;
@@ -239,6 +240,12 @@ class SwitcherErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 }
 
 export function HeaderLangSwitcher(props: HeaderLangSwitcherProps) {
+  const isLovalingoAvailable = useContext(LovalingoAvailabilityContext);
+
+  if (!isLovalingoAvailable) {
+    return <HeaderLangSwitcherFallback {...props} />;
+  }
+
   return (
     <SwitcherErrorBoundary fallback={<HeaderLangSwitcherFallback {...props} />}>
       <HeaderLangSwitcherWithLovalingo {...props} />
