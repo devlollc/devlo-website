@@ -9,16 +9,114 @@ import { useEffect, useRef, useState } from "react";
 
 import { buttonClassName } from "@/components/ui/button";
 import { mainNav } from "@/content/masterfile.fr";
-import { SERVICE_HUB_CARDS } from "@/content/services";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
+import { resolvePathForLocale, splitLocalePath, type SupportedLocale } from "@/lib/i18n/slug-map";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+const navCopyByLocale: Record<
+  SupportedLocale,
+  {
+    navigationAria: string;
+    homeAria: string;
+    agency: string;
+    caseStudies: string;
+    services: string;
+    academy: string;
+    cta: string;
+    allServices: string;
+    seeAllServices: string;
+    openServicesMenu: string;
+    showServices: string;
+    openMenu: string;
+    closeMenu: string;
+  }
+> = {
+  fr: {
+    navigationAria: "Navigation principale",
+    homeAria: "Accueil devlo",
+    agency: "Agence",
+    caseStudies: "Études de cas",
+    services: "Services",
+    academy: "Outbound Academy",
+    cta: "Consultation gratuite",
+    allServices: "Tous les services",
+    seeAllServices: "Voir tous les services →",
+    openServicesMenu: "Ouvrir le menu services",
+    showServices: "Afficher les services",
+    openMenu: "Ouvrir le menu",
+    closeMenu: "Fermer le menu",
+  },
+  en: {
+    navigationAria: "Main navigation",
+    homeAria: "devlo homepage",
+    agency: "Agency",
+    caseStudies: "Case studies",
+    services: "Services",
+    academy: "Outbound Academy",
+    cta: "Free consultation",
+    allServices: "All services",
+    seeAllServices: "See all services →",
+    openServicesMenu: "Open services menu",
+    showServices: "Show services",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+  },
+  de: {
+    navigationAria: "Hauptnavigation",
+    homeAria: "devlo Startseite",
+    agency: "Agentur",
+    caseStudies: "Fallstudien",
+    services: "Dienstleistungen",
+    academy: "Outbound Academy",
+    cta: "Kostenlose Beratung",
+    allServices: "Alle Leistungen",
+    seeAllServices: "Alle Leistungen ansehen →",
+    openServicesMenu: "Service-Menü öffnen",
+    showServices: "Leistungen anzeigen",
+    openMenu: "Menü öffnen",
+    closeMenu: "Menü schließen",
+  },
+  nl: {
+    navigationAria: "Hoofdnavigatie",
+    homeAria: "devlo homepage",
+    agency: "Agentschap",
+    caseStudies: "Praktijkvoorbeelden",
+    services: "Diensten",
+    academy: "Outbound Academy",
+    cta: "Gratis consultatie",
+    allServices: "Alle diensten",
+    seeAllServices: "Alle diensten bekijken →",
+    openServicesMenu: "Servicemenu openen",
+    showServices: "Diensten tonen",
+    openMenu: "Menu openen",
+    closeMenu: "Menu sluiten",
+  },
+};
+
 export function SiteHeader() {
   const pathname = usePathname();
+  const safePathname = pathname ?? "/";
+  const { locale: currentLocale, path: localePath } = splitLocalePath(safePathname);
+  const navCopy = navCopyByLocale[currentLocale];
+
+  const toCurrentLocalePath = (frPath: string) => resolvePathForLocale(frPath, currentLocale).path;
+  const navItems = [
+    { key: "agency", href: toCurrentLocalePath("/") as string, label: navCopy.agency },
+    { key: "caseStudies", href: toCurrentLocalePath("/etudes-de-cas") as string, label: navCopy.caseStudies },
+    { key: "services", href: toCurrentLocalePath("/services") as string, label: navCopy.services },
+    { key: "academy", href: toCurrentLocalePath("/academy") as string, label: navCopy.academy },
+  ] as const;
+  const consultationHref = toCurrentLocalePath("/consultation");
+  const localizedServicesCards = getLocalizedServicesContent(currentLocale).SERVICE_HUB_CARDS.map((service) => ({
+    ...service,
+    href: toCurrentLocalePath(service.href),
+  }));
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showMobileStickyCta, setShowMobileStickyCta] = useState(false);
@@ -41,8 +139,8 @@ export function SiteHeader() {
   useEffect(() => {
     setIsMenuOpen(false);
     setIsServicesMenuOpen(false);
-    setIsMobileServicesOpen(pathname.startsWith("/services"));
-  }, [pathname]);
+    setIsMobileServicesOpen(localePath.startsWith("/services"));
+  }, [safePathname, localePath]);
 
   useEffect(() => {
     if (!isServicesMenuOpen) return;
@@ -65,8 +163,8 @@ export function SiteHeader() {
     };
   }, [isServicesMenuOpen]);
 
-  const transparentMode = pathname === "/" && !isScrolled;
-  const servicesActive = pathname === "/services" || pathname.startsWith("/services/");
+  const transparentMode = safePathname === "/" && !isScrolled;
+  const servicesActive = localePath === "/services" || localePath.startsWith("/services/");
 
   return (
     <>
@@ -79,16 +177,16 @@ export function SiteHeader() {
         ].join(" ")}
       >
         <div className="mx-auto flex h-16 w-full max-w-[1260px] items-center justify-between px-6 md:h-20 md:px-10">
-          <Link href="/" className="inline-flex min-h-[44px] items-center" aria-label="Accueil devlo">
+          <Link href={toCurrentLocalePath("/")} className="inline-flex min-h-[44px] items-center" aria-label={navCopy.homeAria}>
             <Image src={mainNav.logo} alt="devlo logo" width={240} height={80} className="h-14 w-auto md:h-16" />
           </Link>
 
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Navigation principale">
-            {mainNav.links.map((item) => {
-              if (item.href === "/services") {
+          <nav className="hidden items-center gap-8 md:flex" aria-label={navCopy.navigationAria}>
+            {navItems.map((item) => {
+              if (item.key === "services") {
                 return (
                   <div
-                    key={item.href}
+                    key={item.key}
                     ref={servicesMenuRef}
                     className="relative"
                     onMouseEnter={() => setIsServicesMenuOpen(true)}
@@ -118,7 +216,7 @@ export function SiteHeader() {
                       </Link>
                       <button
                         type="button"
-                        aria-label="Ouvrir le menu services"
+                        aria-label={navCopy.openServicesMenu}
                         aria-expanded={isServicesMenuOpen}
                         onClick={() => setIsServicesMenuOpen((prev) => !prev)}
                         className={[
@@ -143,10 +241,10 @@ export function SiteHeader() {
                         >
                           <div>
                             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/80">
-                              Tous les services
+                              {navCopy.allServices}
                             </p>
                             <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                              {SERVICE_HUB_CARDS.map((service) => (
+                              {localizedServicesCards.map((service) => (
                                 <Link
                                   key={`desktop-menu-${service.href}`}
                                   href={service.href}
@@ -159,10 +257,10 @@ export function SiteHeader() {
                             </div>
                             <div className="mt-4 border-t border-white/20 pt-3">
                               <Link
-                                href="/services"
+                                href={toCurrentLocalePath("/services")}
                                 className="inline-flex rounded-full border border-white/30 bg-white px-3 py-1.5 text-xs font-semibold text-devlo-700 transition hover:bg-devlo-50"
                               >
-                                Voir tous les services →
+                                {navCopy.seeAllServices}
                               </Link>
                             </div>
                           </div>
@@ -190,8 +288,8 @@ export function SiteHeader() {
 
             <div className="flex items-center gap-3">
               <LanguageSwitcher />
-              <Link href={mainNav.cta.href} className={buttonClassName("outline", "px-5 py-2.5 text-sm")}>
-                {mainNav.cta.label}
+              <Link href={consultationHref} className={buttonClassName("outline", "px-5 py-2.5 text-sm")}>
+                {navCopy.cta}
               </Link>
             </div>
           </nav>
@@ -199,7 +297,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={isMenuOpen ? navCopy.closeMenu : navCopy.openMenu}
             className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-neutral-200 bg-white text-devlo-900 md:hidden"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -222,7 +320,7 @@ export function SiteHeader() {
                 type="button"
                 onClick={() => setIsMenuOpen(false)}
                 className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-neutral-200"
-                aria-label="Fermer le menu"
+                aria-label={navCopy.closeMenu}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -230,10 +328,10 @@ export function SiteHeader() {
 
             <div className="mt-10 space-y-2">
               <LanguageSwitcher mobile />
-              {mainNav.links.map((item) => {
-                if (item.href === "/services") {
+              {navItems.map((item) => {
+                if (item.key === "services") {
                   return (
-                    <div key={`mobile-${item.href}`} className="rounded-xl border border-neutral-200 p-2">
+                    <div key={`mobile-${item.key}`} className="rounded-xl border border-neutral-200 p-2">
                       <div className="flex items-center justify-between gap-2">
                         <Link
                           href={item.href}
@@ -248,7 +346,7 @@ export function SiteHeader() {
                           type="button"
                           onClick={() => setIsMobileServicesOpen((prev) => !prev)}
                           className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-devlo-700"
-                          aria-label="Afficher les services"
+                          aria-label={navCopy.showServices}
                         >
                           <ChevronDown className={["h-4 w-4 transition-transform", isMobileServicesOpen ? "rotate-180" : ""].join(" ")} />
                         </button>
@@ -263,7 +361,7 @@ export function SiteHeader() {
                             className="mt-2 overflow-hidden"
                           >
                             <div className="grid gap-1.5">
-                              {SERVICE_HUB_CARDS.map((service) => (
+                              {localizedServicesCards.map((service) => (
                                 <Link
                                   key={`mobile-service-${service.href}`}
                                   href={service.href}
@@ -276,10 +374,10 @@ export function SiteHeader() {
                             </div>
                             <div className="mt-2 border-t border-neutral-200 pt-2">
                               <Link
-                                href="/services"
+                                href={toCurrentLocalePath("/services")}
                                 className="inline-flex min-h-[40px] items-center rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold text-devlo-700"
                               >
-                                Voir tous les services →
+                                {navCopy.seeAllServices}
                               </Link>
                             </div>
                           </motion.div>
@@ -304,8 +402,8 @@ export function SiteHeader() {
               })}
             </div>
 
-            <Link href={mainNav.cta.href} className={buttonClassName("primary", "mt-8 w-full py-4 text-base")}>
-              {mainNav.cta.label}
+            <Link href={consultationHref} className={buttonClassName("primary", "mt-8 w-full py-4 text-base")}>
+              {navCopy.cta}
             </Link>
           </motion.aside>
         ) : null}
@@ -320,8 +418,8 @@ export function SiteHeader() {
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="fixed bottom-0 left-0 right-0 z-40 border-t border-neutral-200 bg-white px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:hidden"
           >
-            <Link href={mainNav.cta.href} className={buttonClassName("primary", "w-full py-4 text-base")}>
-              {mainNav.cta.label}
+            <Link href={consultationHref} className={buttonClassName("primary", "w-full py-4 text-base")}>
+              {navCopy.cta}
             </Link>
           </motion.div>
         ) : null}

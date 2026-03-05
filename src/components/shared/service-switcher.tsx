@@ -2,20 +2,38 @@
 
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { SERVICE_HUB_CARDS, type ServiceSlug } from "@/content/services";
+import { type ServiceSlug } from "@/content/services";
+import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
+import { resolvePathForLocale, splitLocalePath, type SupportedLocale } from "@/lib/i18n/slug-map";
 
 type ServiceSwitcherProps = {
   currentSlug: ServiceSlug;
+  locale?: SupportedLocale;
 };
 
-export function ServiceSwitcher({ currentSlug }: ServiceSwitcherProps) {
+const copyByLocale: Record<
+  SupportedLocale,
+  { changeService: string; selectService: string }
+> = {
+  fr: { changeService: "Changer de service", selectService: "Sélectionner un service" },
+  en: { changeService: "Switch service", selectService: "Select a service" },
+  de: { changeService: "Service wechseln", selectService: "Service auswählen" },
+  nl: { changeService: "Dienst wisselen", selectService: "Selecteer een dienst" },
+};
+
+export function ServiceSwitcher({ currentSlug, locale }: ServiceSwitcherProps) {
+  const pathname = usePathname() ?? "/";
+  const currentLocale = locale ?? splitLocalePath(pathname).locale;
+  const copy = copyByLocale[currentLocale];
+  const localizedServices = getLocalizedServicesContent(currentLocale).SERVICE_HUB_CARDS;
   const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const currentService = SERVICE_HUB_CARDS.find((item) => item.href.endsWith(`/${currentSlug}`));
+  const currentService = localizedServices.find((item) => item.href.endsWith(`/${currentSlug}`));
 
   const clearCloseTimeout = useCallback(() => {
     if (closeTimeoutRef.current) {
@@ -81,9 +99,9 @@ export function ServiceSwitcher({ currentSlug }: ServiceSwitcherProps) {
         onClick={() => (isOpen ? closeMenu() : openMenu())}
         className="flex w-full min-h-[52px] items-center justify-between gap-3 rounded-2xl border border-neutral-200 bg-white px-4 py-2 text-left shadow-soft transition hover:border-devlo-700/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2"
       >
-        <span>
-          <span className="block text-[11px] font-semibold uppercase tracking-[0.08em] text-devlo-700">Changer de service</span>
-          <span className="block text-sm font-semibold text-devlo-900">{currentService?.title ?? "Sélectionner un service"}</span>
+          <span>
+          <span className="block text-[11px] font-semibold uppercase tracking-[0.08em] text-devlo-700">{copy.changeService}</span>
+          <span className="block text-sm font-semibold text-devlo-900">{currentService?.title ?? copy.selectService}</span>
         </span>
         <ChevronDown className={["h-4 w-4 text-devlo-700 transition-transform", isOpen ? "rotate-180" : ""].join(" ")} />
       </button>
@@ -99,12 +117,12 @@ export function ServiceSwitcher({ currentSlug }: ServiceSwitcherProps) {
         role="listbox"
       >
         <div className="grid gap-1.5 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-2 shadow-panel md:max-h-[420px] md:overflow-y-auto">
-          {SERVICE_HUB_CARDS.map((service) => {
+          {localizedServices.map((service) => {
             const selected = service.href.endsWith(`/${currentSlug}`);
             return (
               <Link
                 key={service.href}
-                href={service.href}
+                href={resolvePathForLocale(service.href, currentLocale).path}
                 onClick={closeMenu}
                 className={[
                   "rounded-xl border px-3 py-2 text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",

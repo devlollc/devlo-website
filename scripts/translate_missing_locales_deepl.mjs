@@ -82,6 +82,16 @@ function coerceLocalizedObject(value) {
   };
 }
 
+function normalizedText(value) {
+  return (value || "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+function needsTranslation(frValue, localizedValue) {
+  if (!frValue) return false;
+  if (!localizedValue) return true;
+  return normalizedText(frValue) === normalizedText(localizedValue);
+}
+
 const translationCache = new Map();
 let totalCharactersSent = 0;
 
@@ -218,7 +228,8 @@ async function main() {
       description,
       seoTitle,
       seoDescription,
-      ogImage
+      ogImage,
+      body
     }`,
   );
 
@@ -260,26 +271,35 @@ async function main() {
     const seoTitleLocalized = coerceLocalizedObject(doc.seoTitle);
     const descriptionLocalized = coerceLocalizedObject(doc.description);
     const seoDescriptionLocalized = coerceLocalizedObject(doc.seoDescription);
+    const bodyLocalized = coerceLocalizedObject(doc.body);
 
     const frTitle = (titleLocalized.fr || seoTitleLocalized.fr || "").trim();
     const frDescription = (descriptionLocalized.fr || seoDescriptionLocalized.fr || "").trim();
-    const hasFrAnyField = Boolean(frTitle || frDescription);
+    const frBody = (bodyLocalized.fr || [frTitle, frDescription].filter(Boolean).join("\n\n")).trim();
+    const hasFrAnyField = Boolean(frTitle || frDescription || frBody);
 
     const nextTitle = { ...titleLocalized };
     const nextSeoTitle = { ...seoTitleLocalized };
     const nextDescription = { ...descriptionLocalized };
     const nextSeoDescription = { ...seoDescriptionLocalized };
+    const nextBody = { ...bodyLocalized };
     let localizedChanged = false;
 
     for (const target of TARGETS) {
       const neededTexts = [];
-      const needTitle = Boolean(frTitle && (!nextTitle[target.locale] || !nextSeoTitle[target.locale]));
-      const needDescription = Boolean(
-        frDescription && (!nextDescription[target.locale] || !nextSeoDescription[target.locale]),
+      const needTitle = Boolean(
+        frTitle && (needsTranslation(frTitle, nextTitle[target.locale]) || needsTranslation(frTitle, nextSeoTitle[target.locale])),
       );
+      const needDescription = Boolean(
+        frDescription &&
+          (needsTranslation(frDescription, nextDescription[target.locale]) ||
+            needsTranslation(frDescription, nextSeoDescription[target.locale])),
+      );
+      const needBody = Boolean(frBody && needsTranslation(frBody, nextBody[target.locale]));
 
       if (needTitle) neededTexts.push(frTitle);
       if (needDescription) neededTexts.push(frDescription);
+      if (needBody) neededTexts.push(frBody);
       if (neededTexts.length === 0) continue;
 
       const uniqueNeededTexts = Array.from(new Set(neededTexts));
@@ -288,11 +308,11 @@ async function main() {
       if (needTitle) {
         const translated = translatedBySource[frTitle];
         if (translated) {
-          if (!nextTitle[target.locale]) {
+          if (needsTranslation(frTitle, nextTitle[target.locale])) {
             nextTitle[target.locale] = translated;
             fieldsPatched += 1;
           }
-          if (!nextSeoTitle[target.locale]) {
+          if (needsTranslation(frTitle, nextSeoTitle[target.locale])) {
             nextSeoTitle[target.locale] = translated;
             fieldsPatched += 1;
           }
@@ -303,14 +323,23 @@ async function main() {
       if (needDescription) {
         const translated = translatedBySource[frDescription];
         if (translated) {
-          if (!nextDescription[target.locale]) {
+          if (needsTranslation(frDescription, nextDescription[target.locale])) {
             nextDescription[target.locale] = translated;
             fieldsPatched += 1;
           }
-          if (!nextSeoDescription[target.locale]) {
+          if (needsTranslation(frDescription, nextSeoDescription[target.locale])) {
             nextSeoDescription[target.locale] = translated;
             fieldsPatched += 1;
           }
+          localizedChanged = true;
+        }
+      }
+
+      if (needBody) {
+        const translated = translatedBySource[frBody];
+        if (translated && needsTranslation(frBody, nextBody[target.locale])) {
+          nextBody[target.locale] = translated;
+          fieldsPatched += 1;
           localizedChanged = true;
         }
       }
@@ -321,6 +350,7 @@ async function main() {
       patch.seoTitle = nextSeoTitle;
       patch.description = nextDescription;
       patch.seoDescription = nextSeoDescription;
+      patch.body = nextBody;
     }
 
     if (!hasFrAnyField) {

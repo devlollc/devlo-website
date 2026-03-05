@@ -4,27 +4,64 @@ import Link from "next/link";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { caseStudiesCards, caseStudiesSeo } from "@/content/masterfile.fr";
+import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 
-export function CaseStudiesMasterPage() {
+type CaseStudiesMasterPageProps = {
+  seo?: typeof caseStudiesSeo;
+  cards?: typeof caseStudiesCards;
+  locale?: SupportedLocale;
+};
+
+const copyByLocale: Record<
+  SupportedLocale,
+  {
+    openCase: (client: string) => string;
+    learnMore: string;
+  }
+> = {
+  fr: {
+    openCase: (client) => `Ouvrir l'étude de cas ${client}`,
+    learnMore: "En savoir plus →",
+  },
+  en: {
+    openCase: (client) => `Open case study ${client}`,
+    learnMore: "Learn more →",
+  },
+  de: {
+    openCase: (client) => `Fallstudie ${client} öffnen`,
+    learnMore: "Mehr erfahren →",
+  },
+  nl: {
+    openCase: (client) => `Open praktijkvoorbeeld ${client}`,
+    learnMore: "Meer informatie →",
+  },
+};
+
+export function CaseStudiesMasterPage({
+  seo = caseStudiesSeo,
+  cards = caseStudiesCards,
+  locale = "fr",
+}: CaseStudiesMasterPageProps) {
+  const copy = copyByLocale[locale];
   return (
     <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">
       <FadeInOnScroll>
         <h1 className="text-center text-4xl font-extrabold leading-[1.1] text-devlo-900 md:text-5xl lg:text-[56px]">
-          {caseStudiesSeo.h1}
+          {seo.h1}
         </h1>
       </FadeInOnScroll>
       <FadeInOnScroll delay={0.1}>
         <p className="mx-auto mt-5 max-w-[900px] text-center text-lg leading-8 text-neutral-600">
-          {caseStudiesSeo.subtitle}
+          {seo.subtitle}
         </p>
       </FadeInOnScroll>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {caseStudiesCards.map((study, index) => (
+        {cards.map((study, index) => (
           <FadeInOnScroll key={study.slug} delay={(index % 2) * 0.2}>
             <Link
-              href={`/etudes-de-cas/${study.slug}`}
-              aria-label={`Ouvrir l'étude de cas ${study.client}`}
+              href={resolvePathForLocale(`/etudes-de-cas/${study.slug}`, locale).path}
+              aria-label={copy.openCase(study.client)}
               className="group block overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-soft transition-all duration-300 hover:scale-[1.02] hover:shadow-panel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2"
             >
               <article>
@@ -78,7 +115,7 @@ export function CaseStudiesMasterPage() {
                   </div>
                   <p className="mt-4 text-sm font-medium text-neutral-600">{study.sector}</p>
                   <span className="mt-5 inline-flex text-sm font-semibold text-devlo-700 transition group-hover:text-devlo-900">
-                    En savoir plus →
+                    {copy.learnMore}
                   </span>
                 </div>
               </article>

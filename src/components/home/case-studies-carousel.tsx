@@ -4,13 +4,55 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 import type { CaseStudyCard } from "@/content/masterfile.fr";
 import { buttonClassName } from "@/components/ui/button";
+import { resolvePathForLocale, splitLocalePath } from "@/lib/i18n/slug-map";
 
 const VISIBLE = 3;
 
-export function CaseStudiesCarousel({ cards }: { cards: CaseStudyCard[] }) {
+type CaseStudiesCarouselProps = {
+  cards: CaseStudyCard[];
+  locale?: "fr" | "en" | "de" | "nl";
+};
+
+const copyByLocale = {
+  fr: {
+    prevCase: "Étude de cas précédente",
+    nextCase: "Étude de cas suivante",
+    prev: "Précédent",
+    next: "Suivant",
+    all: "Voir toutes les études de cas",
+  },
+  en: {
+    prevCase: "Previous case study",
+    nextCase: "Next case study",
+    prev: "Previous",
+    next: "Next",
+    all: "View all case studies",
+  },
+  de: {
+    prevCase: "Vorherige Fallstudie",
+    nextCase: "Nächste Fallstudie",
+    prev: "Zurück",
+    next: "Weiter",
+    all: "Alle Fallstudien ansehen",
+  },
+  nl: {
+    prevCase: "Vorige praktijkcase",
+    nextCase: "Volgende praktijkcase",
+    prev: "Vorige",
+    next: "Volgende",
+    all: "Alle praktijkvoorbeelden bekijken",
+  },
+} as const;
+
+export function CaseStudiesCarousel({ cards, locale }: CaseStudiesCarouselProps) {
+  const pathname = usePathname() ?? "/";
+  const currentLocale = locale ?? splitLocalePath(pathname).locale;
+  const copy = copyByLocale[currentLocale];
+
   const [index, setIndex] = useState(0);
 
   const prev = () => setIndex((i) => (i - 1 + cards.length) % cards.length);
@@ -27,7 +69,7 @@ export function CaseStudiesCarousel({ cards }: { cards: CaseStudyCard[] }) {
         <button
           type="button"
           onClick={prev}
-          aria-label="Étude de cas précédente"
+          aria-label={copy.prevCase}
           className="absolute left-0 top-1/2 z-10 hidden -translate-x-5 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white p-2 shadow-soft transition hover:border-devlo-600 hover:text-devlo-600 lg:flex"
         >
           <ChevronLeft className="h-5 w-5" />
@@ -38,7 +80,7 @@ export function CaseStudiesCarousel({ cards }: { cards: CaseStudyCard[] }) {
           {visible.map((card, i) => (
             <Link
               key={`${card.slug}-${i}`}
-              href={`/etudes-de-cas/${card.slug}`}
+              href={resolvePathForLocale(`/etudes-de-cas/${card.slug}`, currentLocale).path}
               className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel"
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-devlo-50">
@@ -70,7 +112,7 @@ export function CaseStudiesCarousel({ cards }: { cards: CaseStudyCard[] }) {
         <button
           type="button"
           onClick={next}
-          aria-label="Étude de cas suivante"
+          aria-label={copy.nextCase}
           className="absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 translate-x-5 items-center justify-center rounded-full border border-neutral-200 bg-white p-2 shadow-soft transition hover:border-devlo-600 hover:text-devlo-600 lg:flex"
         >
           <ChevronRight className="h-5 w-5" />
@@ -82,7 +124,7 @@ export function CaseStudiesCarousel({ cards }: { cards: CaseStudyCard[] }) {
         <button
           type="button"
           onClick={prev}
-          aria-label="Précédent"
+          aria-label={copy.prev}
           className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-soft"
         >
           <ChevronLeft className="h-4 w-4" />
@@ -90,7 +132,7 @@ export function CaseStudiesCarousel({ cards }: { cards: CaseStudyCard[] }) {
         <button
           type="button"
           onClick={next}
-          aria-label="Suivant"
+          aria-label={copy.next}
           className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-soft"
         >
           <ChevronRight className="h-4 w-4" />
@@ -99,8 +141,8 @@ export function CaseStudiesCarousel({ cards }: { cards: CaseStudyCard[] }) {
 
       {/* All studies link */}
       <div className="mt-8 text-center">
-        <Link href="/etudes-de-cas" className={buttonClassName("outline", "px-8 py-3 text-sm")}>
-          Voir toutes les études de cas
+        <Link href={resolvePathForLocale("/etudes-de-cas", currentLocale).path} className={buttonClassName("outline", "px-8 py-3 text-sm")}>
+          {copy.all}
         </Link>
       </div>
     </div>

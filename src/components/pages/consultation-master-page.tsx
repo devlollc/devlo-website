@@ -3,8 +3,12 @@ import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { HubspotForm } from "@/components/ui/hubspot-form";
 import { consultationContent } from "@/content/masterfile.fr";
 
-export function ConsultationMasterPage() {
-  const c = consultationContent;
+type ConsultationMasterPageProps = {
+  content?: typeof consultationContent;
+};
+
+export function ConsultationMasterPage({ content = consultationContent }: ConsultationMasterPageProps) {
+  const c = content;
 
   return (
     <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">

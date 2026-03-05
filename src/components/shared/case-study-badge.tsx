@@ -3,16 +3,27 @@ import Link from "next/link";
 
 import { CountryFlags, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { buildClientMonogram, getCaseStudyBrandAssetByClient } from "@/content/service-brand-assets";
+import { localizeGeoTermsInString } from "@/lib/i18n/geo-terms";
+import { type SupportedLocale } from "@/lib/i18n/slug-map";
 
 type CaseStudyBadgeProps = {
   client: string;
   result: string;
   details: string;
   href?: string;
+  locale?: SupportedLocale;
 };
 
-export function CaseStudyBadge({ client, result, details, href }: CaseStudyBadgeProps) {
+const verifiedCopyByLocale: Record<SupportedLocale, string> = {
+  fr: "Cas client vérifié",
+  en: "Verified client case",
+  de: "Verifizierter Kundenfall",
+  nl: "Geverifieerde klantcase",
+};
+
+export function CaseStudyBadge({ client, result, details, href, locale = "fr" }: CaseStudyBadgeProps) {
   const brand = getCaseStudyBrandAssetByClient(client);
+  const localizedDetails = localizeGeoTermsInString(details, locale);
 
   const content = (
     <ServicesSurfaceCard className="h-full p-4 transition-all duration-200 hover:border-devlo-600/35 hover:shadow-panel">
@@ -21,7 +32,7 @@ export function CaseStudyBadge({ client, result, details, href }: CaseStudyBadge
         <CountryFlags countries={brand?.countries ?? ["EU"]} showMore={Boolean(brand?.showMoreCountries)} />
       </div>
       <h3 className="mt-3 text-lg font-semibold leading-snug text-devlo-900">{result}</h3>
-      <p className="mt-2 text-sm leading-6 text-neutral-600">{details}</p>
+      <p className="mt-2 text-sm leading-6 text-neutral-600">{localizedDetails}</p>
 
       <div className="mt-4 flex items-center gap-2 border-t border-neutral-100 pt-3">
         {brand?.logo ? (
@@ -33,7 +44,7 @@ export function CaseStudyBadge({ client, result, details, href }: CaseStudyBadge
             {buildClientMonogram(client)}
           </div>
         )}
-        <span className="text-xs font-semibold text-neutral-700">Cas client vérifié</span>
+        <span className="text-xs font-semibold text-neutral-700">{verifiedCopyByLocale[locale]}</span>
       </div>
     </ServicesSurfaceCard>
   );

@@ -9,6 +9,8 @@ import { buttonClassName } from "@/components/ui/button";
 import { HubspotForm } from "@/components/ui/hubspot-form";
 import { WistiaThumbnailTrigger } from "@/components/ui/wistia-thumbnail-trigger";
 import { caseStudiesCards, consultationContent } from "@/content/masterfile.fr";
+import { localizeGeoTermsInObject } from "@/lib/i18n/geo-terms";
+import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { type CaseStudy, type CaseStudySection, caseStudyBySlug } from "@/lib/case-studies";
 import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
 
@@ -25,7 +27,141 @@ const anchorIds = {
   contactForm: "contact-form",
 } as const;
 
-const unifiedCtaLabel = "Obtenir un plan outbound similaire lors d’une rencontre";
+const copyByLocale: Record<
+  SupportedLocale,
+  {
+    unifiedCtaLabel: string;
+    subnavAbout: string;
+    subnavChallenges: string;
+    subnavSolutions: string;
+    subnavResults: string;
+    subnavLearnings: string;
+    subnavTestimonial: string;
+    subnavContact: string;
+    backToCaseStudies: string;
+    caseStudyBadge: string;
+    campaignDetails: string;
+    keyResults: string;
+    observedKpis: string;
+    videoTestimonial: (client: string) => string;
+    conversion: string;
+    conversionDescription: string;
+    kpis: string;
+    contact: string;
+    contactTitle: string;
+    contactDescription: string;
+    outcomes: string;
+    fallbackSolutionTitle: string;
+    navigationAriaLabel: string;
+  }
+> = {
+  fr: {
+    unifiedCtaLabel: "Obtenir un plan outbound similaire lors d’une rencontre",
+    subnavAbout: "À propos",
+    subnavChallenges: "Défis du client",
+    subnavSolutions: "Nos solutions",
+    subnavResults: "Résultats",
+    subnavLearnings: "Principaux enseignements",
+    subnavTestimonial: "Témoignage",
+    subnavContact: "Contact",
+    backToCaseStudies: "Études de cas",
+    caseStudyBadge: "Étude de cas",
+    campaignDetails: "Détails de campagne",
+    keyResults: "Résultats clés",
+    observedKpis: "KPIs observés",
+    videoTestimonial: (client) => `Témoignage vidéo ${client}`,
+    conversion: "Conversion",
+    conversionDescription:
+      "Planifiez une rencontre pour obtenir un plan outbound adapté à votre marché et vos objectifs commerciaux.",
+    kpis: "KPIs",
+    contact: "Contact",
+    contactTitle: "Comment obtenir plus de rendez-vous : parlons-en",
+    contactDescription: "Partagez vos objectifs et recevez un plan outbound concret, priorisé pour votre marché.",
+    outcomes: "Résultats",
+    fallbackSolutionTitle: "Nos solutions",
+    navigationAriaLabel: "Navigation de l’étude de cas",
+  },
+  en: {
+    unifiedCtaLabel: "Get a similar outbound plan during a meeting",
+    subnavAbout: "About",
+    subnavChallenges: "Client challenges",
+    subnavSolutions: "Our solutions",
+    subnavResults: "Results",
+    subnavLearnings: "Key learnings",
+    subnavTestimonial: "Testimonial",
+    subnavContact: "Contact",
+    backToCaseStudies: "Case studies",
+    caseStudyBadge: "Case study",
+    campaignDetails: "Campaign details",
+    keyResults: "Key results",
+    observedKpis: "Observed KPIs",
+    videoTestimonial: (client) => `${client} video testimonial`,
+    conversion: "Conversion",
+    conversionDescription:
+      "Book a call to get an outbound plan tailored to your market and commercial goals.",
+    kpis: "KPIs",
+    contact: "Contact",
+    contactTitle: "How to get more meetings: let’s talk",
+    contactDescription: "Share your goals and receive a concrete outbound plan prioritized for your market.",
+    outcomes: "Results",
+    fallbackSolutionTitle: "Our solutions",
+    navigationAriaLabel: "Case study navigation",
+  },
+  de: {
+    unifiedCtaLabel: "Einen ähnlichen Outbound-Plan im Gespräch erhalten",
+    subnavAbout: "Überblick",
+    subnavChallenges: "Kundenherausforderungen",
+    subnavSolutions: "Unsere Lösungen",
+    subnavResults: "Ergebnisse",
+    subnavLearnings: "Wichtigste Learnings",
+    subnavTestimonial: "Kundenstimme",
+    subnavContact: "Kontakt",
+    backToCaseStudies: "Fallstudien",
+    caseStudyBadge: "Fallstudie",
+    campaignDetails: "Kampagnendetails",
+    keyResults: "Wichtige Ergebnisse",
+    observedKpis: "Beobachtete KPIs",
+    videoTestimonial: (client) => `Video-Testimonial ${client}`,
+    conversion: "Conversion",
+    conversionDescription:
+      "Vereinbaren Sie ein Gespräch, um einen Outbound-Plan für Ihren Markt und Ihre Vertriebsziele zu erhalten.",
+    kpis: "KPIs",
+    contact: "Kontakt",
+    contactTitle: "Mehr Termine erzielen: Sprechen wir darüber",
+    contactDescription:
+      "Teilen Sie Ihre Ziele und erhalten Sie einen konkreten Outbound-Plan, priorisiert für Ihren Markt.",
+    outcomes: "Ergebnisse",
+    fallbackSolutionTitle: "Unsere Lösungen",
+    navigationAriaLabel: "Fallstudien-Navigation",
+  },
+  nl: {
+    unifiedCtaLabel: "Ontvang een gelijkaardig outboundplan tijdens een gesprek",
+    subnavAbout: "Overzicht",
+    subnavChallenges: "Uitdagingen van de klant",
+    subnavSolutions: "Onze oplossingen",
+    subnavResults: "Resultaten",
+    subnavLearnings: "Belangrijkste learnings",
+    subnavTestimonial: "Getuigenis",
+    subnavContact: "Contact",
+    backToCaseStudies: "Praktijkvoorbeelden",
+    caseStudyBadge: "Praktijkcase",
+    campaignDetails: "Campagnedetails",
+    keyResults: "Belangrijkste resultaten",
+    observedKpis: "Geobserveerde KPI's",
+    videoTestimonial: (client) => `Videotestimonial ${client}`,
+    conversion: "Conversie",
+    conversionDescription:
+      "Plan een gesprek om een outboundplan te krijgen dat is afgestemd op jouw markt en commerciële doelen.",
+    kpis: "KPI's",
+    contact: "Contact",
+    contactTitle: "Meer afspraken krijgen: laten we praten",
+    contactDescription:
+      "Deel je doelen en ontvang een concreet outboundplan, geprioriteerd voor jouw markt.",
+    outcomes: "Resultaten",
+    fallbackSolutionTitle: "Onze oplossingen",
+    navigationAriaLabel: "Navigatie praktijkcase",
+  },
+};
 
 function normalizeHeading(value: string) {
   return value.toLowerCase();
@@ -208,10 +344,28 @@ function NarrativeCard({
   );
 }
 
-export function CaseStudyMasterPage({ slug }: { slug: string }) {
+type CaseStudyMasterPageProps = {
+  slug: string;
+  caseStudiesCardsData?: typeof caseStudiesCards;
+  caseStudyBySlugData?: Record<string, CaseStudy>;
+  consultationData?: typeof consultationContent;
+  locale?: SupportedLocale;
+};
+
+export function CaseStudyMasterPage({
+  slug,
+  caseStudiesCardsData = caseStudiesCards,
+  caseStudyBySlugData = caseStudyBySlug,
+  consultationData = consultationContent,
+  locale = "fr",
+}: CaseStudyMasterPageProps) {
+  const copy = copyByLocale[locale];
   const canonicalSlug = resolveCaseStudyCanonicalSlug(slug);
-  const detailedStudy = caseStudyBySlug[canonicalSlug] ?? caseStudyBySlug[slug];
-  const cardStudy = caseStudiesCards.find((item) => item.slug === slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
+  const detailedStudyRaw = caseStudyBySlugData[canonicalSlug] ?? caseStudyBySlugData[slug];
+  const detailedStudy = detailedStudyRaw ? localizeGeoTermsInObject(detailedStudyRaw, locale) : null;
+  const cardStudy =
+    caseStudiesCardsData.find((item) => item.slug === slug) ??
+    caseStudiesCardsData.find((item) => item.slug === canonicalSlug);
   const study =
     cardStudy ??
     (detailedStudy
@@ -312,14 +466,14 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
   const remainingNarrativeSections = visibleSections.filter((section) => !consumedHeadings.has(section.heading));
 
   const subnavItems = [
-    (aboutSection || contextSection) ? { id: aboutSection ? anchorIds.about : anchorIds.context, label: "À propos" } : null,
+    (aboutSection || contextSection) ? { id: aboutSection ? anchorIds.about : anchorIds.context, label: copy.subnavAbout } : null,
     icpSection ? { id: anchorIds.icp, label: "ICP" } : null,
-    challengeSection ? { id: anchorIds.challenge, label: "Défis du client" } : null,
-    (primarySolutionsSection || methodSteps.length) ? { id: anchorIds.solutions, label: "Nos solutions" } : null,
-    resultSection ? { id: anchorIds.results, label: "Résultats" } : null,
-    primaryLearningsSection ? { id: anchorIds.learnings, label: "Principaux enseignements" } : null,
-    testimonialSection ? { id: anchorIds.testimonial, label: "Témoignage" } : null,
-    { id: anchorIds.contact, label: "Contact" },
+    challengeSection ? { id: anchorIds.challenge, label: copy.subnavChallenges } : null,
+    (primarySolutionsSection || methodSteps.length) ? { id: anchorIds.solutions, label: copy.subnavSolutions } : null,
+    resultSection ? { id: anchorIds.results, label: copy.subnavResults } : null,
+    primaryLearningsSection ? { id: anchorIds.learnings, label: copy.subnavLearnings } : null,
+    testimonialSection ? { id: anchorIds.testimonial, label: copy.subnavTestimonial } : null,
+    { id: anchorIds.contact, label: copy.subnavContact },
   ].filter(Boolean) as { id: string; label: string }[];
 
   const heroImage = detailedStudy.heroImageUrl || study.banner;
@@ -345,8 +499,8 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start lg:gap-10">
           <div className="min-w-0">
             <FadeInOnScroll eager>
-              <Link href="/etudes-de-cas" className="inline-flex items-center rounded-full border border-devlo-100 bg-devlo-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-devlo-700 hover:text-devlo-900">
-                Études de cas
+              <Link href={resolvePathForLocale("/etudes-de-cas", locale).path} className="inline-flex items-center rounded-full border border-devlo-100 bg-devlo-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-devlo-700 hover:text-devlo-900">
+                {copy.backToCaseStudies}
               </Link>
             </FadeInOnScroll>
 
@@ -374,7 +528,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                   data-case-study-cta-variant="hero"
                   className={buttonClassName("primary", "w-full whitespace-normal px-5 py-3 text-left text-sm leading-6 sm:w-auto sm:text-center")}
                 >
-                  {unifiedCtaLabel}
+                  {copy.unifiedCtaLabel}
                 </Link>
               </div>
             </FadeInOnScroll>
@@ -407,7 +561,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                     <p className="truncate text-xs text-neutral-500">{detailedStudy.sector}</p>
                   </div>
                 </div>
-                <span className="rounded-full bg-devlo-900 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white">Étude de cas</span>
+                <span className="rounded-full bg-devlo-900 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white">{copy.caseStudyBadge}</span>
               </div>
               <div className="relative aspect-[16/10] bg-devlo-50">
                 <Image
@@ -429,7 +583,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
           <section className="mt-8 rounded-[22px] border border-neutral-200 bg-gradient-to-b from-white to-devlo-50/60 p-5 shadow-soft md:mt-10 md:p-6">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
               <article className="rounded-panel border border-neutral-200 bg-white p-5 shadow-[0_10px_24px_rgba(15,43,60,0.05)]">
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-devlo-700">Détails de campagne</h2>
+                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-devlo-700">{copy.campaignDetails}</h2>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   {detailedStudy.campaignDetails.map((detail) => (
                     <div key={`${detail.label}-${detail.value}`} className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
@@ -442,9 +596,9 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
 
               <article className={["rounded-panel border border-neutral-200 bg-white shadow-[0_10px_24px_rgba(15,43,60,0.05)]", isIddiStudy ? "p-4 md:p-5" : "p-5"].join(" ")}>
                 <div className="flex items-center justify-between gap-3">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-devlo-700">Résultats clés</h2>
+                  <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-devlo-700">{copy.keyResults}</h2>
                   <span className="hidden rounded-full border border-devlo-100 bg-devlo-50 px-3 py-1 text-[11px] font-semibold text-devlo-700 md:inline-flex">
-                    KPIs observés
+                    {copy.observedKpis}
                   </span>
                 </div>
                 <div className={["mt-4 grid sm:grid-cols-2", isIddiStudy ? "gap-2.5" : "gap-3"].join(" ")}>
@@ -486,7 +640,8 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
           <CaseStudyStickySubnav
             items={subnavItems}
             ctaHref={`#${anchorIds.contactForm}`}
-            ctaLabel={unifiedCtaLabel}
+            ctaLabel={copy.unifiedCtaLabel}
+            navigationAriaLabel={copy.navigationAriaLabel}
           />
 
           <div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_300px] xl:items-start">
@@ -517,7 +672,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
 
             {(primarySolutionsSection || methodSteps.length) ? (
               <FadeInOnScroll delay={0.12}>
-                <section id={anchorIds.solutions} className="scroll-mt-[170px] rounded-panel border border-neutral-200 bg-white p-7 shadow-soft md:p-9">
+            <section id={anchorIds.solutions} className="scroll-mt-[170px] rounded-panel border border-neutral-200 bg-white p-7 shadow-soft md:p-9">
                   {primarySolutionsSection ? (
                     <>
                       <h2 className="text-xl font-semibold tracking-tight text-devlo-900 md:text-2xl">{primarySolutionsSection.heading}</h2>
@@ -526,7 +681,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                       </div>
                     </>
                   ) : (
-                    <h2 className="text-xl font-semibold tracking-tight text-devlo-900 md:text-2xl">Nos solutions</h2>
+                    <h2 className="text-xl font-semibold tracking-tight text-devlo-900 md:text-2xl">{copy.fallbackSolutionTitle}</h2>
                   )}
 
                   {methodSteps.length ? (
@@ -621,7 +776,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                     <div className="mt-5 overflow-hidden rounded-2xl border border-neutral-200 bg-white">
                       <WistiaThumbnailTrigger
                         videoId={detailedStudy.testimonialVideo.wistiaMediaId}
-                        title={detailedStudy.testimonialVideo.title ?? `Témoignage vidéo ${detailedStudy.client}`}
+                        title={detailedStudy.testimonialVideo.title ?? copy.videoTestimonial(detailedStudy.client)}
                         previewSrc={detailedStudy.testimonialVideo.previewSrc}
                         previewAlt={detailedStudy.testimonialVideo.previewAlt}
                         sizes="(min-width: 1280px) 640px, (min-width: 768px) 80vw, 94vw"
@@ -671,9 +826,9 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
           <aside className="hidden xl:block">
             <div className="sticky top-[154px] space-y-4">
               <div className="rounded-panel border border-neutral-200 bg-white p-5 shadow-soft">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">Conversion</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">{copy.conversion}</p>
                 <p className="mt-2 text-sm leading-6 text-neutral-700">
-                  Planifiez une rencontre pour obtenir un plan outbound adapté à votre marché et vos objectifs commerciaux.
+                  {copy.conversionDescription}
                 </p>
                 <div className="mt-4 space-y-2">
                   <Link
@@ -682,13 +837,13 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                     data-case-study-cta-variant="sidebar"
                     className={buttonClassName("primary", "w-full justify-center px-4 py-2.5 text-xs")}
                   >
-                    {unifiedCtaLabel}
+                    {copy.unifiedCtaLabel}
                   </Link>
                 </div>
               </div>
 
               <div className="rounded-panel border border-neutral-200 bg-white p-5 shadow-soft">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">KPIs</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">{copy.kpis}</p>
                 <ul className="mt-3 space-y-2 text-sm text-neutral-700">
                   {detailedStudy.resultHighlights.slice(0, 4).map((line, index) => (
                     <li key={`${detailedStudy.slug}-sidebar-kpi-${index}`} className="flex gap-2">
@@ -709,17 +864,17 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
           <div className="mx-auto max-w-[980px] rounded-[22px] border border-neutral-200 bg-white p-6 shadow-panel md:p-8">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
               <div className="min-w-0">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">Contact</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">{copy.contact}</p>
                 <h2 className="mt-2 text-2xl font-semibold tracking-tight text-devlo-900 md:text-3xl">
-                  Comment obtenir plus de rendez-vous : parlons-en
+                  {copy.contactTitle}
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-neutral-600 md:text-base md:leading-8">
-                  Partagez vos objectifs et recevez un plan outbound concret, priorisé pour votre marché.
+                  {copy.contactDescription}
                 </p>
 
                 <div className="mt-5 rounded-2xl border border-neutral-200 bg-neutral-50/70 p-4 md:p-5">
                   <article className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
-                    <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">Résultats</h3>
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">{copy.outcomes}</h3>
                     <ul className="mt-2 space-y-2 text-sm leading-6 text-neutral-700">
                       {outcomeItems.map((outcome, index) => (
                         <li key={`${detailedStudy.slug}-outcome-${index}`} className="flex gap-2">
@@ -738,16 +893,16 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                     data-case-study-cta-variant="final"
                     className={buttonClassName("primary", "w-full whitespace-normal px-5 py-3 text-left text-sm leading-6 sm:w-auto sm:text-center")}
                   >
-                    {unifiedCtaLabel}
+                    {copy.unifiedCtaLabel}
                   </Link>
                 </div>
               </div>
 
               <div id={anchorIds.contactForm} className="scroll-mt-[170px] rounded-2xl border border-neutral-200 bg-neutral-50/60 p-4 md:p-5">
                 <HubspotForm
-                  portalId={consultationContent.hubspot.portalId}
-                  formId={consultationContent.hubspot.formId}
-                  region={consultationContent.hubspot.region}
+                  portalId={consultationData.hubspot.portalId}
+                  formId={consultationData.hubspot.formId}
+                  region={consultationData.hubspot.region}
                   targetId={`hubspot-case-${study.slug}`}
                 />
               </div>

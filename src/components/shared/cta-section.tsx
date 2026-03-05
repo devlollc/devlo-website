@@ -1,11 +1,33 @@
 import Link from "next/link";
+import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 
 type CTASectionProps = {
+  locale?: SupportedLocale;
   title: string;
   subtitle: string;
 };
 
-export function CTASection({ title, subtitle }: CTASectionProps) {
+const copyByLocale: Record<SupportedLocale, { ctaConsultation: string; ctaCaseStudies: string }> = {
+  fr: {
+    ctaConsultation: "Réserver une consultation gratuite",
+    ctaCaseStudies: "Voir les études de cas",
+  },
+  en: {
+    ctaConsultation: "Book a free consultation",
+    ctaCaseStudies: "View case studies",
+  },
+  de: {
+    ctaConsultation: "Kostenlose Beratung buchen",
+    ctaCaseStudies: "Fallstudien ansehen",
+  },
+  nl: {
+    ctaConsultation: "Gratis consultatie boeken",
+    ctaCaseStudies: "Praktijkvoorbeelden bekijken",
+  },
+};
+
+export function CTASection({ locale = "fr", title, subtitle }: CTASectionProps) {
+  const copy = copyByLocale[locale];
   return (
     <section className="border-t border-neutral-200 bg-white py-16 md:py-18">
       <div className="mx-auto max-w-5xl px-6 text-center">
@@ -13,16 +35,16 @@ export function CTASection({ title, subtitle }: CTASectionProps) {
         <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-neutral-600 md:text-lg">{subtitle}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
-            href="/consultation"
+            href={resolvePathForLocale("/consultation", locale).path}
             className="rounded-lg bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--primary-dark)]"
           >
-            Réserver une consultation gratuite
+            {copy.ctaConsultation}
           </Link>
           <Link
-            href="/etudes-de-cas"
+            href={resolvePathForLocale("/etudes-de-cas", locale).path}
             className="rounded-lg border border-neutral-300 px-6 py-3 text-sm font-semibold text-devlo-900 transition hover:border-devlo-700/40 hover:text-devlo-700"
           >
-            Voir les études de cas
+            {copy.ctaCaseStudies}
           </Link>
         </div>
       </div>

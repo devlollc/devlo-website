@@ -253,6 +253,12 @@ function localizedObject(frValue) {
   return frValue ? { fr: frValue } : null;
 }
 
+function buildSeedBody(frTitle, frDescription) {
+  const parts = [frTitle, frDescription].map((value) => (value || "").trim()).filter(Boolean);
+  if (parts.length === 0) return null;
+  return parts.join("\n\n");
+}
+
 async function main() {
   const csvMetadataByRoute = parseChatSeoMap();
   const crawlMetadataByRoute = parseCrawlSeoMap();
@@ -308,6 +314,7 @@ async function main() {
     const frTitle = metadata?.title || null;
     const frDescription = metadata?.description || null;
     const frOgImage = normalizeOgImage(metadata?.ogImage || null);
+    const frBody = buildSeedBody(frTitle, frDescription);
 
     const doc = {
       _id: sanityIdFromPageId(pageId),
@@ -324,6 +331,7 @@ async function main() {
       seoTitle: localizedObject(frTitle),
       seoDescription: localizedObject(frDescription),
       ogImage: localizedObject(frOgImage),
+      body: localizedObject(frBody),
       updatedAt: new Date().toISOString(),
     };
 

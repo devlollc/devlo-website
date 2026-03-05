@@ -1,26 +1,29 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import HomePageRoute from "@/app/page";
-import AcademyPageRoute from "@/app/academy/page";
-import ConsultationPageRoute from "@/app/consultation/page";
-import ConditionsPageRoute from "@/app/conditions/page";
-import ServicesHubPageRoute from "@/app/services/page";
-import CaseStudiesPageRoute from "@/app/etudes-de-cas/page";
 import { generateMetadata as generateCaseStudyFrMetadata } from "@/app/etudes-de-cas/[slug]/page";
+import { AcademyMasterPage } from "@/components/pages/academy-master-page";
+import { CaseStudiesMasterPage } from "@/components/pages/case-studies-master-page";
 import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
+import { ConditionsMasterPage } from "@/components/pages/conditions-master-page";
+import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
+import { HomePage } from "@/components/pages/home-page";
+import { ServicesHubPage as ServicesHubView } from "@/components/pages/services-hub-page";
 import { ServicePageTemplate } from "@/components/pages/service-page";
+import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { SERVICE_PAGE_DATA, type ServiceSlug } from "@/content/services";
 import { academySeo, caseStudiesSeo, conditionsSeo, consultationSeo, homeSeo } from "@/content/masterfile.fr";
-import { getSanityLocalizedSeo } from "@/lib/i18n/localized-seo";
+import { getLocalizedCaseStudyBySlug } from "@/lib/i18n/case-studies-content";
+import { getLocalizedMasterfileContent } from "@/lib/i18n/masterfile-content";
+import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
+import { getSanityLocalizedPageData, getSanityLocalizedSeo } from "@/lib/i18n/localized-seo";
 import {
+  findEntryByFrPath,
   findEntryByLocalePath,
   normalizePath,
-  slugMap,
-  supportedLocales,
   type SupportedLocale,
 } from "@/lib/i18n/slug-map";
-import { defaultOgImagePath, resolveOgImagePath, toAbsoluteUrl } from "@/lib/seo/metadata";
+import { defaultOgImagePath, resolveOgImagePath, stripDevloSuffix, toAbsoluteUrl } from "@/lib/seo/metadata";
 
 type Params = {
   params: {
@@ -28,6 +31,8 @@ type Params = {
     slug?: string[];
   };
 };
+
+export const dynamic = "force-dynamic";
 
 const consultationAliases = new Set([
   "/contact",
@@ -53,8 +58,12 @@ const openGraphLocaleByLanguage: Record<SupportedLocale, string> = {
   nl: "nl_NL",
 };
 
-function isSupportedLocale(value: string): value is Exclude<SupportedLocale, "fr"> {
+function isPrefixedLocale(value: string): value is Exclude<SupportedLocale, "fr"> {
   return value === "en" || value === "de" || value === "nl";
+}
+
+function normalizeTextForCompare(value: string | undefined): string {
+  return (value || "").replace(/\s+/g, " ").trim().toLowerCase();
 }
 
 function mapFrPathToRenderable(path: string): string {
@@ -71,19 +80,31 @@ function mapFrPathToRenderable(path: string): string {
 }
 
 function resolveRoute(locale: string, slug: string[] | undefined) {
-  if (!isSupportedLocale(locale)) return null;
+  if (isPrefixedLocale(locale)) {
+    const relativePath = slug && slug.length > 0 ? `/${slug.join("/")}` : "/";
+    const localePath = relativePath === "/" ? `/${locale}` : `/${locale}${relativePath}`;
+    const found = findEntryByLocalePath(locale, localePath);
+    if (!found || !found.entry.fr) return null;
 
-  const relativePath = slug && slug.length > 0 ? `/${slug.join("/")}` : "/";
-  const localePath = relativePath === "/" ? `/${locale}` : `/${locale}${relativePath}`;
-  const found = findEntryByLocalePath(locale, localePath);
-  if (!found || !found.entry.fr) return null;
+    return {
+      locale,
+      localePath: normalizePath(localePath),
+      pageId: found.pageId,
+      entry: found.entry,
+      frPath: mapFrPathToRenderable(found.entry.fr),
+    };
+  }
+
+  const frCandidatePath = normalizePath(`/${[locale, ...(slug ?? [])].join("/")}`);
+  const frMatch = findEntryByFrPath(frCandidatePath);
+  if (!frMatch || !frMatch.entry.fr) return null;
 
   return {
-    locale,
-    localePath: normalizePath(localePath),
-    pageId: found.pageId,
-    entry: found.entry,
-    frPath: mapFrPathToRenderable(found.entry.fr),
+    locale: "fr" as const,
+    localePath: normalizePath(frMatch.entry.fr),
+    pageId: frMatch.pageId,
+    entry: frMatch.entry,
+    frPath: mapFrPathToRenderable(frMatch.entry.fr),
   };
 }
 
@@ -157,29 +178,87 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
   };
 }
 
-export function generateStaticParams() {
-  const seen = new Set<string>();
-  const params: Array<{ locale: string; slug?: string[] }> = [];
+function resolveLocalizedServiceFromPath(
+  frPath: string,
+  locale: SupportedLocale,
+) {
+  if (frPath === "/services") {
+    const content = getLocalizedServicesContent(locale);
+    return {
+      kind: "hub" as const,
+      cards: content.SERVICE_HUB_CARDS,
+      copy: content.hubCopy,
+      caseStudies: content.ALL_CASE_STUDIES,
+    };
+  }
 
-  for (const entry of Object.values(slugMap)) {
-    for (const locale of supportedLocales) {
-      if (locale === "fr") continue;
-      const localePath = entry[locale];
-      if (!localePath) continue;
-      const normalizedLocalePath = normalizePath(localePath);
-      const expectedPrefix = `/${locale}`;
-      if (!(normalizedLocalePath === expectedPrefix || normalizedLocalePath.startsWith(`${expectedPrefix}/`))) continue;
-
-      const relativePath = normalizePath(normalizedLocalePath.replace(expectedPrefix, "") || "/");
-      const slug = relativePath === "/" ? [] : relativePath.slice(1).split("/");
-      const key = `${locale}|${slug.join("/")}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
-      params.push({ locale, slug });
+  if (frPath.startsWith("/services/")) {
+    const serviceSlug = frPath.slice("/services/".length) as ServiceSlug;
+    const content = getLocalizedServicesContent(locale);
+    const localizedService = content.SERVICE_PAGE_DATA[serviceSlug];
+    if (localizedService) {
+      return {
+        kind: "detail" as const,
+        service: localizedService,
+      };
     }
   }
 
-  return params;
+  return null;
+}
+
+function resolveLocalizedTemplateFromPath(
+  frPath: string,
+  locale: SupportedLocale,
+) {
+  const content = getLocalizedMasterfileContent(locale);
+
+  if (frPath === "/") {
+    return {
+      kind: "home" as const,
+      content,
+    };
+  }
+
+  if (frPath === "/consultation") {
+    return {
+      kind: "consultation" as const,
+      content,
+    };
+  }
+
+  if (frPath === "/academy") {
+    return {
+      kind: "academy" as const,
+      content,
+    };
+  }
+
+  if (frPath === "/conditions") {
+    return {
+      kind: "conditions" as const,
+      content,
+    };
+  }
+
+  if (frPath === "/etudes-de-cas") {
+    return {
+      kind: "case-studies" as const,
+      content,
+    };
+  }
+
+  if (frPath.startsWith("/etudes-de-cas/")) {
+    const caseStudySlug = frPath.slice("/etudes-de-cas/".length);
+    return {
+      kind: "case-study" as const,
+      content,
+      slug: caseStudySlug,
+      bySlug: getLocalizedCaseStudyBySlug(locale),
+    };
+  }
+
+  return null;
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
@@ -190,7 +269,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   const baseSeo = resolveFrSeo(resolved.frPath);
   const sanitySeo = await getSanityLocalizedSeo(resolved.pageId, resolved.locale);
-  const title = sanitySeo?.title ?? baseSeo.title;
+  const title = stripDevloSuffix(sanitySeo?.title ?? baseSeo.title);
   const description = sanitySeo?.description ?? baseSeo.description;
   const imagePath = resolveOgImagePath(sanitySeo?.ogImage ?? baseSeo.imagePath ?? defaultOgImagePath);
   const alternates = buildAlternates(resolved.entry, resolved.frPath);
@@ -232,32 +311,114 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-export default function LocalizedPage({ params }: Params) {
+export default async function LocalizedRoutePage({ params }: Params) {
   const resolved = resolveRoute(params.locale, params.slug);
   if (!resolved) {
     notFound();
   }
 
   const frPath = resolved.frPath;
-
-  if (frPath === "/") return <HomePageRoute />;
-  if (frPath === "/academy") return <AcademyPageRoute />;
-  if (frPath === "/consultation") return <ConsultationPageRoute />;
-  if (frPath === "/conditions") return <ConditionsPageRoute />;
-  if (frPath === "/services") return <ServicesHubPageRoute />;
-  if (frPath === "/etudes-de-cas") return <CaseStudiesPageRoute />;
-
-  if (frPath.startsWith("/services/")) {
-    const serviceSlug = frPath.slice("/services/".length) as ServiceSlug;
-    const service = SERVICE_PAGE_DATA[serviceSlug];
-    if (!service) notFound();
-    return <ServicePageTemplate service={service} />;
+  const localizedServiceView = resolveLocalizedServiceFromPath(frPath, resolved.locale);
+  if (localizedServiceView?.kind === "hub") {
+    return (
+      <ServicesHubView
+        cards={localizedServiceView.cards}
+        copy={localizedServiceView.copy}
+        caseStudies={localizedServiceView.caseStudies}
+        locale={resolved.locale}
+      />
+    );
   }
+  if (localizedServiceView?.kind === "detail") {
+    return <ServicePageTemplate service={localizedServiceView.service} locale={resolved.locale} />;
+  }
+
+  const localizedTemplate = resolveLocalizedTemplateFromPath(frPath, resolved.locale);
+  if (localizedTemplate?.kind === "home") {
+    return (
+      <HomePage
+        content={localizedTemplate.content.homeContent as Parameters<typeof HomePage>[0]["content"]}
+        studies={localizedTemplate.content.caseStudiesCards as Parameters<typeof HomePage>[0]["studies"]}
+        locale={resolved.locale}
+      />
+    );
+  }
+  if (localizedTemplate?.kind === "consultation") {
+    return (
+      <ConsultationMasterPage
+        content={
+          localizedTemplate.content.consultationContent as Parameters<typeof ConsultationMasterPage>[0]["content"]
+        }
+      />
+    );
+  }
+  if (localizedTemplate?.kind === "academy") {
+    return (
+      <AcademyMasterPage
+        content={localizedTemplate.content.academyContent as Parameters<typeof AcademyMasterPage>[0]["content"]}
+        sharedHomeContent={
+          localizedTemplate.content.homeContent as Parameters<typeof AcademyMasterPage>[0]["sharedHomeContent"]
+        }
+      />
+    );
+  }
+  if (localizedTemplate?.kind === "conditions") {
+    return (
+      <ConditionsMasterPage
+        content={localizedTemplate.content.conditionsContent as Parameters<typeof ConditionsMasterPage>[0]["content"]}
+      />
+    );
+  }
+  if (localizedTemplate?.kind === "case-studies") {
+    return (
+      <CaseStudiesMasterPage
+        seo={localizedTemplate.content.caseStudiesSeo as Parameters<typeof CaseStudiesMasterPage>[0]["seo"]}
+        cards={localizedTemplate.content.caseStudiesCards as Parameters<typeof CaseStudiesMasterPage>[0]["cards"]}
+        locale={resolved.locale}
+      />
+    );
+  }
+  if (localizedTemplate?.kind === "case-study") {
+    return (
+      <CaseStudyMasterPage
+        slug={localizedTemplate.slug}
+        caseStudiesCardsData={
+          localizedTemplate.content.caseStudiesCards as Parameters<typeof CaseStudyMasterPage>[0]["caseStudiesCardsData"]
+        }
+        caseStudyBySlugData={localizedTemplate.bySlug}
+        consultationData={
+          localizedTemplate.content.consultationContent as Parameters<typeof CaseStudyMasterPage>[0]["consultationData"]
+        }
+        locale={resolved.locale}
+      />
+    );
+  }
+
+  const pageData = await getSanityLocalizedPageData(resolved.pageId, resolved.locale);
+
+  const baseSeo = resolveFrSeo(frPath);
+  let localizedData = pageData;
 
   if (frPath.startsWith("/etudes-de-cas/")) {
     const caseStudySlug = frPath.slice("/etudes-de-cas/".length);
-    return <CaseStudyMasterPage slug={caseStudySlug} />;
+    const caseStudyFallback = await getSanityLocalizedPageData(`case-study:${caseStudySlug}`, resolved.locale);
+    if (
+      caseStudyFallback &&
+      (!localizedData?.title || normalizeTextForCompare(localizedData.title) === normalizeTextForCompare(baseSeo.title))
+    ) {
+      localizedData = caseStudyFallback;
+    }
   }
 
-  return <HomePageRoute />;
+  const localizedTitle = localizedData?.title ?? baseSeo.title;
+  const localizedDescription = localizedData?.description ?? baseSeo.description;
+  const localizedBody = localizedData?.body ?? [localizedDescription].filter(Boolean).join("\n\n");
+
+  return (
+    <LocalizedContentPage
+      title={localizedTitle}
+      description={localizedDescription}
+      body={localizedBody}
+    />
+  );
 }

@@ -3,11 +3,15 @@ import Link from "next/link";
 
 import { CountryFlags, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { buildClientMonogram, getCaseStudyBrandAsset } from "@/content/service-brand-assets";
-import { ALL_CASE_STUDIES, type ServiceTag } from "@/content/services";
+import { ALL_CASE_STUDIES, type CaseStudyCard, type ServiceTag } from "@/content/services";
+import { localizeGeoTermsInString } from "@/lib/i18n/geo-terms";
+import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 
 type CaseStudyGridProps = {
   filterTag?: ServiceTag;
   limit?: number;
+  caseStudies?: CaseStudyCard[];
+  locale?: SupportedLocale;
 };
 
 const tagColors: Record<ServiceTag, string> = {
@@ -23,10 +27,10 @@ const tagColors: Record<ServiceTag, string> = {
   "crm-delivrabilite": "bg-white text-gray-700 border-gray-200",
 };
 
-export function CaseStudyGrid({ filterTag, limit }: CaseStudyGridProps) {
+export function CaseStudyGrid({ filterTag, limit, caseStudies = ALL_CASE_STUDIES, locale = "fr" }: CaseStudyGridProps) {
   const filtered = filterTag
-    ? ALL_CASE_STUDIES.filter((caseStudy) => caseStudy.tags.includes(filterTag))
-    : ALL_CASE_STUDIES;
+    ? caseStudies.filter((caseStudy) => caseStudy.tags.includes(filterTag))
+    : caseStudies;
 
   const displayed = limit ? filtered.slice(0, limit) : filtered;
 
@@ -36,7 +40,7 @@ export function CaseStudyGrid({ filterTag, limit }: CaseStudyGridProps) {
         const brand = getCaseStudyBrandAsset(caseStudy.slug);
 
         return (
-          <Link key={caseStudy.slug} href={caseStudy.href} className="group">
+          <Link key={caseStudy.slug} href={resolvePathForLocale(caseStudy.href, locale).path} className="group">
             <ServicesSurfaceCard className="h-full p-5 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-devlo-600/35 group-hover:shadow-panel">
               <div className="mb-4 flex items-start justify-between gap-3">
                 <span
@@ -78,7 +82,7 @@ export function CaseStudyGrid({ filterTag, limit }: CaseStudyGridProps) {
                   )}
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold text-devlo-900">{caseStudy.client}</p>
-                    <p className="truncate text-xs text-neutral-500">{caseStudy.region}</p>
+                    <p className="truncate text-xs text-neutral-500">{localizeGeoTermsInString(caseStudy.region, locale)}</p>
                   </div>
                   <span className="ml-auto text-sm font-semibold text-devlo-700 transition group-hover:translate-x-0.5">→</span>
                 </div>

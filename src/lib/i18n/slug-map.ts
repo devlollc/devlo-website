@@ -1,4 +1,5 @@
 import slugMapJson from "@/lib/i18n/slug-map.json";
+import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
 
 export const supportedLocales = ["fr", "en", "de", "nl"] as const;
 export type SupportedLocale = (typeof supportedLocales)[number];
@@ -124,17 +125,38 @@ export function findEntryByPathname(pathname: string): LocaleSlugMatch | null {
 }
 
 export function resolvePathForLocale(pathname: string, targetLocale: SupportedLocale): { path: string; found: boolean; pageId: string | null } {
-  const found = findEntryByPathname(pathname);
-  if (found) {
-    const localizedPath = found.entry[targetLocale];
+  const directMatch = findEntryByPathname(pathname);
+  if (directMatch) {
+    const localizedPath = directMatch.entry[targetLocale];
     if (localizedPath) {
-      return { path: normalizePath(localizedPath), found: true, pageId: found.pageId };
+      return { path: normalizePath(localizedPath), found: true, pageId: directMatch.pageId };
     }
   }
 
+  const { path: normalizedInputPath } = splitLocalePath(pathname);
+  const caseStudyPrefix = "/etudes-de-cas/";
+
+  if (normalizedInputPath.startsWith(caseStudyPrefix)) {
+    const incomingSlug = normalizedInputPath.slice(caseStudyPrefix.length);
+    const canonicalSlug = resolveCaseStudyCanonicalSlug(incomingSlug);
+
+    if (canonicalSlug !== incomingSlug) {
+      const canonicalFrPath = `${caseStudyPrefix}${canonicalSlug}`;
+      const canonicalMatch = findEntryByFrPath(canonicalFrPath);
+
+      if (canonicalMatch) {
+        const localizedPath = canonicalMatch.entry[targetLocale];
+        if (localizedPath) {
+          return { path: normalizePath(localizedPath), found: true, pageId: canonicalMatch.pageId };
+        }
+      }
+    }
+  }
+
+  const fallbackPath = toLocalePath(targetLocale, normalizedInputPath);
   return {
-    path: targetLocale === "fr" ? "/" : `/${targetLocale}`,
+    path: normalizePath(fallbackPath),
     found: false,
-    pageId: found?.pageId ?? null,
+    pageId: directMatch?.pageId ?? null,
   };
 }

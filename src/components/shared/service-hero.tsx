@@ -1,22 +1,59 @@
 import { ServiceSwitcher } from "@/components/shared/service-switcher";
 import type { ServiceSlug } from "@/content/services";
+import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 type ServiceHeroProps = {
   currentSlug: ServiceSlug;
+  locale?: SupportedLocale;
   title: string;
   subtitle: string;
   paragraphs: string[];
   quickFacts: string[];
 };
 
-const sectionAnchors = [
-  { id: "ce-que-couvre", label: "Ce que couvre" },
-  { id: "processus", label: "Processus" },
-  { id: "resultats", label: "Résultats" },
-  { id: "faq", label: "FAQ" },
-];
+const sectionAnchorsByLocale: Record<SupportedLocale, { id: string; label: string }[]> = {
+  fr: [
+    { id: "ce-que-couvre", label: "Ce que couvre" },
+    { id: "processus", label: "Processus" },
+    { id: "resultats", label: "Résultats" },
+    { id: "faq", label: "FAQ" },
+  ],
+  en: [
+    { id: "ce-que-couvre", label: "Coverage" },
+    { id: "processus", label: "Process" },
+    { id: "resultats", label: "Results" },
+    { id: "faq", label: "FAQ" },
+  ],
+  de: [
+    { id: "ce-que-couvre", label: "Leistungsumfang" },
+    { id: "processus", label: "Prozess" },
+    { id: "resultats", label: "Ergebnisse" },
+    { id: "faq", label: "FAQ" },
+  ],
+  nl: [
+    { id: "ce-que-couvre", label: "Wat het omvat" },
+    { id: "processus", label: "Proces" },
+    { id: "resultats", label: "Resultaten" },
+    { id: "faq", label: "FAQ" },
+  ],
+};
 
-export function ServiceHero({ currentSlug, title, subtitle, paragraphs, quickFacts }: ServiceHeroProps) {
+const badgeByLocale: Record<SupportedLocale, string> = {
+  fr: "DEVLO.CH — AGENCE B2B SUISSE",
+  en: "DEVLO.CH — SWISS B2B AGENCY",
+  de: "DEVLO.CH — SCHWEIZER B2B AGENTUR",
+  nl: "DEVLO.CH — ZWITSERS B2B-BUREAU",
+};
+
+const sectionNavAriaByLocale: Record<SupportedLocale, string> = {
+  fr: "Navigation de section",
+  en: "Section navigation",
+  de: "Abschnittsnavigation",
+  nl: "Sectienavigatie",
+};
+
+export function ServiceHero({ currentSlug, locale = "fr", title, subtitle, paragraphs, quickFacts }: ServiceHeroProps) {
+  const sectionAnchors = sectionAnchorsByLocale[locale];
   return (
     <section className="relative overflow-hidden border-b border-neutral-200 bg-white">
       <div className="pointer-events-none absolute -left-16 top-10 h-44 w-44 rounded-full bg-devlo-100/40 blur-3xl" />
@@ -24,11 +61,11 @@ export function ServiceHero({ currentSlug, title, subtitle, paragraphs, quickFac
 
       <div className="relative mx-auto w-full max-w-[1400px] px-6 pb-8 pt-6 md:px-8 md:pb-10 md:pt-8">
         <div className="max-w-md">
-          <ServiceSwitcher currentSlug={currentSlug} />
+          <ServiceSwitcher currentSlug={currentSlug} locale={locale} />
         </div>
 
         <p className="mt-4 inline-flex items-center rounded-full bg-devlo-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.09em] text-devlo-700">
-          DEVLO.CH — AGENCE B2B SUISSE
+          {badgeByLocale[locale]}
         </p>
 
         <h1 className="mt-3 max-w-5xl text-3xl font-extrabold leading-[1.08] tracking-tight text-devlo-900 md:text-4xl lg:text-[44px]">
@@ -53,7 +90,7 @@ export function ServiceHero({ currentSlug, title, subtitle, paragraphs, quickFac
           ))}
         </div>
 
-        <nav aria-label="Navigation de section" className="mt-5">
+        <nav aria-label={sectionNavAriaByLocale[locale]} className="mt-5">
           <ul className="flex flex-wrap gap-2">
             {sectionAnchors.map((anchor) => (
               <li key={anchor.id}>

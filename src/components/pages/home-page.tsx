@@ -27,6 +27,7 @@ import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { WistiaThumbnailTrigger } from "@/components/ui/wistia-thumbnail-trigger";
 import { caseStudiesCards, homeContent } from "@/content/masterfile.fr";
+import type { CaseStudyCard as MasterCaseStudyCard } from "@/content/masterfile.fr";
 
 const noRecruitIcons = [Target, PiggyBank, Rocket] as const;
 const whyIcons = [
@@ -52,15 +53,32 @@ function ClientsRailRow({ names, reverse = false }: { names: string[]; reverse?:
   return <InfiniteLogoRail logos={namesToLogoItems(names)} pauseOnHover reverse={reverse} duration="slow" />;
 }
 
-export function HomePage() {
-  const noRecruitCards = homeContent.noRecruitCards;
-  const methodSteps = homeContent.methodSteps;
-  const whyCards = homeContent.whyCards;
-  const writtenTestimonials = homeContent.writtenTestimonials;
+type HomeContentProps = {
+  content?: typeof homeContent;
+  studies?: MasterCaseStudyCard[];
+  locale?: "fr" | "en" | "de" | "nl";
+};
+
+const caseStudiesTitleByLocale = {
+  fr: "Nos études de cas",
+  en: "Our case studies",
+  de: "Unsere Fallstudien",
+  nl: "Onze praktijkvoorbeelden",
+} as const;
+
+function normalizeMetricSeparator(value: string): string {
+  return value.replace(/\s-\s\+/g, " · +").replace(/\s-\s/g, " · ");
+}
+
+export function HomePage({ content = homeContent, studies = caseStudiesCards, locale = "fr" }: HomeContentProps) {
+  const noRecruitCards = content.noRecruitCards;
+  const methodSteps = content.methodSteps;
+  const whyCards = content.whyCards;
+  const writtenTestimonials = content.writtenTestimonials;
   const rendezVousRowCount = 3;
-  const rendezVousPerRow = Math.ceil(homeContent.rendezVousLogos.length / rendezVousRowCount);
+  const rendezVousPerRow = Math.ceil(content.rendezVousLogos.length / rendezVousRowCount);
   const rendezVousRows = Array.from({ length: rendezVousRowCount }, (_, index) =>
-    homeContent.rendezVousLogos.slice(index * rendezVousPerRow, (index + 1) * rendezVousPerRow),
+    content.rendezVousLogos.slice(index * rendezVousPerRow, (index + 1) * rendezVousPerRow),
   ).filter((row) => row.length > 0);
 
   return (
@@ -70,63 +88,63 @@ export function HomePage() {
           <div>
             <FadeInOnScroll eager>
               <p className="inline-flex items-center gap-2 rounded-full bg-devlo-100 px-4 py-1.5 text-sm font-semibold text-devlo-700">
-                {homeContent.hero.badge}
+                {normalizeMetricSeparator(content.hero.badge)}
               </p>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.1} eager>
               <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-devlo-900 md:text-5xl lg:text-[56px]">
-                {homeContent.hero.h1}
+                {content.hero.h1}
               </h1>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.2} eager>
-              <h2 className="mt-5 text-xl font-semibold leading-relaxed text-devlo-700 md:text-2xl">{homeContent.hero.h2}</h2>
+              <h2 className="mt-5 text-xl font-semibold leading-relaxed text-devlo-700 md:text-2xl">{content.hero.h2}</h2>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.3} eager>
-              <p className="mt-4 text-lg leading-relaxed text-neutral-600">{homeContent.hero.paragraph}</p>
+              <p className="mt-4 text-lg leading-relaxed text-neutral-600">{content.hero.paragraph}</p>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.4} eager>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link href={homeContent.hero.ctaPrimary.href} className={buttonClassName("primary", "px-8 py-4 text-base")}> 
-                  {homeContent.hero.ctaPrimary.label}
+                <Link href={content.hero.ctaPrimary.href} className={buttonClassName("primary", "px-8 py-4 text-base")}> 
+                  {content.hero.ctaPrimary.label}
                 </Link>
-                <Link href={homeContent.hero.ctaSecondary.href} className={buttonClassName("secondary", "px-8 py-4 text-base")}>
-                  {homeContent.hero.ctaSecondary.label}
+                <Link href={content.hero.ctaSecondary.href} className={buttonClassName("secondary", "px-8 py-4 text-base")}>
+                  {content.hero.ctaSecondary.label}
                 </Link>
-                <Link href={homeContent.hero.ctaServices.href} className={buttonClassName("secondary", "px-8 py-4 text-base")}>
-                  {homeContent.hero.ctaServices.label}
+                <Link href={content.hero.ctaServices.href} className={buttonClassName("secondary", "px-8 py-4 text-base")}>
+                  {content.hero.ctaServices.label}
                 </Link>
               </div>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.5} eager>
-              <p className="mt-5 text-sm font-semibold text-neutral-600">{homeContent.hero.microProof}</p>
+              <p className="mt-5 text-sm font-semibold text-neutral-600">{normalizeMetricSeparator(content.hero.microProof)}</p>
             </FadeInOnScroll>
           </div>
 
           <FadeInOnScroll delay={0.2} direction="right" eager>
             <div className="overflow-hidden rounded-2xl border border-neutral-200 shadow-panel">
               <WistiaThumbnailTrigger
-                videoId={homeContent.hero.wistiaMediaId}
-                title={homeContent.hero.h1}
-                previewSrc={homeContent.hero.posterSrc}
-                previewAlt={homeContent.hero.posterAlt}
+                videoId={content.hero.wistiaMediaId}
+                title={content.hero.h1}
+                previewSrc={content.hero.posterSrc}
+                previewAlt={content.hero.posterAlt}
                 priority
                 sizes="(min-width: 1024px) 46vw, (min-width: 768px) 88vw, 100vw"
                 className="bg-white"
               />
             </div>
             <Link
-              href={homeContent.hero.videoTestimonial.href}
+              href={content.hero.videoTestimonial.href}
               className="mt-4 block rounded-xl border border-neutral-200 bg-white p-4 shadow-soft transition hover:-translate-y-0.5 hover:shadow-panel"
             >
-              <p className="text-sm font-semibold text-devlo-900">{homeContent.hero.videoTestimonial.line}</p>
-              <p className="mt-2 text-sm font-semibold text-devlo-900">{homeContent.hero.videoTestimonial.client}</p>
+              <p className="text-sm font-semibold text-devlo-900">{content.hero.videoTestimonial.line}</p>
+              <p className="mt-2 text-sm font-semibold text-devlo-900">{content.hero.videoTestimonial.client}</p>
               <p className="mt-1 text-sm text-neutral-600">
-                {homeContent.hero.videoTestimonial.role}, {homeContent.hero.videoTestimonial.company}
+                {content.hero.videoTestimonial.role}, {content.hero.videoTestimonial.company}
               </p>
             </Link>
           </FadeInOnScroll>
@@ -135,7 +153,7 @@ export function HomePage() {
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.rendezVousTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.rendezVousTitle}</h2>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.1}>
           <div className="relative mt-10 -mx-6 space-y-4 overflow-hidden md:-mx-12 lg:-mx-16">
@@ -150,11 +168,11 @@ export function HomePage() {
 
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.videoTestimonials.title}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.videoTestimonials.title}</h2>
         </FadeInOnScroll>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {homeContent.videoTestimonials.items.map((item, index) => (
+          {content.videoTestimonials.items.map((item, index) => (
             <FadeInOnScroll key={item.title} delay={index * 0.2}>
               <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel">
                 <WistiaThumbnailTrigger
@@ -197,21 +215,21 @@ export function HomePage() {
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.clientsTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.clientsTitle}</h2>
         </FadeInOnScroll>
 
         <div className="relative mt-10 -mx-6 space-y-4 overflow-hidden md:-mx-12 lg:-mx-16">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
-          <ClientsRailRow names={homeContent.clientsLogos.slice(0, 8)} />
-          <ClientsRailRow names={homeContent.clientsLogos.slice(8, 15)} reverse />
-          <ClientsRailRow names={homeContent.clientsLogos.slice(15)} />
+          <ClientsRailRow names={content.clientsLogos.slice(0, 8)} />
+          <ClientsRailRow names={content.clientsLogos.slice(8, 15)} reverse />
+          <ClientsRailRow names={content.clientsLogos.slice(15)} />
         </div>
       </SectionWrapper>
 
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.noRecruitTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.noRecruitTitle}</h2>
         </FadeInOnScroll>
 
         <div className="mt-10 grid gap-8 md:grid-cols-3">
@@ -232,14 +250,14 @@ export function HomePage() {
 
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">Nos études de cas</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{caseStudiesTitleByLocale[locale]}</h2>
         </FadeInOnScroll>
-        <CaseStudiesCarousel cards={caseStudiesCards} />
+        <CaseStudiesCarousel cards={studies} locale={locale} />
       </SectionWrapper>
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.methodTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.methodTitle}</h2>
         </FadeInOnScroll>
 
         <div className="mx-auto mt-10 max-w-[980px] space-y-3">
@@ -272,7 +290,7 @@ export function HomePage() {
 
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.whyTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.whyTitle}</h2>
         </FadeInOnScroll>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -293,7 +311,7 @@ export function HomePage() {
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.writtenTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.writtenTitle}</h2>
         </FadeInOnScroll>
         <WrittenTestimonialsCarousel testimonials={writtenTestimonials} />
       </SectionWrapper>
@@ -301,21 +319,21 @@ export function HomePage() {
       <WaveDivider variant="layered-top" />
       <SectionWrapper background="dark" className="py-[80px] text-white md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] md:text-4xl">{homeContent.ctaMid.title}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] md:text-4xl">{content.ctaMid.title}</h2>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.2}>
-          <p className="mx-auto mt-4 max-w-[920px] text-center text-lg leading-8 text-white/90">{homeContent.ctaMid.text}</p>
+          <p className="mx-auto mt-4 max-w-[920px] text-center text-lg leading-8 text-white/90">{content.ctaMid.text}</p>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.3}>
-          <h3 className="mt-8 text-center text-2xl font-semibold md:text-3xl">{homeContent.ctaMid.h3}</h3>
+          <h3 className="mt-8 text-center text-2xl font-semibold md:text-3xl">{content.ctaMid.h3}</h3>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.4}>
-          <p className="mx-auto mt-3 max-w-[900px] text-center text-base leading-7 text-white/90 md:text-lg">{homeContent.ctaMid.h3Text}</p>
+          <p className="mx-auto mt-3 max-w-[900px] text-center text-base leading-7 text-white/90 md:text-lg">{content.ctaMid.h3Text}</p>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.5}>
           <div className="mt-8 text-center">
-            <Link href={homeContent.ctaMid.cta.href} className={buttonClassName("secondary", "bg-white px-8 py-4 text-base text-devlo-900 hover:text-devlo-900")}>
-              {homeContent.ctaMid.cta.label}
+            <Link href={content.ctaMid.cta.href} className={buttonClassName("secondary", "bg-white px-8 py-4 text-base text-devlo-900 hover:text-devlo-900")}>
+              {content.ctaMid.cta.label}
             </Link>
           </div>
         </FadeInOnScroll>
@@ -324,15 +342,15 @@ export function HomePage() {
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.faqTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.faqTitle}</h2>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.15}>
           <p className="mx-auto mt-4 max-w-[820px] text-center text-base leading-7 text-neutral-600 md:text-lg">
-            {homeContent.faqCtaText}
+            {content.faqCtaText}
           </p>
         </FadeInOnScroll>
         <div className="mx-auto mt-10 max-w-[980px]">
-          <AccordionSingle items={homeContent.faqs} defaultOpenIndex={-1} />
+          <AccordionSingle items={content.faqs} defaultOpenIndex={-1} />
         </div>
       </SectionWrapper>
     </>

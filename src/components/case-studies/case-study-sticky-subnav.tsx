@@ -13,12 +13,14 @@ type CaseStudyStickySubnavProps = {
   items: StickySubnavItem[];
   ctaHref?: string;
   ctaLabel?: string;
+  navigationAriaLabel?: string;
 };
 
 export function CaseStudyStickySubnav({
   items,
   ctaHref = "#contact",
   ctaLabel = "Planifier une consultation stratégique",
+  navigationAriaLabel = "Navigation de l’étude de cas",
 }: CaseStudyStickySubnavProps) {
   const validItems = useMemo(() => items.filter((item) => item.id && item.label), [items]);
   const [activeId, setActiveId] = useState<string>(validItems[0]?.id ?? "");
@@ -66,7 +68,7 @@ export function CaseStudyStickySubnav({
     <div data-case-study-sticky-subnav="" className="sticky top-[86px] z-30 hidden md:block">
       <div className="rounded-2xl border border-neutral-200/90 bg-white/90 px-4 py-3 shadow-soft backdrop-blur-md">
         <div className="flex items-center gap-4">
-          <nav aria-label="Navigation de l’étude de cas" className="min-w-0 flex-1">
+          <nav aria-label={navigationAriaLabel} className="min-w-0 flex-1">
             <ul className="flex flex-wrap items-center gap-2">
               {validItems.map((item) => {
                 const isActive = activeId === item.id;

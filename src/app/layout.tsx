@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { headers } from "next/headers";
 import Script from "next/script";
 
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -18,6 +19,8 @@ const plusJakartaSans = localFont({
 });
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-9CKZL9V2VN";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -183,8 +186,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const localeHeader = headers().get("x-devlo-locale");
+  const htmlLang = localeHeader === "en" || localeHeader === "de" || localeHeader === "nl" ? localeHeader : "fr";
+  const skipToContentText =
+    htmlLang === "en"
+      ? "Skip to content"
+      : htmlLang === "de"
+        ? "Zum Inhalt springen"
+        : htmlLang === "nl"
+          ? "Naar de inhoud springen"
+          : "Aller au contenu";
+
   return (
-    <html lang="fr">
+    <html lang={htmlLang}>
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
@@ -209,7 +223,7 @@ export default function RootLayout({
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-soft focus:bg-paper focus:px-4 focus:py-2 focus:text-sm"
         >
-          Aller au contenu
+          {skipToContentText}
         </a>
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
