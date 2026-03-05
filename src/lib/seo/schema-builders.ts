@@ -10,6 +10,11 @@ type FaqItemLike = {
   answer: string;
 };
 
+type HowToStepLike = {
+  title: string;
+  description: string;
+};
+
 export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
@@ -34,6 +39,20 @@ export function buildFaqPageSchema(items: FaqItemLike[]) {
         "@type": "Answer",
         text: item.answer,
       },
+    })),
+  };
+}
+
+export function buildHowToSchema(name: string, steps: HowToStepLike[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.description,
     })),
   };
 }

@@ -16,7 +16,7 @@ import { localizeGeoTermsInObject } from "@/lib/i18n/geo-terms";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { toAbsoluteUrl } from "@/lib/seo/metadata";
-import { buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
+import { buildBreadcrumbSchema, buildFaqPageSchema, buildHowToSchema } from "@/lib/seo/schema-builders";
 
 function buildServiceSchema(service: ServicePageData) {
   return {
@@ -133,6 +133,7 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
   const schemas = [
     buildServiceSchema(localizedService),
     buildFaqPageSchema(localizedService.faqItems),
+    buildHowToSchema(localizedService.processTitle, localizedService.processSteps),
     buildBreadcrumbSchema([
       { name: copy.home, path: resolvePathForLocale("/", locale).path },
       { name: copy.services, path: resolvePathForLocale("/services", locale).path },

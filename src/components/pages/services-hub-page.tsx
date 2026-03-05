@@ -10,6 +10,7 @@ import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import type { CaseStudyCard, ServiceHubCard } from "@/content/services";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
+import { toAbsoluteUrl } from "@/lib/seo/metadata";
 
 type ServicesHubCopy = {
   eyebrow: string;
@@ -40,14 +41,31 @@ const breadcrumbLabelsByLocale: Record<SupportedLocale, { home: string; services
 export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: ServicesHubPageProps) {
   const labels = breadcrumbLabelsByLocale[locale];
   const toLocalePath = (frPath: string) => resolvePathForLocale(frPath, locale).path;
+  const servicesHubPath = toLocalePath("/services");
+  const serviceHubSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: copy.title,
+    description: copy.description,
+    provider: {
+      "@type": "Organization",
+      name: "devlo",
+      url: "https://devlo.ch",
+    },
+    areaServed: ["CH", "BE", "FR", "DE", "AT", "NL"],
+    url: toAbsoluteUrl(servicesHubPath),
+  };
 
   return (
     <>
       <JsonLd
-        schema={buildBreadcrumbSchema([
-          { name: labels.home, path: toLocalePath("/") },
-          { name: labels.services, path: toLocalePath("/services") },
-        ])}
+        schema={[
+          buildBreadcrumbSchema([
+            { name: labels.home, path: toLocalePath("/") },
+            { name: labels.services, path: servicesHubPath },
+          ]),
+          serviceHubSchema,
+        ]}
       />
 
       <main>
