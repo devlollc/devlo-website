@@ -1,4 +1,4 @@
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import { Linkedin } from "lucide-react";
@@ -11,6 +11,8 @@ import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 function resolveLocaleFromHeaders(): SupportedLocale {
   const localeHeader = headers().get("x-devlo-locale");
   if (localeHeader === "en" || localeHeader === "de" || localeHeader === "nl") return localeHeader;
+  const localeCookie = cookies().get("devlo_locale")?.value;
+  if (localeCookie === "en" || localeCookie === "de" || localeCookie === "nl") return localeCookie;
   return "fr";
 }
 

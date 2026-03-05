@@ -9,13 +9,19 @@ function resolveLocale(pathname: string): "fr" | "en" | "de" | "nl" {
 }
 
 export function middleware(request: NextRequest) {
+  const locale = resolveLocale(request.nextUrl.pathname);
   const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-devlo-locale", resolveLocale(request.nextUrl.pathname));
-  return NextResponse.next({
+  requestHeaders.set("x-devlo-locale", locale);
+  const response = NextResponse.next({
     request: {
       headers: requestHeaders,
     },
   });
+  response.cookies.set("devlo_locale", locale, {
+    path: "/",
+    sameSite: "lax",
+  });
+  return response;
 }
 
 export const config = {
