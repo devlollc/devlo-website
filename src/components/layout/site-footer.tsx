@@ -1,19 +1,17 @@
-import { cookies, headers } from "next/headers";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Linkedin } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 import { getLocalizedCaseStudies } from "@/lib/i18n/case-studies-content";
 import { getLocalizedMasterfileContent } from "@/lib/i18n/masterfile-content";
-import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
+import { resolvePathForLocale, splitLocalePath, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 
-function resolveLocaleFromHeaders(): SupportedLocale {
-  const localeHeader = headers().get("x-devlo-locale");
-  if (localeHeader === "en" || localeHeader === "de" || localeHeader === "nl") return localeHeader;
-  const localeCookie = cookies().get("devlo_locale")?.value;
-  if (localeCookie === "en" || localeCookie === "de" || localeCookie === "nl") return localeCookie;
-  return "fr";
+function resolveLocaleFromPathname(pathname: string | null): SupportedLocale {
+  return splitLocalePath(pathname ?? "/").locale;
 }
 
 const footerLabelsByLocale: Record<
@@ -124,7 +122,8 @@ function FooterList({
 }
 
 export function SiteFooter() {
-  const locale = resolveLocaleFromHeaders();
+  const pathname = usePathname();
+  const locale = resolveLocaleFromPathname(pathname);
   const footerContent = getLocalizedMasterfileContent(locale).footerContent as {
     mission: string;
     swissOffice: string[];
