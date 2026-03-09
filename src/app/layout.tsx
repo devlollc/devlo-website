@@ -134,7 +134,18 @@ const swissLocalBusinessSchema = {
     addressRegion: "Vaud",
     addressCountry: "CH",
   },
-  areaServed: ["CH", "BE", "FR", "DE", "LU"],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 46.4744,
+    longitude: 6.8432,
+  },
+  areaServed: [
+    { "@type": "Country", "name": "Switzerland" },
+    { "@type": "Country", "name": "Belgium" },
+    { "@type": "Country", "name": "France" },
+    { "@type": "Country", "name": "Germany" },
+    { "@type": "Country", "name": "Luxembourg" },
+  ],
   sameAs: [
     "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
   ],
