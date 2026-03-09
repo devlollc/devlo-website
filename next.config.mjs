@@ -522,8 +522,51 @@ const nextConfig = {
       },
     ];
 
-    // Blog is now active — old WordPress blog slugs redirect to new blog hub
-    const frBlogRedirects = [];
+    // ─── Legacy WordPress blog posts & content pages ──────────────────────
+    // These old WP articles have no equivalent in the new site.
+    // Redirect to homepage or most relevant section.
+    const frBlogRedirects = [
+      // Old FR blog posts → homepage
+      { source: "/2020-b2b-sales-leaders-teams", destination: "/", permanent: true },
+      { source: "/5-raisons-pour-lesquelles-la-prospection-commerciale-b2b-est-cruciale", destination: "/blog", permanent: true },
+      { source: "/5-reasons-why-b2b-sales-prospecting-is-essential", destination: "/blog", permanent: true },
+      { source: "/courriel-quelquun-vendre-quelque-chose", destination: "/blog", permanent: true },
+      { source: "/developpement-ventes-peche-au-harpon", destination: "/blog", permanent: true },
+      { source: "/devlo-b2b-lead-generation-partner", destination: "/", permanent: true },
+      { source: "/eliminated-kpis-in-2020", destination: "/", permanent: true },
+      { source: "/externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives", destination: "/blog/externaliser-prospection-commerciale", permanent: true },
+      { source: "/indicateurs-de-performance-elimines-2020", destination: "/", permanent: true },
+      { source: "/lancement-devlo-partenaire-de-confiance-generation-de-prospects", destination: "/", permanent: true },
+      { source: "/mark-roberge-predictions-prescriptions-2021", destination: "/", permanent: true },
+      { source: "/oui-a-reduction-friction-commerciale", destination: "/blog", permanent: true },
+      { source: "/outsourcing-b2b-sales-development-avoid-overspending", destination: "/blog/externaliser-prospection-commerciale", permanent: true },
+      { source: "/personalisation-digitalisation-are-so-important", destination: "/blog", permanent: true },
+      { source: "/personalized-b2b-sales-sequences", destination: "/blog/cold-email-b2b-guide-complet", permanent: true },
+      { source: "/personnalisation-digitalisation-sont-si-importantes", destination: "/blog", permanent: true },
+      { source: "/sales-development-is-like-spearfishing", destination: "/blog", permanent: true },
+      { source: "/yes-to-reducing-sales-friction", destination: "/blog", permanent: true },
+      // Old DE/misc URL variants at FR root
+      { source: "/akademie-unser-ruf", destination: "/academy", permanent: true },
+      { source: "/ausbildung-prospektion-b2b", destination: "/academy", permanent: true },
+      { source: "/academy-our-call", destination: "/consultation", permanent: true },
+      { source: "/academy-terms-conditions", destination: "/conditions", permanent: true },
+      { source: "/privacy-policy", destination: "/politique-confidentialite", permanent: true },
+      { source: "/telefonanruf", destination: "/telephone", permanent: true },
+      { source: "/ultimativer-verkaufstrainingskurs", destination: "/formation-prospection-b2b", permanent: true },
+      { source: "/unser-termin", destination: "/consultation", permanent: true },
+      { source: "/prospection-commerciale-b2b", destination: "/prospection-commerciale-suisse", permanent: true },
+      // Old case study hub variants
+      { source: "/casestudy", destination: "/etudes-de-cas", permanent: true },
+      { source: "/casestudy/:slug*", destination: "/etudes-de-cas", permanent: true },
+      { source: "/fallstudien", destination: "/etudes-de-cas", permanent: true },
+      { source: "/fallstudien/:slug*", destination: "/etudes-de-cas", permanent: true },
+      { source: "/results_cas_studies", destination: "/etudes-de-cas", permanent: true },
+      { source: "/results_cas_studies/:slug*", destination: "/etudes-de-cas", permanent: true },
+      { source: "/ergebnisse_fall_studien", destination: "/etudes-de-cas", permanent: true },
+      { source: "/ergebnisse_fall_studien/:slug*", destination: "/etudes-de-cas", permanent: true },
+      { source: "/resultats-cas-etudes", destination: "/etudes-de-cas", permanent: true },
+      { source: "/resultats-cas-etudes/:slug*", destination: "/etudes-de-cas", permanent: true },
+    ];
 
     // ─── Probable old devlo.ch page URL variants ──────────────────────────────
     // Best guesses based on typical WP site naming conventions.

@@ -1,0 +1,36 @@
+url,status_code,reason,redirect_to
+/2020-b2b-sales-leaders-teams,200,soft-404 legacy WP blog post,/
+/5-raisons-pour-lesquelles-la-prospection-commerciale-b2b-est-cruciale,200,soft-404 legacy WP blog post,/blog
+/5-reasons-why-b2b-sales-prospecting-is-essential,200,soft-404 legacy WP blog post,/blog
+/academy-our-call,200,soft-404 legacy WP page,/consultation
+/academy-terms-conditions,200,soft-404 legacy WP page,/conditions
+/akademie-unser-ruf,200,soft-404 DE page at FR root,/academy
+/ausbildung-prospektion-b2b,200,soft-404 DE page at FR root,/academy
+/casestudy,200,soft-404 old case study hub,/etudes-de-cas
+/casestudy/*,200,soft-404 old EN case study paths,/etudes-de-cas
+/courriel-quelquun-vendre-quelque-chose,200,soft-404 legacy WP blog post,/blog
+/developpement-ventes-peche-au-harpon,200,soft-404 legacy WP blog post,/blog
+/devlo-b2b-lead-generation-partner,200,soft-404 legacy WP blog post,/
+/eliminated-kpis-in-2020,200,soft-404 legacy WP blog post,/
+/ergebnisse_fall_studien,200,soft-404 old DE results hub,/etudes-de-cas
+/ergebnisse_fall_studien/*,200,soft-404 old DE results pages,/etudes-de-cas
+/externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives,200,soft-404 legacy WP blog post,/blog/externaliser-prospection-commerciale
+/fallstudien,200,soft-404 old DE case study hub,/etudes-de-cas
+/fallstudien/*,200,soft-404 old DE case study paths,/etudes-de-cas
+/indicateurs-de-performance-elimines-2020,200,soft-404 legacy WP blog post,/
+/lancement-devlo-partenaire-de-confiance-generation-de-prospects,200,soft-404 legacy WP blog post,/
+/mark-roberge-predictions-prescriptions-2021,200,soft-404 legacy WP blog post,/
+/oui-a-reduction-friction-commerciale,200,soft-404 legacy WP blog post,/blog
+/outsourcing-b2b-sales-development-avoid-overspending,200,soft-404 legacy WP blog post,/blog/externaliser-prospection-commerciale
+/personalisation-digitalisation-are-so-important,200,soft-404 legacy WP blog post,/blog
+/personalized-b2b-sales-sequences,200,soft-404 legacy WP blog post,/blog/cold-email-b2b-guide-complet
+/personnalisation-digitalisation-sont-si-importantes,200,soft-404 legacy WP blog post,/blog
+/privacy-policy,200,soft-404 duplicate page,/politique-confidentialite
+/prospection-commerciale-b2b,200,soft-404 old page variant,/prospection-commerciale-suisse
+/resultats-cas-etudes,200,soft-404 old results hub,/etudes-de-cas
+/results_cas_studies,200,soft-404 old EN results hub,/etudes-de-cas
+/sales-development-is-like-spearfishing,200,soft-404 legacy WP blog post,/blog
+/telefonanruf,200,soft-404 DE page at FR root,/telephone
+/ultimativer-verkaufstrainingskurs,200,soft-404 DE page at FR root,/formation-prospection-b2b
+/unser-termin,200,soft-404 DE page at FR root,/consultation
+/yes-to-reducing-sales-friction,200,soft-404 legacy WP blog post,/blog
