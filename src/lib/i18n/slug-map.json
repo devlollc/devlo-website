@@ -7,9 +7,9 @@
   },
   "case-studies": {
     "fr": "/etudes-de-cas",
-    "en": "/en/etudes-de-cas",
-    "de": "/de/etudes-de-cas",
-    "nl": "/nl/etudes-de-cas"
+    "en": "/en/case-studies",
+    "de": "/de/fallstudien",
+    "nl": "/nl/case-studies"
   },
   "case-study:audiovisuel-16-rendez-vous": {
     "fr": "/resultats/audiovisuel-16-rendez-vous",
@@ -163,21 +163,21 @@
   },
   "service:crm-delivrabilite": {
     "fr": "/services/crm-delivrabilite",
-    "en": "/en/services/crm-delivrabilite",
-    "de": "/de/services/crm-delivrabilite",
-    "nl": "/nl/services/crm-delivrabilite"
+    "en": "/en/services/crm-deliverability",
+    "de": "/de/services/crm-zustellbarkeit",
+    "nl": "/nl/services/crm-afleverbaarheid"
   },
   "service:enrichissement-clay": {
     "fr": "/services/enrichissement-clay",
-    "en": "/en/services/enrichissement-clay",
-    "de": "/de/services/enrichissement-clay",
-    "nl": "/nl/services/enrichissement-clay"
+    "en": "/en/services/clay-enrichment",
+    "de": "/de/services/datenanreicherung-clay",
+    "nl": "/nl/services/data-verrijking-clay"
   },
   "service:generation-leads": {
     "fr": "/services/generation-leads",
-    "en": "/en/services/generation-leads",
-    "de": "/de/services/generation-leads",
-    "nl": "/nl/services/generation-leads"
+    "en": "/en/services/lead-generation",
+    "de": "/de/services/leadgenerierung",
+    "nl": "/nl/services/leadgeneratie"
   },
   "service:intent-data": {
     "fr": "/services/intent-data",
@@ -193,21 +193,21 @@
   },
   "service:outbound-multicanal": {
     "fr": "/services/outbound-multicanal",
-    "en": "/en/services/outbound-multicanal",
-    "de": "/de/services/outbound-multicanal",
-    "nl": "/nl/services/outbound-multicanal"
+    "en": "/en/services/outbound-multichannel",
+    "de": "/de/services/outbound-multikanal",
+    "nl": "/nl/services/outbound-multichannel"
   },
   "service:prise-de-rendez-vous": {
     "fr": "/services/prise-de-rendez-vous",
-    "en": "/en/services/prise-de-rendez-vous",
-    "de": "/de/services/prise-de-rendez-vous",
-    "nl": "/nl/services/prise-de-rendez-vous"
+    "en": "/en/services/appointment-setting",
+    "de": "/de/services/terminvereinbarung",
+    "nl": "/nl/services/afspraak-boeken"
   },
   "service:qualification-leads": {
     "fr": "/services/qualification-leads",
-    "en": "/en/services/qualification-leads",
-    "de": "/de/services/qualification-leads",
-    "nl": "/nl/services/qualification-leads"
+    "en": "/en/services/lead-qualification",
+    "de": "/de/services/lead-qualifizierung",
+    "nl": "/nl/services/lead-kwalificatie"
   },
   "services": {
     "fr": "/services",

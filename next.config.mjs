@@ -410,16 +410,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/en/case-studies",
-        destination: "/etudes-de-cas",
-        permanent: true,
-      },
-      {
-        source: "/en/case-studies/",
-        destination: "/etudes-de-cas",
-        permanent: true,
-      },
-      {
         source: "/en/contact",
         destination: "/consultation",
         permanent: true,
@@ -504,12 +494,6 @@ const nextConfig = {
         destination: "/de/fallstudien/monizze-120-termine",
         permanent: true,
       },
-      // DE fallstudien fallback → listing page
-      {
-        source: "/de/fallstudien/:slug*",
-        destination: "/etudes-de-cas",
-        permanent: true,
-      },
       // DE key pages
       {
         source: "/de/ausbildung-prospektion-b2b",
@@ -539,16 +523,6 @@ const nextConfig = {
       {
         source: "/de/kostenlose-beratung/",
         destination: "/consultation",
-        permanent: true,
-      },
-      {
-        source: "/de/fallstudien",
-        destination: "/etudes-de-cas",
-        permanent: true,
-      },
-      {
-        source: "/de/fallstudien/",
-        destination: "/etudes-de-cas",
         permanent: true,
       },
     ];
@@ -617,13 +591,65 @@ const nextConfig = {
       { source: "/outbound-academy", destination: "/academy", permanent: true },
       { source: "/formation-outbound", destination: "/academy", permanent: true },
       // Home / generic
-      { source: "/agence", destination: "/", permanent: true },
       { source: "/a-propos", destination: "/", permanent: true },
       { source: "/prospection-b2b", destination: "/", permanent: true },
     ];
 
+    // ─── Slug fix redirects: old FR slugs copied to EN/DE/NL → correct translations ──
+    // These were set up with copy-pasted FR slugs in EN/DE/NL routes.
+    // Must come BEFORE enRedirects/deRedirects to avoid redirect chains.
+    const slugFixRedirects = [
+      // Case studies hub
+      { source: "/en/etudes-de-cas", destination: "/en/case-studies", permanent: true },
+      { source: "/en/etudes-de-cas/", destination: "/en/case-studies", permanent: true },
+      { source: "/de/etudes-de-cas", destination: "/de/fallstudien", permanent: true },
+      { source: "/de/etudes-de-cas/", destination: "/de/fallstudien", permanent: true },
+      { source: "/nl/etudes-de-cas", destination: "/nl/case-studies", permanent: true },
+      { source: "/nl/etudes-de-cas/", destination: "/nl/case-studies", permanent: true },
+      // EN services
+      { source: "/en/services/crm-delivrabilite", destination: "/en/services/crm-deliverability", permanent: true },
+      { source: "/en/services/crm-delivrabilite/", destination: "/en/services/crm-deliverability", permanent: true },
+      { source: "/en/services/enrichissement-clay", destination: "/en/services/clay-enrichment", permanent: true },
+      { source: "/en/services/enrichissement-clay/", destination: "/en/services/clay-enrichment", permanent: true },
+      { source: "/en/services/generation-leads", destination: "/en/services/lead-generation", permanent: true },
+      { source: "/en/services/generation-leads/", destination: "/en/services/lead-generation", permanent: true },
+      { source: "/en/services/outbound-multicanal", destination: "/en/services/outbound-multichannel", permanent: true },
+      { source: "/en/services/outbound-multicanal/", destination: "/en/services/outbound-multichannel", permanent: true },
+      { source: "/en/services/prise-de-rendez-vous", destination: "/en/services/appointment-setting", permanent: true },
+      { source: "/en/services/prise-de-rendez-vous/", destination: "/en/services/appointment-setting", permanent: true },
+      { source: "/en/services/qualification-leads", destination: "/en/services/lead-qualification", permanent: true },
+      { source: "/en/services/qualification-leads/", destination: "/en/services/lead-qualification", permanent: true },
+      // DE services
+      { source: "/de/services/crm-delivrabilite", destination: "/de/services/crm-zustellbarkeit", permanent: true },
+      { source: "/de/services/crm-delivrabilite/", destination: "/de/services/crm-zustellbarkeit", permanent: true },
+      { source: "/de/services/enrichissement-clay", destination: "/de/services/datenanreicherung-clay", permanent: true },
+      { source: "/de/services/enrichissement-clay/", destination: "/de/services/datenanreicherung-clay", permanent: true },
+      { source: "/de/services/generation-leads", destination: "/de/services/leadgenerierung", permanent: true },
+      { source: "/de/services/generation-leads/", destination: "/de/services/leadgenerierung", permanent: true },
+      { source: "/de/services/outbound-multicanal", destination: "/de/services/outbound-multikanal", permanent: true },
+      { source: "/de/services/outbound-multicanal/", destination: "/de/services/outbound-multikanal", permanent: true },
+      { source: "/de/services/prise-de-rendez-vous", destination: "/de/services/terminvereinbarung", permanent: true },
+      { source: "/de/services/prise-de-rendez-vous/", destination: "/de/services/terminvereinbarung", permanent: true },
+      { source: "/de/services/qualification-leads", destination: "/de/services/lead-qualifizierung", permanent: true },
+      { source: "/de/services/qualification-leads/", destination: "/de/services/lead-qualifizierung", permanent: true },
+      // NL services
+      { source: "/nl/services/crm-delivrabilite", destination: "/nl/services/crm-afleverbaarheid", permanent: true },
+      { source: "/nl/services/crm-delivrabilite/", destination: "/nl/services/crm-afleverbaarheid", permanent: true },
+      { source: "/nl/services/enrichissement-clay", destination: "/nl/services/data-verrijking-clay", permanent: true },
+      { source: "/nl/services/enrichissement-clay/", destination: "/nl/services/data-verrijking-clay", permanent: true },
+      { source: "/nl/services/generation-leads", destination: "/nl/services/leadgeneratie", permanent: true },
+      { source: "/nl/services/generation-leads/", destination: "/nl/services/leadgeneratie", permanent: true },
+      { source: "/nl/services/outbound-multicanal", destination: "/nl/services/outbound-multichannel", permanent: true },
+      { source: "/nl/services/outbound-multicanal/", destination: "/nl/services/outbound-multichannel", permanent: true },
+      { source: "/nl/services/prise-de-rendez-vous", destination: "/nl/services/afspraak-boeken", permanent: true },
+      { source: "/nl/services/prise-de-rendez-vous/", destination: "/nl/services/afspraak-boeken", permanent: true },
+      { source: "/nl/services/qualification-leads", destination: "/nl/services/lead-kwalificatie", permanent: true },
+      { source: "/nl/services/qualification-leads/", destination: "/nl/services/lead-kwalificatie", permanent: true },
+    ];
+
     return excludeRscRequests(
       withStatusCode301([
+        ...slugFixRedirects, // must be first to avoid redirect chains
         ...caseStudyRedirects,
         ...wpResultatRedirects, // specific WP long slugs — must be before wildcard
         ...resultatRedirects,
