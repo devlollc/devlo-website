@@ -223,92 +223,92 @@
   },
   "blog-article:cold-email-b2b-guide-complet": {
     "fr": "/blog/cold-email-b2b-guide-complet",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/cold-email-b2b-complete-guide",
+    "de": "/de/blog/cold-email-b2b-leitfaden",
+    "nl": "/nl/blog/cold-email-b2b-complete-gids"
   },
   "blog-article:externaliser-prospection-commerciale": {
     "fr": "/blog/externaliser-prospection-commerciale",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/outsourcing-b2b-prospecting",
+    "de": "/de/blog/b2b-akquise-auslagern",
+    "nl": "/nl/blog/b2b-prospectie-uitbesteden"
   },
   "blog-article:intent-data-prospects-prets-acheter": {
     "fr": "/blog/intent-data-prospects-prets-acheter",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/intent-data-b2b-ready-to-buy",
+    "de": "/de/blog/intent-data-kaufbereite-leads",
+    "nl": "/nl/blog/intent-data-koopklare-prospects"
   },
   "geo:prospection-commerciale-suisse": {
     "fr": "/prospection-commerciale-suisse",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/b2b-prospecting-switzerland",
+    "de": "/de/b2b-akquise-schweiz",
+    "nl": "/nl/b2b-prospectie-zwitserland"
   },
   "geo:prospection-commerciale-belgique": {
     "fr": "/prospection-commerciale-belgique",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/b2b-prospecting-belgium",
+    "de": "/de/b2b-akquise-belgien",
+    "nl": "/nl/b2b-prospectie-belgie"
   },
   "geo:prospection-commerciale-france": {
     "fr": "/prospection-commerciale-france",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/b2b-prospecting-france",
+    "de": "/de/b2b-akquise-frankreich",
+    "nl": "/nl/b2b-prospectie-frankrijk"
   },
   "agence": {
     "fr": "/agence",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/about",
+    "de": "/de/uber-uns",
+    "nl": "/nl/over-ons"
   },
   "blog-article:prospection-b2b-suisse-guide-2026": {
     "fr": "/blog/prospection-b2b-suisse-guide-2026",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/b2b-prospecting-switzerland-2026",
+    "de": "/de/blog/b2b-akquise-schweiz-2026",
+    "nl": "/nl/blog/b2b-prospectie-zwitserland-2026"
   },
   "blog-article:linkedin-outreach-b2b-methode-resultats": {
     "fr": "/blog/linkedin-outreach-b2b-methode-resultats",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/linkedin-b2b-outreach-method",
+    "de": "/de/blog/linkedin-b2b-outreach-methode",
+    "nl": "/nl/blog/linkedin-b2b-outreach-methode"
   },
   "blog-article:cold-calling-b2b-2026-encore-efficace": {
     "fr": "/blog/cold-calling-b2b-2026-encore-efficace",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/cold-calling-b2b-2026-effective",
+    "de": "/de/blog/cold-calling-b2b-2026-effektiv",
+    "nl": "/nl/blog/cold-calling-b2b-2026-effectief"
   },
   "blog-article:generation-leads-b2b-methode-complete": {
     "fr": "/blog/generation-leads-b2b-methode-complete",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/b2b-lead-generation-method",
+    "de": "/de/blog/b2b-leadgenerierung-methode",
+    "nl": "/nl/blog/b2b-leadgeneratie-methode"
   },
   "blog-article:prospection-multicanale-b2b-cold-email-linkedin-calling": {
     "fr": "/blog/prospection-multicanale-b2b-cold-email-linkedin-calling",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/blog/multichannel-b2b-prospecting",
+    "de": "/de/blog/multichannel-b2b-akquise",
+    "nl": "/nl/blog/multichannel-b2b-prospectie"
   },
   "alternative:alternative-undersales": {
     "fr": "/alternative-undersales",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/alternative-undersales",
+    "de": "/de/alternative-undersales",
+    "nl": "/nl/alternatief-undersales"
   },
   "alternative:alternative-lalaleads": {
     "fr": "/alternative-lalaleads",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/alternative-lalaleads",
+    "de": "/de/alternative-lalaleads",
+    "nl": "/nl/alternatief-lalaleads"
   },
   "alternative:alternative-agences-prospection-b2b": {
     "fr": "/alternative-agences-prospection-b2b",
-    "en": null,
-    "de": null,
-    "nl": null
+    "en": "/en/alternative-b2b-prospecting-agencies",
+    "de": "/de/alternative-b2b-akquise-agenturen",
+    "nl": "/nl/alternatief-b2b-prospectie-bureaus"
   }
 }

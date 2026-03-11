@@ -1,0 +1,402 @@
+{
+  "fr": {
+    "metaTitle": "L'agence — devlo",
+    "metaDescription": "devlo est une agence de prospection commerciale B2B fondée en 2020, basée en Suisse. Plus de 1000 campagnes outbound déployées en Suisse, Belgique, France, DACH et Amérique du Nord.",
+    "h1": "L'agence devlo",
+    "intro": "devlo est une agence de prospection commerciale B2B fondée en 2020, basée à Lausanne dans le canton de Vaud, en Suisse. Nous accompagnons les entreprises dans leur développement commercial via des campagnes outbound multicanales : cold email, LinkedIn et cold calling.",
+    "stats": [
+      {
+        "value": "+1000",
+        "label": "campagnes déployées"
+      },
+      {
+        "value": "5/5",
+        "label": "satisfaction client (Outbound Experts)"
+      },
+      {
+        "value": "4",
+        "label": "marchés principaux"
+      },
+      {
+        "value": "2020",
+        "label": "fondée à Lausanne, Suisse"
+      }
+    ],
+    "founderName": "Charles Perret",
+    "founderRole": "Fondateur & CEO",
+    "founderLinkedIn": "https://www.linkedin.com/in/charlesperret/",
+    "story": [
+      "devlo a été fondée en 2020 à Lausanne avec une conviction simple : la prospection B2B externalisée doit produire des résultats mesurables, pas des promesses vagues. Depuis, nous avons déployé plus de 1000 campagnes pour des clients en Suisse, Belgique, France, DACH et Amérique du Nord.",
+      "Notre équipe maîtrise les trois canaux outbound qui convertissent le mieux en B2B : le cold email, le LinkedIn outreach et le cold calling. Nous ne sommes pas une agence full-service — nous sommes spécialistes de l'outbound, et uniquement de l'outbound.",
+      "Notre méthode combine la rigueur suisse avec une connaissance approfondie des marchés locaux. Chaque campagne démarre par un workshop ICP, suivi d'une phase de test de deux semaines, puis d'un déploiement à l'échelle. Les résultats sont mesurables dès la troisième semaine."
+    ],
+    "marketsHeading": "4 marchés principaux, une portée mondiale",
+    "marketsNote": "Nous aidons aussi nos clients à prospecter en Amérique du Nord, APAC et sur l'ensemble de la zone EMEA.",
+    "markets": [
+      {
+        "name": "Suisse",
+        "description": "Marché historique. Romand, alémanique et tessinois."
+      },
+      {
+        "name": "Belgique",
+        "description": "FR et NL. Bruxelles, Wallonie, Flandre."
+      },
+      {
+        "name": "France",
+        "description": "Île-de-France, Lyon, Marseille, pôles régionaux."
+      },
+      {
+        "name": "DACH",
+        "description": "Allemagne, Autriche, Suisse alémanique."
+      }
+    ],
+    "values": [
+      {
+        "title": "Résultats mesurables",
+        "description": "Chaque campagne est suivie avec des KPIs précis : taux de réponse, nombre de rendez-vous, pipeline généré."
+      },
+      {
+        "title": "Transparence totale",
+        "description": "Accès complet aux données de campagne en temps réel. Reporting hebdomadaire sans filtre."
+      },
+      {
+        "title": "Expertise native",
+        "description": "Nos équipes rédigent et prospectent en français, anglais, allemand et néerlandais — avec des messages natifs, pas des traductions."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Où est basée devlo ?",
+        "answer": "devlo est basée à Lausanne, dans le canton de Vaud en Suisse. Nous sommes une équipe distribuée avec des collaborateurs en Suisse, Belgique, France et DACH."
+      },
+      {
+        "question": "Depuis quand devlo existe-t-elle ?",
+        "answer": "devlo a été fondée en 2020 par Charles Perret. En 5 ans, nous avons déployé plus de 1000 campagnes outbound pour des clients B2B sur 4 marchés principaux."
+      },
+      {
+        "question": "Quels secteurs ciblez-vous ?",
+        "answer": "Tous les secteurs B2B : IT/SaaS, finance, industrie, services professionnels, santé, immobilier, environnement, formation. Nous adaptons notre approche à chaque secteur et chaque ICP."
+      },
+      {
+        "question": "Combien coûte une campagne outbound avec devlo ?",
+        "answer": "Le tarif dépend du volume de prospects, des canaux utilisés et de la durée de la campagne. Nous proposons des forfaits mensuels transparents, sans frais cachés. Contactez-nous pour un devis personnalisé."
+      },
+      {
+        "question": "Combien de temps faut-il pour obtenir les premiers résultats ?",
+        "answer": "Les premiers rendez-vous qualifiés arrivent généralement entre la 2ᵉ et la 3ᵉ semaine de campagne. La phase de test initiale (2 semaines) permet d'optimiser les messages avant le déploiement à grande échelle."
+      },
+      {
+        "question": "Travaillez-vous avec des startups ou seulement des grandes entreprises ?",
+        "answer": "Nous travaillons avec des entreprises de toutes tailles, de la startup early-stage aux grands groupes. Le critère principal est d'avoir un produit ou service B2B à commercialiser et une cible claire."
+      },
+      {
+        "question": "Comment mesurez-vous le succès d'une campagne ?",
+        "answer": "Nous suivons des KPIs concrets : taux d'ouverture, taux de réponse, nombre de rendez-vous bookés, taux de no-show, et pipeline commercial généré. Un reporting hebdomadaire détaillé est partagé avec chaque client."
+      },
+      {
+        "question": "Pouvez-vous prospecter en dehors de l'Europe ?",
+        "answer": "Oui. Nos 4 marchés principaux sont la Suisse, la Belgique, la France et le DACH, mais nous déployons aussi des campagnes en Amérique du Nord, au Royaume-Uni et dans d'autres régions EMEA et APAC selon les besoins."
+      }
+    ]
+  },
+  "en": {
+    "metaTitle": "The agency - devlo",
+    "metaDescription": "devlo is a B2B sales prospecting agency founded in 2020 and based in Switzerland. Over 1,000 outbound campaigns deployed in Switzerland, Belgium, France, DACH and North America.",
+    "h1": "The devlo agency",
+    "intro": "devlo is a B2B sales prospecting agency founded in 2020, based in Lausanne in the canton of Vaud, Switzerland. We support companies in their commercial development through multi-channel outbound campaigns: cold email, LinkedIn and cold calling.",
+    "stats": [
+      {
+        "value": "+1000",
+        "label": "campaigns deployed"
+      },
+      {
+        "value": "5/5",
+        "label": "customer satisfaction (Outbound Experts)"
+      },
+      {
+        "value": "4",
+        "label": "main markets"
+      },
+      {
+        "value": "2020",
+        "label": "founded in Lausanne, Switzerland"
+      }
+    ],
+    "founderName": "Charles Perret",
+    "founderRole": "Founder & CEO",
+    "founderLinkedIn": "https://www.linkedin.com/in/charlesperret/",
+    "story": [
+      "devlo was founded in Lausanne in 2020 with a simple conviction: outsourced B2B prospecting should produce measurable results, not vague promises. Since then, we've deployed over 1,000 campaigns for clients in Switzerland, Belgium, France, DACH and North America.",
+      "Our team has mastered the three outbound channels that convert best in B2B: cold email, LinkedIn outreach and cold calling. We're not a full-service agency - we're outbound specialists, and only outbound specialists.",
+      "Our method combines Swiss rigour with in-depth knowledge of local markets. Each campaign starts with an ICP workshop, followed by a two-week test phase and then a full-scale roll-out. The results are measurable from the third week onwards."
+    ],
+    "marketsHeading": "4 main markets, a global reach",
+    "marketsNote": "We also help our customers to prospect in North America, APAC and the whole of EMEA.",
+    "markets": [
+      {
+        "name": "Suisse",
+        "description": "Historic market. French, German and Ticino."
+      },
+      {
+        "name": "Belgique",
+        "description": "FR and NL. Brussels, Wallonia, Flanders."
+      },
+      {
+        "name": "France",
+        "description": "Île-de-France, Lyon, Marseille, regional hubs."
+      },
+      {
+        "name": "DACH",
+        "description": "Germany, Austria, German-speaking Switzerland."
+      }
+    ],
+    "values": [
+      {
+        "title": "Measurable results",
+        "description": "Each campaign is monitored using precise KPIs: response rate, number of appointments, pipeline generated."
+      },
+      {
+        "title": "Total transparency",
+        "description": "Full access to campaign data in real time. Weekly, unfiltered reporting."
+      },
+      {
+        "title": "Native expertise",
+        "description": "Our teams write and prospect in French, English, German and Dutch - with native messages, not translations."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Where is devlo based?",
+        "answer": "devlo is based in Lausanne, in the canton of Vaud in Switzerland. We are a distributed team with employees in Switzerland, Belgium, France and DACH."
+      },
+      {
+        "question": "How long has devlo been around?",
+        "answer": "devlo was founded in 2020 by Charles Perret. In 5 years, we have deployed over 1,000 outbound campaigns for B2B customers in 4 main markets."
+      },
+      {
+        "question": "What sectors are you targeting?",
+        "answer": "All B2B sectors: IT/SaaS, finance, industry, professional services, healthcare, real estate, environment, training. We tailor our approach to each sector and each KPI."
+      },
+      {
+        "question": "How much does an outbound campaign with devlo cost?",
+        "answer": "The price depends on the volume of leads, the channels used and the duration of the campaign. We offer transparent monthly packages with no hidden costs. Contact us for a personalised quote."
+      },
+      {
+        "question": "How long does it take to get the first results?",
+        "answer": "The first qualified appointments generally arrive between the 2ᵉ and 3ᵉ week of the campaign. The initial test phase (2 weeks) allows messages to be optimised before large-scale deployment."
+      },
+      {
+        "question": "Do you work with start-ups or just large companies?",
+        "answer": "We work with companies of all sizes, from early-stage start-ups to major groups. The main criterion is to have a B2B product or service to market and a clear target."
+      },
+      {
+        "question": "How do you measure the success of a campaign?",
+        "answer": "We track concrete KPIs: open rate, response rate, number of appointments booked, no-show rate, and sales pipeline generated. A detailed weekly report is shared with each customer."
+      },
+      {
+        "question": "Can you prospect outside Europe?",
+        "answer": "Yes, our 4 main markets are Switzerland, Belgium, France and the DACH, but we also run campaigns in North America, the UK and other EMEA and APAC regions as required."
+      }
+    ]
+  },
+  "de": {
+    "metaTitle": "Die Agentur - devlo",
+    "metaDescription": "devlo ist eine 2020 gegründete B2B-Agentur für Geschäftsanbahnung mit Sitz in der Schweiz. Mehr als 1000 Outbound-Kampagnen wurden in der Schweiz, Belgien, Frankreich, DACH und Nordamerika eingesetzt.",
+    "h1": "Die devlo-Agentur",
+    "intro": "devlo ist eine 2020 gegründete Agentur für B2B-Geschäftsanbahnung mit Sitz in Lausanne im Kanton Waadt in der Schweiz. Wir begleiten Unternehmen bei ihrer Geschäftsentwicklung durch mehrkanalige Outbound-Kampagnen: Cold E-Mail, LinkedIn und Cold Calling.",
+    "stats": [
+      {
+        "value": "+1000",
+        "label": "eingesetzte Kampagnen"
+      },
+      {
+        "value": "5/5",
+        "label": "kundenzufriedenheit (Outbound Experts)"
+      },
+      {
+        "value": "4",
+        "label": "hauptmärkte"
+      },
+      {
+        "value": "2020",
+        "label": "gegründet in Lausanne, Schweiz"
+      }
+    ],
+    "founderName": "Charles Perret",
+    "founderRole": "Gründer & CEO",
+    "founderLinkedIn": "https://www.linkedin.com/in/charlesperret/",
+    "story": [
+      "devlo wurde 2020 in Lausanne mit einer einfachen Überzeugung gegründet: Ausgelagerte B2B-Akquise muss messbare Ergebnisse liefern, keine vagen Versprechungen. Seitdem haben wir über 1000 Kampagnen für Kunden in der Schweiz, Belgien, Frankreich, DACH und Nordamerika ausgerollt.",
+      "Unser Team beherrscht die drei Outbound-Kanäle, die im B2B-Bereich am besten konvertieren: Cold E-Mail, LinkedIn Outreach und Cold Calling. Wir sind keine Full-Service-Agentur - wir sind Outbound-Spezialisten, und zwar ausschließlich Outbound.",
+      "Unsere Methode kombiniert Schweizer Gründlichkeit mit einer umfassenden Kenntnis der lokalen Märkte. Jede Kampagne beginnt mit einem PKI-Workshop, gefolgt von einer zweiwöchigen Testphase und einem skalierten Einsatz. Die Ergebnisse sind ab der dritten Woche messbar."
+    ],
+    "marketsHeading": "4 Hauptmärkte, globale Reichweite",
+    "marketsNote": "Wir unterstützen unsere Kunden auch bei der Akquise in Nordamerika, APAC und in der gesamten EMEA-Region.",
+    "markets": [
+      {
+        "name": "Suisse",
+        "description": "Historischer Markt. Romandie, Deutschschweiz und Tessin."
+      },
+      {
+        "name": "Belgique",
+        "description": "FR und NL. Brüssel, Wallonien, Flandern."
+      },
+      {
+        "name": "France",
+        "description": "Île-de-France, Lyon, Marseille, regionale Schwerpunkte."
+      },
+      {
+        "name": "DACH",
+        "description": "Deutschland, Österreich, Deutschsprachige Schweiz."
+      }
+    ],
+    "values": [
+      {
+        "title": "Messbare Ergebnisse",
+        "description": "Jede Kampagne wird mit genauen KPIs verfolgt: Antwortrate, Anzahl der Termine, erzeugte Pipeline."
+      },
+      {
+        "title": "Volle Transparenz",
+        "description": "Vollständiger Zugriff auf Kampagnendaten in Echtzeit. Wöchentliches Reporting ohne Filter."
+      },
+      {
+        "title": "Native Expertise",
+        "description": "Unsere Teams schreiben und akquirieren auf Französisch, Englisch, Deutsch und Niederländisch - mit nativen Botschaften, nicht mit Übersetzungen."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Wo ist devlo ansässig?",
+        "answer": "devlo hat seinen Sitz in Lausanne, im Kanton Waadt in der Schweiz. Wir sind ein verteiltes Team mit Mitarbeitern in der Schweiz, Belgien, Frankreich und DACH."
+      },
+      {
+        "question": "Seit wann gibt es devlo?",
+        "answer": "devlo wurde 2020 von Charles Perret gegründet. In fünf Jahren haben wir über 1000 Outbound-Kampagnen für B2B-Kunden in vier Hauptmärkten umgesetzt."
+      },
+      {
+        "question": "Auf welche Branchen zielen Sie ab?",
+        "answer": "Alle B2B-Branchen: IT/SaaS, Finanzen, Industrie, professionelle Dienstleistungen, Gesundheit, Immobilien, Umwelt, Bildung. Wir passen unseren Ansatz an jeden Sektor und jede KPI an."
+      },
+      {
+        "question": "Wie viel kostet eine Outbound-Kampagne mit devlo?",
+        "answer": "Der Preis hängt vom Volumen der Leads, den verwendeten Kanälen und der Dauer der Kampagne ab. Wir bieten transparente monatliche Pauschalen ohne versteckte Kosten. Kontaktieren Sie uns für ein individuelles Angebot."
+      },
+      {
+        "question": "Wie lange dauert es, bis die ersten Ergebnisse erzielt werden?",
+        "answer": "Die ersten qualifizierten Termine kommen in der Regel zwischen der 2ᵉ und der 3ᵉ Kampagnenwoche. In der anfänglichen Testphase (2 Wochen) werden die Botschaften vor dem großflächigen Einsatz optimiert."
+      },
+      {
+        "question": "Arbeiten Sie mit Startups oder nur mit großen Unternehmen zusammen?",
+        "answer": "Wir arbeiten mit Unternehmen jeder Größe zusammen, von Early-Stage-Startups bis hin zu großen Konzernen. Das Hauptkriterium ist, dass sie ein B2B-Produkt oder eine B2B-Dienstleistung vermarkten wollen und eine klare Zielgruppe haben."
+      },
+      {
+        "question": "Wie messen Sie den Erfolg einer Kampagne?",
+        "answer": "Wir verfolgen konkrete KPIs: Öffnungsrate, Antwortrate, Anzahl der gebuchten Termine, No-Show-Rate und generierte kommerzielle Pipeline. Ein detailliertes wöchentliches Reporting wird mit jedem Kunden geteilt."
+      },
+      {
+        "question": "Können Sie auch außerhalb Europas Akquise betreiben?",
+        "answer": "Ja. Unsere vier Hauptmärkte sind die Schweiz, Belgien, Frankreich und DACH, aber wir setzen auch Kampagnen in Nordamerika, Großbritannien und anderen EMEA- und APAC-Regionen ein, je nach Bedarf."
+      }
+    ]
+  },
+  "nl": {
+    "metaTitle": "Het agentschap - devlo",
+    "metaDescription": "devlo is een B2B sales prospecting agentschap opgericht in 2020 en gevestigd in Zwitserland. Meer dan 1.000 outbound campagnes ingezet in Zwitserland, België, Frankrijk, DACH en Noord-Amerika.",
+    "h1": "Het devlo-bureau",
+    "intro": "devlo is een B2B sales prospectie agentschap opgericht in 2020, gevestigd in Lausanne in het kanton Vaud, Zwitserland. Wij ondersteunen bedrijven in hun commerciële ontwikkeling door middel van outbound campagnes via meerdere kanalen: koude e-mail, LinkedIn en cold calling.",
+    "stats": [
+      {
+        "value": "+1000",
+        "label": "campagnes ingezet"
+      },
+      {
+        "value": "5/5",
+        "label": "klanttevredenheid (Outbound Experts)"
+      },
+      {
+        "value": "4",
+        "label": "belangrijkste markten"
+      },
+      {
+        "value": "2020",
+        "label": "opgericht in Lausanne, Zwitserland"
+      }
+    ],
+    "founderName": "Charles Perret",
+    "founderRole": "Oprichter & CEO",
+    "founderLinkedIn": "https://www.linkedin.com/in/charlesperret/",
+    "story": [
+      "devlo werd in 2020 opgericht in Lausanne met een eenvoudige overtuiging: uitbestede B2B prospectie moet meetbare resultaten opleveren, geen vage beloften. Sindsdien hebben we meer dan 1000 campagnes uitgevoerd voor klanten in Zwitserland, België, Frankrijk, DACH en Noord-Amerika.",
+      "Ons team beheerst de drie uitgaande kanalen die het best converteren in B2B: koude e-mail, LinkedIn outreach en cold calling. We zijn geen full-service bureau - we zijn outbound specialisten, en alleen outbound specialisten.",
+      "Onze methode combineert Zwitserse nauwkeurigheid met diepgaande kennis van lokale markten. Elke campagne begint met een ICP-workshop, gevolgd door een testfase van twee weken en vervolgens een volledige uitrol. De resultaten zijn meetbaar vanaf de derde week."
+    ],
+    "marketsHeading": "4 belangrijke markten, een wereldwijd bereik",
+    "marketsNote": "We helpen onze klanten ook met prospectie in Noord-Amerika, APAC en de hele EMEA-regio.",
+    "markets": [
+      {
+        "name": "Suisse",
+        "description": "Historische markt. Frans, Duits en Ticino."
+      },
+      {
+        "name": "Belgique",
+        "description": "FR en NL. Brussel, Wallonië, Vlaanderen."
+      },
+      {
+        "name": "France",
+        "description": "Île-de-France, Lyon, Marseille, regionale hubs."
+      },
+      {
+        "name": "DACH",
+        "description": "Duitsland, Oostenrijk, Duitstalig Zwitserland."
+      }
+    ],
+    "values": [
+      {
+        "title": "Meetbare resultaten",
+        "description": "Elke campagne wordt gemonitord aan de hand van nauwkeurige KPI's: responspercentage, aantal afspraken, gegenereerde pijplijn."
+      },
+      {
+        "title": "Totale transparantie",
+        "description": "Volledige toegang tot campagnegegevens in realtime. Wekelijkse, ongefilterde rapportage."
+      },
+      {
+        "title": "Moedertaal expertise",
+        "description": "Onze teams schrijven en prospecteren in het Frans, Engels, Duits en Nederlands - met native boodschappen, geen vertalingen."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Waar is devlo gevestigd?",
+        "answer": "devlo is gevestigd in Lausanne, in het kanton Vaud in Zwitserland. We zijn een gedistribueerd team met medewerkers in Zwitserland, België, Frankrijk en DACH."
+      },
+      {
+        "question": "Hoe lang bestaat devlo al?",
+        "answer": "devlo werd in 2020 opgericht door Charles Perret. In 5 jaar hebben we meer dan 1.000 outbound campagnes voor B2B-klanten in 4 belangrijke markten ingezet."
+      },
+      {
+        "question": "Op welke sectoren richt je je?",
+        "answer": "Alle B2B-sectoren: IT/SaaS, financiën, industrie, professionele diensten, gezondheidszorg, vastgoed, milieu, opleiding. We stemmen onze aanpak af op elke sector en elke KPI."
+      },
+      {
+        "question": "Hoeveel kost een outbound campagne met devlo?",
+        "answer": "De prijs is afhankelijk van het volume leads, de gebruikte kanalen en de duur van de campagne. We bieden transparante maandelijkse pakketten zonder verborgen kosten. Neem contact met ons op voor een persoonlijke offerte."
+      },
+      {
+        "question": "Hoe lang duurt het voordat je de eerste resultaten krijgt?",
+        "answer": "De eerste gekwalificeerde afspraken komen over het algemeen binnen tussen de 2ᵉ en 3ᵉ week van de campagne. De eerste testfase (2 weken) maakt het mogelijk om berichten te optimaliseren voordat ze op grote schaal worden ingezet."
+      },
+      {
+        "question": "Werkt u met start-ups of alleen met grote bedrijven?",
+        "answer": "We werken met bedrijven van alle groottes, van startende ondernemingen in een vroeg stadium tot grote groepen. Het belangrijkste criterium is dat je een B2B-product of -dienst op de markt wilt brengen en een duidelijk doel voor ogen hebt."
+      },
+      {
+        "question": "Hoe meet je het succes van een campagne?",
+        "answer": "We houden concrete KPI's bij: open rate, respons rate, aantal geboekte afspraken, no-show rate en gegenereerde sales pipeline. Een gedetailleerd wekelijks rapport wordt met elke klant gedeeld."
+      },
+      {
+        "question": "Kun je buiten Europa prospecteren?",
+        "answer": "Ja, onze 4 belangrijkste markten zijn Zwitserland, België, Frankrijk en DACH, maar we voeren ook campagnes in Noord-Amerika, het Verenigd Koninkrijk en andere EMEA- en APAC-regio's als dat nodig is."
+      }
+    ]
+  }
+}

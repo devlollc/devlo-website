@@ -8,8 +8,71 @@ import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { type GeoPageData } from "@/content/geo-pages";
 import { caseStudyBySlug } from "@/lib/case-studies";
+import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
+import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 
-export function GeoLandingPage({ data }: { data: GeoPageData }) {
+const copyByLocale: Record<
+  SupportedLocale,
+  {
+    home: string;
+    presence: string;
+    ctaConsultation: string;
+    caseStudiesEyebrow: string;
+    caseStudiesHeading: string;
+    faqTitle: string;
+    ctaTitle: string;
+    ctaSubtitle: string;
+  }
+> = {
+  fr: {
+    home: "Accueil",
+    presence: "Présence",
+    ctaConsultation: "Consultation gratuite",
+    caseStudiesEyebrow: "Études de cas",
+    caseStudiesHeading: "Résultats concrets sur ce marché",
+    faqTitle: "Questions fréquentes",
+    ctaTitle: "Prêt à développer votre pipeline commercial ?",
+    ctaSubtitle: "Réservez un appel stratégique gratuit de 30 minutes avec notre équipe.",
+  },
+  en: {
+    home: "Home",
+    presence: "Presence",
+    ctaConsultation: "Free consultation",
+    caseStudiesEyebrow: "Case studies",
+    caseStudiesHeading: "Concrete results in this market",
+    faqTitle: "Frequently asked questions",
+    ctaTitle: "Ready to grow your commercial pipeline?",
+    ctaSubtitle: "Book a free 30-minute strategic call with our team.",
+  },
+  de: {
+    home: "Startseite",
+    presence: "Präsenz",
+    ctaConsultation: "Kostenlose Beratung",
+    caseStudiesEyebrow: "Fallstudien",
+    caseStudiesHeading: "Konkrete Ergebnisse auf diesem Markt",
+    faqTitle: "Häufig gestellte Fragen",
+    ctaTitle: "Bereit, Ihre Vertriebspipeline auszubauen?",
+    ctaSubtitle: "Buchen Sie ein kostenloses 30-minütiges Strategiegespräch mit unserem Team.",
+  },
+  nl: {
+    home: "Home",
+    presence: "Aanwezigheid",
+    ctaConsultation: "Gratis consultatie",
+    caseStudiesEyebrow: "Praktijkvoorbeelden",
+    caseStudiesHeading: "Concrete resultaten op deze markt",
+    faqTitle: "Veelgestelde vragen",
+    ctaTitle: "Klaar om uw commerciële pipeline te laten groeien?",
+    ctaSubtitle: "Boek een gratis strategiegesprek van 30 minuten met ons team.",
+  },
+};
+
+export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; locale?: SupportedLocale }) {
+  const copy = copyByLocale[locale];
+  const localizedContent = getLocalizedGeoContent(data.slug, locale);
+  const h1 = localizedContent?.h1 ?? data.h1;
+  const intro = localizedContent?.intro ?? data.intro;
+  const faqs = localizedContent?.faqs ?? data.faqs;
+
   const studies = data.caseStudySlugs
     .map((slug) => caseStudyBySlug[slug])
     .filter(Boolean);
@@ -18,16 +81,21 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
     ? TRUSTED_LOGOS_STRIP.filter((l) => !data.excludeLogos!.includes(l.alt))
     : TRUSTED_LOGOS_STRIP;
 
+  const homePath = resolvePathForLocale("/", locale).path;
+  const switzerlandPath = resolvePathForLocale("/prospection-commerciale-suisse", locale).path;
+  const geoPath = resolvePathForLocale(`/${data.slug}`, locale).path;
+  const consultationPath = resolvePathForLocale("/consultation", locale).path;
+
   const breadcrumbItems =
     data.country === "ch"
       ? [
-          { name: "Accueil", path: "/" },
-          { name: data.h1, path: `/${data.slug}` },
+          { name: copy.home, path: homePath },
+          { name: h1, path: geoPath },
         ]
       : [
-          { name: "Accueil", path: "/" },
-          { name: "Présence", path: "/prospection-commerciale-suisse" },
-          { name: data.h1, path: `/${data.slug}` },
+          { name: copy.home, path: homePath },
+          { name: copy.presence, path: switzerlandPath },
+          { name: h1, path: geoPath },
         ];
 
   return (
@@ -36,20 +104,20 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
         <Breadcrumb items={breadcrumbItems} variant="dark" />
         <div className="mx-auto w-full max-w-screen-xl px-6 pt-8 text-center lg:px-10">
           <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            {data.h1}
+            {h1}
           </h1>
           <div className="mx-auto mt-6 max-w-3xl space-y-4">
-            {data.intro.map((p, i) => (
+            {intro.map((p, i) => (
               <p key={i} className="text-base leading-7 text-white/85 md:text-lg">
                 {p}
               </p>
             ))}
           </div>
           <Link
-            href="/consultation"
+            href={consultationPath}
             className="mt-8 inline-flex h-12 items-center rounded-lg bg-white px-6 text-sm font-semibold uppercase tracking-[0.1em] text-[#074f74] transition hover:bg-white/90"
           >
-            Consultation gratuite
+            {copy.ctaConsultation}
           </Link>
         </div>
       </section>
@@ -70,16 +138,16 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
         <section className="bg-[#f7f8fc] py-14 md:py-18">
           <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
             <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
-              Études de cas
+              {copy.caseStudiesEyebrow}
             </p>
             <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
-              Résultats concrets sur ce marché
+              {copy.caseStudiesHeading}
             </h2>
             <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {studies.map((study) => (
                 <Link
                   key={study.slug}
-                  href={`/etudes-de-cas/${study.slug}`}
+                  href={resolvePathForLocale(`/etudes-de-cas/${study.slug}`, locale).path}
                   className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft transition hover:border-[var(--primary)]/40"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#4d6678]">
@@ -101,13 +169,14 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
       )}
 
       <FAQSection
-        title="Questions fréquentes"
-        items={data.faqs}
+        title={copy.faqTitle}
+        items={faqs}
       />
 
       <CTASection
-        title="Prêt à développer votre pipeline commercial ?"
-        subtitle="Réservez un appel stratégique gratuit de 30 minutes avec notre équipe."
+        locale={locale}
+        title={copy.ctaTitle}
+        subtitle={copy.ctaSubtitle}
       />
     </>
   );

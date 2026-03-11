@@ -3,16 +3,27 @@ import { notFound } from "next/navigation";
 
 import { generateMetadata as generateCaseStudyFrMetadata } from "@/app/etudes-de-cas/[slug]/page";
 import { AcademyMasterPage } from "@/components/pages/academy-master-page";
+import { AgencyMasterPage } from "@/components/pages/agency-master-page";
+import { BlogHubMasterPage } from "@/components/pages/blog-hub-master-page";
+import { BlogArticleMasterPage } from "@/components/pages/blog-article-master-page";
 import { CaseStudiesMasterPage } from "@/components/pages/case-studies-master-page";
 import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
 import { ConditionsMasterPage } from "@/components/pages/conditions-master-page";
 import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
+import { GeoLandingPage } from "@/components/pages/geo-landing-page";
+import { AlternativePage } from "@/components/pages/alternative-page";
 import { HomePage } from "@/components/pages/home-page";
 import { ServicesHubPage as ServicesHubView } from "@/components/pages/services-hub-page";
 import { ServicePageTemplate } from "@/components/pages/service-page";
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
+import { GEO_PAGES } from "@/content/geo-pages";
+import { ALTERNATIVE_PAGES } from "@/content/alternatives";
+import { agencyContent } from "@/content/agency";
 import { SERVICE_PAGE_DATA, type ServiceSlug } from "@/content/services";
 import { academySeo, caseStudiesSeo, conditionsSeo, consultationSeo, homeSeo } from "@/content/masterfile.fr";
+import { getLocalizedBlogArticle } from "@/lib/i18n/blog-content";
+import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
+import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
 import { getLocalizedCaseStudyBySlug } from "@/lib/i18n/case-studies-content";
 import { getLocalizedMasterfileContent } from "@/lib/i18n/masterfile-content";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
@@ -176,6 +187,45 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
       imagePath,
       type: "article",
     };
+  }
+
+  if (path === "/agence") {
+    return {
+      title: agencyContent.metaTitle.replace(/\s*—\s*devlo$/i, ""),
+      description: agencyContent.metaDescription,
+    };
+  }
+
+  if (path === "/blog") {
+    return {
+      title: "Blog — Prospection B2B, cold email et outbound",
+      description:
+        "Articles et guides pratiques sur la prospection commerciale B2B : cold email, LinkedIn outreach, intent data et stratégies outbound.",
+    };
+  }
+
+  if (path.startsWith("/blog/")) {
+    const frSlug = path.slice("/blog/".length);
+    const article = getLocalizedBlogArticle(frSlug, "fr");
+    if (article) {
+      return { title: article.title, description: article.description, type: "article" as const };
+    }
+  }
+
+  if (path.startsWith("/prospection-commerciale-")) {
+    const geoSlug = path.slice(1);
+    const geoContent = getLocalizedGeoContent(geoSlug, "fr");
+    if (geoContent) {
+      return { title: geoContent.metaTitle, description: geoContent.metaDescription };
+    }
+  }
+
+  if (path.startsWith("/alternative-")) {
+    const altSlug = path.slice(1);
+    const altContent = getLocalizedAlternativeContent(altSlug, "fr");
+    if (altContent) {
+      return { title: altContent.metaTitle, description: altContent.metaDescription };
+    }
   }
 
   return {
@@ -399,6 +449,33 @@ export default async function LocalizedRoutePage({ params }: Params) {
         locale={resolved.locale}
       />
     );
+  }
+
+  if (frPath === "/agence") {
+    return <AgencyMasterPage locale={resolved.locale} />;
+  }
+
+  if (frPath === "/blog") {
+    return <BlogHubMasterPage locale={resolved.locale} />;
+  }
+
+  if (frPath.startsWith("/blog/")) {
+    const frSlug = frPath.slice("/blog/".length);
+    return <BlogArticleMasterPage frSlug={frSlug} locale={resolved.locale} />;
+  }
+
+  if (frPath.startsWith("/prospection-commerciale-")) {
+    const geoSlug = frPath.slice(1);
+    const geoData = GEO_PAGES[geoSlug];
+    if (!geoData) notFound();
+    return <GeoLandingPage data={geoData} locale={resolved.locale} />;
+  }
+
+  if (frPath.startsWith("/alternative-")) {
+    const altSlug = frPath.slice(1);
+    const altData = ALTERNATIVE_PAGES[altSlug];
+    if (!altData) notFound();
+    return <AlternativePage data={altData} locale={resolved.locale} />;
   }
 
   const pageData = await getSanityLocalizedPageData(resolved.pageId, resolved.locale);

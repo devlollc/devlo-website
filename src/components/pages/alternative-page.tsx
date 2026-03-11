@@ -7,17 +7,112 @@ import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { type AlternativePageData } from "@/content/alternatives";
 import { caseStudyBySlug } from "@/lib/case-studies";
+import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
+import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 
-export function AlternativePage({ data }: { data: AlternativePageData }) {
+const copyByLocale: Record<
+  SupportedLocale,
+  {
+    home: string;
+    comparatif: string;
+    ctaConsultation: string;
+    comparatifEyebrow: string;
+    comparisonEyebrow: string;
+    whyDevloEyebrow: string;
+    whyDevloHeading: string;
+    caseStudiesEyebrow: string;
+    caseStudiesHeading: string;
+    viewCaseStudy: string;
+    faqTitle: string;
+    ctaTitle: string;
+    ctaSubtitle: string;
+  }
+> = {
+  fr: {
+    home: "Accueil",
+    comparatif: "Comparatif",
+    ctaConsultation: "Consultation gratuite",
+    comparatifEyebrow: "Comparatif agences B2B",
+    comparisonEyebrow: "Comparaison",
+    whyDevloEyebrow: "Pourquoi devlo",
+    whyDevloHeading: "Ce que devlo apporte de différent",
+    caseStudiesEyebrow: "Résultats clients",
+    caseStudiesHeading: "Ce que nos clients ont obtenu",
+    viewCaseStudy: "Voir l'étude de cas →",
+    faqTitle: "Questions fréquentes",
+    ctaTitle: "Prêt à générer plus de rendez-vous B2B ?",
+    ctaSubtitle: "Obtenez votre stratégie de prospection personnalisée en 30 minutes. Premiers résultats dès la 3e semaine.",
+  },
+  en: {
+    home: "Home",
+    comparatif: "Comparison",
+    ctaConsultation: "Free consultation",
+    comparatifEyebrow: "B2B agency comparison",
+    comparisonEyebrow: "Comparison",
+    whyDevloEyebrow: "Why devlo",
+    whyDevloHeading: "What devlo brings differently",
+    caseStudiesEyebrow: "Client results",
+    caseStudiesHeading: "What our clients achieved",
+    viewCaseStudy: "View case study →",
+    faqTitle: "Frequently asked questions",
+    ctaTitle: "Ready to generate more B2B meetings?",
+    ctaSubtitle: "Get your personalised prospecting strategy in 30 minutes. First results from week 3.",
+  },
+  de: {
+    home: "Startseite",
+    comparatif: "Vergleich",
+    ctaConsultation: "Kostenlose Beratung",
+    comparatifEyebrow: "B2B-Agenturvergleich",
+    comparisonEyebrow: "Vergleich",
+    whyDevloEyebrow: "Warum devlo",
+    whyDevloHeading: "Was devlo anders macht",
+    caseStudiesEyebrow: "Kundenergebnisse",
+    caseStudiesHeading: "Was unsere Kunden erreicht haben",
+    viewCaseStudy: "Fallstudie ansehen →",
+    faqTitle: "Häufig gestellte Fragen",
+    ctaTitle: "Bereit, mehr B2B-Meetings zu generieren?",
+    ctaSubtitle: "Erhalten Sie Ihre personalisierte Akquisestrategie in 30 Minuten. Erste Ergebnisse ab Woche 3.",
+  },
+  nl: {
+    home: "Home",
+    comparatif: "Vergelijking",
+    ctaConsultation: "Gratis consultatie",
+    comparatifEyebrow: "B2B bureau vergelijking",
+    comparisonEyebrow: "Vergelijking",
+    whyDevloEyebrow: "Waarom devlo",
+    whyDevloHeading: "Wat devlo anders doet",
+    caseStudiesEyebrow: "Klantresultaten",
+    caseStudiesHeading: "Wat onze klanten hebben bereikt",
+    viewCaseStudy: "Praktijkvoorbeeld bekijken →",
+    faqTitle: "Veelgestelde vragen",
+    ctaTitle: "Klaar om meer B2B-afspraken te genereren?",
+    ctaSubtitle: "Ontvang uw gepersonaliseerde prospectie-strategie in 30 minuten. Eerste resultaten vanaf week 3.",
+  },
+};
+
+export function AlternativePage({ data, locale = "fr" }: { data: AlternativePageData; locale?: SupportedLocale }) {
+  const copy = copyByLocale[locale];
+  const localizedContent = getLocalizedAlternativeContent(data.slug, locale);
+  const h1 = localizedContent?.h1 ?? data.h1;
+  const intro = localizedContent?.intro ?? data.intro;
+  const comparisonTable = localizedContent?.comparisonTable ?? data.comparisonTable;
+  const whyDevlo = localizedContent?.whyDevlo ?? data.whyDevlo;
+  const faqs = localizedContent?.faqs ?? data.faqs;
+
   const studies = data.caseStudySlugs
     .map((slug) => caseStudyBySlug[slug])
     .filter(Boolean);
 
+  const homePath = resolvePathForLocale("/", locale).path;
+  const comparatifPath = resolvePathForLocale("/alternative-agences-prospection-b2b", locale).path;
+  const altPath = resolvePathForLocale(`/${data.slug}`, locale).path;
+  const consultationPath = resolvePathForLocale("/consultation", locale).path;
+
   const breadcrumbItems = [
-    { name: "Accueil", path: "/" },
-    { name: "Comparatif", path: "/alternative-agences-prospection-b2b" },
+    { name: copy.home, path: homePath },
+    { name: copy.comparatif, path: comparatifPath },
     ...(data.slug !== "alternative-agences-prospection-b2b"
-      ? [{ name: `vs ${data.competitorName}`, path: `/${data.slug}` }]
+      ? [{ name: `vs ${data.competitorName}`, path: altPath }]
       : []),
   ];
 
@@ -29,23 +124,23 @@ export function AlternativePage({ data }: { data: AlternativePageData }) {
       <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] py-16 text-white md:py-24">
         <div className="mx-auto w-full max-w-screen-xl px-6 text-center lg:px-10">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-white/60">
-            Comparatif agences B2B
+            {copy.comparatifEyebrow}
           </p>
           <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            {data.h1}
+            {h1}
           </h1>
           <div className="mx-auto mt-6 max-w-3xl space-y-4">
-            {data.intro.map((p, i) => (
+            {intro.map((p, i) => (
               <p key={i} className="text-base leading-7 text-white/85 md:text-lg">
                 {p}
               </p>
             ))}
           </div>
           <Link
-            href="/consultation"
+            href={consultationPath}
             className="mt-8 inline-flex h-12 items-center rounded-lg bg-white px-6 text-sm font-semibold uppercase tracking-[0.1em] text-[#074f74] transition hover:bg-white/90"
           >
-            Consultation gratuite
+            {copy.ctaConsultation}
           </Link>
         </div>
       </section>
@@ -65,7 +160,7 @@ export function AlternativePage({ data }: { data: AlternativePageData }) {
       <section className="bg-white py-16">
         <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
-            Comparaison
+            {copy.comparisonEyebrow}
           </p>
           <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
             devlo vs {data.competitorName}
@@ -80,7 +175,7 @@ export function AlternativePage({ data }: { data: AlternativePageData }) {
                 </tr>
               </thead>
               <tbody>
-                {data.comparisonTable.map((row, i) => (
+                {comparisonTable.map((row, i) => (
                   <tr
                     key={i}
                     className="border-b border-neutral-100 last:border-0 hover:bg-neutral-50"
@@ -105,13 +200,13 @@ export function AlternativePage({ data }: { data: AlternativePageData }) {
       <section className="bg-[#f7f8fc] py-16">
         <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
-            Pourquoi devlo
+            {copy.whyDevloEyebrow}
           </p>
           <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
-            Ce que devlo apporte de différent
+            {copy.whyDevloHeading}
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {data.whyDevlo.map((point, i) => (
+            {whyDevlo.map((point, i) => (
               <div
                 key={i}
                 className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft"
@@ -128,16 +223,16 @@ export function AlternativePage({ data }: { data: AlternativePageData }) {
         <section className="bg-white py-16">
           <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
             <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
-              Résultats clients
+              {copy.caseStudiesEyebrow}
             </p>
             <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
-              Ce que nos clients ont obtenu
+              {copy.caseStudiesHeading}
             </h2>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {studies.map((study) => (
                 <Link
                   key={study.slug}
-                  href={`/etudes-de-cas/${study.slug}`}
+                  href={resolvePathForLocale(`/etudes-de-cas/${study.slug}`, locale).path}
                   className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-soft transition hover:border-[var(--primary)]/40"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
@@ -145,7 +240,7 @@ export function AlternativePage({ data }: { data: AlternativePageData }) {
                   </p>
                   <h3 className="mt-2 text-base font-semibold text-[#153a54]">{study.title}</h3>
                   <span className="mt-4 inline-flex text-xs font-semibold text-[#074f74]">
-                    {"Voir l'étude de cas →"}
+                    {copy.viewCaseStudy}
                   </span>
                 </Link>
               ))}
@@ -155,12 +250,13 @@ export function AlternativePage({ data }: { data: AlternativePageData }) {
       )}
 
       {/* FAQ */}
-      <FAQSection title="Questions fréquentes" items={data.faqs} />
+      <FAQSection title={copy.faqTitle} items={faqs} />
 
       {/* CTA */}
       <CTASection
-        title="Prêt à générer plus de rendez-vous B2B ?"
-        subtitle="Obtenez votre stratégie de prospection personnalisée en 30 minutes. Premiers résultats dès la 3e semaine."
+        locale={locale}
+        title={copy.ctaTitle}
+        subtitle={copy.ctaSubtitle}
       />
     </>
   );

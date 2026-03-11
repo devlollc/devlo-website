@@ -1,0 +1,824 @@
+{
+  "alternative-undersales": {
+    "fr": {
+      "metaTitle": "Alternative à Undersales | Agence prospection B2B Suisse | devlo",
+      "metaDescription": "Vous comparez devlo et Undersales pour externaliser votre prospection B2B ? Découvrez la différence : multicanal natif FR/DE/EN, 1000+ campagnes, résultats dès J+15.",
+      "h1": "devlo : l'alternative à Undersales pour votre prospection B2B",
+      "intro": [
+        "Vous évaluez des agences de prospection B2B et comparez devlo à Undersales ? Cette page vous aide à prendre la bonne décision en fonction de vos besoins spécifiques.",
+        "Les deux agences opèrent sur le marché B2B francophone. Les différences se trouvent dans l'approche multicanale, la couverture linguistique, et l'expérience sur les marchés suisse et DACH.",
+        "Chez devlo, nous combinons cold email, LinkedIn outreach et cold calling dans une séquence coordonnée — avec une équipe native FR/DE/EN basée en Suisse depuis 2020."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multicanale (cold email + LinkedIn + calling)",
+          "competitor": "Principalement cold email"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL natif",
+          "competitor": "FR principalement"
+        },
+        {
+          "feature": "Marché Suisse",
+          "devlo": "Spécialiste — 500+ campagnes CH",
+          "competitor": "Couverture limitée"
+        },
+        {
+          "feature": "Marché DACH",
+          "devlo": "Oui — équipe germanophone native",
+          "competitor": "Couverture limitée"
+        },
+        {
+          "feature": "Démarrage",
+          "devlo": "Résultats dès la 3e semaine",
+          "competitor": "4-6 semaines"
+        },
+        {
+          "feature": "Expérience",
+          "devlo": "1000+ campagnes depuis 2020",
+          "competitor": "Données non publiques"
+        },
+        {
+          "feature": "Reporting",
+          "devlo": "Dashboard en temps réel + weekly call",
+          "competitor": "Rapport mensuel"
+        }
+      ],
+      "whyDevlo": [
+        "Expertise Suisse & DACH : devlo est basée en Suisse et opère en français, allemand et anglais natif — indispensable pour les marchés helvétique et germanophone.",
+        "Multicanal coordonné : nous combinons cold email, LinkedIn et cold calling dans une même séquence pour maximiser les points de contact avec vos décideurs cibles.",
+        "Résultats chiffrés et vérifiables : 14 cas clients publics avec des métriques précises — 120 RDV pour Monizze, 71 RDV pour Cortexia, 52 RDV pour Square Co.",
+        "Infrastructure complète : domaines dédiés, warm-up, délivrabilité, Sales Navigator, Clay — tout est inclus dans nos forfaits."
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la principale différence entre devlo et Undersales ?",
+          "answer": "La différence clé est l'approche multicanale et la couverture linguistique. devlo opère en FR/DE/EN natif avec une expertise reconnue sur les marchés suisse et DACH, et combine trois canaux d'outreach coordonnés."
+        },
+        {
+          "question": "devlo est-elle plus chère qu'Undersales ?",
+          "answer": "Nos forfaits démarrent à CHF 2'500/mois et incluent l'infrastructure complète (domaines, outils, délivrabilité). Le ROI est mesuré sur les rendez-vous qualifiés générés, pas sur le prix brut."
+        },
+        {
+          "question": "Comment migrer d'Undersales vers devlo ?",
+          "answer": "La transition prend 2 semaines : workshop ICP, transfert des listes de prospects, setup de l'infrastructure, validation des séquences. Nos premiers résultats arrivent dès la 3e semaine de campagne."
+        }
+      ]
+    },
+    "en": {
+      "metaTitle": "Alternative to Undersales | B2B prospecting agency Switzerland | devlo",
+      "metaDescription": "Are you comparing devlo and Undersales to outsource your B2B prospecting? Discover the difference: native multi-channel FR/DE/EN, 1000+ campaigns, results from D+15.",
+      "h1": "devlo: the alternative to Undersales for B2B prospecting",
+      "intro": [
+        "Are you evaluating B2B prospecting agencies and comparing devlo in Undersales? This page will help you make the right decision based on your specific needs.",
+        "Both agencies operate in the French-speaking B2B market. The differences lie in their multi-channel approach, language coverage and experience in the Swiss and DACH markets.",
+        "At devlo, we combine cold email, LinkedIn outreach and cold calling in a coordinated sequence - with a native FR/DE/EN team based in Switzerland since 2020."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multi-channel (cold email + LinkedIn + calling)",
+          "competitor": "Mainly cold email"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL native",
+          "competitor": "EN mainly"
+        },
+        {
+          "feature": "Swiss market",
+          "devlo": "Specialist - 500+ CH campaigns",
+          "competitor": "Limited coverage"
+        },
+        {
+          "feature": "DACH market",
+          "devlo": "Yes - native German-speaking team",
+          "competitor": "Limited coverage"
+        },
+        {
+          "feature": "Start",
+          "devlo": "Results from the 3rd week",
+          "competitor": "4-6 weeks"
+        },
+        {
+          "feature": "Experience",
+          "devlo": "1000+ campaigns since 2020",
+          "competitor": "Non-public data"
+        },
+        {
+          "feature": "Reporting",
+          "devlo": "Real-time dashboard + weekly call",
+          "competitor": "Monthly report"
+        }
+      ],
+      "whyDevlo": [
+        "Swiss & DACH expertise: devlo is based in Switzerland and operates in French, German and native English - essential for the Swiss and German-speaking markets.",
+        "Coordinated multi-channel: we combine cold email, LinkedIn and cold calling in the same sequence to maximise the points of contact with your target decision-makers.",
+        "Measurable and verifiable results: 14 public customer cases with precise metrics - 120 meetings for Monizze, 71 meetings for Cortexia, 52 meetings for Square Co.",
+        "Complete infrastructure: dedicated domains, warm-up, deliverability, Sales Navigator, Clay - everything is included in our packages."
+      ],
+      "faqs": [
+        {
+          "question": "What is the main difference between devlo and Undersales?",
+          "answer": "The key difference is the multi-channel approach and language coverage. devlo operates in native FR/DE/EN with recognised expertise in the Swiss and DACH markets, and combines three coordinated outreach channels."
+        },
+        {
+          "question": "is devlo more expensive than Undersales?",
+          "answer": "Our packages start at CHF 2,500/month and include the complete infrastructure (domains, tools, deliverability). ROI is measured on qualified appointments generated, not on the gross price."
+        },
+        {
+          "question": "How do I migrate from Undersales to devlo?",
+          "answer": "The transition takes 2 weeks: ICP workshop, transfer of prospect lists, infrastructure setup, validation of sequences. Our first results came in the 3rd week of the campaign."
+        }
+      ]
+    },
+    "de": {
+      "metaTitle": "Alternative zu Undersales | B2B Prospektionsagentur Schweiz | devlo",
+      "metaDescription": "Sie vergleichen devlo und Undersales, um Ihre B2B-Akquise auszulagern? Entdecken Sie den Unterschied: native Multichannel FR/DE/EN, 1000+ Kampagnen, Ergebnisse ab D+15.",
+      "h1": "devlo: Die Alternative zu Undersales für Ihre B2B-Akquise",
+      "intro": [
+        "Bewerten Sie B2B-Akquise-Agenturen und vergleichen Sie devlo in Undersales? Diese Seite hilft Ihnen dabei, die richtige Entscheidung zu treffen, die auf Ihren spezifischen Bedürfnissen basiert.",
+        "Beide Agenturen sind auf dem französischsprachigen B2B-Markt tätig. Die Unterschiede liegen im Multichannel-Ansatz, der Sprachabdeckung und der Erfahrung auf dem Schweizer und dem DACH-Markt.",
+        "Bei devlo kombinieren wir Cold E-Mail, LinkedIn Outreach und Cold Calling in einer koordinierten Abfolge - mit einem muttersprachlichen FR/DE/EN-Team, das seit 2020 in der Schweiz ansässig ist."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multichannel (cold email + LinkedIn + calling)",
+          "competitor": "Hauptsächlich Cold E-Mail"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL Muttersprachler",
+          "competitor": "DE hauptsächlich"
+        },
+        {
+          "feature": "Markt Schweiz",
+          "devlo": "Spezialist - 500+ Kampagnen CH",
+          "competitor": "Begrenzte Reichweite"
+        },
+        {
+          "feature": "DACH-Markt",
+          "devlo": "Ja - deutschsprachiges natives Team",
+          "competitor": "Begrenzte Reichweite"
+        },
+        {
+          "feature": "Start",
+          "devlo": "Ergebnisse ab der 3. Woche",
+          "competitor": "4-6 Wochen"
+        },
+        {
+          "feature": "Erfahrung",
+          "devlo": "1000+ Kampagnen seit 2020",
+          "competitor": "Nicht-öffentliche Daten"
+        },
+        {
+          "feature": "Reporting",
+          "devlo": "Dashboard in Echtzeit + weekly call",
+          "competitor": "Monatlicher Bericht"
+        }
+      ],
+      "whyDevlo": [
+        "Expertise Schweiz & DACH: devlo hat seinen Sitz in der Schweiz und operiert auf Deutsch, Französisch und muttersprachlichem Englisch - unerlässlich für den helvetischen und deutschsprachigen Markt.",
+        "Koordiniertes Multichanneling: Wir kombinieren Cold E-Mail, LinkedIn und Cold Calling in einer Sequenz, um die Kontaktpunkte mit Ihren Zielentscheidern zu maximieren.",
+        "Quantifizierbare und überprüfbare Ergebnisse: 14 öffentliche Kundenfälle mit genauen Metriken - 120 RDVs für Monizze, 71 RDVs für Cortexia, 52 RDVs für Square Co.",
+        "Komplette Infrastruktur: Dedizierte Domains, Warm-up, Zustellbarkeit, Sales Navigator, Clay - alles ist in unseren Paketen enthalten."
+      ],
+      "faqs": [
+        {
+          "question": "Was ist der Hauptunterschied zwischen devlo und Undersales?",
+          "answer": "Der Schlüsselunterschied ist der Multichannel-Ansatz und die Sprachabdeckung. devlo operiert in nativem FR/DE/EN mit anerkannter Expertise auf dem Schweizer und DACH-Markt und kombiniert drei aufeinander abgestimmte Outreach-Kanäle."
+        },
+        {
+          "question": "ist devlo teurer als Undersales?",
+          "answer": "Unsere Pauschalangebote beginnen bei CHF 2'500/Monat und beinhalten die komplette Infrastruktur (Domains, Tools, Zustellbarkeit). Der ROI wird anhand der generierten qualifizierten Termine gemessen, nicht anhand des Bruttopreises."
+        },
+        {
+          "question": "Wie migriere ich von Undersales zu devlo?",
+          "answer": "Die Umstellung dauert zwei Wochen: ICP-Workshop, Übertragung der Listen mit potenziellen Kunden, Setup der Infrastruktur, Validierung der Sequenzen. Unsere ersten Ergebnisse kommen bereits in der dritten Kampagnenwoche."
+        }
+      ]
+    },
+    "nl": {
+      "metaTitle": "Alternatief voor Undersales | B2B prospectiebureau Zwitserland | devlo",
+      "metaDescription": "Vergelijkt u devlo en Undersales om uw B2B prospectie uit te besteden? Ontdek het verschil: native multichannel FR/DE/EN, 1000+ campagnes, resultaten van D+15.",
+      "h1": "devlo: het alternatief voor Undersales voor B2B prospectie",
+      "intro": [
+        "Ben je B2B prospectiebureaus aan het evalueren en devlo in Undersales aan het vergelijken? Deze pagina helpt u de juiste beslissing te nemen op basis van uw specifieke behoeften.",
+        "Beide bureaus zijn actief op de Franstalige B2B-markt. De verschillen zitten in hun multichannelaanpak, taaldekking en ervaring in de Zwitserse en DACH-markten.",
+        "Bij devlo combineren we cold e-mail, LinkedIn outreach en cold calling in een gecoördineerde reeks - met een native FR/DE/EN team dat sinds 2020 in Zwitserland is gevestigd."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multi-channel (koude e-mail + LinkedIn + bellen)",
+          "competitor": "Voornamelijk koude e-mail"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL moedertaal",
+          "competitor": "NL voornamelijk"
+        },
+        {
+          "feature": "Zwitserse markt",
+          "devlo": "Specialist - 500+ CH-campagnes",
+          "competitor": "Beperkte dekking"
+        },
+        {
+          "feature": "DACH-markt",
+          "devlo": "Ja - Duitstalig team",
+          "competitor": "Beperkte dekking"
+        },
+        {
+          "feature": "Start",
+          "devlo": "Resultaten van de 3e week",
+          "competitor": "4-6 weken"
+        },
+        {
+          "feature": "Ervaring",
+          "devlo": "1000+ campagnes sinds 2020",
+          "competitor": "Niet-openbare gegevens"
+        },
+        {
+          "feature": "Reporting",
+          "devlo": "Real-time dashboard + wekelijks gesprek",
+          "competitor": "Maandelijks verslag"
+        }
+      ],
+      "whyDevlo": [
+        "Zwitserse & DACH-expertise: devlo is gevestigd in Zwitserland en werkt in het Frans, Duits en native Engels - essentieel voor de Zwitserse en Duitstalige markten.",
+        "Gecoördineerde multichannel: we combineren koude e-mail, LinkedIn en cold calling in dezelfde volgorde om het aantal contactmomenten met uw beoogde besluitvormers te maximaliseren.",
+        "Meetbare en controleerbare resultaten: 14 openbare klantcases met precieze meetgegevens - 120 bijeenkomsten voor Monizze, 71 bijeenkomsten voor Cortexia, 52 bijeenkomsten voor Square Co.",
+        "Complete infrastructuur: dedicated domeinen, warm-up, deliverability, Sales Navigator, Clay - alles is inbegrepen in onze pakketten."
+      ],
+      "faqs": [
+        {
+          "question": "Wat is het belangrijkste verschil tussen devlo en Undersales?",
+          "answer": "Het belangrijkste verschil is de multi-channel aanpak en de taaldekking. devlo is actief in native FR/DE/EN met erkende expertise in de Zwitserse en DACH-markten en combineert drie gecoördineerde outreach-kanalen."
+        },
+        {
+          "question": "is devlo duurder dan Undersales?",
+          "answer": "Onze pakketten beginnen bij CHF 2.500/maand en omvatten de volledige infrastructuur (domeinen, tools, deliverability). De ROI wordt gemeten op basis van gegenereerde gekwalificeerde afspraken, niet op basis van de brutoprijs."
+        },
+        {
+          "question": "Hoe migreer ik van Undersales naar devlo?",
+          "answer": "De overgang duurt 2 weken: ICP-workshop, overdracht van prospectlijsten, opzetten van infrastructuur, validatie van sequenties. Onze eerste resultaten kwamen in de 3e week van de campagne."
+        }
+      ]
+    }
+  },
+  "alternative-lalaleads": {
+    "fr": {
+      "metaTitle": "Alternative à LalaLeads | Agence prospection B2B Suisse | devlo",
+      "metaDescription": "Vous comparez devlo et LalaLeads pour votre prospection B2B ? devlo apporte une approche multicanale, une expertise Suisse/DACH et des résultats mesurables dès J+15.",
+      "h1": "devlo : l'alternative à LalaLeads pour votre prospection B2B",
+      "intro": [
+        "LalaLeads et devlo sont deux agences spécialisées dans la génération de leads B2B. Si vous hésitez entre les deux, voici une comparaison objective pour guider votre décision.",
+        "devlo se distingue par son approche outbound multicanale intégrée — cold email, LinkedIn et calling coordonnés — et par sa présence historique sur les marchés suisse et DACH.",
+        "Avec plus de 1000 campagnes depuis 2020 et 14 cas clients publics, nous privilégions la transparence et les résultats mesurables."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multicanale (cold email + LinkedIn + calling)",
+          "competitor": "Cold email & LinkedIn"
+        },
+        {
+          "feature": "Cold calling",
+          "devlo": "Oui — équipe native FR/DE/EN",
+          "competitor": "Non inclus"
+        },
+        {
+          "feature": "Marché Suisse",
+          "devlo": "Spécialiste — basé en Suisse depuis 2020",
+          "competitor": "Marché secondaire"
+        },
+        {
+          "feature": "Intent data",
+          "devlo": "Service dédié (signaux Bombora, G2, recrutements)",
+          "competitor": "Non proposé"
+        },
+        {
+          "feature": "Enrichissement",
+          "devlo": "Clay + Apollo + Cognism intégré",
+          "competitor": "Outils standards"
+        },
+        {
+          "feature": "Cas clients publics",
+          "devlo": "14 cas clients avec métriques",
+          "competitor": "Données limitées"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL",
+          "competitor": "FR / EN"
+        }
+      ],
+      "whyDevlo": [
+        "Prospection multicanale réelle : certaines agences se limitent au cold email. Chez devlo, cold email, LinkedIn et calling sont coordonnés dans une même séquence pour 2-3x plus de réponses.",
+        "Intent data inclus : nous identifions les entreprises qui montrent des signaux d'achat actifs — levées de fonds, recrutements, signaux G2 — avant de les prospecter.",
+        "Suisse & DACH : notre équipe est native FR/DE/EN. Nous parlons la langue de vos prospects — pas seulement au sens littéral, mais culturellement.",
+        "Transparence totale : 14 cas clients publics avec des résultats chiffrés. Pas de promesses vagues, des exemples concrets vérifiables."
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence clé entre devlo et LalaLeads ?",
+          "answer": "devlo propose une approche outbound multicanale complète (cold email + LinkedIn + calling) avec une expertise reconnue en Suisse et en DACH. Nous ajoutons également l'intent data et l'enrichissement Clay en standard."
+        },
+        {
+          "question": "devlo peut-elle prospecter en Allemagne et en Autriche comme LalaLeads ?",
+          "answer": "Oui. Notre équipe germanophone native opère en Allemagne, Autriche et Suisse alémanique depuis 2020. Exemple : 54 rendez-vous qualifiés pour CareerLunch sur le marché DACH."
+        },
+        {
+          "question": "Quels résultats puis-je attendre avec devlo ?",
+          "answer": "Taux de réponse moyen de 8-15 % selon le canal et le secteur, premiers rendez-vous qualifiés dès la 3e semaine. Nos 14 cas clients publics donnent une idée précise des résultats possibles dans votre secteur."
+        }
+      ]
+    },
+    "en": {
+      "metaTitle": "Alternative to LalaLeads | B2B prospecting agency Switzerland | devlo",
+      "metaDescription": "Are you comparing devlo and LalaLeads for your B2B prospecting? devlo offers a multi-channel approach, Swiss/DACH expertise and measurable results from D+15.",
+      "h1": "devlo: the alternative to LalaLeads for B2B prospecting",
+      "intro": [
+        "LalaLeads and devlo are two agencies specialising in B2B lead generation. If you're on the fence between the two, here's an objective comparison to guide your decision.",
+        "devlo stands out for its integrated multi-channel outbound approach - cold email, LinkedIn and coordinated calling - and for its long-standing presence in the Swiss and DACH markets.",
+        "With more than 1,000 campaigns since 2020 and 14 public client cases, we place a premium on transparency and measurable results."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multi-channel (cold email + LinkedIn + calling)",
+          "competitor": "Cold email & LinkedIn"
+        },
+        {
+          "feature": "Cold calling",
+          "devlo": "Yes - native FR/DE/EN team",
+          "competitor": "Not included"
+        },
+        {
+          "feature": "Swiss market",
+          "devlo": "Specialist - based in Switzerland since 2020",
+          "competitor": "Secondary market"
+        },
+        {
+          "feature": "Intent data",
+          "devlo": "Dedicated department (Bombora signals, G2, recruitment)",
+          "competitor": "Not proposed"
+        },
+        {
+          "feature": "Enrichissement",
+          "devlo": "Clay + Apollo + Cognism integrated",
+          "competitor": "Standard tools"
+        },
+        {
+          "feature": "Public customer cases",
+          "devlo": "14 case studies with metrics",
+          "competitor": "Limited data"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL",
+          "competitor": "FR / EN"
+        }
+      ],
+      "whyDevlo": [
+        "Real multi-channel prospecting: some agencies limit themselves to cold email. At devlo, cold email, LinkedIn and calling are coordinated in the same sequence for 2-3x more responses.",
+        "Intent data included: we identify companies showing active buy signals - fundraising, recruitment, G2 signals - before prospecting them.",
+        "Switzerland & DACH: our team is native FR/DE/EN speakers. We speak the language of your prospects - not just literally, but culturally.",
+        "Total transparency: 14 public case studies with quantified results. No vague promises, just concrete, verifiable examples."
+      ],
+      "faqs": [
+        {
+          "question": "What is the key difference between devlo and LalaLeads?",
+          "answer": "devlo offers a complete multi-channel outbound approach (cold email + LinkedIn + calling) with recognised expertise in Switzerland and DACH. We also include intent data and Clay enrichment as standard."
+        },
+        {
+          "question": "can devlo prospect in Germany and Austria like LalaLeads?",
+          "answer": "Yes, our native German-speaking team has been operating in Germany, Austria and German-speaking Switzerland since 2020. Example: 54 qualified appointments for CareerLunch in the DACH market."
+        },
+        {
+          "question": "What results can I expect from devlo?",
+          "answer": "Average response rate of 8-15% depending on the channel and sector, first qualified appointments in the 3rd week. Our 14 public case studies give you a clear idea of the possible results in your sector."
+        }
+      ]
+    },
+    "de": {
+      "metaTitle": "Alternative zu LalaLeads | B2B Prospektionsagentur Schweiz | devlo",
+      "metaDescription": "Sie vergleichen devlo und LalaLeads für Ihre B2B-Akquise? devlo bringt einen Multi-Channel-Ansatz, Schweizer/DACH-Expertise und messbare Ergebnisse ab D+15.",
+      "h1": "devlo: Die Alternative zu LalaLeads für Ihre B2B-Akquise",
+      "intro": [
+        "LalaLeads und devlo sind zwei Agenturen, die sich auf die Generierung von B2B-Leads spezialisiert haben. Wenn Sie sich zwischen den beiden nicht entscheiden können, finden Sie hier einen objektiven Vergleich, der Ihre Entscheidung leiten soll.",
+        "devlo zeichnet sich durch seinen integrierten Multichannel-Outbound-Ansatz - Cold E-Mail, LinkedIn und Calling koordiniert - und seine historische Präsenz auf dem Schweizer und DACH-Markt aus.",
+        "Mit über 1000 Kampagnen seit 2020 und 14 öffentlichen Kundenfällen legen wir Wert auf Transparenz und messbare Ergebnisse."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multichannel (cold email + LinkedIn + calling)",
+          "competitor": "Cold email & LinkedIn"
+        },
+        {
+          "feature": "Cold calling",
+          "devlo": "Ja - native team FR/DE/EN",
+          "competitor": "Nicht enthalten"
+        },
+        {
+          "feature": "Markt Schweiz",
+          "devlo": "Spezialist - seit 2020 in der Schweiz ansässig",
+          "competitor": "Sekundärer Markt"
+        },
+        {
+          "feature": "Intent data",
+          "devlo": "Dedizierte Abteilung (Bombora-Signale, G2, Rekrutierungen)",
+          "competitor": "Nicht vorgeschlagen"
+        },
+        {
+          "feature": "Enrichissement",
+          "devlo": "Clay + Apollo + Cognism integriert",
+          "competitor": "Standard-Tools"
+        },
+        {
+          "feature": "Fälle öffentliche Kunden",
+          "devlo": "14 Kundenfälle mit Metriken",
+          "competitor": "Begrenzte Daten"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL",
+          "competitor": "FR / EN"
+        }
+      ],
+      "whyDevlo": [
+        "Echte Multichannel-Akquise: Manche Agenturen beschränken sich auf Cold E-Mail. Bei devlo werden Cold E-Mail, LinkedIn und Calling in einer Sequenz koordiniert, um 2-3x mehr Antworten zu erhalten.",
+        "Intent data included: Wir identifizieren Unternehmen, die aktive Kaufsignale zeigen - Kapitalerhebungen, Neueinstellungen, G2-Signale -, bevor wir sie ansprechen.",
+        "Schweiz & DACH: Unser Team ist muttersprachlich FR/DE/EN. Wir sprechen die Sprache Ihrer potenziellen Kunden - nicht nur im wörtlichen Sinne, sondern kulturell.",
+        "Volle Transparenz: 14 öffentliche Kundenfälle mit quantifizierten Ergebnissen. Keine vagen Versprechungen, sondern konkrete, nachprüfbare Beispiele."
+      ],
+      "faqs": [
+        {
+          "question": "Was ist der Schlüsselunterschied zwischen devlo und LalaLeads?",
+          "answer": "devlo bietet einen umfassenden Multichannel-Outbound-Ansatz (Cold E-Mail + LinkedIn + Calling) mit anerkannter Expertise in der Schweiz und in DACH. Wir fügen außerdem Intent Data und Clay Enrichment als Standard hinzu."
+        },
+        {
+          "question": "kann devlo wie LalaLeads in Deutschland und Österreich prospektieren?",
+          "answer": "Ja. Unser natives deutschsprachiges Team ist seit 2020 in Deutschland, Österreich und der deutschsprachigen Schweiz tätig. Beispiel: 54 qualifizierte Termine für CareerLunch auf dem DACH-Markt."
+        },
+        {
+          "question": "Welche Ergebnisse kann ich von devlo erwarten?",
+          "answer": "Durchschnittliche Antwortquote von 8-15% je nach Kanal und Branche, erste qualifizierte Termine ab der dritten Woche. Unsere 14 öffentlichen Fallbeispiele geben Ihnen eine genaue Vorstellung von den möglichen Ergebnissen in Ihrer Branche."
+        }
+      ]
+    },
+    "nl": {
+      "metaTitle": "Alternatief voor LalaLeads | B2B prospectie agentschap Zwitserland | devlo",
+      "metaDescription": "Vergelijkt u devlo en LalaLeads voor uw B2B prospectie? devlo biedt een multi-channel aanpak, Zwitserse/DACH expertise en meetbare resultaten vanaf D+15.",
+      "h1": "devlo: het alternatief voor LalaLeads voor B2B prospectie",
+      "intro": [
+        "LalaLeads en devlo zijn twee bureaus die gespecialiseerd zijn in B2B leadgeneratie. Als je twijfelt tussen de twee, is hier een objectieve vergelijking om je te helpen bij je beslissing.",
+        "devlo onderscheidt zich door zijn geïntegreerde multi-channel outbound aanpak - koude e-mail, LinkedIn en gecoördineerd bellen - en door zijn jarenlange aanwezigheid op de Zwitserse en DACH-markten.",
+        "Met meer dan 1.000 campagnes sinds 2020 en 14 openbare klantcases hechten we veel waarde aan transparantie en meetbare resultaten."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multi-channel (koude e-mail + LinkedIn + bellen)",
+          "competitor": "Koude e-mail & LinkedIn"
+        },
+        {
+          "feature": "Koud bellen",
+          "devlo": "Ja - geboren FR/DE/EN team",
+          "competitor": "Niet inbegrepen"
+        },
+        {
+          "feature": "Zwitserse markt",
+          "devlo": "Specialist - sinds 2020 gevestigd in Zwitserland",
+          "competitor": "Secundaire markt"
+        },
+        {
+          "feature": "Intentiegegevens",
+          "devlo": "Speciale afdeling (Bombora-signalen, G2, werving)",
+          "competitor": "Niet voorgesteld"
+        },
+        {
+          "feature": "Enrichissement",
+          "devlo": "Klei + Apollo + Cognisme geïntegreerd",
+          "competitor": "Standaard gereedschap"
+        },
+        {
+          "feature": "Openbare klantcases",
+          "devlo": "14 casestudies met statistieken",
+          "competitor": "Beperkte gegevens"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL",
+          "competitor": "FR / EN"
+        }
+      ],
+      "whyDevlo": [
+        "Echte multi-channel prospectie: sommige bureaus beperken zich tot koude e-mail. Bij devlo worden koude e-mail, LinkedIn en bellen in dezelfde volgorde gecoördineerd voor 2-3x meer reacties.",
+        "Inclusief intentiegegevens: we identificeren bedrijven met actieve koopsignalen - fondsenwerving, werving, G2-signalen - voordat we ze prospecteren.",
+        "Zwitserland & DACH: ons team spreekt FR/DE/EN als moedertaal. Wij spreken de taal van uw prospects - niet alleen letterlijk, maar ook cultureel.",
+        "Totale transparantie: 14 openbare casestudies met gekwantificeerde resultaten. Geen vage beloften, maar concrete, controleerbare voorbeelden."
+      ],
+      "faqs": [
+        {
+          "question": "Wat is het belangrijkste verschil tussen devlo en LalaLeads?",
+          "answer": "devlo biedt een complete multi-channel outbound aanpak (koude e-mail + LinkedIn + bellen) met erkende expertise in Zwitserland en DACH. We voegen ook standaard intentiegegevens en Clay-verrijking toe."
+        },
+        {
+          "question": "kan devlo net als LalaLeads een prospect worden in Duitsland en Oostenrijk?",
+          "answer": "Ja, ons Duitstalige team is sinds 2020 actief in Duitsland, Oostenrijk en Duitstalig Zwitserland. Voorbeeld: 54 gekwalificeerde afspraken voor CareerLunch in de DACH-markt."
+        },
+        {
+          "question": "Welke resultaten kan ik verwachten van devlo?",
+          "answer": "Gemiddelde respons van 8-15% afhankelijk van het kanaal en de sector, eerste gekwalificeerde afspraken in de 3e week. Onze 14 openbare case studies geven u een duidelijk beeld van de mogelijke resultaten in uw sector."
+        }
+      ]
+    }
+  },
+  "alternative-agences-prospection-b2b": {
+    "fr": {
+      "metaTitle": "Meilleure agence prospection B2B Suisse | Comparatif 2026 | devlo",
+      "metaDescription": "Comparez les agences de prospection B2B en Suisse et en France. devlo vs Undersales, LalaLeads, Sortlist agencies : critères, résultats et méthode pour bien choisir.",
+      "h1": "Choisir son agence de prospection B2B : comparatif 2026",
+      "intro": [
+        "Le marché des agences de prospection B2B s'est considérablement développé depuis 2020. Entre les agences spécialisées outbound, les plateformes de mise en relation et les freelances, il est difficile de s'y retrouver.",
+        "Cette page vous aide à comparer les options et à identifier les critères qui comptent vraiment : approche multicanale, couverture linguistique, transparence sur les résultats, et expérience sur votre marché cible.",
+        "devlo est une agence suisse spécialisée en prospection B2B multicanale depuis 2020. Nous avons accompagné plus de 200 clients en Suisse, Belgique, France et DACH."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multicanale (cold email + LinkedIn + calling)",
+          "competitor": "Variable selon l'agence"
+        },
+        {
+          "feature": "Marché Suisse",
+          "devlo": "Spécialiste — basé en Suisse",
+          "competitor": "Souvent secondaire"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL natif",
+          "competitor": "FR principalement"
+        },
+        {
+          "feature": "Transparence résultats",
+          "devlo": "14 cas clients publics chiffrés",
+          "competitor": "Variable"
+        },
+        {
+          "feature": "Intent data",
+          "devlo": "Inclus dans les forfaits",
+          "competitor": "Rarement proposé"
+        },
+        {
+          "feature": "Cold calling",
+          "devlo": "Oui — équipe native multilingue",
+          "competitor": "Souvent absent"
+        },
+        {
+          "feature": "Démarrage",
+          "devlo": "Premiers RDV dès la 3e semaine",
+          "competitor": "4-8 semaines en général"
+        }
+      ],
+      "whyDevlo": [
+        "Les 5 critères pour choisir une agence de prospection : (1) expertise multicanale, (2) références vérifiables dans votre secteur, (3) couverture linguistique sur votre marché, (4) transparence sur la méthodologie, (5) reporting en temps réel.",
+        "devlo coche ces 5 cases : 1000+ campagnes, 14 cas clients publics, équipe FR/DE/EN/NL, méthodologie documentée, dashboard en temps réel.",
+        "Notre différence vs les agences génériques : nous sommes exclusivement spécialisés en outbound B2B. Pas de SEO, pas d'inbound, pas de social media — seulement de la prospection commerciale B2B."
+      ],
+      "faqs": [
+        {
+          "question": "Comment comparer les agences de prospection B2B ?",
+          "answer": "Demandez des références dans votre secteur, examinez les cas clients publiés avec des métriques précises, vérifiez la couverture linguistique sur votre marché cible, et assurez-vous que l'approche est vraiment multicanale."
+        },
+        {
+          "question": "devlo est-elle adaptée aux PME ou seulement aux grandes entreprises ?",
+          "answer": "Nous accompagnons des PME (dès 10 employés) comme de grandes entreprises. Nos forfaits s'adaptent au budget et aux objectifs. Le critère principal est la qualité de votre offre B2B, pas la taille de votre entreprise."
+        },
+        {
+          "question": "Quels sont les tarifs des agences de prospection B2B en Suisse ?",
+          "answer": "Les tarifs varient de CHF 1'500 à CHF 10'000+/mois selon le volume, les canaux et l'expertise. devlo démarre à CHF 2'500/mois avec une approche multicanale complète. Les agences moins chères fonctionnent souvent sur un seul canal avec des résultats plus aléatoires."
+        },
+        {
+          "question": "Combien de temps pour voir des résultats avec une agence B2B ?",
+          "answer": "Chez devlo, les premiers rendez-vous qualifiés arrivent dès la 3e semaine. La phase de rampe (optimisation du messaging et de la délivrabilité) dure 2-4 semaines. À 8 semaines, la campagne est en régime de croisière."
+        }
+      ]
+    },
+    "en": {
+      "metaTitle": "Best B2B prospecting agency Switzerland | Comparative 2026 | devlo",
+      "metaDescription": "Compare B2B prospecting agencies in Switzerland and France. devlo vs Undersales, LalaLeads, Sortlist agencies: criteria, results and how to choose.",
+      "h1": "Choosing your B2B prospecting agency: 2026 comparison",
+      "intro": [
+        "The B2B prospecting agency market has grown considerably since 2020. Between specialist outbound agencies, matchmaking platforms and freelancers, it's hard to find your way around.",
+        "This page helps you compare the options and identify the criteria that really count: multi-channel approach, language coverage, transparency of results and experience in your target market.",
+        "devlo is a Swiss agency that has specialised in multi-channel B2B prospecting since 2020. We have worked with over 200 customers in Switzerland, Belgium, France and DACH."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multi-channel (cold email + LinkedIn + calling)",
+          "competitor": "Varies by agency"
+        },
+        {
+          "feature": "Swiss market",
+          "devlo": "Specialist - based in Switzerland",
+          "competitor": "Often secondary"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL native",
+          "competitor": "EN mainly"
+        },
+        {
+          "feature": "Transparency of results",
+          "devlo": "14 case studies with figures",
+          "competitor": "Variable"
+        },
+        {
+          "feature": "Intent data",
+          "devlo": "Included in packages",
+          "competitor": "Rarely offered"
+        },
+        {
+          "feature": "Cold calling",
+          "devlo": "Yes - native multilingual team",
+          "competitor": "Often absent"
+        },
+        {
+          "feature": "Start",
+          "devlo": "First appointments in the 3rd week",
+          "competitor": "4-8 weeks in general"
+        }
+      ],
+      "whyDevlo": [
+        "The 5 criteria for choosing a prospecting agency: (1) multi-channel expertise, (2) verifiable references in your sector, (3) linguistic coverage of your market, (4) transparency of methodology, (5) real-time reporting.",
+        "devlo ticks these 5 boxes: 1000+ campaigns, 14 public customer cases, FR/DE/EN/NL team, documented methodology, real-time dashboard.",
+        "What sets us apart from generic agencies is that we specialise exclusively in B2B outbound. No SEO, no inbound, no social media - just B2B sales prospecting."
+      ],
+      "faqs": [
+        {
+          "question": "How do you compare B2B prospecting agencies?",
+          "answer": "Ask for references in your sector, look at published case studies with precise metrics, check language coverage in your target market, and make sure the approach is truly multi-channel."
+        },
+        {
+          "question": "is devlo suitable for SMEs or just large companies?",
+          "answer": "We work with SMEs (from 10 employees) as well as large companies. Our packages are tailored to your budget and objectives. The main criterion is the quality of your B2B offering, not the size of your company."
+        },
+        {
+          "question": "How much do B2B prospecting agencies charge in Switzerland?",
+          "answer": "Rates vary from CHF 1,500 to CHF 10,000+/month depending on volume, channels and expertise. devlo starts at CHF 2,500/month with a full multi-channel approach. Cheaper agencies often operate on a single channel with more random results."
+        },
+        {
+          "question": "How long does it take to see results with a B2B agency?",
+          "answer": "At devlo, the first qualified appointments are made as early as the 3rd week. The ramp phase (optimisation of messaging and deliverability) lasts 2-4 weeks. At 8 weeks, the campaign is at cruising speed."
+        }
+      ]
+    },
+    "de": {
+      "metaTitle": "Beste B2B Akquise Agentur Schweiz | Vergleich 2026 | devlo",
+      "metaDescription": "Vergleichen Sie B2B-Akquise-Agenturen in der Schweiz und in Frankreich. devlo vs Undersales, LalaLeads, Sortlist agencies: Kriterien, Ergebnisse und Methoden für eine gute Auswahl.",
+      "h1": "Die Wahl der richtigen B2B-Akquise-Agentur: Vergleich 2026",
+      "intro": [
+        "Der Markt für B2B-Akquiseagenturen ist seit 2020 erheblich gewachsen. Zwischen spezialisierten Outbound-Agenturen, Vermittlungsplattformen und Freelancern ist es schwierig, den Überblick zu behalten.",
+        "Diese Seite hilft Ihnen dabei, Optionen zu vergleichen und die Kriterien zu identifizieren, die wirklich wichtig sind: Multichannel-Ansatz, Sprachabdeckung, Transparenz der Ergebnisse und Erfahrung in Ihrem Zielmarkt.",
+        "devlo ist eine Schweizer Agentur, die seit 2020 auf B2B-Multichannel-Akquise spezialisiert ist. Wir haben über 200 Kunden in der Schweiz, Belgien, Frankreich und DACH betreut."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multichannel (cold email + LinkedIn + calling)",
+          "competitor": "Je nach Agentur unterschiedlich"
+        },
+        {
+          "feature": "Markt Schweiz",
+          "devlo": "Spezialist - mit Sitz in der Schweiz",
+          "competitor": "Häufig sekundär"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL Muttersprachler",
+          "competitor": "DE hauptsächlich"
+        },
+        {
+          "feature": "Transparenz der Ergebnisse",
+          "devlo": "14 bezifferte öffentliche Kundenfälle",
+          "competitor": "Variable"
+        },
+        {
+          "feature": "Intent data",
+          "devlo": "In den Paketen enthalten",
+          "competitor": "Selten angeboten"
+        },
+        {
+          "feature": "Cold calling",
+          "devlo": "Ja - mehrsprachiges natives Team",
+          "competitor": "Häufig abwesend"
+        },
+        {
+          "feature": "Start",
+          "devlo": "Erste Dates ab der 3. Woche",
+          "competitor": "4-8 Wochen in der Regel"
+        }
+      ],
+      "whyDevlo": [
+        "Die fünf Kriterien für die Auswahl einer Akquiseagentur: (1) Multichannel-Expertise, (2) nachweisbare Referenzen in Ihrer Branche, (3) sprachliche Abdeckung in Ihrem Markt, (4) Transparenz der Methodik, (5) Echtzeit-Berichterstattung.",
+        "devlo kreuzt diese 5 Kästchen an: 1000+ Kampagnen, 14 öffentliche Kundenfälle, Team FR/DE/EN/NL, dokumentierte Methodik, Echtzeit-Dashboard.",
+        "Unser Unterschied zu generischen Agenturen: Wir sind ausschließlich auf B2B-Outbound spezialisiert. Kein SEO, kein Inbound, kein Social Media - nur B2B-Geschäftsanbahnung."
+      ],
+      "faqs": [
+        {
+          "question": "Wie kann man B2B-Akquise-Agenturen vergleichen?",
+          "answer": "Fragen Sie nach Referenzen in Ihrer Branche, überprüfen Sie veröffentlichte Kundenfälle mit genauen Metriken, prüfen Sie die Sprachabdeckung in Ihrem Zielmarkt und vergewissern Sie sich, dass der Ansatz wirklich mehrkanalig ist."
+        },
+        {
+          "question": "ist devlo für KMU oder nur für große Unternehmen geeignet?",
+          "answer": "Wir begleiten sowohl kleine und mittlere Unternehmen (ab 10 Mitarbeitern) als auch Großunternehmen. Unsere Pakete passen sich dem Budget und den Zielen an. Das Hauptkriterium ist die Qualität Ihres B2B-Angebots, nicht die Größe Ihres Unternehmens."
+        },
+        {
+          "question": "Wie hoch sind die Preise für B2B-Akquiseagenturen in der Schweiz?",
+          "answer": "Die Preise variieren von CHF 1'500 bis CHF 10'000+/Monat, je nach Volumen, Kanälen und Expertise. devlo beginnt bei CHF 2'500/Monat mit einem umfassenden Multichannel-Ansatz. Günstigere Agenturen arbeiten oft nur mit einem Kanal mit zufälligeren Ergebnissen."
+        },
+        {
+          "question": "Wie lange dauert es, bis man mit einer B2B-Agentur Ergebnisse sieht?",
+          "answer": "Bei devlo kommen die ersten qualifizierten Termine bereits in der dritten Woche. Die Rampenphase (Optimierung des Messaging und der Zustellbarkeit) dauert 2-4 Wochen. Bei 8 Wochen ist die Kampagne auf Hochtouren."
+        }
+      ]
+    },
+    "nl": {
+      "metaTitle": "Beste B2B prospectiebureau Zwitserland | Vergelijkend 2026 | devlo",
+      "metaDescription": "Vergelijk B2B prospectiebureaus in Zwitserland en Frankrijk. devlo vs Undersales, LalaLeads, Sortlist bureaus: criteria, resultaten en hoe te kiezen.",
+      "h1": "Uw B2B prospectiebureau kiezen: vergelijking 2026",
+      "intro": [
+        "De markt van B2B prospectiebureaus is sinds 2020 aanzienlijk gegroeid. Tussen gespecialiseerde outbound bureaus, matchmaking platforms en freelancers is het moeilijk om je weg te vinden.",
+        "Deze pagina helpt je de opties te vergelijken en de criteria te identificeren die echt tellen: multi-channel aanpak, taaldekking, transparantie van resultaten en ervaring in je doelmarkt.",
+        "devlo is een Zwitsers agentschap dat sinds 2020 gespecialiseerd is in multi-channel B2B prospectie. We hebben gewerkt met meer dan 200 klanten in Zwitserland, België, Frankrijk en DACH."
+      ],
+      "comparisonTable": [
+        {
+          "feature": "Approche",
+          "devlo": "Multi-channel (koude e-mail + LinkedIn + bellen)",
+          "competitor": "Verschilt per agentschap"
+        },
+        {
+          "feature": "Zwitserse markt",
+          "devlo": "Specialist - gevestigd in Zwitserland",
+          "competitor": "Vaak secundair"
+        },
+        {
+          "feature": "Langues",
+          "devlo": "FR / DE / EN / NL moedertaal",
+          "competitor": "NL voornamelijk"
+        },
+        {
+          "feature": "Transparantie van resultaten",
+          "devlo": "14 casestudies met cijfers",
+          "competitor": "Variable"
+        },
+        {
+          "feature": "Intentiegegevens",
+          "devlo": "Inbegrepen in pakketten",
+          "competitor": "Zelden aangeboden"
+        },
+        {
+          "feature": "Koud bellen",
+          "devlo": "Ja - meertalig team",
+          "competitor": "Vaak afwezig"
+        },
+        {
+          "feature": "Start",
+          "devlo": "Eerste afspraken in de 3e week",
+          "competitor": "4-8 weken in het algemeen"
+        }
+      ],
+      "whyDevlo": [
+        "De 5 criteria voor het kiezen van een prospectiebureau: (1) multi-channel expertise, (2) controleerbare referenties in uw sector, (3) taalkundige dekking van uw markt, (4) transparantie van de methodologie, (5) real-time rapportage.",
+        "devlo vinkt deze 5 vakjes aan: 1000+ campagnes, 14 openbare klantcases, FR/DE/EN/NL team, gedocumenteerde methodologie, real-time dashboard.",
+        "Wat ons onderscheidt van algemene bureaus is dat we uitsluitend gespecialiseerd zijn in B2B outbound. Geen SEO, geen inbound, geen social media - alleen B2B sales prospectie."
+      ],
+      "faqs": [
+        {
+          "question": "Hoe vergelijk je B2B prospectiebureaus?",
+          "answer": "Vraag naar referenties in uw sector, kijk naar gepubliceerde casestudy's met precieze statistieken, controleer de taaldekking in uw doelmarkt en zorg ervoor dat de aanpak echt multichannel is."
+        },
+        {
+          "question": "is devlo geschikt voor kmo's of alleen voor grote bedrijven?",
+          "answer": "We werken zowel met KMO's (vanaf 10 werknemers) als met grote bedrijven. Onze pakketten zijn afgestemd op uw budget en doelstellingen. Het belangrijkste criterium is de kwaliteit van je B2B-aanbod, niet de grootte van je bedrijf."
+        },
+        {
+          "question": "Hoeveel kosten B2B prospectiebureaus in Zwitserland?",
+          "answer": "Tarieven variëren van CHF 1.500 tot CHF 10.000+/maand, afhankelijk van volume, kanalen en expertise. devlo begint bij CHF 2.500/maand met een volledige multi-channel aanpak. Goedkopere bureaus werken vaak op één kanaal met meer willekeurige resultaten."
+        },
+        {
+          "question": "Hoe lang duurt het voordat je resultaten ziet met een B2B-bureau?",
+          "answer": "Bij devlo worden de eerste gekwalificeerde afspraken al in de 3e week gemaakt. De ramp fase (optimalisatie van messaging en deliverability) duurt 2-4 weken. Na 8 weken is de campagne op kruissnelheid."
+        }
+      ]
+    }
+  }
+}
