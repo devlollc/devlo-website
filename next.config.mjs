@@ -671,6 +671,9 @@ const nextConfig = {
       { source: "/nl/casestudy/mobility-40-prospects", destination: "/nl/casestudy/mobiliteit-40-prospects", permanent: true },
       { source: "/nl/casestudy/monizze-120-appointments", destination: "/nl/casestudy/monizze-120-afspraken", permanent: true },
       { source: "/nl/casestudy/urban-cleanliness-71-meetings", destination: "/nl/casestudy/stedelijke-reiniging-71-afspraken", permanent: true },
+      // Privacy policy DE (was French slug)
+      { source: "/de/politique-confidentialite", destination: "/de/datenschutz", permanent: true },
+      { source: "/de/politique-confidentialite/", destination: "/de/datenschutz", permanent: true },
     ];
 
     return excludeRscRequests(

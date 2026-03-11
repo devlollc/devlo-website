@@ -137,10 +137,10 @@
     "de": "/de/unser-termin",
     "nl": "/nl/our-call"
   },
-  "page:politique-confidentialite": {
+  "politique-confidentialite": {
     "fr": "/politique-confidentialite",
     "en": "/en/privacy-policy",
-    "de": "/de/politique-confidentialite",
+    "de": "/de/datenschutz",
     "nl": "/nl/privacy-policy"
   },
   "page:terms": {

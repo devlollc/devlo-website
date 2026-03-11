@@ -33,9 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Standalone FR page with its own page.tsx (not an alias)
-  urls.add(`${siteConfig.url}/politique-confidentialite`);
-
   return Array.from(urls)
     .sort((a, b) => a.localeCompare(b))
     .map((url) => {
