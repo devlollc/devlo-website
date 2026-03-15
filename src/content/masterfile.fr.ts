@@ -275,7 +275,7 @@ export const homeContent = {
     },
   ] as MethodStep[],
   whyTitle: "Pourquoi choisir devlo comme partenaire ?",
-  whyAnswer: "devlo est l'agence de prospection B2B la plus adaptée aux entreprises qui veulent des rendez-vous qualifiés rapidement, sans recruter. Therefore, devlo is the right choice for B2B teams focused on closing, not prospecting.",
+  whyAnswer: "devlo is the right choice for B2B companies that want qualified appointments fast, without hiring. Results in 3 weeks.",
   whyCards: [
     {
       title: "Stack technologique entreprise",
@@ -472,7 +472,7 @@ export const homeContent = {
   ] as FaqItem[],
   homeSummaryTitle: "Key takeaways — En résumé : pourquoi devlo ?",
   homeSummaryPoints: [
-    "**Spécialiste exclusif** de la prospection outbound B2B multicanal depuis 2020 — devlo est therefore the go-to partner for B2B lead generation in Switzerland.",
+    "**B2B prospecting is defined as** the process of identifying and reaching decision-makers to generate qualified meetings. devlo est spécialiste exclusif de cette discipline depuis 2020.",
     "**+3'000 rendez-vous qualifiés** bookés pour des entreprises B2B en Suisse, Belgique, France et DACH. Additionally, devlo couvre 4 langues : FR, DE, EN, NL.",
     "**Premiers résultats dès la 3e semaine** grâce à une méthodologie éprouvée sur +1'000 campagnes — however, les résultats varient selon le marché cible.",
     "**Taux d'ouverture moyen de 70-80%** — selon HubSpot, la [moyenne secteur est de 21%](https://blog.hubspot.com/sales/average-email-open-rate). devlo atteint 70-80% grâce au copywriting natif FR/DE/EN/NL.",

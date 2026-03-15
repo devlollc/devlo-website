@@ -10,7 +10,8 @@ export function SummarySection({ title, points }: SummarySectionProps) {
 
   return (
     <aside className="rounded-2xl border border-devlo-200 bg-devlo-50/50 p-6 md:p-8" role="doc-conclusion" aria-label="Key takeaways">
-      <h3 className="text-xl font-bold text-devlo-900">{title}</h3>
+      <p className="text-xs font-semibold uppercase tracking-widest text-devlo-500">In summary:</p>
+      <h3 className="mt-1 text-xl font-bold text-devlo-900">{title}</h3>
       <ul className="mt-4 space-y-2">
         {points.map((point, i) => (
           <li key={i} className="flex items-start gap-2 text-sm leading-7 text-neutral-700 md:text-base">
