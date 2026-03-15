@@ -9,7 +9,7 @@ export function SummarySection({ title, points }: SummarySectionProps) {
   if (points.length === 0) return null;
 
   return (
-    <aside className="rounded-2xl border border-devlo-200 bg-devlo-50/50 p-6 md:p-8" role="doc-conclusion" aria-label="Key takeaways">
+    <section className="rounded-2xl border border-devlo-200 bg-devlo-50/50 p-6 md:p-8" role="doc-conclusion" aria-label="Key takeaways">
       <p className="text-xs font-semibold uppercase tracking-widest text-devlo-500">In summary:</p>
       <h3 className="mt-1 text-xl font-bold text-devlo-900">{title}</h3>
       <ul className="mt-4 space-y-2">
@@ -20,6 +20,6 @@ export function SummarySection({ title, points }: SummarySectionProps) {
           </li>
         ))}
       </ul>
-    </aside>
+    </section>
   );
 }

@@ -349,12 +349,10 @@ export function HomePage({
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.whyTitle}</h2>
-        </FadeInOnScroll>
-        {content.whyAnswer && (
-          <FadeInOnScroll delay={0.1}>
+          {content.whyAnswer && (
             <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-7 text-neutral-600">{content.whyAnswer}</p>
-          </FadeInOnScroll>
-        )}
+          )}
+        </FadeInOnScroll>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {whyCards.map((card, index) => {
