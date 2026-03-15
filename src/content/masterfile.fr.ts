@@ -72,7 +72,7 @@ export const homeContent = {
     h1: "Boostez votre prospection commerciale B2B avec notre agence de génération de leads et de téléprospection",
     h2: "Nous prenons des rendez-vous qualifiés pour vous : externalisez votre développement commercial B2B à notre agence.",
     paragraph:
-      "Plus que des consultants : votre partenaire de confiance n°1 pour la génération de leads, la prospection multicanal et la prise de rendez-vous B2B.",
+      "La **prospection commerciale B2B** est l'art de contacter les bons décideurs, au bon moment, sur le bon canal. devlo est votre partenaire de confiance pour la **génération de leads**, la **prospection multicanal** et la **prise de rendez-vous qualifiés** — avec plus de 1'000 campagnes déployées depuis 2020.",
     ctaPrimary: { label: "Planifier votre consultation gratuite →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
     ctaServices: { label: "Voir nos services →", href: "/services" },
@@ -86,7 +86,7 @@ export const homeContent = {
       line: "Plus de 30 prospects intéressés générés pour leur solution",
       href: "/etudes-de-cas/immobilier-30-prospects",
     },
-    microProof: "⭐ 5/5 satisfaction client sur Lemlist Experts · 7% taux d'intérêt moyen · +1'000 campagnes",
+    microProof: "⭐ 5/5 Lemlist Experts · 70-80% taux d'ouverture · +3'000 rendez-vous qualifiés",
   },
   rendezVousTitle: "Rendez-vous commerciaux obtenus avec",
   rendezVousLogos: [
@@ -230,47 +230,47 @@ export const homeContent = {
   noRecruitCards: [
     {
       title: "Concentrez votre équipe sur le closing",
-      text: "Votre équipe commerciale est précieuse. Si elle cherche des leads, vous perdez de l'argent. Nous prospectons pour que votre équipe puisse faire des démos, négocier et conclure.",
+      text: "Votre équipe commerciale est précieuse. En effet, si elle cherche des leads, vous perdez de l'argent. devlo prospecte pour que votre équipe puisse faire des **démos**, **négocier** et **conclure**.",
     },
     {
       title: "Maîtrisez vos coûts d'acquisition",
-      text: "Recruter des SDR coûte cher et comporte des risques. La formation prend des mois. Le turnover est élevé. Externalisez votre développement commercial et transformez des coûts fixes en investissements prévisibles.",
+      text: "Recruter des SDR coûte cher et comporte des risques. De plus, la formation prend des mois et le turnover est élevé. Externalisez votre développement commercial et transformez des **coûts fixes** en **investissements prévisibles** avec un CAC inférieur aux équipes internes.",
     },
     {
       title: "Validez de nouveaux marchés rapidement",
-      text: "La croissance exige des tests rapides. Nous explorons de nouveaux marchés et testons vos offres pour que vous puissiez valider l'adéquation produit-marché sans risque.",
+      text: "La croissance exige des **tests rapides**. Par conséquent, devlo explore de nouveaux marchés et teste vos offres pour que vous puissiez valider l'**adéquation produit-marché** sans risque — avec des premiers résultats dès la 3e semaine.",
     },
   ] as HomeCard[],
   methodTitle: "Notre méthodologie de prospection outbound en 6 étapes",
   methodSteps: [
     {
       title: "Ciblage de précision",
-      text: "Nous ne devinons jamais. Nous créons un Profil Client Idéal (ICP) précis avec vous. Nous sélectionnons les secteurs, tailles d'entreprise et fonctions qui génèrent votre chiffre d'affaires.",
+      text: "Nous ne devinons jamais. Nous créons un **Profil Client Idéal (ICP)** précis avec vous. Nous sélectionnons les secteurs, tailles d'entreprise et fonctions qui génèrent votre chiffre d'affaires.",
       icon: "Target",
     },
     {
       title: "Alignement de la proposition de valeur",
-      text: "Nous étudions votre marque. Nous extrayons vos arguments commerciaux et vos success stories. Nous construisons un message que les décideurs remarquent.",
+      text: "Nous étudions votre marque. Nous extrayons vos arguments commerciaux et vos success stories. Nous construisons un message que les **décideurs** remarquent.",
       icon: "PenTool",
     },
     {
       title: "Stratégie de campagne",
-      text: "Nous concevons des séquences de prospection sur mesure — email, LinkedIn et téléphone — pour maintenir votre marque en top of mind.",
+      text: "Nous concevons des séquences de prospection sur mesure — **email**, **LinkedIn** et **téléphone** — pour maintenir votre marque en top of mind.",
       icon: "LayoutTemplate",
     },
     {
       title: "Sourcing et vérification des données",
-      text: "Nous trouvons les prospects qui correspondent à votre ICP. Nous vérifions les informations de contact pour garantir une haute délivrabilité et un faible taux de rebond.",
+      text: "Nous trouvons les prospects qui correspondent à votre ICP. Nous vérifions les informations de contact pour garantir une **haute délivrabilité** et un faible taux de rebond.",
       icon: "Database",
     },
     {
       title: "Activation multicanal",
-      text: "Nous lançons la prospection. Nous gérons les réponses et filtrons les contacts non intéressés pour ne vous transmettre que l'intérêt réel.",
+      text: "Nous lançons la prospection. Nous gérons les réponses et filtrons les contacts non intéressés pour ne vous transmettre que l'**intérêt réel**.",
       icon: "Send",
     },
     {
       title: "Qualification et prise de rendez-vous",
-      text: "Nous qualifions les leads par budget et autorité décisionnelle. Quand un lead est prêt, nous planifions votre rendez-vous.",
+      text: "Nous qualifions les leads par **budget** et **autorité décisionnelle**. Quand un lead est prêt, nous planifions votre rendez-vous.",
       icon: "CalendarCheck",
     },
   ] as MethodStep[],
@@ -278,27 +278,27 @@ export const homeContent = {
   whyCards: [
     {
       title: "Stack technologique entreprise",
-      text: "Les ventes modernes exigent des outils puissants. Nous déployons Clay, Lemlist et Sales Navigator pour que vous bénéficiez d'un stack technologique de niveau entreprise sans frais de licence ni de configuration supplémentaires.",
+      text: "Les ventes modernes exigent des outils puissants. Nous déployons **Clay**, **Lemlist** et **Sales Navigator** pour que vous bénéficiez d'un stack technologique de niveau entreprise sans frais de licence ni de configuration supplémentaires.",
     },
     {
       title: "Agilité et optimisation",
-      text: "Si une campagne perd en efficacité, nous analysons rapidement, ajustons et pivotons si nécessaire. Nous conduisons des tests A/B sur les objets d'email et les propositions de valeur pour améliorer les performances.",
+      text: "En effet, si une campagne perd en efficacité, nous analysons rapidement, ajustons et pivotons si nécessaire. Nous conduisons des **tests A/B** sur les objets d'email et les propositions de valeur pour améliorer les **performances**.",
     },
     {
       title: "Culture de la performance",
-      text: "Nous sommes plus qu'un prestataire. Nous sommes votre partenaire de croissance. Nous fixons des objectifs clairs et rendons compte en toute transparence. Nous construisons un pipeline régulier pour soutenir votre entreprise sur le long terme.",
+      text: "Nous sommes plus qu'un prestataire. Nous sommes votre partenaire de croissance. Nous fixons des **objectifs clairs** et rendons compte en toute **transparence**. Nous construisons un pipeline régulier pour soutenir votre entreprise sur le long terme.",
     },
     {
       title: "Investissement prévisible",
-      text: "Nous transformons les coûts de recrutement fixes en investissements variables prévisibles avec un Coût d'Acquisition Client (CAC) inférieur aux équipes internes. Nos modèles tarifaires incluent des forfaits mensuels, des tarifs par rendez-vous obtenu et des honoraires par projet. Les investissements démarrent généralement à partir de CHF 3'000 par mois. Vous voyez clairement votre coût par lead, avec un ROI généralement visible dès les premières semaines.",
+      text: "Nous transformons les coûts de recrutement fixes en investissements variables prévisibles avec un **Coût d'Acquisition Client (CAC)** inférieur aux équipes internes. De plus, nos modèles tarifaires incluent des forfaits mensuels, des tarifs par rendez-vous obtenu et des honoraires par projet. Les investissements démarrent à partir de CHF 2'500 par mois. Vous voyez clairement votre coût par lead, avec un ROI généralement visible dès les premières semaines.",
     },
     {
       title: "Lancement rapide",
-      text: "Nous configurons tout — technologie et ICP — pour lancer votre campagne en 21 jours. Vous n'avez besoin d'aucune infrastructure ni d'aucun outil existant.",
+      text: "Nous configurons tout — technologie et ICP — pour lancer votre campagne en **21 jours**. Autrement dit, vous n'avez besoin d'aucune infrastructure ni d'aucun outil existant.",
     },
     {
       title: "Collaboration transparente",
-      text: "Nous agissons comme une extension de votre équipe. Nous envoyons des rapports hebdomadaires et mensuels sur les taux d'ouverture, de réponse et le pipeline. Nous intégrons vos retours et ajustons nos stratégies en temps réel.",
+      text: "Nous agissons comme une extension de votre équipe. Nous envoyons des **rapports hebdomadaires** et mensuels sur les taux d'ouverture, de réponse et le pipeline. Nous intégrons vos retours et ajustons nos stratégies en temps réel.",
     },
     {
       title: "Stratégie globale sur mesure",
@@ -394,7 +394,7 @@ export const homeContent = {
   ] as WrittenTestimonial[],
   ctaMid: {
     title: "Prêt à renforcer votre pipeline ?",
-    text: "Réservez votre consultation cette semaine pour discuter de vos objectifs commerciaux. En planifiant un rendez-vous maintenant, nous pouvons élaborer un plan de prospection adapté à vos besoins et vous aider à atteindre vos objectifs efficacement. Passez à l'étape suivante vers des opportunités régulières et qualifiées.",
+    text: "Réservez votre **consultation gratuite** cette semaine pour discuter de vos objectifs commerciaux. En planifiant un rendez-vous, nous pouvons élaborer un **plan de prospection personnalisé** et vous aider à atteindre vos objectifs. Premiers résultats visibles dès la **3e semaine**.",
     h3: "Planifiez votre session stratégique",
     h3Text:
       "Obtenez une consultation gratuite et sans engagement pour découvrir comment nous pouvons vous aider à signer de nouveaux clients et accroître votre présence dans vos secteurs clés.",
@@ -469,6 +469,29 @@ export const homeContent = {
         "Oui. En plus de piloter des campagnes externalisées, devlo peut former les commerciaux B2B, SDR et BDR aux techniques de prospection modernes. Cette formation couvre des sujets comme la rédaction de cold emails, la téléprospection, la prospection LinkedIn, la prospection multicanal, la qualification des leads et la gestion du pipeline. L'objectif est d'aider les équipes commerciales internes à adopter une méthodologie de développement commercial B2B reproductible et à améliorer leurs résultats.",
     },
   ] as FaqItem[],
+  homeSummaryTitle: "En résumé : pourquoi devlo ?",
+  homeSummaryPoints: [
+    "**Spécialiste exclusif** de la prospection outbound B2B multicanal depuis 2020",
+    "**+3'000 rendez-vous qualifiés** bookés pour des entreprises B2B en Suisse, Belgique, France et DACH",
+    "**Premiers résultats dès la 3e semaine** grâce à une méthodologie éprouvée sur +1'000 campagnes",
+    "**Taux d'ouverture moyen de 70-80%** et taux de réponse de 10-30% grâce au copywriting natif FR/DE/EN/NL",
+  ],
+  homeComparisonTable: {
+    caption: "Comparatif entre la prospection externalisée avec devlo et le recrutement d'une équipe SDR interne",
+    headers: ["Critère", "Équipe SDR interne", "Avec devlo"],
+    rows: [
+      { criterion: "Délai de mise en place", colA: "3-6 mois (recrutement, formation, stack)", colB: "2-3 semaines, campagnes live" },
+      { criterion: "Coût annuel", colA: "80-120k CHF (salaire + outils + formation)", colB: "À partir de 30k CHF/an" },
+      { criterion: "Canaux maîtrisés", colA: "Souvent 1 seul canal", colB: "Email + LinkedIn + Calling coordonnés" },
+      { criterion: "Expertise copywriting", colA: "Apprentissage par essai/erreur", colB: "+1'000 campagnes d'expérience multilingue" },
+      { criterion: "Scalabilité", colA: "Limitée par la taille de l'équipe", colB: "Volume ajustable chaque mois" },
+      { criterion: "Risque", colA: "Turnover élevé, formation perdue", colB: "Aucun engagement long terme, résultats dès semaine 3" },
+    ],
+  },
+  homeAuthor: {
+    datePublished: "2024-01-15",
+    dateModified: "2026-03-15",
+  },
 };
 
 export const caseStudiesSeo = {
