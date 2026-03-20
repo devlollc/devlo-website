@@ -316,5 +316,11 @@
     "en": "/en/alternative-b2b-prospecting-agencies",
     "de": "/de/alternative-b2b-akquise-agenturen",
     "nl": "/nl/alternatief-b2b-prospectie-bureaus"
+  },
+  "insight:dictation-clean": {
+    "fr": "/insights/dictation-clean",
+    "en": "/en/insights/dictation-clean",
+    "de": "/de/insights/dictation-clean",
+    "nl": "/nl/insights/dictation-clean"
   }
 }

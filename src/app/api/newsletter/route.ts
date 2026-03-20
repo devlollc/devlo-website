@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
           send_welcome_email: true,
           utm_source: "devlo.ch",
           utm_medium: "website",
-          referring_site: "devlo.ch/insights/voice-to-content",
+          referring_site: "devlo.ch/insights/dictation-clean",
         }),
       }
     );
