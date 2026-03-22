@@ -18,22 +18,24 @@ import {
 import { AnimatedCounter } from "@/app/insights/buying-signals/animated-counter";
 import { SignalBrowser } from "@/app/insights/buying-signals/signal-browser";
 
-const LOCALE_CONSULTATION_HREFS: Record<Exclude<SupportedLocale, "fr">, string> = {
+const LOCALE_CONSULTATION_HREFS: Record<SupportedLocale, string> = {
+  fr: "/consultation",
   en: "/en/consultation",
   de: "/de/consultation",
   nl: "/nl/consultation",
 };
 
-const LOCALE_SERVICES_HREFS: Record<Exclude<SupportedLocale, "fr">, string> = {
+const LOCALE_SERVICES_HREFS: Record<SupportedLocale, string> = {
+  fr: "/services/cold-email",
   en: "/en/services/cold-email",
   de: "/de/services/cold-email",
   nl: "/nl/services/cold-email",
 };
 
-export function BuyingSignalsMasterPage({ locale }: { locale: Exclude<SupportedLocale, "fr"> }) {
+export function BuyingSignalsMasterPage({ locale }: { locale: SupportedLocale }) {
   const content = getLocalizedBuyingSignals(locale);
   const categories = getLocalizedCategories(locale);
-  const prefix = `/${locale}`;
+  const prefix = locale === "fr" ? "" : `/${locale}`;
 
   const totalSignals = categories.reduce((sum, cat) => sum + cat.count, 0);
 

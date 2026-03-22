@@ -7,27 +7,30 @@ import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
 import { getLocalizedInsightsHub } from "@/lib/i18n/insights-helpers";
 
-const LOCALE_INSIGHTS_HREFS: Record<Exclude<SupportedLocale, "fr">, string> = {
+const LOCALE_INSIGHTS_HREFS: Record<SupportedLocale, string> = {
+  fr: "/insights/buying-signals",
   en: "/en/insights/buying-signals",
   de: "/de/insights/buying-signals",
   nl: "/nl/insights/buying-signals",
 };
 
-const LOCALE_CONSULTATION_HREFS: Record<Exclude<SupportedLocale, "fr">, string> = {
+const LOCALE_CONSULTATION_HREFS: Record<SupportedLocale, string> = {
+  fr: "/consultation",
   en: "/en/consultation",
   de: "/de/consultation",
   nl: "/nl/consultation",
 };
 
-const LOCALE_SERVICES_HREFS: Record<Exclude<SupportedLocale, "fr">, string> = {
+const LOCALE_SERVICES_HREFS: Record<SupportedLocale, string> = {
+  fr: "/services/cold-email",
   en: "/en/services/cold-email",
   de: "/de/services/cold-email",
   nl: "/nl/services/cold-email",
 };
 
-export function InsightsHubMasterPage({ locale }: { locale: Exclude<SupportedLocale, "fr"> }) {
+export function InsightsHubMasterPage({ locale }: { locale: SupportedLocale }) {
   const content = getLocalizedInsightsHub(locale);
-  const prefix = `/${locale}`;
+  const prefix = locale === "fr" ? "" : `/${locale}`;
 
   const breadcrumbItems = [
     { name: content.breadcrumbs.home, path: prefix },

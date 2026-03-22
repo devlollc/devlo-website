@@ -562,12 +562,12 @@ export default async function LocalizedRoutePage({ params }: Params) {
     return <AiSalesOpsMasterPage locale={resolved.locale} />;
   }
 
-  if (frPath === "/insights" && resolved.locale !== "fr") {
-    return <InsightsHubMasterPage locale={resolved.locale as Exclude<SupportedLocale, "fr">} />;
+  if (frPath === "/insights") {
+    return <InsightsHubMasterPage locale={resolved.locale} />;
   }
 
-  if (frPath === "/insights/buying-signals" && resolved.locale !== "fr") {
-    return <BuyingSignalsMasterPage locale={resolved.locale as Exclude<SupportedLocale, "fr">} />;
+  if (frPath === "/insights/buying-signals") {
+    return <BuyingSignalsMasterPage locale={resolved.locale} />;
   }
 
   if (frPath === "/blog") {
