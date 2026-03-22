@@ -13,6 +13,7 @@ import {
 } from "@/lib/seo/schema-builders";
 
 import { AnimatedCounter } from "./animated-counter";
+import { NewsletterFR } from "./newsletter-fr";
 import { SignalBrowser } from "./signal-browser";
 
 /* ------------------------------------------------------------------ */
@@ -946,36 +947,7 @@ export default function BuyingSignalsPage() {
         {/* ============================================================ */}
         {/*  Newsletter FR (between hero and signal browser)              */}
         {/* ============================================================ */}
-        <section className="mx-auto w-full max-w-3xl px-6 py-4">
-          <div className="rounded-xl border border-[#e0e4e6] bg-[#F7F8FC] p-8 text-center">
-            <h3 className="text-xl font-semibold text-[#0D0D0D]">
-              Recevez nos insights B2B chaque semaine
-            </h3>
-            <p className="mx-auto mt-2 max-w-lg text-sm text-[#4A4A4A]">
-              Stratégies outbound concrètes, automatisation IA et intelligence
-              du marché suisse. Pas de blabla — uniquement ce qui fonctionne.
-            </p>
-            <form
-              action="/api/newsletter"
-              method="POST"
-              className="mx-auto mt-6 flex max-w-md gap-2"
-            >
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="votre@email.com"
-                className="flex-1 rounded-md border border-[#E5E7EB] bg-white px-4 py-2.5 text-sm text-[#0D0D0D] placeholder:text-[#8C8C8C] focus:border-[#074f74] focus:outline-none focus:ring-1 focus:ring-[#074f74]"
-              />
-              <button
-                type="submit"
-                className="rounded-md bg-[#074f74] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0a3a54]"
-              >
-                S&apos;abonner
-              </button>
-            </form>
-          </div>
-        </section>
+        <NewsletterFR />
 
         {/* ============================================================ */}
         {/*  Signal Browser (Client Component)                            */}
