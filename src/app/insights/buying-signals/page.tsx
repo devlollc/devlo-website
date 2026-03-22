@@ -946,7 +946,7 @@ export default function BuyingSignalsPage() {
         {/* ============================================================ */}
         {/*  Newsletter FR (between hero and signal browser)              */}
         {/* ============================================================ */}
-        <section className="mx-auto w-full max-w-3xl px-6 py-12">
+        <section className="mx-auto w-full max-w-3xl px-6 py-4">
           <div className="rounded-xl border border-[#e0e4e6] bg-[#F7F8FC] p-8 text-center">
             <h3 className="text-xl font-semibold text-[#0D0D0D]">
               Recevez nos insights B2B chaque semaine
@@ -1009,49 +1009,35 @@ export default function BuyingSignalsPage() {
               </p>
             </div>
 
-            <div className="relative">
-              {/* Vertical timeline line */}
-              <div
-                className="absolute bottom-0 left-6 top-0 hidden w-px sm:block md:left-8"
-                style={{
-                  background:
-                    "linear-gradient(180deg, #e0e4e6, rgba(7,79,116,0.3), #e0e4e6)",
-                }}
-                aria-hidden="true"
-              />
-
-              <div className="space-y-6">
-                {EMAIL_STEPS.map((item, i) => (
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+              {EMAIL_STEPS.map((item, i) => (
+                <div
+                  key={i}
+                  className="group flex flex-col items-center text-center"
+                >
                   <div
-                    key={i}
-                    className="group flex items-start gap-5 sm:gap-6"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg font-black text-sm text-white transition-transform duration-200 group-hover:scale-105"
+                    style={{
+                      background: "#074f74",
+                      boxShadow: "0 4px 12px rgba(7,79,116,0.25)",
+                    }}
                   >
-                    <div
-                      className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-black text-lg text-white transition-transform duration-200 group-hover:scale-105 md:h-16 md:w-16 md:text-xl"
-                      style={{
-                        background: "#074f74",
-                        boxShadow: "0 4px 12px rgba(7,79,116,0.25)",
-                      }}
-                    >
-                      {i + 1}
-                    </div>
-                    <div className="pt-1 md:pt-3">
-                      <p
-                        className="text-base font-bold md:text-lg"
-                        style={{ color: "#0d1a21" }}
-                      >
-                        {item.step}
-                      </p>
-                      <p
-                        className="mt-1 text-sm leading-relaxed"
-                        style={{ color: "#666d70" }}
-                      >
-                        {item.desc}
-                      </p>
-                    </div>
+                    {i + 1}
                   </div>
-                ))}
-              </div>
+                  <p
+                    className="mt-2 text-sm font-bold"
+                    style={{ color: "#0d1a21" }}
+                  >
+                    {item.step}
+                  </p>
+                  <p
+                    className="mt-1 text-xs leading-relaxed"
+                    style={{ color: "#666d70" }}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

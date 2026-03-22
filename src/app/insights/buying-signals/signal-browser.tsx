@@ -262,7 +262,7 @@ export function SignalBrowser({
               : (uiLabels.resultsSingular ?? "{count} signal affiché");
             return template.replace("{count}", String(visibleCount));
           }
-          return `${visibleCount} signal${visibleCount !== 1 ? "x" : ""} affiché${visibleCount !== 1 ? "s" : ""}`;
+          return `${visibleCount} ${visibleCount !== 1 ? "signaux affichés" : "signal affiché"}`;
         })()}
       </p>
 
