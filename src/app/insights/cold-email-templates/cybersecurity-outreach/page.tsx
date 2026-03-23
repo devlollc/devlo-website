@@ -20,7 +20,7 @@ export const metadata: Metadata = buildPageMetadata({
   title:
     "Séquence Cold Email Cybersécurité — 54% de Taux de Réponse | devlo",
   description:
-    "Séquence outreach multicanal de 9 étapes sur 30 jours pour la cybersécurité. 270 prospects contactés, 81% d'ouverture, 54% de réponse. Emails, scripts d'appel et messages LinkedIn inclus.",
+    "Séquence outreach multicanal de 9 étapes sur 30 jours pour la cybersécurité. 270 prospects contactés, 81% d&apos;ouverture, 54% de réponse. Emails, scripts d&apos;appel et messages LinkedIn inclus.",
   path: "/insights/cold-email-templates/cybersecurity-outreach",
   type: "article",
   datePublished: "2026-03-23",
@@ -51,7 +51,7 @@ const faqItems = [
     question:
       "Combien de touches faut-il dans une séquence cybersécurité ?",
     answer:
-      "Nos données montrent qu'une séquence de 9 touches sur 30 jours est optimale pour atteindre les CISO et décideurs en sécurité IT. Les CISO reçoivent en moyenne 50+ emails par jour et participent à de nombreuses réunions internes. Il faut donc suffisamment de points de contact pour percer, sans devenir intrusif. La combinaison de 6 emails, 2 appels et 1 message LinkedIn permet de varier les canaux et d'augmenter les chances de réponse de 3x par rapport à une séquence email-only.",
+      "Nos données montrent qu&apos;une séquence de 9 touches sur 30 jours est optimale pour atteindre les CISO et décideurs en sécurité IT. Les CISO reçoivent en moyenne 50+ emails par jour et participent à de nombreuses réunions internes. Il faut donc suffisamment de points de contact pour percer, sans devenir intrusif. La combinaison de 6 emails, 2 appels et 1 message LinkedIn permet de varier les canaux et d&apos;augmenter les chances de réponse de 3x par rapport à une séquence email-only.",
   },
   {
     question: "Quel est le meilleur moment pour appeler un CISO ?",
@@ -62,7 +62,7 @@ const faqItems = [
     question:
       "Comment personnaliser cette séquence pour mon entreprise ?",
     answer:
-      "Trois éléments à adapter : (1) l'icebreaker — remplacez-le par une référence à un événement réel du prospect (certification obtenue, article publié, conférence). (2) La proposition de valeur — remplacez les métriques par les vôtres (temps de détection, coût évité, surface d'attaque réduite). (3) Le proof point — citez un client dans la même industrie que le prospect, avec un résultat chiffré. Ne changez pas la structure ni le timing entre les touches — ils ont été optimisés sur 270 envois.",
+      "Trois éléments à adapter : (1) l&apos;icebreaker — remplacez-le par une référence à un événement réel du prospect (certification obtenue, article publié, conférence). (2) La proposition de valeur — remplacez les métriques par les vôtres (temps de détection, coût évité, surface d&apos;attaque réduite). (3) Le proof point — citez un client dans la même industrie que le prospect, avec un résultat chiffré. Ne changez pas la structure ni le timing entre les touches — ils ont été optimisés sur 270 envois.",
   },
 ];
 
@@ -103,23 +103,23 @@ const touches: SequenceTouch[] = [
       "A] notre appel {{firstName}} - cyber-résistance\nB] cyber-résistance - notre appel {{firstName}}",
     content: `Bonjour {{firstName}},
 
-{{Icebreaker — ex. : Votre parcours et vos certifications dans le domaine de la sécurité informatique sont impressionnants — j'ai visité votre profil LinkedIn.}}
+{{Icebreaker — ex. : Votre parcours et vos certifications dans le domaine de la sécurité informatique sont impressionnants — j&apos;ai visité votre profil LinkedIn.}}
 
-{{PainPoint — ex. : Vous savez certainement qu'en Suisse, le nombre de cyberattaques double chaque année, et la plupart d'entre elles passent par l'Active Directory. Nos clients dans le secteur {{industry}} se sont tournés vers notre solution pour améliorer leur cyber-résistance et mieux résister à la prochaine attaque ransomware.}}
+{{PainPoint — ex. : Vous savez certainement qu&apos;en Suisse, le nombre de cyberattaques double chaque année, et la plupart d&apos;entre elles passent par l&apos;Active Directory. Nos clients dans le secteur {{industry}} se sont tournés vers notre solution pour améliorer leur cyber-résistance et mieux résister à la prochaine attaque ransomware.}}
 
 En (très) bref, notre solution :
-- identifie et priorise tous les chemins d'attaque pour que vous puissiez concentrer votre attention sur les plus dangereux
-- fournit des recommandations priorisées et actionnables pour réduire les risques liés à vos configurations d'accès
-- cartographie l'ensemble de votre AD (et/ou Azure AD) pour vous fournir un score de risque continu
+- identifie et priorise tous les chemins d&apos;attaque pour que vous puissiez concentrer votre attention sur les plus dangereux
+- fournit des recommandations priorisées et actionnables pour réduire les risques liés à vos configurations d&apos;accès
+- cartographie l&apos;ensemble de votre AD (et/ou Azure AD) pour vous fournir un score de risque continu
 
-Le temps et les ressources sont limités, mais grâce à notre solution, vous savez quoi prioriser pour améliorer votre résistance aux attaques. Les actions qui nécessitent le moins d'effort pour un maximum d'amélioration vous sont suggérées.
+Le temps et les ressources sont limités, mais grâce à notre solution, vous savez quoi prioriser pour améliorer votre résistance aux attaques. Les actions qui nécessitent le moins d&apos;effort pour un maximum d&apos;amélioration vous sont suggérées.
 
-Si réduire votre surface d'attaque est une priorité, accepteriez-vous d'en discuter avec notre CEO [CEO_prénom] ?
+Si réduire votre surface d&apos;attaque est une priorité, accepteriez-vous d&apos;en discuter avec notre CEO [CEO_prénom] ?
 
 Cordialement,
 Charles
 
-PS : Tous nos partenaires ont réduit leur surface d'attaque interne de plus de 60% grâce à [NomEntreprise].`,
+PS : Tous nos partenaires ont réduit leur surface d&apos;attaque interne de plus de 60% grâce à [NomEntreprise].`,
   },
   {
     number: 2,
@@ -131,9 +131,9 @@ PS : Tous nos partenaires ont réduit leur surface d'attaque interne de plus de 
 
 Puisque la cyber-résistance de {{CompanyName}} est importante, je souhaite vous faire une proposition et partager plus de contexte sur [NomEntreprise].
 
-Nous serions heureux de réaliser un audit de sécurité sur votre environnement interne (AD, Azure AD). Au lieu de payer des consultants entre CHF 20'000.- ou 100'000.- pour un pentest ou un audit limité et non continu, nous vous offrons un test de 30 jours pour une fraction de ce coût afin d'analyser l'ensemble de votre surface d'attaque en continu. D'expérience, les résultats sont garantis.
+Nous serions heureux de réaliser un audit de sécurité sur votre environnement interne (AD, Azure AD). Au lieu de payer des consultants entre CHF 20'000.- ou 100'000.- pour un pentest ou un audit limité et non continu, nous vous offrons un test de 30 jours pour une fraction de ce coût afin d&apos;analyser l&apos;ensemble de votre surface d&apos;attaque en continu. D'expérience, les résultats sont garantis.
 
-Avant d'utiliser [NomEntreprise], nos clients faisaient face à des milliers de recommandations basées sur de la conformité qualitative. Il fallait du temps pour comprendre par où commencer et identifier les problèmes les plus critiques dans le contexte de leur organisation.
+Avant d&apos;utiliser [NomEntreprise], nos clients faisaient face à des milliers de recommandations basées sur de la conformité qualitative. Il fallait du temps pour comprendre par où commencer et identifier les problèmes les plus critiques dans le contexte de leur organisation.
 
 Maintenant ils savent où concentrer leur attention et quelles actions prendre en premier, grâce à des recommandations simples, priorisées et contextuelles.
 
@@ -141,7 +141,7 @@ Maintenant ils savent où concentrer leur attention et quelles actions prendre e
 
 Pouvez-vous nous accorder 45 minutes pour discuter de votre cyber-résistance ? Vous pouvez planifier le moment de votre choix directement dans le calendrier de [CEO_prénom] (mais si vous préférez, je peux aussi vous envoyer 2 ou 3 propositions).
 
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 
 Cordialement,
 Charles
@@ -156,11 +156,11 @@ PS : Voici un petit café virtuel pour vous aider à continuer votre journée :)
     subject: "(même objet)",
     content: `Bonjour {{firstName}},
 
-Je suppose que c'est une période chargée ?
+Je suppose que c&apos;est une période chargée ?
 
 La proposition de mon dernier message de tester notre solution pendant 30 jours à un coût très compétitif reste ouverte.
 
-Je vous invite à lire notre courte brochure pour comprendre comment la théorie des graphes et les techniques de Machine Learning permettent à notre solution de cartographier en continu la surface d'attaque d'une organisation, d'identifier les chemins d'attaque les plus probables et de suggérer des remédiations.
+Je vous invite à lire notre courte brochure pour comprendre comment la théorie des graphes et les techniques de Machine Learning permettent à notre solution de cartographier en continu la surface d&apos;attaque d&apos;une organisation, d&apos;identifier les chemins d&apos;attaque les plus probables et de suggérer des remédiations.
 
 Sachez également que si votre environnement est hybride, notre solution analyse non seulement Microsoft Active Directory, mais aussi Azure Active Directory et la relation entre les deux.
 
@@ -181,9 +181,9 @@ Charles`,
 
 J'espère que vous allez bien.
 
-Je n'ai pas eu de nouvelles de votre part, c'est pourquoi je me demandais si c'est vers vous ou plutôt vers votre collègue {{colleague_name}} que je devrais me tourner ?
+Je n&apos;ai pas eu de nouvelles de votre part, c&apos;est pourquoi je me demandais si c&apos;est vers vous ou plutôt vers votre collègue {{colleague_name}} que je devrais me tourner ?
 
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 
 Cordialement,
 {{salesRep}}`,
@@ -195,32 +195,32 @@ Cordialement,
     timing: "4 jours après",
     content: `Si le prospect répond :
 
-"Bonjour {{firstName}}, c'est {{salesRep}} de [NomEntreprise]. Je vous ai envoyé des emails concernant notre solution qui peut vous aider à améliorer votre cyber-résistance, notamment en vous faisant gagner du temps et de l'argent. Auriez-vous 2 minutes à m'accorder pour voir si nous pourrions être une bonne solution pour vous ?"
+"Bonjour {{firstName}}, c&apos;est {{salesRep}} de [NomEntreprise]. Je vous ai envoyé des emails concernant notre solution qui peut vous aider à améliorer votre cyber-résistance, notamment en vous faisant gagner du temps et de l&apos;argent. Auriez-vous 2 minutes à m'accorder pour voir si nous pourrions être une bonne solution pour vous ?"
 
 Si oui :
 
-"Vous savez certainement qu'en Suisse, le nombre de cyberattaques double chaque année, et le SI est compromis en moins de 24 heures dans 80% des audits réalisés en 2020 (selon Wavestone). Face à ce constat, 53% des grandes entreprises et PME ont un projet de sécurisation AD. Notre solution résout trois problèmes courants : 1) la priorisation des actions à mener, 2) un audit qui ne s'arrête jamais, 3) un coût très abordable. Nos clients ont réduit leur surface d'attaque interne de plus de 60% en quelques mois."
+"Vous savez certainement qu&apos;en Suisse, le nombre de cyberattaques double chaque année, et le SI est compromis en moins de 24 heures dans 80% des audits réalisés en 2020 (selon Wavestone). Face à ce constat, 53% des grandes entreprises et PME ont un projet de sécurisation AD. Notre solution résout trois problèmes courants : 1) la priorisation des actions à mener, 2) un audit qui ne s&apos;arrête jamais, 3) un coût très abordable. Nos clients ont réduit leur surface d&apos;attaque interne de plus de 60% en quelques mois."
 
 Si intéressé → Questions de qualification + planifier une démo.
 Si pas intéressé → Reformuler le problème, gérer les objections avec courtoisie.
 
 Si messagerie vocale :
 
-"Bonjour {{firstName}}, c'est {{salesRep}} de [NomEntreprise]. J'espère que vous allez bien. J'ai essayé de vous appeler parce que vous pourriez être intéressé à découvrir comment nos clients ont réduit leur surface d'attaque de plus de 60%. Auriez-vous une minute pour discuter cybersécurité ensemble ? Vous pouvez me rappeler à ce numéro ou par email. Bonne journée."`,
+"Bonjour {{firstName}}, c&apos;est {{salesRep}} de [NomEntreprise]. J'espère que vous allez bien. J'ai essayé de vous appeler parce que vous pourriez être intéressé à découvrir comment nos clients ont réduit leur surface d&apos;attaque de plus de 60%. Auriez-vous une minute pour discuter cybersécurité ensemble ? Vous pouvez me rappeler à ce numéro ou par email. Bonne journée."`,
   },
   {
     number: 6,
     channel: "email",
-    label: "Après l'appel",
+    label: "Après l&apos;appel",
     timing: "1 jour après",
     subject: "(même objet)",
     content: `Bonjour {{firstName}},
 
 J'espère que vous allez bien.
 
-J'ai essayé de vous joindre par téléphone hier au sujet de notre solution d'anticipation des attaques (mon mobile est [Numéro]). Pourrais-je vous rappeler à un autre moment pour voir si notre solution est la bonne ?
+J'ai essayé de vous joindre par téléphone hier au sujet de notre solution d&apos;anticipation des attaques (mon mobile est [Numéro]). Pourrais-je vous rappeler à un autre moment pour voir si notre solution est la bonne ?
 
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 
 Cordialement,
 {{salesRep}}`,
@@ -230,9 +230,9 @@ Cordialement,
     channel: "call",
     label: "Deuxième appel",
     timing: "3 jours après",
-    content: `Même script que le Touch #5. Deuxième tentative d'appel pour les prospects qui n'ont pas décroché la première fois.
+    content: `Même script que le Touch #5. Deuxième tentative d&apos;appel pour les prospects qui n&apos;ont pas décroché la première fois.
 
-Objectif : atteindre le prospect en personne. Varier l'heure d'appel par rapport au premier essai (si le premier appel était le matin, essayer en fin de journée).`,
+Objectif : atteindre le prospect en personne. Varier l&apos;heure d&apos;appel par rapport au premier essai (si le premier appel était le matin, essayer en fin de journée).`,
   },
   {
     number: 8,
@@ -242,15 +242,15 @@ Objectif : atteindre le prospect en personne. Varier l'heure d'appel par rapport
     subject: "(même objet)",
     content: `Bonjour {{firstName}},
 
-J'ai essayé de vous joindre à nouveau hier, mais il semble que vous ayez un emploi du temps chargé. S'il y a un meilleur moment, ou si vous n'avez aucun intérêt à découvrir la valeur ajoutée de notre solution, n'hésitez pas à me le faire savoir afin que j'arrête de vous contacter.
+J'ai essayé de vous joindre à nouveau hier, mais il semble que vous ayez un emploi du temps chargé. S'il y a un meilleur moment, ou si vous n&apos;avez aucun intérêt à découvrir la valeur ajoutée de notre solution, n&apos;hésitez pas à me le faire savoir afin que j&apos;arrête de vous contacter.
 
-Je pense que notre solution pourrait vous intéresser pour remplacer de nombreux audits et pentests par un seul outil d'analyse continue, couvrant l'ensemble de la surface d'attaque interne, à un coût significativement inférieur.
+Je pense que notre solution pourrait vous intéresser pour remplacer de nombreux audits et pentests par un seul outil d&apos;analyse continue, couvrant l&apos;ensemble de la surface d&apos;attaque interne, à un coût significativement inférieur.
 
 Sinon, pourriez-vous me dire si je devrais me tourner vers un autre de vos collègues ? Peut-être {{colleague_name}} ?
 
 Vous trouverez notre brochure ici au cas où, mais je reste à votre disposition si vous avez une question ou pour discuter ensemble de la protection de votre infrastructure contre les attaques les plus dommageables.
 
-Merci d'avance pour votre réponse, et je vous souhaite tout le meilleur pour la suite.
+Merci d&apos;avance pour votre réponse, et je vous souhaite tout le meilleur pour la suite.
 
 Cordialement,
 {{salesRep}}`,
@@ -260,7 +260,7 @@ Cordialement,
     channel: "linkedin",
     label: "Connexion LinkedIn",
     timing: "Le même jour",
-    content: `Bonjour {{firstName}}, c'est [CEO_prénom] de [NomEntreprise]. Au plaisir de me connecter avec vous et de découvrir les projets et insights que vous partagez chez {{companyName}}. À bientôt`,
+    content: `Bonjour {{firstName}}, c&apos;est [CEO_prénom] de [NomEntreprise]. Au plaisir de me connecter avec vous et de découvrir les projets et insights que vous partagez chez {{companyName}}. À bientôt`,
   },
 ];
 
@@ -278,7 +278,7 @@ export default function CybersecurityOutreachPage() {
             headline:
               "Séquence Cold Email Cybersécurité — 54% de Taux de Réponse",
             description:
-              "Séquence outreach multicanal de 9 étapes sur 30 jours pour la cybersécurité. 270 prospects contactés, 81% d'ouverture, 54% de réponse.",
+              "Séquence outreach multicanal de 9 étapes sur 30 jours pour la cybersécurité. 270 prospects contactés, 81% d&apos;ouverture, 54% de réponse.",
             path: "/insights/cold-email-templates/cybersecurity-outreach",
             imagePath: "/images/CharlesPerretProfilePicture2025.webp",
             datePublished: "2026-03-23",
@@ -383,7 +383,7 @@ export default function CybersecurityOutreachPage() {
               },
               {
                 value: "81%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },
@@ -697,15 +697,15 @@ export default function CybersecurityOutreachPage() {
                 },
                 {
                   title: "Vente de solutions cybersécurité ou IT",
-                  desc: "Votre produit adresse la gestion des accès, la détection de menaces, l'audit de sécurité, la conformité ou la protection d'infrastructure. La proposition de valeur s'adapte facilement.",
+                  desc: "Votre produit adresse la gestion des accès, la détection de menaces, l&apos;audit de sécurité, la conformité ou la protection d&apos;infrastructure. La proposition de valeur s&apos;adapte facilement.",
                 },
                 {
                   title: "Industries régulées",
-                  desc: "Finance, santé, secteur public, énergie — les prospects dans ces industries ont des obligations de conformité qui rendent la cybersécurité prioritaire. L'urgence est déjà là.",
+                  desc: "Finance, santé, secteur public, énergie — les prospects dans ces industries ont des obligations de conformité qui rendent la cybersécurité prioritaire. L&apos;urgence est déjà là.",
                 },
                 {
                   title: "Cycle de vente de 3 à 6 mois",
-                  desc: "Les 30 jours de cette séquence couvrent la phase d'ouverture. Pour les deals complexes avec plusieurs décideurs, elle sert à obtenir le premier rendez-vous.",
+                  desc: "Les 30 jours de cette séquence couvrent la phase d&apos;ouverture. Pour les deals complexes avec plusieurs décideurs, elle sert à obtenir le premier rendez-vous.",
                 },
               ].map((item) => (
                 <div
@@ -748,7 +748,7 @@ export default function CybersecurityOutreachPage() {
                 },
                 {
                   title: "SDRs ciblant les professionnels IT security",
-                  desc: "Le script d'appel inclut des questions de qualification et de gestion des objections spécifiques au monde de la cybersécurité. Prêt à l'emploi.",
+                  desc: "Le script d&apos;appel inclut des questions de qualification et de gestion des objections spécifiques au monde de la cybersécurité. Prêt à l&apos;emploi.",
                 },
                 {
                   title: "Partenaires channel cybersécurité",
@@ -756,7 +756,7 @@ export default function CybersecurityOutreachPage() {
                 },
                 {
                   title: "Tout éditeur B2B vendant aux CISO",
-                  desc: "Même hors cybersécurité pure, si votre buyer persona est le CISO (ex. : backup, cloud, compliance), la structure et le timing de cette séquence s'appliquent.",
+                  desc: "Même hors cybersécurité pure, si votre buyer persona est le CISO (ex. : backup, cloud, compliance), la structure et le timing de cette séquence s&apos;appliquent.",
                 },
               ].map((item) => (
                 <div

@@ -107,9 +107,9 @@ Bonjour {{salutation}} {{lastName}},
 
 En Suisse romande, de nombreuses entreprises comme {{companyName}} nous font part de leurs préoccupations informatiques : des tickets qui restent trop longtemps en attente, des factures imprévisibles, un support qui manque de réactivité dans les moments critiques, etc.
 
-Pour {{testimony company}}, par exemple, ces goulots d'étranglement représentaient une perte de 3 à 4 jours par mois. Aujourd'hui, « {{clientCompanyName}} est notre partenaire informatique de confiance depuis des années. Il agit comme un service informatique externalisé et offre une fiabilité et une qualité de service exceptionnelles. »
+Pour {{testimony company}}, par exemple, ces goulots d&apos;étranglement représentaient une perte de 3 à 4 jours par mois. Aujourd&apos;hui, « {{clientCompanyName}} est notre partenaire informatique de confiance depuis des années. Il agit comme un service informatique externalisé et offre une fiabilité et une qualité de service exceptionnelles. »
 
-Ces problèmes ne sont pas seulement d'ordre informatique : ils sont source de stress, ralentissent les projets et entraînent d'importants dépassements budgétaires.
+Ces problèmes ne sont pas seulement d&apos;ordre informatique : ils sont source de stress, ralentissent les projets et entraînent d&apos;importants dépassements budgétaires.
 
 {{companyName}} est-il parfois confronté à ces mêmes situations, ou me trompé-je ?
 
@@ -129,7 +129,7 @@ Leurs prestataires informatiques qui s’appuient sur des services d’assistanc
 
 Nous sommes basés à Genève et proposons des tarifs fixes pour une surveillance proactive 24h/24 et 7j/7. 
 
-L'informatique devient ainsi un allié fiable plutôt qu'une source de frustration sans fin.
+L&apos;informatique devient ainsi un allié fiable plutôt qu&apos;une source de frustration sans fin.
 
 {{companyName}} est-il confronté aux mêmes casse-tête ? Ou suis-je complètement à côté de la plaque ?
 
@@ -158,11 +158,11 @@ Se désabonner`,
     channel: "email",
     label: "Email #3",
     timing: "7 jours après",    subject:
-      "{% if Colleaguename1 != blank and Colleaguename2 != blank %} discuter avec {{ Colleaguename1 }} ou {{ Colleaguename2 }} ?{% elsif Colleaguename1 != blank %} discuter avec {{ Colleaguename1 }} ?{% else %} discuter avec quelqu'un d'autre sur {{ companyName }} ?{% endif %}",
+      "{% if Colleaguename1 != blank and Colleaguename2 != blank %} discuter avec {{ Colleaguename1 }} ou {{ Colleaguename2 }} ?{% elsif Colleaguename1 != blank %} discuter avec {{ Colleaguename1 }} ?{% else %} discuter avec quelqu&apos;un d&apos;autre sur {{ companyName }} ?{% endif %}",
     content: `Bonjour {{salutation}} {{lastName}},
-{% if Colleaguename1 != blank and Colleaguename2 != blank %} Je ne sais pas si l'assistance informatique relève de votre responsabilité ou si c'est plutôt le travail de vos collègues {{ Colleaguename1 }} ou {{ Colleaguename2 }} ?{% elsif Colleaguename1 != blank %} Je ne sais pas si l'assistance informatique relève de votre responsabilité ou s'il vaut mieux que votre collègue {{Colleaguename1}} s'en charge ?{% elsif Colleaguename2 != blank %} Vous ne savez pas si le support informatique relève de votre responsabilité ou s'il serait mieux géré par votre collègue {{Colleaguename2}} ?{% else %} Vous ne savez pas si le support informatique relève de votre responsabilité ou s'il relève davantage de la compétence d'un autre membre de votre équipe ?{% endif %}
-Des coûts transparents, une assistance locale réactive et une sécurité renforcée : voilà exactement ce que recherchent les responsables informatiques de Suisse romande lorsqu'ils évaluent leurs options d'externalisation informatique.
-Pourriez-vous me mettre en contact avec vos collègues afin qu'ils puissent se forger leur propre opinion ?
+{% if Colleaguename1 != blank and Colleaguename2 != blank %} Je ne sais pas si l&apos;assistance informatique relève de votre responsabilité ou si c&apos;est plutôt le travail de vos collègues {{ Colleaguename1 }} ou {{ Colleaguename2 }} ?{% elsif Colleaguename1 != blank %} Je ne sais pas si l&apos;assistance informatique relève de votre responsabilité ou s&apos;il vaut mieux que votre collègue {{Colleaguename1}} s&apos;en charge ?{% elsif Colleaguename2 != blank %} Vous ne savez pas si le support informatique relève de votre responsabilité ou s&apos;il serait mieux géré par votre collègue {{Colleaguename2}} ?{% else %} Vous ne savez pas si le support informatique relève de votre responsabilité ou s&apos;il relève davantage de la compétence d&apos;un autre membre de votre équipe ?{% endif %}
+Des coûts transparents, une assistance locale réactive et une sécurité renforcée : voilà exactement ce que recherchent les responsables informatiques de Suisse romande lorsqu&apos;ils évaluent leurs options d&apos;externalisation informatique.
+Pourriez-vous me mettre en contact avec vos collègues afin qu&apos;ils puissent se forger leur propre opinion ?
 Cordialement
 {{accountSignature}}  
 Se désabonner`,
@@ -303,7 +303,7 @@ export default function WebTechnologyPage() {
               },
               {
                 value: "4%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

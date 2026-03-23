@@ -105,7 +105,7 @@ const touches: SequenceTouch[] = [
 
 {{icebreaker}} 
 
-La promotion de {{companyname}} et la mise en avant de l'appartenance à votre établissement sont sans aucun doute des thèmes d'actualité. Nos partenaires, tels que [ClientCustomer], mais aussi des lycées et des écoles internationales, se sont tournés vers nous dans ce but. 
+La promotion de {{companyname}} et la mise en avant de l&apos;appartenance à votre établissement sont sans aucun doute des thèmes d&apos;actualité. Nos partenaires, tels que [ClientCustomer], mais aussi des lycées et des écoles internationales, se sont tournés vers nous dans ce but. 
 
 Ils bénéficient de nos services de merchandising pour des textiles et des objets personnalisés selon leur image de marque. Leurs élèves peuvent se procurer divers articles tels que des sweatshirts, des t-shirts, des blocs-notes et des équipements sportifs pour le basket, le football, etc.
 
@@ -113,14 +113,14 @@ Plus besoin de vous occuper de tâches fastidieuses et chronophages comme la col
 
 De plus, tout est produit dans le respect des personnes et de la planète : coton 100 % biologique, matériaux recyclés et certifications telles que Oeko-Tex ou PETA-Approved Vegan.
 
-Souhaitez-vous en discuter ensemble pendant 15 minutes lors d'un premier contact par téléphone {% assign today = "now" | date: "%A" %}{% case today %}{% when "Monday" %}demain ou mercredi{% when "Tuesday" %}demain ou jeudi{% when "Wednesday" %}demain ou vendredi{% when "Thursday" %}demain ou lundi{% when "Friday" %}lundi ou mardi matin{% endcase %}?
+Souhaitez-vous en discuter ensemble pendant 15 minutes lors d&apos;un premier contact par téléphone {% assign today = "now" | date: "%A" %}{% case today %}{% when "Monday" %}demain ou mercredi{% when "Tuesday" %}demain ou jeudi{% when "Wednesday" %}demain ou vendredi{% when "Thursday" %}demain ou lundi{% when "Friday" %}lundi ou mardi matin{% endcase %}?
 
-Merci d'avance pour votre réponse.
+Merci d&apos;avance pour votre réponse.
 
 Cordialement,
 Janice
 
-PS : Voici quelques exemples, et ci-dessous une illustration d'un sweat-shirt de marque avec le logo [ClientCustomer] [ClientCustomer]
+PS : Voici quelques exemples, et ci-dessous une illustration d&apos;un sweat-shirt de marque avec le logo [ClientCustomer] [ClientCustomer]
 
 {{signature}}`,
   },
@@ -133,15 +133,15 @@ PS : Voici quelques exemples, et ci-dessous une illustration d'un sweat-shirt de
 
 J'espère que vous allez bien.
 
-L'image de marque de {{companyname}} étant importante, j'aimerais vous faire une proposition : la conception graphique personnalisée de vos articles vous serait entièrement offerte. 
+L&apos;image de marque de {{companyname}} étant importante, j&apos;aimerais vous faire une proposition : la conception graphique personnalisée de vos articles vous serait entièrement offerte. 
 
-À l'instar de nos partenaires, vous et vos collègues serez accompagnés et conseillés par l'un de nos experts. Tout est mis en œuvre pour vous faciliter la vie. Vous serez sans aucun doute surpris de découvrir la grande qualité de nos produits, leur faible impact écologique et les dernières technologies disponibles : sérigraphie, broderie, spécificité des produits (végan), etc.
+À l&apos;instar de nos partenaires, vous et vos collègues serez accompagnés et conseillés par l&apos;un de nos experts. Tout est mis en œuvre pour vous faciliter la vie. Vous serez sans aucun doute surpris de découvrir la grande qualité de nos produits, leur faible impact écologique et les dernières technologies disponibles : sérigraphie, broderie, spécificité des produits (végan), etc.
 
-Bien que de nombreux établissements du secteur de l'éducation fassent appel à nos services, d'autres organisations telles que le [ClientCustomer], le Comité International Olympique et le Montreux Jazz Festival nous font également confiance depuis plus de 20 ans.
+Bien que de nombreux établissements du secteur de l&apos;éducation fassent appel à nos services, d&apos;autres organisations telles que le [ClientCustomer], le Comité International Olympique et le Montreux Jazz Festival nous font également confiance depuis plus de 20 ans.
 
 Souhaitez-vous en discuter avec nous ? Si oui, aimeriez-vous recevoir 2 ou 3 propositions pour une visioconférence de 45 minutes [Client_FirstName] (vous pouvez également choisir une date directement dans son agenda) ?
 
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 
 Cordialement,
 {{salesRep}}
@@ -155,8 +155,8 @@ PS : Voici un petit café virtuel pour vous aider à poursuivre votre journée �
     channel: "email",
     label: "Email #3",
     timing: "6 jours après",
-    content: `E-mail 3 - Contacter un autre collègue d'ElonMusk / suivi
-Date d'envoi : 6 jours après le dernier message
+    content: `E-mail 3 - Contacter un autre collègue d&apos;ElonMusk / suivi
+Date d&apos;envoi : 6 jours après le dernier message
 Objet : identique au précédent
 Date :
 
@@ -168,12 +168,12 @@ Dois-je écrire à votre collègue {{colleaguename}} ?
 
 Ou bien
 travaillez-vous déjà avec un autre fournisseur pour votre merchandising
-La rentrée scolaire est une période chargée et ce n'est pas le meilleur moment
+La rentrée scolaire est une période chargée et ce n&apos;est pas le meilleur moment
 une autre raison, peut-être ?
 
-Veuillez noter que la proposition de mon dernier message reste d'actualité.
+Veuillez noter que la proposition de mon dernier message reste d&apos;actualité.
 
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 
 Cordialement,
 {{salesRep}}
@@ -192,13 +192,13 @@ PS : Ma liste de tâches ci-dessous m'a rappelé de 😉 J'espère que cela fera
     timing: "2 jours après",
     content: `Appel à froid
 Réalisation : 2 jours après le dernier message
-Script d'appel :
+Script d&apos;appel :
 Si le prospect répond :
-Bonjour {{salutation}} {{lastName}}, je m'appelle {{salesRep}} et je travaille chez [ClientCompanyName]. Je vous ai contacté par e-mail au sujet de nos services de merchandising destinés à vos élèves, notamment pour renforcer l'image de votre établissement. Auriez-vous 2 minutes à nous accorder ?
+Bonjour {{salutation}} {{lastName}}, je m'appelle {{salesRep}} et je travaille chez [ClientCompanyName]. Je vous ai contacté par e-mail au sujet de nos services de merchandising destinés à vos élèves, notamment pour renforcer l&apos;image de votre établissement. Auriez-vous 2 minutes à nous accorder ?
 Si oui :
-Plusieurs établissements d'enseignement, tels que [ClientCustomer], ainsi que des écoles publiques, travaillent avec nous pour proposer à leurs élèves des vêtements et des objets personnalisés avec leur logo. Tout est fait pour leur simplifier la vie, et ils n'ont rien à faire de leur côté, de la conception graphique à la commande et au paiement, en passant par la livraison. De plus, tout est produit dans le respect des personnes et de la planète : 100 % coton biologique avec des matériaux recyclés et certifiés.
+Plusieurs établissements d&apos;enseignement, tels que [ClientCustomer], ainsi que des écoles publiques, travaillent avec nous pour proposer à leurs élèves des vêtements et des objets personnalisés avec leur logo. Tout est fait pour leur simplifier la vie, et ils n&apos;ont rien à faire de leur côté, de la conception graphique à la commande et au paiement, en passant par la livraison. De plus, tout est produit dans le respect des personnes et de la planète : 100 % coton biologique avec des matériaux recyclés et certifiés.
 Est-ce quelque chose que vous faites déjà ? [...]
-D'accord, et seriez-vous intéressé(e) pour en discuter avec [Client_FirstName] lors d'une visioconférence afin qu'il puisse vous en dire plus et vous présenter une ou deux études de cas de nos partenaires ?
+D'accord, et seriez-vous intéressé(e) pour en discuter avec [Client_FirstName] lors d&apos;une visioconférence afin qu&apos;il puisse vous en dire plus et vous présenter une ou deux études de cas de nos partenaires ?
 —---—---—---—---—---—---—---—---—---—---—---—---—- -------__PROTÉGÉ_19____PROTÉGÉ_20____PROTÉGÉ_21____PROTÉGÉ_22____PROTÉGÉ_23____PROTÉGÉ_24____PROTÉGÉ_25____PROTÉGÉ_26____PROTÉGÉ_27____PROTÉGÉ_28____PROTÉGÉ_29__ -------------------------
 S'ils sont intéressés, 
 posez ces questions pour évaluer le prospect :
@@ -219,7 +219,7 @@ Vous devriez avoir reçu un appel manqué de ma part hier. Mon numéro de portab
 
 Serait-il possible de vous rappeler {% assign today = "now" | date: "%A" %}{% case today %}{% when "Monday" %}demain ou mercredi{% when "Tuesday" %}demain ou jeudi{% when "Wednesday" %}demain ou vendredi{% when "Thursday" %}demain ou lundi{% when "Friday" %}lundi ou mardi matin{% when "Saturday" %}la semaine prochaine{% when "Sunday" %}la semaine prochaine{% endcase %}?
 
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 
 Cordialement,
 {{salesRep}}
@@ -233,11 +233,11 @@ Cordialement,
     timing: "4 jours après",
     content: `Bonjour {{salutation}} {{lastName}},
  
-Pourriez-vous m'indiquer si c'est votre collègue {{colleaguename}} que je dois contacter ?
+Pourriez-vous m'indiquer si c&apos;est votre collègue {{colleaguename}} que je dois contacter ?
  
-Si un autre moment vous convient mieux, ou si vous n'êtes pas intéressé(e) par les avantages que pourraient tirer votre établissement et vos étudiants de vêtements personnalisés et d'autres articles, n'hésitez pas à me le faire savoir.
+Si un autre moment vous convient mieux, ou si vous n&apos;êtes pas intéressé(e) par les avantages que pourraient tirer votre établissement et vos étudiants de vêtements personnalisés et d&apos;autres articles, n&apos;hésitez pas à me le faire savoir.
  
-Je vous souhaite tout le meilleur pour l'avenir.
+Je vous souhaite tout le meilleur pour l&apos;avenir.
  
 Cordialement,
 {{salesRep}}
@@ -250,9 +250,9 @@ Cordialement,
     label: "Connexion LinkedIn",
     timing: "0 jours après",
     content: `Demande de connexion sur LinkedIn
-Date d'envoi : 0 jour après le dernier message
+Date d&apos;envoi : 0 jour après le dernier message
 Envoyé depuis le compte LinkedIn de notre client (le PDG)
-Bonjour {{salutation}} {{lastName}}, je suis [Client_FirstName] de [ClientCompanyName]. Mon collègue {{salesRep}} vous a contacté pour discuter de la commercialisation de vos articles textiles et personnalisés sous la marque {{companyName}}. J'ai hâte d'échanger avec vous. À bientôt, j'espère`,
+Bonjour {{salutation}} {{lastName}}, je suis [Client_FirstName] de [ClientCompanyName]. Mon collègue {{salesRep}} vous a contacté pour discuter de la commercialisation de vos articles textiles et personnalisés sous la marque {{companyName}}. J'ai hâte d&apos;échanger avec vous. À bientôt, j&apos;espère`,
   }
 ];
 
@@ -373,7 +373,7 @@ export default function MerchandiseProductsPage() {
               },
               {
                 value: "N/A",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#9ca3af",
                 text: "#ffffff",
               },

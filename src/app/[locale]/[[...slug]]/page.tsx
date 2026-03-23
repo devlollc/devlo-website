@@ -260,6 +260,23 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
     };
   }
 
+  if (path === "/insights/cold-email-templates") {
+    return {
+      title: "25 Séquences Cold Email B2B avec Résultats — Templates Gratuits",
+      description:
+        "Découvrez 25 séquences cold email testées avec résultats réels. Industrie, métriques, emails complets.",
+    };
+  }
+
+  if (path.startsWith("/insights/cold-email-templates/")) {
+    return {
+      title: "Séquence Cold Email B2B — Template avec Résultats",
+      description:
+        "Séquence cold email complète avec métriques, emails, et analyse.",
+      type: "article" as const,
+    };
+  }
+
   if (path === "/blog") {
     return {
       title: "Blog — Prospection B2B, cold email et outbound",
@@ -570,6 +587,20 @@ export default async function LocalizedRoutePage({ params }: Params) {
     return <BuyingSignalsMasterPage locale={resolved.locale} />;
   }
 
+  if (frPath === "/insights/cold-email-templates") {
+    const { default: ColdEmailTemplatesPage } = await import("@/app/insights/cold-email-templates/page");
+    return <ColdEmailTemplatesPage />;
+  }
+
+  if (frPath.startsWith("/insights/cold-email-templates/")) {
+    const slug = frPath.slice("/insights/cold-email-templates/".length);
+    try {
+      const { default: SequencePage } = await import(`@/app/insights/cold-email-templates/${slug}/page`);
+      return <SequencePage />;
+    } catch {
+      notFound();
+    }
+  }
 
   if (frPath === "/blog") {
     return <BlogHubMasterPage locale={resolved.locale} />;

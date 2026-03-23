@@ -101,7 +101,7 @@ const touches: SequenceTouch[] = [
     label: "Connexion LinkedIn",
     timing: "First day of the sequence",
     content: `Demande de connexion LinkedIn
-Date d'envoi : premier jour de la séquence
+Date d&apos;envoi : premier jour de la séquence
 Expéditeur : {{salesRep}}
 Contenu :
 
@@ -112,15 +112,15 @@ Contenu :
 
 ---
 
-→ Présentation (envoyée 1 jour après l'acceptation de la connexion LinkedIn) :
+→ Présentation (envoyée 1 jour après l&apos;acceptation de la connexion LinkedIn) :
 Bonjour {{firstName}}, merci de vous être connecté.
-Dans les grandes organisations, les questions relatives aux incidents impliquant des fournisseurs, à l'exposition aux ransomwares ou à la conformité réglementaire surgissent souvent en dehors des revues de sécurité planifiées.
+Dans les grandes organisations, les questions relatives aux incidents impliquant des fournisseurs, à l&apos;exposition aux ransomwares ou à la conformité réglementaire surgissent souvent en dehors des revues de sécurité planifiées.
 Comment ces sujets sont-ils généralement traités chez {{companyName}} ?
 
 ---
 
 → Message avec les noms des collègues + faute de frappe (envoyé 5 jours plus tard) :
-{{firstName}}, pour ces sujets, est-ce que vous vous en occupez généralement directement, ou est-ce que c'est {% if colleaguename1 != blank and colleaguename2 != blank %}{{colleaguename1}} ou {{colleaguename2}}{% elsif colleaguename1 != blank %}{{colleaguename1}}{% elsif colleaguename2 != blank %}{{colleaguename2}}{% else %}un autre membre de l'équipe de sécurité ou de gestion des risques{% endif %} qui s'en charge ?
+{{firstName}}, pour ces sujets, est-ce que vous vous en occupez généralement directement, ou est-ce que c&apos;est {% if colleaguename1 != blank and colleaguename2 != blank %}{{colleaguename1}} ou {{colleaguename2}}{% elsif colleaguename1 != blank %}{{colleaguename1}}{% elsif colleaguename2 != blank %}{{colleaguename2}}{% else %}un autre membre de l&apos;équipe de sécurité ou de gestion des risques{% endif %} qui s&apos;en charge ?
 Je vérifie simplement pour m'assurer que je m'adresse à la bonne personne chez {{companyName}}.
 
 ---
@@ -132,7 +132,7 @@ Je vérifie simplement pour m'assurer que je m'adresse à la bonne personne chez
 
 → Message de conclusion (envoyé 7 jours plus tard) :
 Bonjour {{firstName}},
-Je m'arrêterai là pour l'instant, si ce n'est pas le bon moment.
+Je m'arrêterai là pour l&apos;instant, si ce n&apos;est pas le bon moment.
 Devrions-nous reprendre contact dans 3 mois pour voir si les besoins ont évolué ?
 Je vous souhaite bonne chance pour vos projets en cours.`,
   },
@@ -141,8 +141,8 @@ Je vous souhaite bonne chance pour vos projets en cours.`,
     channel: "email",
     label: "Email #2",
     timing: "Jour 1",    subject:
-      "Ce qui est visible de l'extérieur à {{companyName}}",
-    content: `Version A - avec phrase d'accroche
+      "Ce qui est visible de l&apos;extérieur à {{companyName}}",
+    content: `Version A - avec phrase d&apos;accroche
 
 Cher(e) {{firstName}},
 
@@ -178,9 +178,9 @@ se désabonner`,
     timing: "7 jours après",    subject:
       "{% if colleaguename1 != blank and colleaguename2 != blank %} concerne-t-il {{colleaguename1}} ou {{colleaguename2}} ? {% elsif colleaguename1 != blank %} concerne-t-il {{colleaguename1}} ? {% elsif colleaguename2 != blank %} concerne-t-il {{colleaguename2}} ? {% else %} concerne-t-il une personne à {{companyName}} ? {% endif %}",
     content: `Bonjour {{firstName}},
-Serait-il judicieux d'associer à cette discussion {% if colleaguename1 != blank and colleaguename2 != blank %}{{colleaguename1}} ou {{colleaguename2}}{% elsif colleaguename1 != blank %}{{colleaguename1}}{% elsif colleaguename2 != blank %}{{colleaguename2}}{% else %}un membre de votre équipe de sécurité ou de gestion des risques{% endif %} ?
-Dans des environnements similaires, les équipes de sécurité ont réduit le temps d'enquête de plusieurs jours à quelques minutes en reliant directement les activités sur le dark web et les menaces aux actifs exposés et aux fournisseurs critiques, ce qui leur a permis d'agir avant que les incidents ne s'aggravent.
-Dans l'attente de votre réponse.
+Serait-il judicieux d&apos;associer à cette discussion {% if colleaguename1 != blank and colleaguename2 != blank %}{{colleaguename1}} ou {{colleaguename2}}{% elsif colleaguename1 != blank %}{{colleaguename1}}{% elsif colleaguename2 != blank %}{{colleaguename2}}{% else %}un membre de votre équipe de sécurité ou de gestion des risques{% endif %} ?
+Dans des environnements similaires, les équipes de sécurité ont réduit le temps d&apos;enquête de plusieurs jours à quelques minutes en reliant directement les activités sur le dark web et les menaces aux actifs exposés et aux fournisseurs critiques, ce qui leur a permis d&apos;agir avant que les incidents ne s&apos;aggravent.
+Dans l&apos;attente de votre réponse.
 {{signature}}
 Se désabonner`,
   },
@@ -190,9 +190,9 @@ Se désabonner`,
     label: "Email #4",
     timing: "6 jours après",
     content: `Bonjour {{firstName}},
-L'un des défis fréquemment évoqués par les responsables de la sécurité est le fait de disposer d'une multitude d'outils, tout en manquant de visibilité sur les alertes externes qui ont réellement un impact sur leurs actifs, leurs fournisseurs ou leur marque.
-C'est souvent là que les faux positifs s'immiscent et que les signaux pertinents passent inaperçus, en particulier lors d'incidents liés à des ransomwares ou impliquant des fournisseurs.
-Votre équipe est-elle à l'aise avec cette situation aujourd'hui ?
+L&apos;un des défis fréquemment évoqués par les responsables de la sécurité est le fait de disposer d&apos;une multitude d&apos;outils, tout en manquant de visibilité sur les alertes externes qui ont réellement un impact sur leurs actifs, leurs fournisseurs ou leur marque.
+C'est souvent là que les faux positifs s&apos;immiscent et que les signaux pertinents passent inaperçus, en particulier lors d&apos;incidents liés à des ransomwares ou impliquant des fournisseurs.
+Votre équipe est-elle à l&apos;aise avec cette situation aujourd&apos;hui ?
 Cordialement,
 
 {{signature}}
@@ -204,7 +204,7 @@ Se désabonner`,
     label: "Email #5",
     timing: "9 jours après",
     content: `Bonjour {{firstName}},
-Je ne veux pas insister si ce n'est pas le bon moment.
+Je ne veux pas insister si ce n&apos;est pas le bon moment.
 Si cela peut vous être utile, je serais ravi de vous proposer une ressource concise et sans engagement, comme une analyse ponctuelle de votre exposition sur le dark web, un aperçu des menaces pesant sur votre marque ou une brève liste de contrôle de conformité réglementaire pour les grandes entreprises.
 Ou bien pouvons-nous reprendre contact dans quelques mois, lorsque vos priorités auront changé ?
 Bonne journée.
@@ -330,7 +330,7 @@ export default function CybersecurityRiskManagementPage() {
               },
               {
                 value: "N/A",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#9ca3af",
                 text: "#ffffff",
               },

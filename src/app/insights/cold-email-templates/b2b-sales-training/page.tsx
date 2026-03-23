@@ -134,11 +134,11 @@ LinkedIn`,
     timing: "3 jours après",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Bonjour{% variation %}Salut{% endspin %} {{firstName}},
 
-Je vous écris à propos de mon dernier e-mail : j'ai pensé que vous aimeriez peut-être avoir un peu plus de contexte.
+Je vous écris à propos de mon dernier e-mail : j&apos;ai pensé que vous aimeriez peut-être avoir un peu plus de contexte.
 
 Si vous souhaitez contacter davantage de {{Target Audience - example: c-levels}} pour promouvoir votre {{Product: cyber security solution}}, accédez gratuitement au premier chapitre de notre Académie.
 
-Parmi plusieurs tutoriels, vous apprendrez comment mettre en place une campagne sortante automatisée sur LinkedIn, jusqu'à 400 invitations par mois, sans aucun frais.
+Parmi plusieurs tutoriels, vous apprendrez comment mettre en place une campagne sortante automatisée sur LinkedIn, jusqu&apos;à 400 invitations par mois, sans aucun frais.
 
 Cela vous intéresse ?
 
@@ -153,7 +153,7 @@ Cordialement,
     timing: "6 jours après",    subject:
       "Discuter avec {{colleaguename1}}",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
-Je comprends que vous soyez très occupé, mais je ne voudrais pas manquer l'occasion de travailler avec {{companyName}} : devrais-je contacter quelqu'un d'autre pour discuter du développement commercial (génération de prospects, prospection sortante, etc.) ?
+Je comprends que vous soyez très occupé, mais je ne voudrais pas manquer l&apos;occasion de travailler avec {{companyName}} : devrais-je contacter quelqu&apos;un d&apos;autre pour discuter du développement commercial (génération de prospects, prospection sortante, etc.) ?
 Peut-être {{colleaguename1}} ?
 
 Cordialement
@@ -185,9 +185,9 @@ Cordialement
     label: "Email #5",
     timing: "4 jours après",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
-Puisque vous êtes le/la {{jobtitle}}, qu'est-ce qui vous empêche d'obtenir un projet gratuit de génération de prospects ou d'apprendre de nouvelles méthodes d'acquisition de clients ? Est-ce parce que :
+Puisque vous êtes le/la {{jobtitle}}, qu&apos;est-ce qui vous empêche d&apos;obtenir un projet gratuit de génération de prospects ou d&apos;apprendre de nouvelles méthodes d&apos;acquisition de clients ? Est-ce parce que :
 vous ne faites pas de prospection par e-mail, de démarchage téléphonique ou sur LinkedIn
-ce n'est pas le bon moment
+ce n&apos;est pas le bon moment
 pour une autre raison ?
 Je serais ravi de discuter avec vous de la manière dont nos clients ont lancé leur première campagne de prospection ou dont ils ont amélioré leur approche précédente.
 
@@ -210,11 +210,11 @@ Alors… mes e-mails étaient-ils si mauvais qu’ils n’ont pas retenu votre a
 
 J’ai essayé de vous contacter à plusieurs reprises, et si vous n’êtes pas intéressé par cette discussion, c’est tout à fait compréhensible.
 
-J'ai pensé qu'il serait bon de vous contacter car, avant de nous rencontrer, nos clients passaient à côté de beaucoup d'opportunités : leurs commerciaux ne programmaient pas assez de démonstrations, leurs taux de conversion étaient catastrophiques et ils n'arrivaient pas à atteindre leurs objectifs.
+J'ai pensé qu&apos;il serait bon de vous contacter car, avant de nous rencontrer, nos clients passaient à côté de beaucoup d&apos;opportunités : leurs commerciaux ne programmaient pas assez de démonstrations, leurs taux de conversion étaient catastrophiques et ils n&apos;arrivaient pas à atteindre leurs objectifs.
 
 Cordialement,
 
-P.S. : si vous n'êtes pas intéressé par une collaboration pour développer votre activité, faites-le-moi savoir et je cesserai de vous contacter.
+P.S. : si vous n&apos;êtes pas intéressé par une collaboration pour développer votre activité, faites-le-moi savoir et je cesserai de vous contacter.
 
 {{signature}}`,
   },
@@ -224,7 +224,7 @@ P.S. : si vous n'êtes pas intéressé par une collaboration pour développer vo
     label: "Connexion LinkedIn",
     timing: "1 jours après",
     content: `Connexion sur LinkedIn
-Date d'envoi : 1 jour après le dernier message
+Date d&apos;envoi : 1 jour après le dernier message
 Contenu : depuis le compte LinkedIn de Charles
 {% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}}, Charles de devlo. J'ai hâte de me connecter avec vous et de découvrir les projets de {{companyName}}. Bonne chance pour vos initiatives de vente B2B au troisième trimestre`,
   }
@@ -347,7 +347,7 @@ export default function B2bSalesTrainingPage() {
               },
               {
                 value: "N/A",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#9ca3af",
                 text: "#ffffff",
               },
@@ -528,7 +528,7 @@ export default function B2bSalesTrainingPage() {
                 />
                 <span>
                   <strong>Proposer de la valeur gratuite avant de demander un rendez-vous.</strong>{" "}
-                  L'accès gratuit au premier chapitre ou la génération de 100 leads offerte réduisent la friction et augmentent l’engagement.
+                  L&apos;accès gratuit au premier chapitre ou la génération de 100 leads offerte réduisent la friction et augmentent l’engagement.
                 </span>
               </li>
               <li className="flex gap-3">

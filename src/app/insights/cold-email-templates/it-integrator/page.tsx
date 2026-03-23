@@ -105,17 +105,17 @@ const touches: SequenceTouch[] = [
 
 {{Icebreaker - example: post shared on LinkedIn - Your background is impressive; I visited your LinkedIn profile; As a [JobTitle], is the [subject] important to you?}}. 
 
-De nombreux {{engineering offices; architectural offices}} se sont tournés vers nous pour trouver les meilleures solutions aux problèmes audiovisuels de leurs clients, et j'ai pensé à {{CompanyName}}. 
+De nombreux {{engineering offices; architectural offices}} se sont tournés vers nous pour trouver les meilleures solutions aux problèmes audiovisuels de leurs clients, et j&apos;ai pensé à {{CompanyName}}. 
 
 Notre entreprise vous accompagnera pleinement dans vos projets, vous conseillera sur les dernières innovations et technologies, et répondra à toutes vos questions, telles que :
 
-Qu'en est-il du plan d'élévation, des schémas techniques, des courants forts, des réseaux, du tirage de câbles, etc. ?
+Qu'en est-il du plan d&apos;élévation, des schémas techniques, des courants forts, des réseaux, du tirage de câbles, etc. ?
 Quelles solutions sont utilisées pour mettre en œuvre le travail hybride ?
 Comment naviguer entre {{client_ref}}, etc., et assurer leur interopérabilité ?
 
-Nos clients font également appel à nos experts pour leurs projets d'affichage dynamique, de réservation de salles, de domotique, d'installations visuelles interactives, etc.
+Nos clients font également appel à nos experts pour leurs projets d&apos;affichage dynamique, de réservation de salles, de domotique, d&apos;installations visuelles interactives, etc.
 
-Si l'intégration audiovisuelle est un sujet essentiel pour vous et vos clients, seriez-vous intéressé par un premier contact ?
+Si l&apos;intégration audiovisuelle est un sujet essentiel pour vous et vos clients, seriez-vous intéressé par un premier contact ?
 
 Merci pour votre temps et votre réponse.
 
@@ -137,15 +137,15 @@ J'espère que vous allez bien.
 
 Je souhaiterais vous faire une proposition et vous donner plus de détails.
 
-Nous serions ravis de vous inviter à déjeuner pour faire votre connaissance. Nous sommes impatients d'en savoir plus sur {{CompanyName}}, ainsi que sur vos projets actuels et à venir. 
+Nous serions ravis de vous inviter à déjeuner pour faire votre connaissance. Nous sommes impatients d&apos;en savoir plus sur {{CompanyName}}, ainsi que sur vos projets actuels et à venir. 
 
-Depuis 2001, plus de 750 clients ont fait appel à notre équipe de 40 collaborateurs, principalement basée à Gland. Ces derniers temps, les solutions de travail hybrides sont devenues une priorité. Ce serait donc une excellente idée d'aborder ce sujet ensemble.
+Depuis 2001, plus de 750 clients ont fait appel à notre équipe de 40 collaborateurs, principalement basée à Gland. Ces derniers temps, les solutions de travail hybrides sont devenues une priorité. Ce serait donc une excellente idée d&apos;aborder ce sujet ensemble.
 
 Cette invitation vous intéresserait-elle ? Ou préférez-vous un entretien téléphonique de 10 à 15 minutes ?
 
-Vous pouvez choisir la date qui vous convient directement dans l'agenda de mon responsable. 
+Vous pouvez choisir la date qui vous convient directement dans l&apos;agenda de mon responsable. 
 
-Je vous remercie d'avance pour votre réponse.
+Je vous remercie d&apos;avance pour votre réponse.
 
 Cordialement,
 {{salesRep}}
@@ -164,13 +164,13 @@ PS : Ma liste de tâches ci-dessous m'a rappelé de vous contacter 😉
     content: `Bonjour {{firstName}},
 J'espère que vous allez bien.
 
-Je me demandais si ce n'était pas le bon moment ou si nos services n'avaient pas suscité votre intérêt. Est-ce parce que :
+Je me demandais si ce n&apos;était pas le bon moment ou si nos services n&apos;avaient pas suscité votre intérêt. Est-ce parce que :
 
-Avez-vous déjà un autre partenaire en matière d'antivirus ?
+Avez-vous déjà un autre partenaire en matière d&apos;antivirus ?
 Serait-il préférable de contacter un autre de vos collègues, peut-être {{colleaguename}} ?
 Y a-t-il une autre raison ?
 
-L'invitation à déjeuner ensemble que je vous avais adressée dans mon dernier message tient toujours.
+L&apos;invitation à déjeuner ensemble que je vous avais adressée dans mon dernier message tient toujours.
 
 Je vous remercie par avance de votre réponse.
 
@@ -185,11 +185,11 @@ Cordialement,
     timing: "5 jours après",
     content: `Appel à froid n° 1
 
-Date d'envoi : 5 jours après le dernier message
-Script d'appel :
+Date d&apos;envoi : 5 jours après le dernier message
+Script d&apos;appel :
 Si le prospect répond :
 
-Bonjour {{firstName}}, c'est {{salesRep}} de [ClientCompanyName]. Comment allez-vous ? … [« Oui, merci, et vous ? »]
+Bonjour {{firstName}}, c&apos;est {{salesRep}} de [ClientCompanyName]. Comment allez-vous ? … [« Oui, merci, et vous ? »]
 Très bien, merci. Je vous ai contacté par e-mail car j’ai vu que vous étiez responsable du {{jobtitle}} chez {{companyName}}. J’ai pensé vous passer un petit coup de fil. Auriez-vous une minute pour en discuter ensemble ?
 Si oui :
 Nous sommes un intégrateur de systèmes audiovisuels et de technologies de communication : solutions de visioconférence, affichage dynamique, domotique et réservation de salles.
@@ -233,8 +233,8 @@ Bonne journée,
     label: "Appel téléphonique",
     timing: "2 jours après",
     content: `Appel à froid n° 2
-Date d'envoi : 2 jours après le dernier contact
-Script d'appel : 
+Date d&apos;envoi : 2 jours après le dernier contact
+Script d&apos;appel : 
 
 (Identique à celui du contact n° 4)`,
   },
@@ -251,7 +251,7 @@ J'ai essayé de vous joindre par téléphone hier au sujet de vos projets audiov
 
 Pourrais-je vous appeler à un autre moment ? Sinon, je tenterai de vous recontacter dans quelques jours.
 
-Merci d'avance pour votre réponse.
+Merci d&apos;avance pour votre réponse.
 
 Cordialement,
 {{salesRep}}
@@ -267,13 +267,13 @@ Cordialement,
  
 J'espère que vous allez bien.
  
-Si un autre moment vous convient mieux, ou si vous n'êtes pas intéressé par nos services, n'hésitez pas à me le faire savoir.    
+Si un autre moment vous convient mieux, ou si vous n&apos;êtes pas intéressé par nos services, n&apos;hésitez pas à me le faire savoir.    
  
 Ou devrais-je plutôt m'adresser à un autre de vos collègues ? Peut-être {{colleaguename}} ?
  
 Je reste à votre disposition si vous avez des questions ou si vous souhaitez discuter de vos projets.
  
-Je vous remercie d'avance pour votre réponse et vous souhaite tout le meilleur pour l'avenir.
+Je vous remercie d&apos;avance pour votre réponse et vous souhaite tout le meilleur pour l&apos;avenir.
  
 Cordialement,
 {{salesRep}}
@@ -286,7 +286,7 @@ Cordialement,
     label: "Connexion LinkedIn",
     timing: "1 jours après",
     content: `Demande de connexion sur LinkedIn
-Date d'envoi : 1 jour après le dernier message
+Date d&apos;envoi : 1 jour après le dernier message
 Contenu : provenant de LinkedIn
 Bonjour {{firstName}}, je m'appelle {{salesRep}} et je travaille chez [ClientCompanyName]. Je me réjouis de me connecter avec vous et de découvrir les projets et les idées de {{companyName}} que vous partagez. À bientôt.`,
   }
@@ -409,7 +409,7 @@ export default function ItIntegratorPage() {
               },
               {
                 value: "89%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

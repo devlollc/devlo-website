@@ -107,7 +107,7 @@ const touches: SequenceTouch[] = [
 → LinkedIn message (sent 1 day after the LinkedIn connection is accepted):
 	Version A (Client reference + Pain cost efficient + CTC)
 {% if lastName == blank %}Bonjour {{salutation}} {{firstName}}{% else %}Bonjour {{salutation}} {{lastName}} {% endif %}
-En tant que membre de la commission paritaire 200, j'imagine que vos employés bénéficient déjà d'éco-chèques.
+En tant que membre de la commission paritaire 200, j&apos;imagine que vos employés bénéficient déjà d&apos;éco-chèques.
 {% if gender == "Male" %}Seriez-vous intéressé de découvrir les différences entre [ClientCompanyName]  et votre fournisseur actuel ?{% else %}Seriez-vous intéressée de découvrir les différences entre [ClientCompanyName] et votre fournisseur actuel ? {% endif %}
 	Version B (3 last novelties)
 {% if lastName == blank %}Bonjour {{salutation}} {{firstName}}{% else %}Bonjour {{salutation}} {{lastName}} {% endif %}
@@ -153,7 +153,7 @@ Version B (old school - very direct)
 
 {% if lastName == blank %}Bonjour {{salutation}} {{firstName}}{% else %}Bonjour {{salutation}} {{lastName}} {% endif %}
 
-En étant membre de la commission paritaire 200, j'imagine que vos employés bénéficient déjà d'éco-chèques.
+En étant membre de la commission paritaire 200, j&apos;imagine que vos employés bénéficient déjà d&apos;éco-chèques.
 
 En plus de notre rapport qualité prix imbattable, nous venons de sortir notre plateforme [ProductName] qui permet à vos employés de profiter de toutes nos promotions, même sans utiliser la carte [ClientCompanyName].
 
@@ -184,7 +184,7 @@ VIDEO SENDSPARK type https://sendspark.com/
 	
 Qu'en avez-vous pensé ?
 
-Au plaisir d'avoir votre retour,
+Au plaisir d&apos;avoir votre retour,
 
 {% if gender == “Male” %}P.S. : Si vous êtes déjà pleinement satisfait de votre partenaire actuel, n’hésitez pas à me le faire savoir 🙂{% else %}P.S. : Si vous êtes déjà pleinement satisfaite de votre partenaire actuel, n’hésitez pas à me le faire savoir 🙂{% endif %}
 
@@ -198,9 +198,9 @@ Version B
 
 Comme vous le savez, tous les membres de la commission paritaire sont tenus de proposer des éco-chèques à leurs employés. 
 
-Je me demandais donc si vous offriez déjà d'autres avantages ?
+Je me demandais donc si vous offriez déjà d&apos;autres avantages ?
 
-Au plaisir d'avoir votre retour,
+Au plaisir d&apos;avoir votre retour,
 
 {% if gender == "Male" %}P.S. : Si vous êtes déjà pleinement satisfait de votre partenaire actuel, n’hésitez pas à me le faire savoir 🙂{% else %}P.S. : Si vous êtes déjà pleinement satisfaite de votre partenaire actuel, n’hésitez pas à me le faire savoir 🙂{% endif %}`,
   },
@@ -216,7 +216,7 @@ Au plaisir d'avoir votre retour,
 
 {% if colleaguename1 == blank %}Est-ce que je devrais plutôt contacter un.e autre collègue concernant nos[ProductName] ?{% else %}Est-ce que je devrais plutôt contacter votre collègue {{colleaguename1}} concernant nos[ProductName] ?{% endif %}{% if colleaguename2 == blank %}{% else %}Ou peut-être {{colleaguename2}} ?{% endif %}
 
-Merci d'avance pour votre aide,
+Merci d&apos;avance pour votre aide,
 {{signature}}
 Unsubscribe link 
 
@@ -278,16 +278,16 @@ Unsubscribe link`,
       "ce sera mon dernier mail, bonne continuation 🙂",
     content: `Version A (FUN)
 Bonjour {{salutation}} {{lastName}},
-{% spin %}{% variation %}C'est donc le moment de se dire au revoir 😢{% variation %}Il est donc temps de se dire au revoir 😢{% variation %}C'est donc l'heure de nous dire au revoir 😢{% endspin %}
+{% spin %}{% variation %}C'est donc le moment de se dire au revoir 😢{% variation %}Il est donc temps de se dire au revoir 😢{% variation %}C'est donc l&apos;heure de nous dire au revoir 😢{% endspin %}
 {% spin %}{% variation %}Chez [ClientCompanyName], nous sommes très friands de feedback afin de nous améliorer.
 Si vous avez 5 petites secondes, pourriez-vous m'indiquer pourquoi vous préférez en rester là ? Nous avons besoin que d’une seule lettre! {% variation %}Chez [ClientCompanyName], nous apprécions chaque retour pour nous améliorer.
 Si vous avez 5 secondes, pourriez-vous m'indiquer pourquoi vous préférez en rester là ? Une seule lettre suffit ! {% variation %}Chez [ClientCompanyName], chaque retour nous aide à progresser.
 En 5 secondes, pourriez-vous me dire en une lettre pourquoi vous préférez ne pas donner suite ? 😊 {% endspin %}
     A. "Non merci, absolument pas besoin"
     B. "Pas le bon moment, un petit mail dans 3 mois ?"
-    C. "Intéressant, mais j’ai besoin de plus d’infos... On s'appelle semaine prochaine ?"
+    C. "Intéressant, mais j’ai besoin de plus d’infos... On s&apos;appelle semaine prochaine ?"
     D. "J’ai atterri sur une île déserte et Rio ne répond plus ! 🏝️"
-En tout cas, j'espère vous avoir fait sourire🙂
+En tout cas, j&apos;espère vous avoir fait sourire🙂
 Excellente continuation à toute votre équipe,
 
 {{signature}}
@@ -297,7 +297,7 @@ Version B  (No fun, 3 months later relaunch?)
 
 Bonjour {{salutation}} {{lastName}},	
 
-{% if gender == “Male” %}Je vous ai contacté à plusieurs reprises et je ne veux pas continuer à vous écrire si l’optimisation de vos coûts n’est pas une priorité pour l'instant.{% else %}Je vous ai contactée à plusieurs reprises et je ne veux pas continuer à vous écrire si l’optimisation de vos coûts n’est pas une priorité pour l’instant.{% endif %}
+{% if gender == “Male” %}Je vous ai contacté à plusieurs reprises et je ne veux pas continuer à vous écrire si l’optimisation de vos coûts n’est pas une priorité pour l&apos;instant.{% else %}Je vous ai contactée à plusieurs reprises et je ne veux pas continuer à vous écrire si l’optimisation de vos coûts n’est pas une priorité pour l’instant.{% endif %}
 
 Serait-il judicieux de se recontacter dans quelques mois ?
 
@@ -313,7 +313,7 @@ Unsubscribe link`,
     content: `Call - OPTIONAL
 
 Objections management:
-Vous me confirmez que dans nos commissions paritaires on peut remplacer la Prime de Fin d'année par ce plan cafetaria (CP200 & CP 207)
+Vous me confirmez que dans nos commissions paritaires on peut remplacer la Prime de Fin d&apos;année par ce plan cafetaria (CP200 & CP 207)
 Malheureusement non, la commission paritaire 207 ne permet pas de convertir la primer de fin d’année par le plan cafétaria`,
   }
 ];
@@ -435,7 +435,7 @@ export default function HrServicesPage() {
               },
               {
                 value: "85%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

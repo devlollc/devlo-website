@@ -112,9 +112,9 @@ Si la demande de connexion LinkedIn est acceptée, le message suivant est envoy�
 Bonjour {{firstName}}, mon collègue {{salesRep}}  vous a envoyé un e-mail.
 Vous occupez-vous de solutions [ProductName] auto-hébergées qui pourraient intéresser {{companyName}} ?
 [ClientCustomer]  et plusieurs entreprises du classement Fortune 500 utilisent notre solution, tout comme des entreprises telles que {{company name}}.
-Elles accélèrent l'intégration de leurs équipes de développement logiciel sur site, à proximité ou offshore. Et elles se tournent vers notre solution car c'est la première plateforme CDE à offrir à la fois productivité et sécurité des données.
+Elles accélèrent l&apos;intégration de leurs équipes de développement logiciel sur site, à proximité ou offshore. Et elles se tournent vers notre solution car c&apos;est la première plateforme CDE à offrir à la fois productivité et sécurité des données.
 Si la demande de connexion LinkedIn est acceptée, le message suivant est envoyé 21 jours plus tard :
-Bonjour {{firstName}}, vaut-il mieux contacter {{colleaguename1}} ou {{colleaguename2}} pour discuter de l'expérience développeur, de la productivité, de la gestion des ordinateurs portables et des coûts de conformité, etc. ?`,
+Bonjour {{firstName}}, vaut-il mieux contacter {{colleaguename1}} ou {{colleaguename2}} pour discuter de l&apos;expérience développeur, de la productivité, de la gestion des ordinateurs portables et des coûts de conformité, etc. ?`,
   },
   {
     number: 2,
@@ -126,13 +126,13 @@ Bonjour {{firstName}}, vaut-il mieux contacter {{colleaguename1}} ou {{colleague
 A] {{icebreaker}}.
 Mes recherches montrent que vous dirigez [ProductName].
 B] Mes recherches indiquent que vous, {{colleaguename1}} et {{colleaguename2}}, dirigez [ProductName].
-Nos clients, des entreprises telles que [ClientCustomer], font confiance à notre solution pour améliorer la productivité et l'expérience de codage de leurs développeurs. Les équipes internes et externes travaillent sur des environnements de développement cloud auto-hébergés (CDE).
+Nos clients, des entreprises telles que [ClientCustomer], font confiance à notre solution pour améliorer la productivité et l&apos;expérience de codage de leurs développeurs. Les équipes internes et externes travaillent sur des environnements de développement cloud auto-hébergés (CDE).
 Contrairement au DaaS ou aux VDI, les CDE sont des environnements Linux de développement préconfigurés comprenant tous les outils, bibliothèques, dépendances et fonctionnalités de sécurité.
-Les CDE de [ClientCompanyName] sont les premiers environnements de développement sécurisés, standardisés et prêts à l'emploi. Entre autres :
-Le temps d'intégration des développeurs a été réduit de plusieurs jours à quelques minutes
+Les CDE de [ClientCompanyName] sont les premiers environnements de développement sécurisés, standardisés et prêts à l&apos;emploi. Entre autres :
+Le temps d&apos;intégration des développeurs a été réduit de plusieurs jours à quelques minutes
 Les coûts de gestion des ordinateurs portables et de mise en conformité ont été réduits de 50 %
-L'ensemble de l'environnement de développement est désormais sécurisé
-L'idée d'avoir un peu plus de contexte lors d'un appel vous parle-t-elle, ou suis-je à côté de la plaque ?
+L&apos;ensemble de l&apos;environnement de développement est désormais sécurisé
+L&apos;idée d&apos;avoir un peu plus de contexte lors d&apos;un appel vous parle-t-elle, ou suis-je à côté de la plaque ?
 
 PS - Version A{{firstName}}, cela vous dit quelque chose ?
 
@@ -145,13 +145,13 @@ PS - Version A{{firstName}}, cela vous dit quelque chose ?
     timing: "7 jours après",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Bonjour{% endif %} {{firstName}},
 Que pensez-vous de ma dernière suggestion, qui consiste à voir comment nos clients concilient productivité des développeurs et sécurité ?
-L'idée est de nous rencontrer pour un premier entretien (sans engagement).
-De plus, l'offre spéciale {année} permet à [ProductName] de constater par eux-mêmes, dans leur propre environnement, qu'il n'est pas nécessaire de sacrifier l'efficacité au nom de la sécurité. 
+L&apos;idée est de nous rencontrer pour un premier entretien (sans engagement).
+De plus, l&apos;offre spéciale {année} permet à [ProductName] de constater par eux-mêmes, dans leur propre environnement, qu&apos;il n&apos;est pas nécessaire de sacrifier l&apos;efficacité au nom de la sécurité. 
 Ce projet pilote de 45 jours aide :
 les équipes DevOps à garantir la productivité et le confort de leurs développeurs
 les RSSI à réduire les risques liés au développement logiciel ({{colleaguename3}}?)
 aux DSI de réduire les coûts tout en garantissant la conformité ({{colleaguename4}}?)
-PS : L'un des avantages que nos clients apprécient le plus est l'accès à des informations en temps réel. Ils ont une vue d'ensemble de tous les aspects de leur [ProductName], comme dans le tableau de bord que j'ai créé pour {{companyname}} ci-dessous :
+PS : L&apos;un des avantages que nos clients apprécient le plus est l&apos;accès à des informations en temps réel. Ils ont une vue d&apos;ensemble de tous les aspects de leur [ProductName], comme dans le tableau de bord que j&apos;ai créé pour {{companyname}} ci-dessous :
 
 
 
@@ -164,9 +164,9 @@ PS : L'un des avantages que nos clients apprécient le plus est l'accès à des 
     timing: "5 jours après",    subject:
       "Discutez avec {{colleaguename1}} ou {{colleaguename2}}",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
-Vaut-il mieux contacter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour discuter de l'infrastructure DevOps, de l'efficacité du développement de code et de la sécurité des ressources de données ?
-Ou peut-être quelqu'un d'autre ?
-Je comprends que vous soyez occupé, mais il serait dommage de ne pas voir s'il y a des possibilités d'amélioration chez {{companyName}} grâce à l'utilisation d'environnements de développement dans le cloud.
+Vaut-il mieux contacter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour discuter de l&apos;infrastructure DevOps, de l&apos;efficacité du développement de code et de la sécurité des ressources de données ?
+Ou peut-être quelqu&apos;un d&apos;autre ?
+Je comprends que vous soyez occupé, mais il serait dommage de ne pas voir s&apos;il y a des possibilités d&apos;amélioration chez {{companyName}} grâce à l&apos;utilisation d&apos;environnements de développement dans le cloud.
 Merci
 
 PS : Ma liste de tâches ci-dessous m'a rappelé de vous écrire 😉
@@ -179,9 +179,9 @@ PS : Ma liste de tâches ci-dessous m'a rappelé de vous écrire 😉
     label: "Appel téléphonique",
     timing: "3 jours après",
     content: `Appel à froid n° 1
-Date d'envoi : 3 jours après le dernier message
+Date d&apos;envoi : 3 jours après le dernier message
 Si le prospect répond :
-« John Doe à l'appareil »
+« John Doe à l&apos;appareil »
  
 Bonjour John, je suis {{salesRep}} de {clientCompanyName}. Comment allez-vous ?
  
@@ -193,25 +193,25 @@ Je vous ai contacté par e-mail au sujet de
 des conteneurs en ligne pour les activités de développement de code afin de garantir la productivité et le confort des développeurs
 des environnements Linux de développement préconfigurés et auto-hébergés
 
-Nous améliorons l'efficacité, la sécurité et la gouvernance de l'ensemble de votre processus de développement d'applications tout en réduisant les coûts de gestion.
+Nous améliorons l&apos;efficacité, la sécurité et la gouvernance de l&apos;ensemble de votre processus de développement d&apos;applications tout en réduisant les coûts de gestion.
 
 Ce qui est reconnu dans le rapport {clientRecognition} de cette année.
 
 Avez-vous une minute pour en discuter ensemble ?
                                 
 « Oui »
-« Je n'ai pas le temps pour l'instant, je suis sur le point d'entrer en réunion »
+« Je n&apos;ai pas le temps pour l&apos;instant, je suis sur le point d&apos;entrer en réunion »
 Voir ci-dessous
 
 
 ↘
-Oh d'accord, pourrais-je vous rappeler demain matin vers 10 h ?
+Oh d&apos;accord, pourrais-je vous rappeler demain matin vers 10 h ?
 
 « Oui, ça me convient »
 
 D'accord, merci. Vous recevrez une invitation. Bonne réunion et à demain. [END]
 Pour vous donner un peu de contexte, 
-(Si ce n'est pas déjà dit : à confirmer
+(Si ce n&apos;est pas déjà dit : à confirmer
 
 Cela vous intéresse-t-il ? 
 
@@ -228,9 +228,9 @@ Voir ci-dessous
 ↘
 à confirmer
 
-Serait-il judicieux d'organiser une première réunion tous ensemble pour discuter et échanger sur les meilleures pratiques, sans engagement, bien sûr ? [Obtenir les coordonnées]
+Serait-il judicieux d&apos;organiser une première réunion tous ensemble pour discuter et échanger sur les meilleures pratiques, sans engagement, bien sûr ? [Obtenir les coordonnées]
 
-Et pour l'instant, quels sont les projets dont vous avez la supervision pour aider vos collègues dans leur travail ?
+Et pour l&apos;instant, quels sont les projets dont vous avez la supervision pour aider vos collègues dans leur travail ?
 
 [...] (contenu complet disponible sur demande)`,
   },
@@ -242,9 +242,9 @@ Et pour l'instant, quels sont les projets dont vous avez la supervision pour aid
       "Notre conversation téléphonique",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
 
-J'ai essayé de t'appeler aujourd'hui [PhoneNumber].
+J'ai essayé de t'appeler aujourd&apos;hui [PhoneNumber].
 
-Vous connaissez sans doute GitHub Codespaces, alors vous serez peut-être intéressé de découvrir comment [ClientCompanyName] est l'alternative auto-hébergée la plus sécurisée pour gérer les environnements de développement.
+Vous connaissez sans doute GitHub Codespaces, alors vous serez peut-être intéressé de découvrir comment [ClientCompanyName] est l&apos;alternative auto-hébergée la plus sécurisée pour gérer les environnements de développement.
 
 Un café virtuel avec un peu plus de contexte vous intéresse-t-il ?
 
@@ -263,13 +263,13 @@ Serait-il judicieux de contacter {{colleaguename3}} ou {{colleaguename4}}, étan
 
 Notre {clientRole} {clientName} et moi-même avons essayé de vous contacter à plusieurs reprises.
 Nous avons pensé que vous seriez peut-être intéressé de savoir comment nos clients :
-améliorent l'expérience de leurs développeurs (il ne leur faut plus qu'une minute pour les intégrer) grâce à des environnements de développement Linux prêts à l'emploi qui fonctionnent dans n'importe quel navigateur
-contrôlent les risques d'exfiltration de données et l'accès aux ressources
+améliorent l&apos;expérience de leurs développeurs (il ne leur faut plus qu&apos;une minute pour les intégrer) grâce à des environnements de développement Linux prêts à l&apos;emploi qui fonctionnent dans n&apos;importe quel navigateur
+contrôlent les risques d&apos;exfiltration de données et l&apos;accès aux ressources
 réalisent des économies de 30 à 50 % en passant au CDE
 
-Si cela ne vous intéresse pas, merci de me le faire savoir, c'est tout à fait compréhensible.
+Si cela ne vous intéresse pas, merci de me le faire savoir, c&apos;est tout à fait compréhensible.
 
-Ou devrais-je vous recontacter au début de l'année prochaine ?
+Ou devrais-je vous recontacter au début de l&apos;année prochaine ?
 
 Cordialement,
 {{signature}}`,
@@ -393,7 +393,7 @@ export default function DevopsEngineeringPage() {
               },
               {
                 value: "58%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

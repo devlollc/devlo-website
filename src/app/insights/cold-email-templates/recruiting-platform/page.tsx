@@ -105,20 +105,20 @@ const touches: SequenceTouch[] = [
 
 Notre plateforme de recrutement peut vous aider, vous et {{companyName}}, à rencontrer de nouveaux talents.
 
-Je me demandais si c'est à vous ou plutôt à votre collègue {{colleaguename}} que je devrais m'adresser ?
+Je me demandais si c&apos;est à vous ou plutôt à votre collègue {{colleaguename}} que je devrais m'adresser ?
 
 
 
 
-Nos clients, tels que {{client_ref}}, utilisent déjà avec succès notre solution pour rencontrer des candidats lors d'un déjeuner informel, que ce soit en ligne ou en personne (comme vous l'avez peut-être deviné en voyant mon montage photo ci-dessus 😊).
+Nos clients, tels que {{client_ref}}, utilisent déjà avec succès notre solution pour rencontrer des candidats lors d&apos;un déjeuner informel, que ce soit en ligne ou en personne (comme vous l&apos;avez peut-être deviné en voyant mon montage photo ci-dessus 😊).
 
 Le principe est simple : des étudiants ou de jeunes diplômés postulent via notre plateforme pour demander un déjeuner avec un employé. Si leur candidature est retenue, ils rencontrent l’employé du service choisi pour une discussion informelle autour d’un déjeuner.
 
 Chaque jour, notre plateforme s’enrichit de nouveaux profils d’étudiants, de diplômés et de jeunes professionnels issus de nombreuses universités et écoles supérieures. {{icebreaker}}
 
-Que diriez-vous de nous contacter la semaine prochaine pour voir si notre solution numérique peut vous aider à recruter davantage de talents ? Autour d'un café virtuel, peut-être ?
+Que diriez-vous de nous contacter la semaine prochaine pour voir si notre solution numérique peut vous aider à recruter davantage de talents ? Autour d&apos;un café virtuel, peut-être ?
 
-Merci d'avance pour vos commentaires,
+Merci d&apos;avance pour vos commentaires,
 
 Cordialement,
 {{salesRep}}
@@ -140,7 +140,7 @@ J'imagine que votre emploi du temps est très chargé – ma liste de tâches ci
 
 
 
-Blague à part, je suis convaincu que vos candidats actuels et potentiels sont au cœur de toutes les activités de {{companyName}}. Aujourd'hui, le recrutement est crucial, mais un peu plus complexe qu'auparavant.
+Blague à part, je suis convaincu que vos candidats actuels et potentiels sont au cœur de toutes les activités de {{companyName}}. Aujourd&apos;hui, le recrutement est crucial, mais un peu plus complexe qu&apos;auparavant.
 
 C'est pourquoi vous et votre équipe serez agréablement surpris de voir à quel point notre solution soutient nos clients et vous aide à atteindre vos objectifs de recrutement.
 
@@ -164,13 +164,13 @@ J'imagine que votre emploi du temps est très chargé – ma liste de tâches ci
 
 
 
-Blague à part, je pense que vos employés actuels et potentiels sont au cœur de tout ce que fait {{companyName}}. Aujourd'hui, le recrutement est crucial, mais un peu plus complexe qu'auparavant.
+Blague à part, je pense que vos employés actuels et potentiels sont au cœur de tout ce que fait {{companyName}}. Aujourd&apos;hui, le recrutement est crucial, mais un peu plus complexe qu&apos;auparavant.
 
 C'est pourquoi vous et votre équipe serez agréablement surpris de voir à quel point notre solution soutient nos clients et vous aide à atteindre vos objectifs de recrutement.
 
 Comment abordez-vous actuellement le recrutement ? Les résultats sont-ils à la hauteur de vos attentes ?
 
-Que diriez-vous d'explorer ensemble cette nouvelle approche par téléphone dans les prochains jours ?
+Que diriez-vous d&apos;explorer ensemble cette nouvelle approche par téléphone dans les prochains jours ?
 
 Cordialement,
 {{salesRep}}
@@ -198,9 +198,9 @@ Visite du profil LinkedIn de {{ClientCompanyName}}`,
     timing: "4 jours après",
     content: `Bonjour {{firstName}},
 J'espère que vous allez bien.
-Je n'ai pas eu de vos nouvelles, je suppose donc que vous êtes très occupé en ce moment, ou bien quelqu'un d'autre s'occupe-t-il du recrutement ?
+Je n&apos;ai pas eu de vos nouvelles, je suppose donc que vous êtes très occupé en ce moment, ou bien quelqu&apos;un d&apos;autre s&apos;occupe-t-il du recrutement ?
 Mon collègue {{salesRep}} et moi-même serions ravis de rencontrer un représentant de {{companyName}} 😃
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 Cordialement,
 {{salesRep}}
 P.S. : J'ai pensé à vous car nos partenaires les plus performants ont déjà enrichi leur vivier de talents de plus de 100 profils grâce à notre solution !
@@ -211,7 +211,7 @@ P.S. : J'ai pensé à vous car nos partenaires les plus performants ont déjà e
     channel: "linkedin",
     label: "Connexion LinkedIn",
     timing: "Sent from another team member 2 jours après",
-    content: `Bonjour {{firstName}}, c'est {{salesRep2}} de chez {{ClientCompanyName}}. Je suis le collègue de {{salesRep}}, qui vous a contacté par e-mail. Ce serait formidable de se connecter et d'échanger des nouvelles concernant {{companyName}} sur LinkedIn. Prenez soin de vous`,
+    content: `Bonjour {{firstName}}, c&apos;est {{salesRep2}} de chez {{ClientCompanyName}}. Je suis le collègue de {{salesRep}}, qui vous a contacté par e-mail. Ce serait formidable de se connecter et d&apos;échanger des nouvelles concernant {{companyName}} sur LinkedIn. Prenez soin de vous`,
   },
   {
     number: 6,
@@ -220,12 +220,12 @@ P.S. : J'ai pensé à vous car nos partenaires les plus performants ont déjà e
     timing: "3 jours après",
     content: `Démarchage téléphonique
 Réalisation : 3 jours après le dernier contact
-Script d'appel :
+Script d&apos;appel :
 Si le prospect décroche :
 Bonjour {{firstName}}, je m'appelle {{salesRep}} et je travaille chez {{ClientCompanyName}}. 
 Je vous ai envoyé un e-mail concernant notre plateforme de recrutement : nous aidons des entreprises comme {{client_ref}} à renforcer la notoriété de leur marque employeur. Seriez-vous intéressé(e) pour discuter des résultats obtenus ? [...]
 Si oui : 
-Parfait, très bien. Je vous propose d'organiser une démonstration lorsque vous serez disponible. Auriez-vous 2 minutes maintenant pour répondre à quelques questions afin de mieux cerner votre situation et nous permettre de préparer une présentation personnalisée, incluant des exemples de réussite d'entreprises au profil similaire ?
+Parfait, très bien. Je vous propose d&apos;organiser une démonstration lorsque vous serez disponible. Auriez-vous 2 minutes maintenant pour répondre à quelques questions afin de mieux cerner votre situation et nous permettre de préparer une présentation personnalisée, incluant des exemples de réussite d&apos;entreprises au profil similaire ?
 S'il est intéressé, 
 posez ces questions pour qualifier le prospect :
 __________________________________________________________________________________.
@@ -235,7 +235,7 @@ S'ils sont qualifiés, posez ces questions afin de personnaliser la démonstrati
 __________________________________________________________________________________.
 __________________________________________________________________________________.
 __________________________________________________________________________________.
-Appel à l'action → Planifiez une démonstration avec notre cofondateur/dirigeant directement dans son agenda.
+Appel à l&apos;action → Planifiez une démonstration avec notre cofondateur/dirigeant directement dans son agenda.
 
 [...] (contenu complet disponible sur demande)`,
   },
@@ -252,11 +252,11 @@ Je souhaitais vous donner un peu plus de détails sur notre solution, qui facili
 
 Notre plateforme permet non seulement de créer de véritables liens entre les meilleurs employeurs et les meilleurs talents, mais elle se charge également de toute la coordination.
 
-En d'autres termes, votre équipe RH reçoit les candidatures, ce qui vous permet de présélectionner les profils qui vous intéressent le plus. Notre outil les met ensuite automatiquement en relation avec un collaborateur disponible du service concerné pour un déjeuner ou un café.
+En d&apos;autres termes, votre équipe RH reçoit les candidatures, ce qui vous permet de présélectionner les profils qui vous intéressent le plus. Notre outil les met ensuite automatiquement en relation avec un collaborateur disponible du service concerné pour un déjeuner ou un café.
 
-Si vous n'avez pas encore reçu de retour, le recrutement n'est-il pas à l'ordre du jour ? Ou souhaitez-vous d'abord recevoir plus d'informations ?
+Si vous n&apos;avez pas encore reçu de retour, le recrutement n&apos;est-il pas à l&apos;ordre du jour ? Ou souhaitez-vous d&apos;abord recevoir plus d&apos;informations ?
 
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 {{salesRep}}
 
 PS : Voici un café pour bien terminer votre journée 🙂
@@ -273,13 +273,13 @@ PS : Voici un café pour bien terminer votre journée 🙂
     timing: "4 jours après",
     content: `Bonjour {{firstName}},
  
-Il semble que vous ayez un emploi du temps chargé et j'espère ne pas vous déranger.
+Il semble que vous ayez un emploi du temps chargé et j&apos;espère ne pas vous déranger.
  
 Cet e-mail est ma dernière tentative pour vous contacter. Je reste toutefois à votre disposition si vous trouvez le temps de discuter.
  
 Ou devrais-je m'adresser à ton collègue {{colleaguename}} ?
  
-Je te souhaite une excellente journée et te remercie d'avance pour ta réponse.
+Je te souhaite une excellente journée et te remercie d&apos;avance pour ta réponse.
  
 Cordialement,
 {{salesRep}}
@@ -412,7 +412,7 @@ export default function RecruitingPlatformPage() {
               },
               {
                 value: "71%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

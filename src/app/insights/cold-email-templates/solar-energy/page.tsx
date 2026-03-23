@@ -104,21 +104,21 @@ const touches: SequenceTouch[] = [
 
 ---
 
-→ Présentation (envoyée 6 jours après l'acceptation de la demande de connexion sur LinkedIn) :
+→ Présentation (envoyée 6 jours après l&apos;acceptation de la demande de connexion sur LinkedIn) :
 Bonjour {{salutation}} {{lastName}}, mon collègue {{SalesRep}} vous a récemment envoyé un e-mail.
-Nous avons remarqué que {{companyName}} pourrait avoir une consommation d'électricité importante et disposer d'un espace disponible sur son toit. Avez-vous déjà envisagé d'utiliser l'énergie solaire pour réduire vos factures d'électricité et bénéficier de prix stables ?
-De nombreuses entreprises installent désormais des centrales solaires sur site pour réduire leurs coûts, qu'elles investissent ou gèrent ou non l'installation, tout en soutenant la transition énergétique. J'ai pensé que cela pourrait également intéresser {{companyName}}.
+Nous avons remarqué que {{companyName}} pourrait avoir une consommation d&apos;électricité importante et disposer d&apos;un espace disponible sur son toit. Avez-vous déjà envisagé d&apos;utiliser l&apos;énergie solaire pour réduire vos factures d&apos;électricité et bénéficier de prix stables ?
+De nombreuses entreprises installent désormais des centrales solaires sur site pour réduire leurs coûts, qu&apos;elles investissent ou gèrent ou non l&apos;installation, tout en soutenant la transition énergétique. J'ai pensé que cela pourrait également intéresser {{companyName}}.
 
 ---
 
 → Message avec les noms des collègues (envoyé 7 jours plus tard) :
-Bonjour {{salutation}} {{lastName}}, la gestion des coûts d'électricité ou des infrastructures énergétiques relève-t-elle de vos attributions, ou travaillez-vous avec quelqu'un d'autre sur ce sujet ?{% if colleaguename1 != blank and colleaguename2 != blank %} Peut-être {{colleaguename1}} ou {{colleaguename2}} ?{% elsif colleaguename1 != blank %} Peut-être {{colleaguename1}} ?{% elsif colleaguename2 != blank %} Peut-être {{colleaguename2}} ?{% endif %}
+Bonjour {{salutation}} {{lastName}}, la gestion des coûts d&apos;électricité ou des infrastructures énergétiques relève-t-elle de vos attributions, ou travaillez-vous avec quelqu&apos;un d&apos;autre sur ce sujet ?{% if colleaguename1 != blank and colleaguename2 != blank %} Peut-être {{colleaguename1}} ou {{colleaguename2}} ?{% elsif colleaguename1 != blank %} Peut-être {{colleaguename1}} ?{% elsif colleaguename2 != blank %} Peut-être {{colleaguename2}} ?{% endif %}
 
 ---
 
 → Message de rupture (envoyé 8 jours plus tard) :
 {{salutation}} {{lastName}},
-Si la réduction des coûts énergétiques et la garantie de prix de l'électricité à long terme sont des priorités pour {{companyName}} en {{year}}  et au-delà, {{SalesRep}} et moi-même serions ravis de vous montrer comment {{client_ref}} et d'autres y parviennent sans aucun investissement initial.
+Si la réduction des coûts énergétiques et la garantie de prix de l&apos;électricité à long terme sont des priorités pour {{companyName}} en {{year}}  et au-delà, {{SalesRep}} et moi-même serions ravis de vous montrer comment {{client_ref}} et d&apos;autres y parviennent sans aucun investissement initial.
 
 [...] (contenu complet disponible sur demande)`,
   },
@@ -134,7 +134,7 @@ Cher(e) {{salutation}} {{lastName}},
 
 J'ai remarqué que {{companyName}} est propriétaire du bâtiment situé à {{buildingaddress}}.
 
-Des entreprises travaillent avec nous pour réduire leurs factures d'électricité et éviter les pics de prix en installant des centrales solaires sur leurs sites. Il n'y a aucun coût initial, et vous pouvez continuer à vous concentrer sur votre activité pendant que nous nous occupons du reste.
+Des entreprises travaillent avec nous pour réduire leurs factures d&apos;électricité et éviter les pics de prix en installant des centrales solaires sur leurs sites. Il n&apos;y a aucun coût initial, et vous pouvez continuer à vous concentrer sur votre activité pendant que nous nous occupons du reste.
 
 
 Cela pourrait-il intéresser {{companyName}} ? Ou suis-je à côté de la plaque ?
@@ -144,15 +144,15 @@ Dans le meilleur des cas : vous réduisez vos coûts. Dans le pire des cas : vou
 Cordialement,
 {{salesRep}}
 
-P.S. : L'un de nos clients, une maison de retraite, a réduit sa facture énergétique globale de 15 % avec un taux d'autoconsommation de 97 %. Et nous avons versé une somme à cinq chiffres à un autre client simplement pour louer son toit.
+P.S. : L&apos;un de nos clients, une maison de retraite, a réduit sa facture énergétique globale de 15 % avec un taux d&apos;autoconsommation de 97 %. Et nous avons versé une somme à cinq chiffres à un autre client simplement pour louer son toit.
 
 {{signature}}
 
 ---
 
 Cher{{salutation}} {{lastName}},
-Serait-il préférable de contacter {% if colleaguename1 != blank %}{{colleaguename1}}{% endif %}{% if colleaguename1 != blank and colleaguename2 != blank %} {% endif %}{% if colleaguename2 != blank %}{{colleaguename2}}{% endif %} ? {% if colleaguename1 == blank and colleaguename2 == blank %} Serait-il préférable de contacter quelqu'un d'autre ?{% endif %}
-En attendant, voici un document d'une page résumant comment nos clients ont finalement rejoint l'Energiewende sans avoir à se débrouiller seuls.
+Serait-il préférable de contacter {% if colleaguename1 != blank %}{{colleaguename1}}{% endif %}{% if colleaguename1 != blank and colleaguename2 != blank %} {% endif %}{% if colleaguename2 != blank %}{{colleaguename2}}{% endif %} ? {% if colleaguename1 == blank and colleaguename2 == blank %} Serait-il préférable de contacter quelqu&apos;un d&apos;autre ?{% endif %}
+En attendant, voici un document d&apos;une page résumant comment nos clients ont finalement rejoint l&apos;Energiewende sans avoir à se débrouiller seuls.
 Faites-moi savoir ce que vous en pensez.
 Cordialement,
 {{signature}}`,
@@ -171,11 +171,11 @@ Cordialement,
     timing: "7 jours après",
     content: `Cher(e) {{salutation}} {{lastName}},
 
-Je viens d'essayer de vous appeler au {{phonenumber}}.
+Je viens d&apos;essayer de vous appeler au {{phonenumber}}.
 
-Plusieurs entreprises suisses, comme {{companyName}}, nous ont récemment contactés pour savoir comment une installation solaire sur toiture pourrait réduire les coûts énergétiques ou générer des revenus locatifs grâce à l'espace inutilisé sur le toit.
+Plusieurs entreprises suisses, comme {{companyName}}, nous ont récemment contactés pour savoir comment une installation solaire sur toiture pourrait réduire les coûts énergétiques ou générer des revenus locatifs grâce à l&apos;espace inutilisé sur le toit.
 
-Nous proposons un rapport d'impact gratuit adapté à votre bâtiment, qu'il s'agisse d'économies grâce à l'autoconsommation ou d'une injection totale avec location de toiture. Aucun investissement ni gestion n'est nécessaire.
+Nous proposons un rapport d&apos;impact gratuit adapté à votre bâtiment, qu&apos;il s&apos;agisse d&apos;économies grâce à l&apos;autoconsommation ou d&apos;une injection totale avec location de toiture. Aucun investissement ni gestion n&apos;est nécessaire.
 
 
 
@@ -192,11 +192,11 @@ Cordialement,
     timing: "7 jours après",
     content: `Cher(e) {{salutation}} {{lastName}},
 
-Je vous ai contacté(e) à plusieurs reprises et je ne voudrais pas continuer à vous déranger si ce n'est pas une priorité pour le moment.
+Je vous ai contacté(e) à plusieurs reprises et je ne voudrais pas continuer à vous déranger si ce n&apos;est pas une priorité pour le moment.
 
 Serait-il possible de vous envoyer une mise à jour dans quelques mois ?
 
-S'il s'agit simplement d'une question de timing, ou si quelqu'un d'autre chez {{companyName}} s'occupe de ce dossier, merci de m'en faire part.
+S'il s&apos;agit simplement d&apos;une question de timing, ou si quelqu&apos;un d&apos;autre chez {{companyName}} s&apos;occupe de ce dossier, merci de m'en faire part.
 
 Cordialement,
 
@@ -321,7 +321,7 @@ export default function SolarEnergyPage() {
               },
               {
                 value: "13%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

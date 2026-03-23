@@ -141,7 +141,7 @@ Autres modèles de réponses LinkedIn
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Cher{% endif %} {{firstName}},
 {{icebreaker; Congrats for…}}
 Nos clients ont choisi notre SOC-as-a-Service parmi les dizaines de produits disponibles en Suisse.
-Ils ont préféré notre solution à leur ancien SOC car elle était plus complète, prête à l'emploi et plus rentable.
+Ils ont préféré notre solution à leur ancien SOC car elle était plus complète, prête à l&apos;emploi et plus rentable.
 [Client_Testimony]
 Vaut-il la peine de donner plus de contexte ? Ou est-ce hors sujet ?
 Cordialement,
@@ -155,7 +155,7 @@ Cordialement,
       "discussion avec {{colleaguename1}} ou {{colleaguename2}}",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Cher{% endif %} {{firstNasme}},
 Vaut-il mieux contacter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour discuter du SOC de {{companyName}} ?
-Je comprends que vous soyez occupé, mais je ne voudrais pas manquer l'occasion de rencontrer un représentant de  {{companyName}}.
+Je comprends que vous soyez occupé, mais je ne voudrais pas manquer l&apos;occasion de rencontrer un représentant de  {{companyName}}.
 Vous et vos collègues serez impressionnés de voir comment nos experts ont aidé nos clients à surveiller et à protéger efficacement leurs systèmes informatiques contre les cybermenaces et les cyberattaques.
     
 Bonne journée
@@ -172,9 +172,9 @@ Bonne journée
 Notre directeur [Director_Name]  et moi-même avons essayé de vous contacter.
 Nous avons pensé que vous seriez peut-être intéressé(e) de découvrir comment nos clients surveillent leur infrastructure informatique et leurs données, et protègent leur entreprise contre les cybermenaces.
 
-Serait-il possible d'organiser un bref entretien téléphonique pour vous présenter notre solution ?
+Serait-il possible d&apos;organiser un bref entretien téléphonique pour vous présenter notre solution ?
 
-Si cela ne vous intéresse pas, n'hésitez pas à me le faire savoir ; je comprendrai tout à fait.
+Si cela ne vous intéresse pas, n&apos;hésitez pas à me le faire savoir ; je comprendrai tout à fait.
 
 Cordialement,
 
@@ -299,7 +299,7 @@ export default function ItSecuritySocPage() {
               },
               {
                 value: "28%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

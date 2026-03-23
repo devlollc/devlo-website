@@ -107,11 +107,11 @@ const touches: SequenceTouch[] = [
 
 Mes recherches m'ont montré que vous gérez des projets liés aux biocarburants chez {{companyName}}.
 
-Il est de plus en plus difficile de suivre l'évolution du marché des carburants renouvelables, notamment en ce qui concerne les cadres réglementaires et les prévisions de demande pour un éventail toujours plus large de matières premières et de technologies.
+Il est de plus en plus difficile de suivre l&apos;évolution du marché des carburants renouvelables, notamment en ce qui concerne les cadres réglementaires et les prévisions de demande pour un éventail toujours plus large de matières premières et de technologies.
 
-Des centaines d'organisations font confiance à notre expertise et à notre connaissance des biocarburants à l'échelle mondiale. Les membres de leurs équipes ont accès à des informations quotidiennes via notre plateforme Renewable Fuels Intelligence.
+Des centaines d&apos;organisations font confiance à notre expertise et à notre connaissance des biocarburants à l&apos;échelle mondiale. Les membres de leurs équipes ont accès à des informations quotidiennes via notre plateforme Renewable Fuels Intelligence.
 
-« Votre rapport est la Bible », a déclaré le grand patron du biodiesel d'une entreprise du S&P 500. Personne n'offre une analyse aussi précise.
+« Votre rapport est la Bible », a déclaré le grand patron du biodiesel d&apos;une entreprise du S&P 500. Personne n&apos;offre une analyse aussi précise.
 
 Ce serait formidable de vous donner un peu plus de contexte par téléphone et de vous expliquer comment {{companyName}} pourrait également en bénéficier.
 
@@ -133,13 +133,13 @@ PS : Jetez un œil à notre site web https://companyurl/{{firstName}}{{lastName}
     timing: "7 jours après",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
 
-Voici une proposition à votre intention, accompagnée d'un peu plus de contexte : testez notre plateforme pendant 10 jours.
+Voici une proposition à votre intention, accompagnée d&apos;un peu plus de contexte : testez notre plateforme pendant 10 jours.
 
 Découvrez par vous-même pourquoi nos plus de 100 clients ne peuvent plus se passer de nos analyses pour suivre le marché des carburants renouvelables et prendre leurs propres décisions. 
 
-Ils économisent des centaines d'heures en surveillant les niveaux des obligations de mélange et en établissant des prévisions pour [ProductName].
+Ils économisent des centaines d&apos;heures en surveillant les niveaux des obligations de mélange et en établissant des prévisions pour [ProductName].
 
-Certains ont même réalisé qu'ils n'avaient pas besoin d'embaucher un analyste en interne, car ils disposaient de toutes les informations nécessaires.
+Certains ont même réalisé qu&apos;ils n&apos;avaient pas besoin d&apos;embaucher un analyste en interne, car ils disposaient de toutes les informations nécessaires.
 
 Cela vous intéresse ?
 
@@ -154,7 +154,7 @@ Cordialement,
     label: "Email #3",
     timing: "5 jours après",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Bonjour{% endif %} {{firstName}},
-Vaut-il mieux contacter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour discuter des informations relatives aux biocarburants ? Ou peut-être quelqu'un d'autre ?
+Vaut-il mieux contacter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour discuter des informations relatives aux biocarburants ? Ou peut-être quelqu&apos;un d&apos;autre ?
 Merci pour votre réponse,
 {{salesRep}}
 
@@ -170,16 +170,16 @@ PS : Ma liste de tâches avec photo ci-dessous m'a rappelé de vous écrire 😉
     label: "Appel téléphonique",
     timing: "3 jours après",
     content: `Appel à froid n° 1
-Date d'envoi : 3 jours après le dernier message
-Script d'appel :
+Date d&apos;envoi : 3 jours après le dernier message
+Script d&apos;appel :
 Si le prospect répond :
 
-Suivez le script d'appel à froid suivant
+Suivez le script d&apos;appel à froid suivant
 Dans ce cas, posez ces questions pour personnaliser la démonstration, évaluer le prospect et planifier la démonstration
 Avez-vous un défi spécifique pour lequel nous pourrions vous aider ? 
-Combien de personnes de l'équipe sont impliquées ? 
+Combien de personnes de l&apos;équipe sont impliquées ? 
 Souhaitez-vous inviter vos collègues qui commercialisent également des biocarburants ?
-Si ce n'est pas le cas, demandez pourquoi et surmontez les objections : (Courtoisie - Problème - Action)
+Si ce n&apos;est pas le cas, demandez pourquoi et surmontez les objections : (Courtoisie - Problème - Action)
 _____
 _____
 _____`,
@@ -212,7 +212,7 @@ PS : Voici un petit café virtuel pour continuer ta journée :) !
 
 J'espère que vous allez bien.
 
-J'ai essayé de vous contacter à plusieurs reprises, je comprends donc tout à fait si notre plateforme d'informations sur les carburants renouvelables ne vous intéresse pas.
+J'ai essayé de vous contacter à plusieurs reprises, je comprends donc tout à fait si notre plateforme d&apos;informations sur les carburants renouvelables ne vous intéresse pas.
 
 En tant que {{jobtitle}}, de quelles informations spécifiques avez-vous besoin actuellement et que vous ne parvenez pas à trouver ? Laissez-moi vous montrer que vous pouvez prendre de meilleures décisions grâce à nos analyses.
 
@@ -224,7 +224,7 @@ En tant que {{jobtitle}}, de quelles informations spécifiques avez-vous besoin 
     label: "Connexion LinkedIn",
     timing: "1 jours après",
     content: `Connexion sur LinkedIn
-Date d'envoi : 1 jour après le dernier message
+Date d&apos;envoi : 1 jour après le dernier message
 Expéditeur : [Client_FirstName]
 Contenu : provenant de LinkedIn
 {% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}}, [Client_FirstName] de la part de [ClientCompanyName]. Je suis ravi de me connecter avec vous et de partager des informations sur les biocarburants et les meilleures pratiques. Cela pourrait peut-être vous être utile, à vous et à {{companyName}} ?`,
@@ -348,7 +348,7 @@ export default function MarketIntelligencePage() {
               },
               {
                 value: "73%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

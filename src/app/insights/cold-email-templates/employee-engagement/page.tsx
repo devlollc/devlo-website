@@ -105,11 +105,11 @@ const touches: SequenceTouch[] = [
 
 Nous ne nous sommes jamais rencontrés, mais notre équipe a pris connaissance des différentes initiatives durables présentées sur le site web de {{ProspectCompanyName}}. Nous en avons conclu que votre entreprise prend très au sérieux son impact sur la communauté et implique son personnel dans des actions citoyennes.
  
-[Nom du collègue] et moi-même travaillons chez [ClientCompanyName], une plateforme numérique dédiée à l'engagement social des employés, qui propose des actions de bénévolat, de dons et des défis durables. Voici une photo de notre visioconférence, lors de laquelle nous avons pu en savoir plus sur votre organisation.
+[Nom du collègue] et moi-même travaillons chez [ClientCompanyName], une plateforme numérique dédiée à l&apos;engagement social des employés, qui propose des actions de bénévolat, de dons et des défis durables. Voici une photo de notre visioconférence, lors de laquelle nous avons pu en savoir plus sur votre organisation.
  
 
 
-Nous collaborons avec des centaines d'associations caritatives et d'entreprises telles que PwC, L'Oréal et BNP Paribas pour innover dans leurs programmes.
+Nous collaborons avec des centaines d&apos;associations caritatives et d&apos;entreprises telles que PwC, L&apos;Oréal et BNP Paribas pour innover dans leurs programmes.
 
 Pourrions-nous échanger rapidement par téléphone pour voir si [ClientCompanyName] pourrait vous convenir ?
 
@@ -137,13 +137,13 @@ Chargé de compte - [ClientCompanyName]
 
 J'espère que vous allez bien.
 
-Votre boîte de réception doit sans doute être bien remplie, et je tenais à vous recontacter au cas où mon message initial se serait perdu. J'ai pensé que cela vous intéresserait de savoir que nos clients, tels que BNP Paribas, L'Oréal et PwC, ont réorienté leur plateforme de bénévolat d'entreprise pour se concentrer sur les missions virtuelles (et le mois d'août a battu tous les records).
+Votre boîte de réception doit sans doute être bien remplie, et je tenais à vous recontacter au cas où mon message initial se serait perdu. J'ai pensé que cela vous intéresserait de savoir que nos clients, tels que BNP Paribas, L&apos;Oréal et PwC, ont réorienté leur plateforme de bénévolat d&apos;entreprise pour se concentrer sur les missions virtuelles (et le mois d&apos;août a battu tous les records).
 
 Grâce à notre solution numérique, leurs collaborateurs sont encouragés à participer à de petits gestes de gentillesse, comme aider des personnes âgées à faire leurs courses. Ils peuvent également se connecter à des opportunités virtuelles publiées par leurs partenaires caritatifs pour accompagner en ligne des entrepreneurs migrants, organiser un cours de yoga solidaire ou traduire des documents (veuillez consulter le document ci-joint).
 
 Pourrions-nous trouver un moment pour nous voir, peut-être dans les prochains jours ?
 
-Dans l'attente de votre réponse,
+Dans l&apos;attente de votre réponse,
 
 Cordialement,
 Charles
@@ -155,7 +155,7 @@ Charles
     channel: "linkedin",
     label: "Connexion LinkedIn",
     timing: "3 jours après",
-    content: `Bonjour {{firstName}}, c'est Charles de [ClientCompanyName]. Ce serait super de se connecter également sur LinkedIn. Je vous ai contacté par e-mail il y a quelques jours au sujet de vos initiatives en matière de développement durable. Prenez soin de vous`,
+    content: `Bonjour {{firstName}}, c&apos;est Charles de [ClientCompanyName]. Ce serait super de se connecter également sur LinkedIn. Je vous ai contacté par e-mail il y a quelques jours au sujet de vos initiatives en matière de développement durable. Prenez soin de vous`,
   },
   {
     number: 4,
@@ -170,7 +170,7 @@ Nous pourrions tirer parti de notre plateforme et améliorer votre programme de 
 
 Si quelqu’un d’autre est mieux placé pour m’aider, je vous serais très reconnaissant de bien vouloir me mettre en relation avec la personne la plus appropriée. Merci d’avance.
 
-Si cela vous intéresse, je vous invite à réserver directement un créneau dans mon agenda pour notre entretien de prise de contact, afin d'éviter les allers-retours si cela vous convient mieux.
+Si cela vous intéresse, je vous invite à réserver directement un créneau dans mon agenda pour notre entretien de prise de contact, afin d&apos;éviter les allers-retours si cela vous convient mieux.
 
 Cordialement,
 Charles
@@ -183,13 +183,13 @@ Charles
     label: "Appel téléphonique",
     timing: "4 jours après",
     content: `Démarchage téléphonique
-Date d'envoi : 4 jours après le dernier message
-Script d'appel :
+Date d&apos;envoi : 4 jours après le dernier message
+Script d&apos;appel :
 Si le prospect répond :
 Bonjour {{firstName}}, je m'appelle Charles Perret et je travaille chez [ClientCompanyName]. Comment allez-vous ? [...]
-Je vous ai contacté par e-mail au sujet de notre solution d'engagement social des employés. Nous accompagnons des entreprises telles que PwC, L'Oréal et BNP Paribas, et je me demandais si cela vous intéresserait d'en savoir plus. [...]
+Je vous ai contacté par e-mail au sujet de notre solution d&apos;engagement social des employés. Nous accompagnons des entreprises telles que PwC, L&apos;Oréal et BNP Paribas, et je me demandais si cela vous intéresserait d&apos;en savoir plus. [...]
 Si oui : 
-Très bien, parfait. Je vous propose d'organiser une démonstration lorsque vous serez disponible. Auriez-vous 2 minutes maintenant pour que je vous pose quelques questions afin de mieux cerner votre situation, afin que nous puissions préparer une présentation personnalisée, incluant des exemples de réussite d'entreprises au profil similaire ?
+Très bien, parfait. Je vous propose d&apos;organiser une démonstration lorsque vous serez disponible. Auriez-vous 2 minutes maintenant pour que je vous pose quelques questions afin de mieux cerner votre situation, afin que nous puissions préparer une présentation personnalisée, incluant des exemples de réussite d&apos;entreprises au profil similaire ?
 —---—---—---—---—---—---—---—---—---—---—---—---—- -------—---—---—---—---—---—---—-----—---—---—---—- -------------------------
 S'ils sont intéressés, 
 posez ces questions pour qualifier le prospect :
@@ -212,13 +212,13 @@ __PROTÉGÉ_31__.
  
 J'ai essayé de vous appeler il y a quelques jours. J'espère que vous allez bien.
  
-Vous serez sans doute d'accord avec moi pour dire que la RSE est un vaste sujet, dans lequel une entreprise peut agir dans différents domaines, comme l'installation de panneaux solaires sur un toit, la réduction de son empreinte carbone, etc.
+Vous serez sans doute d&apos;accord avec moi pour dire que la RSE est un vaste sujet, dans lequel une entreprise peut agir dans différents domaines, comme l&apos;installation de panneaux solaires sur un toit, la réduction de son empreinte carbone, etc.
  
-La citoyenneté d'entreprise est un domaine que les entreprises ne prennent en compte que de temps à autre, alors qu'il s'agit d'une approche efficace pour faire le bien tout en donnant un rôle actif à vos employés. En mobilisant vos talents, ce n'est plus seulement la direction qui se charge de développer un avenir durable.
+La citoyenneté d&apos;entreprise est un domaine que les entreprises ne prennent en compte que de temps à autre, alors qu&apos;il s&apos;agit d&apos;une approche efficace pour faire le bien tout en donnant un rôle actif à vos employés. En mobilisant vos talents, ce n&apos;est plus seulement la direction qui se charge de développer un avenir durable.
  
-Je vous invite à regarder cette vidéo YouTube pour en savoir plus sur nos approches descendantes et ascendantes. Elle montre comment la plateforme [ClientCompanyName] met en relation les employés avec les missions publiées par les associations caritatives que vous avez sélectionnées, tout en vous offrant une vue d'ensemble de l'ensemble du processus.
+Je vous invite à regarder cette vidéo YouTube pour en savoir plus sur nos approches descendantes et ascendantes. Elle montre comment la plateforme [ClientCompanyName] met en relation les employés avec les missions publiées par les associations caritatives que vous avez sélectionnées, tout en vous offrant une vue d&apos;ensemble de l&apos;ensemble du processus.
  
-Pourriez-vous avoir l'amabilité de transférer mon e-mail si je devais plutôt contacter un autre de vos collègues ?
+Pourriez-vous avoir l&apos;amabilité de transférer mon e-mail si je devais plutôt contacter un autre de vos collègues ?
 
 Cordialement,
 Charles
@@ -232,13 +232,13 @@ Charles
     timing: "3 jours après",
     content: `Bonjour {{firstName}},
 
-Suite à mes derniers e-mails, j'imagine que votre emploi du temps a quelque peu changé, et peut-être aussi votre activité, compte tenu de tout ce qui s'est passé avec la COVID-19.
+Suite à mes derniers e-mails, j&apos;imagine que votre emploi du temps a quelque peu changé, et peut-être aussi votre activité, compte tenu de tout ce qui s&apos;est passé avec la COVID-19.
  
-Malgré l'incertitude, nous aimerions rester positifs et garder une vision optimiste. Certains de nos clients ont réorienté leurs programmes de bénévolat vers des missions virtuelles afin de renforcer l'engagement de leurs employés.
+Malgré l&apos;incertitude, nous aimerions rester positifs et garder une vision optimiste. Certains de nos clients ont réorienté leurs programmes de bénévolat vers des missions virtuelles afin de renforcer l&apos;engagement de leurs employés.
  
-Pourrions-nous nous rencontrer pour discuter de la façon dont les choses ont évolué de votre côté et de la manière dont nous pourrions éventuellement vous aider aujourd'hui ou dans un avenir proche ?
+Pourrions-nous nous rencontrer pour discuter de la façon dont les choses ont évolué de votre côté et de la manière dont nous pourrions éventuellement vous aider aujourd&apos;hui ou dans un avenir proche ?
 
-Dans l'attente de votre réponse,
+Dans l&apos;attente de votre réponse,
 
 Cordialement,
 Charles
@@ -364,7 +364,7 @@ export default function EmployeeEngagementPage() {
               },
               {
                 value: "70%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

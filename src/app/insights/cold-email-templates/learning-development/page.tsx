@@ -105,9 +105,9 @@ const touches: SequenceTouch[] = [
 
 {{Icebreaker}}
 
-Mes recherches m'ont permis de constater que vous gérez le développement des compétences de centaines de personnes chez {{companyname}}. Je suppose notamment que l'accent est mis sur les compétences en leadership, en communication et en animation.
+Mes recherches m'ont permis de constater que vous gérez le développement des compétences de centaines de personnes chez {{companyname}}. Je suppose notamment que l&apos;accent est mis sur les compétences en leadership, en communication et en animation.
 
-Des dizaines d'entreprises font confiance à [ClientCompanyName] pour permettre à leurs collaborateurs de s'épanouir et de se développer dans plus de 30 pays. Dans ce monde post-Covid, le monde des affaires est en constante évolution. Les collaborateurs ont besoin de se perfectionner et de se reconvertir régulièrement pour être efficaces dans leurs fonctions.
+Des dizaines d&apos;entreprises font confiance à [ClientCompanyName] pour permettre à leurs collaborateurs de s&apos;épanouir et de se développer dans plus de 30 pays. Dans ce monde post-Covid, le monde des affaires est en constante évolution. Les collaborateurs ont besoin de se perfectionner et de se reconvertir régulièrement pour être efficaces dans leurs fonctions.
 
 En Suisse, nous concevons et dispensons des formations en allemand, en français et en anglais depuis 2002.
 
@@ -127,15 +127,15 @@ Cordialement,
     timing: "7 jours après",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
 
-Je vous écris à propos de mon dernier e-mail : j'ai pensé que vous souhaiteriez peut-être avoir un peu plus de contexte.
+Je vous écris à propos de mon dernier e-mail : j&apos;ai pensé que vous souhaiteriez peut-être avoir un peu plus de contexte.
 
 Training Industry a classé [ClientCompanyName] parmi les 20 meilleures entreprises reconnues comme les meilleurs prestataires de formation au leadership.
 
-Nos clients apprécient nos solutions car elles sont hybrides, interactives et centrées sur l'apprenant. Vos collaborateurs, où qu'ils se trouvent dans le monde, peuvent véritablement s'épanouir grâce à notre approche pédagogique solide, qui s'appuie sur des décennies d'expérience et d'innovation.
+Nos clients apprécient nos solutions car elles sont hybrides, interactives et centrées sur l&apos;apprenant. Vos collaborateurs, où qu&apos;ils se trouvent dans le monde, peuvent véritablement s&apos;épanouir grâce à notre approche pédagogique solide, qui s&apos;appuie sur des décennies d&apos;expérience et d&apos;innovation.
 
-Parmi nos différentes solutions d'apprentissage, la plupart de nos clients apprécient [ClientSolution] : https://www.youtube.com/
+Parmi nos différentes solutions d&apos;apprentissage, la plupart de nos clients apprécient [ClientSolution] : https://www.youtube.com/
 
-Ce serait formidable d'en savoir plus sur vos futures initiatives visant à aider vos collaborateurs dans leur quotidien et d'échanger nos meilleures pratiques.
+Ce serait formidable d&apos;en savoir plus sur vos futures initiatives visant à aider vos collaborateurs dans leur quotidien et d&apos;échanger nos meilleures pratiques.
 
 Cela vous intéresse-t-il ?
 
@@ -170,7 +170,7 @@ P.S. : Dites-moi si cette situation vous semble familière 😄
     label: "Email #3",
     timing: "5 jours après",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Bonjour{% endif %} {{firstName}},
-Je comprends que vous soyez très occupé. Je ne voudrais pas passer à côté de l'occasion de travailler ensemble : devrais-je contacter quelqu'un d'autre au sein de votre organisation ?
+Je comprends que vous soyez très occupé. Je ne voudrais pas passer à côté de l&apos;occasion de travailler ensemble : devrais-je contacter quelqu&apos;un d&apos;autre au sein de votre organisation ?
 Peut-être votre collègue {{colleaguename1}} ou {{colleaguename2}} ?
 
 Cordialement,
@@ -187,9 +187,9 @@ PS : Voici un petit café virtuel pour vous aider à passer une bonne journée :
     label: "Appel téléphonique",
     timing: "3 jours après",
     content: `Appel à froid n°1
-Date d'envoi : 3 jours après le dernier message
+Date d&apos;envoi : 3 jours après le dernier message
 Si le prospect répond :
-« Bonjour, c'est John Doe. »
+« Bonjour, c&apos;est John Doe. »
  
 Bonjour {{firstname}}, je suis {{salesRep}} de [ClientCompanyName]. Comment allez-vous ?
  
@@ -206,18 +206,18 @@ Il vous a contacté car vous occupez le poste de {{JobTitle}} chez {{CompanyName
 Je me demandais si vous auriez une minute pour en discuter ?
           ↙                                                      ↓                                       
 « Oui »
-« Je n'ai pas le temps pour le moment, je suis sur le point d'entrer en réunion »
+« Je n&apos;ai pas le temps pour le moment, je suis sur le point d&apos;entrer en réunion »
 Voir ci-dessous
 
 
 ↘
-Oh d'accord, pourrais-je vous rappeler demain matin vers 10 h ?
+Oh d&apos;accord, pourrais-je vous rappeler demain matin vers 10 h ?
 
 « Oui, ça me convient »
 
 D'accord, merci. Vous recevrez une invitation. Bonne réunion et à demain. [FIN]
 Pour vous donner un peu de contexte,
-(Si ce n'est pas déjà dit : [ClientCompanyName] a été classée parmi les 20 meilleures entreprises dans le domaine du développement du leadership. Des centaines d'entreprises nous font confiance pour permettre à leurs talents de s'épanouir grâce à différentes solutions d'apprentissage. C'est pourquoi [Client_FirstName] serait ravi de vous rencontrer et de partager les meilleures pratiques afin que vous puissiez peut-être vous inspirer de ce que nous faisons pour votre programme de formation et développement.
+(Si ce n&apos;est pas déjà dit : [ClientCompanyName] a été classée parmi les 20 meilleures entreprises dans le domaine du développement du leadership. Des centaines d&apos;entreprises nous font confiance pour permettre à leurs talents de s&apos;épanouir grâce à différentes solutions d&apos;apprentissage. C'est pourquoi [Client_FirstName] serait ravi de vous rencontrer et de partager les meilleures pratiques afin que vous puissiez peut-être vous inspirer de ce que nous faisons pour votre programme de formation et développement.
 
 Cela vous intéresse-t-il ?
 
@@ -239,9 +239,9 @@ Je m’appelle {{salesRep}} et je travaille avec [ClientName] chez [ClientCompan
 
 Je n’ai malheureusement pas réussi à vous joindre aujourd’hui. Je souhaitais échanger quelques mots avec vous au sujet de la proposition de notre directeur général.
 
-L'idée est de discuter de vos futures initiatives de perfectionnement et de reconversion professionnelle afin d'aider vos collaborateurs dans leur quotidien. Nous pourrions échanger nos meilleures pratiques. 
+L&apos;idée est de discuter de vos futures initiatives de perfectionnement et de reconversion professionnelle afin d&apos;aider vos collaborateurs dans leur quotidien. Nous pourrions échanger nos meilleures pratiques. 
 
-Pourrions-nous en discuter ensemble dans les prochains jours lors d'un bref appel téléphonique ?
+Pourrions-nous en discuter ensemble dans les prochains jours lors d&apos;un bref appel téléphonique ?
 
 Cordialement,
 {{salesRep}}
@@ -257,7 +257,7 @@ Cordialement,
 
 J'espère que vous allez bien.
 
-Nous avons essayé de vous contacter à plusieurs reprises, et si vous ne souhaitez pas en discuter, c'est tout à fait compréhensible.
+Nous avons essayé de vous contacter à plusieurs reprises, et si vous ne souhaitez pas en discuter, c&apos;est tout à fait compréhensible.
 
 Vous devez être très occupé, mais je suis convaincu que vous seriez agréablement surpris de voir ce que nos clients ont mis en place. À ce propos, vous pouvez consulter ces études de cas pour vous faire une meilleure idée :
 
@@ -265,9 +265,9 @@ Vous devez être très occupé, mais je suis convaincu que vous seriez agréable
 
 [ClientsCustomer] souhaitait accompagner ses responsables pharmaciens dans leur nouveau rôle de gestion
 
- Nous serions ravis de vous mettre en relation avec nos clients afin que vous puissiez entendre leur témoignage. Mais avant cela, que diriez-vous d'un entretien ?
+ Nous serions ravis de vous mettre en relation avec nos clients afin que vous puissiez entendre leur témoignage. Mais avant cela, que diriez-vous d&apos;un entretien ?
 
-Ou devrais-je vous contacter plus tard dans l'année ?
+Ou devrais-je vous contacter plus tard dans l&apos;année ?
 
 Cordialement,
 {{salesRep}}`,
@@ -278,10 +278,10 @@ Cordialement,
     label: "Connexion LinkedIn",
     timing: "5 days after Touch#4 - Call for cold#1",
     content: `Demande de connexion LinkedIn
-Date d'envoi : 5 jours après le Contact n° 4 - Premier appel à froid
+Date d&apos;envoi : 5 jours après le Contact n° 4 - Premier appel à froid
 Contenu : message envoyé sur LinkedIn (depuis le compte du client)
 
-{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}}, [FirstNameofClient] de [ClientCompanyName}. Je serais ravi de me connecter avec vous pour partager les meilleures pratiques concernant nos solutions d'apprentissage innovantes afin de faire évoluer et de développer vos collaborateurs.`,
+{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}}, [FirstNameofClient] de [ClientCompanyName}. Je serais ravi de me connecter avec vous pour partager les meilleures pratiques concernant nos solutions d&apos;apprentissage innovantes afin de faire évoluer et de développer vos collaborateurs.`,
   }
 ];
 
@@ -402,7 +402,7 @@ export default function LearningDevelopmentPage() {
               },
               {
                 value: "73%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

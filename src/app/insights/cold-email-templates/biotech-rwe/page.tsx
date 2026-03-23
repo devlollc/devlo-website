@@ -101,7 +101,7 @@ const touches: SequenceTouch[] = [
     label: "Connexion LinkedIn",
     timing: "First day of the sequence",
     content: `Demande de mise en relation sur LinkedIn
-Date d'envoi : premier jour de la séquence
+Date d&apos;envoi : premier jour de la séquence
 Expéditeur : {{salesRep}}
 Contenu :
 
@@ -112,17 +112,17 @@ Contenu :
 
 ---
 
-→ Présentation (envoyée 1 jour après l'acceptation de la demande de mise en relation sur LinkedIn) :
+→ Présentation (envoyée 1 jour après l&apos;acceptation de la demande de mise en relation sur LinkedIn) :
 Bonjour {{firstName}}, ravi de me connecter avec vous.
-Je vous ai écrit à l'adresse {{email}} au sujet des défis récents auxquels sont confrontées les équipes biotechnologiques lorsqu'elles collaborent sur des données du monde réel. Avez-vous reçu mon e-mail ?
-Vous et moi savons que l'accès aux informations cliniques est crucial pour éviter de ralentir les progrès.
+Je vous ai écrit à l&apos;adresse {{email}} au sujet des défis récents auxquels sont confrontées les équipes biotechnologiques lorsqu&apos;elles collaborent sur des données du monde réel. Avez-vous reçu mon e-mail ?
+Vous et moi savons que l&apos;accès aux informations cliniques est crucial pour éviter de ralentir les progrès.
 Est-ce quelque chose qui pose problème à {{companyName}} ou pas du tout ?
 
 ---
 
 → Message mentionnant les noms de collègues (envoyé 5 jours plus tard) :
 {{firstName}}, vaut-il mieux discuter des données du monde réel avec {% if colleaguename1 != blank and colleaguename2 != blank %}{{colleaguename1}} ou {{colleaguename2}}{% elsif colleaguename1 != blank %}{{colleaguename1}}{% elsif colleaguename2 != blank %}{{colleaguename2}}{% else %}un membre de votre équipe de R&D ou de développement clinique{% endif %} ?
-Je suis curieux de savoir comment {{companyName}} exploite les données cliniques provenant d'hôpitaux à l'échelle nationale pour faciliter les études de faisabilité et réduire les délais de mise sur le marché (plutôt que d'attendre des mois pour obtenir les autorisations d'accès et de manquer des sources de données nécessaires)
+Je suis curieux de savoir comment {{companyName}} exploite les données cliniques provenant d&apos;hôpitaux à l&apos;échelle nationale pour faciliter les études de faisabilité et réduire les délais de mise sur le marché (plutôt que d&apos;attendre des mois pour obtenir les autorisations d&apos;accès et de manquer des sources de données nécessaires)
 
 ---
 
@@ -133,7 +133,7 @@ Je suis curieux de savoir comment {{companyName}} exploite les données clinique
 
 → Message de prise de distance (envoyé 7 jours plus tard) :
 Cher {{firstName}},
-Pourrions-nous reprendre contact dans quelques mois, une fois que les données cliniques de {{ region}} auront davantage d'importance chez {{companyName}} ?
+Pourrions-nous reprendre contact dans quelques mois, une fois que les données cliniques de {{ region}} auront davantage d&apos;importance chez {{companyName}} ?
 Bonne journée`,
   },
   {
@@ -148,9 +148,9 @@ Cher(e) {{firstName}},
 
 {{icebreaker}}
 
-Vous savez à quel point il est compliqué d'accéder à des données de santé sensibles en toute sécurité et dans le respect de la réglementation européenne en matière de protection de la vie privée.
+Vous savez à quel point il est compliqué d&apos;accéder à des données de santé sensibles en toute sécurité et dans le respect de la réglementation européenne en matière de protection de la vie privée.
 
-Chaque jour, cela ralentit les prises de décision, les retarde et empêche l'accès à de précieuses informations concrètes.
+Chaque jour, cela ralentit les prises de décision, les retarde et empêche l&apos;accès à de précieuses informations concrètes.
 
 Roche et DebioPharm ont choisi notre solution fédérée pour transformer leur recherche en oncologie dans le cadre du projet NAIPO.
 
@@ -163,9 +163,9 @@ Version B - version plus courte sans introduction
 
 Cher/Chère {{firstName}},
 
-Vous savez à quel point il est compliqué d'accéder à des données de santé sensibles en toute sécurité et dans le respect des réglementations européennes en matière de confidentialité.
+Vous savez à quel point il est compliqué d&apos;accéder à des données de santé sensibles en toute sécurité et dans le respect des réglementations européennes en matière de confidentialité.
 
-Chaque jour, cela ralentit les décisions, les retarde et empêche l'accès à de précieuses informations issues du monde réel.
+Chaque jour, cela ralentit les décisions, les retarde et empêche l&apos;accès à de précieuses informations issues du monde réel.
 
 Roche et DebioPharm ont choisi notre solution fédérée pour transformer leur recherche en oncologie dans le cadre du projet NAIPO.
 
@@ -197,10 +197,10 @@ Se désabonner`,
     label: "Email #4",
     timing: "6 jours après",
     content: `Bonjour {{firstName}},
-Voici le lien vers la brève étude de cas dont je vous ai parlé, qui présente comment {{testimony company}} transforme la recherche en oncologie grâce à l'IA dans le cadre du projet NAIPO en Suisse.
+Voici le lien vers la brève étude de cas dont je vous ai parlé, qui présente comment {{testimony company}} transforme la recherche en oncologie grâce à l&apos;IA dans le cadre du projet NAIPO en Suisse.
 J'ai pensé que cela pourrait vous intéresser de voir comment :
-1/les modèles d'IA fonctionnent sur des ensembles de données cliniques fédérés issus du monde réel
-2/la sécurité des données n'est pas compromise
+1/les modèles d&apos;IA fonctionnent sur des ensembles de données cliniques fédérés issus du monde réel
+2/la sécurité des données n&apos;est pas compromise
 3/la conformité est simplifiée entre les partenaires
 Est-ce un sujet qui vous intéresse, ou pas du tout ?
 Cordialement,
@@ -213,7 +213,7 @@ se désabonner`,
     label: "Email #5",
     timing: "9 jours après",
     content: `Bonjour {{firstName}},
-Ce n'est peut-être pas le moment idéal pour examiner comment les données issues de la pratique clinique peuvent soutenir vos travaux de recherche.
+Ce n&apos;est peut-être pas le moment idéal pour examiner comment les données issues de la pratique clinique peuvent soutenir vos travaux de recherche.
 Puis-je vous recontacter dans environ trois mois pour voir si vos priorités ont changé ?
 P.S. : En attendant, voici un café virtuel pour vous en attendant notre prochaine rencontre ☕️
 
@@ -340,7 +340,7 @@ export default function BiotechRwePage() {
               },
               {
                 value: "49%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

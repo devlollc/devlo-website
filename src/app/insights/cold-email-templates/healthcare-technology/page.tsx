@@ -107,13 +107,13 @@ Le message LinkedIn commence ainsi :
 Votre profil LinkedIn indique que…
 Votre interview OU votre article OU votre billet de blog…
 Mon collègue {{salesRep}}  m'a parlé de…
-… Je suis ravi d'entrer en contact avec vous. »
+… Je suis ravi d&apos;entrer en contact avec vous. »
 
 ---
 
-→ Note audio (envoyée 6 jours après l'acceptation de la demande de connexion sur LinkedIn) :
+→ Note audio (envoyée 6 jours après l&apos;acceptation de la demande de connexion sur LinkedIn) :
 Merci de m'avoir ajouté à votre réseau.
-Mon collègue {{salesRep}} m'a envoyé un e-mail pour expliquer pourquoi les régimes de santé s'associent à nous pour combler les lacunes en matière de soins et améliorer leur qualité ainsi que leurs performances STAR. Seriez-vous intéressé(e) pour en discuter davantage ?
+Mon collègue {{salesRep}} m'a envoyé un e-mail pour expliquer pourquoi les régimes de santé s&apos;associent à nous pour combler les lacunes en matière de soins et améliorer leur qualité ainsi que leurs performances STAR. Seriez-vous intéressé(e) pour en discuter davantage ?
 
 ---
 
@@ -123,12 +123,12 @@ Bonjour {{firstName}}, serait-il plus approprié que je contacte vos collègues 
 ---
 
 → Message de clôture (envoyé 5 jours plus tard) :
-{{firstName}}, je suis désolé que nous n'ayons pas eu l'occasion de nous parler directement. 
-Je vous tiendrai au courant à mesure que nous publierons de nouveaux résultats concernant la réduction des lacunes en matière de soins de nos clients et l'amélioration de leur qualité et de leurs notes STAR.   
+{{firstName}}, je suis désolé que nous n&apos;ayons pas eu l&apos;occasion de nous parler directement. 
+Je vous tiendrai au courant à mesure que nous publierons de nouveaux résultats concernant la réduction des lacunes en matière de soins de nos clients et l&apos;amélioration de leur qualité et de leurs notes STAR.   
 Cordialement.
 Autres modèles de réponses LinkedIn
 → Envoyé manuellement si le prospect répond par un message non concluant qui interrompt la séquence
-{{firstName}}, mon collègue {{salesRep}}  vous a envoyé un e-mail pour vous expliquer pourquoi les clients s'associent à nous pour améliorer leur qualité et leurs notes STAR grâce à des soins préventifs, à la réduction des lacunes en matière de soins et à une meilleure expérience des membres.
+{{firstName}}, mon collègue {{salesRep}}  vous a envoyé un e-mail pour vous expliquer pourquoi les clients s&apos;associent à nous pour améliorer leur qualité et leurs notes STAR grâce à des soins préventifs, à la réduction des lacunes en matière de soins et à une meilleure expérience des membres.
 
 [...] (contenu complet disponible sur demande)`,
   },
@@ -141,29 +141,29 @@ Autres modèles de réponses LinkedIn
     content: `Introduction - A
 {% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
 {{icebreaker}}
-Tous les régimes de santé s'efforcent d'améliorer la qualité et les performances STAR en comblant les lacunes en matière de soins et en améliorant l'expérience des adhérents. 
-Pour atteindre ces objectifs, de nombreux régimes de santé s'associent à [clientCompanyName], garantissant ainsi à leurs adhérents de recevoir les soins dont ils ont besoin tout en bénéficiant d'une expérience exceptionnelle. 
-Vaut-il la peine de donner un peu plus de contexte lors d'un bref appel téléphonique ? Ou est-ce hors sujet ? 
+Tous les régimes de santé s&apos;efforcent d&apos;améliorer la qualité et les performances STAR en comblant les lacunes en matière de soins et en améliorant l&apos;expérience des adhérents. 
+Pour atteindre ces objectifs, de nombreux régimes de santé s&apos;associent à [clientCompanyName], garantissant ainsi à leurs adhérents de recevoir les soins dont ils ont besoin tout en bénéficiant d&apos;une expérience exceptionnelle. 
+Vaut-il la peine de donner un peu plus de contexte lors d&apos;un bref appel téléphonique ? Ou est-ce hors sujet ? 
 Cordialement,
 
 {{signature}}
 
 Intro - B
-Heure d'envoi : premier jour de la séquence
+Heure d&apos;envoi : premier jour de la séquence
 Objet : Brève conversation, {{firstname}} ?
 Contenu :
 {% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Bonjour{% endif %} {{firstName}},
 5 des 7 plus grandes organisations de soins intégrés (MCO) se sont associées à nous pour offrir à leurs membres les soins dont ils ont besoin et une expérience exceptionnelle.
-Chaque régime de santé s'efforce d'améliorer la qualité et les performances STAR en comblant les lacunes en matière de soins et en améliorant l'expérience des membres. 
-Vaut-il la peine de donner un peu plus de contexte lors d'un bref appel téléphonique ? 
+Chaque régime de santé s&apos;efforce d&apos;améliorer la qualité et les performances STAR en comblant les lacunes en matière de soins et en améliorant l&apos;expérience des membres. 
+Vaut-il la peine de donner un peu plus de contexte lors d&apos;un bref appel téléphonique ? 
 Cordialement
 
 {{signature}}Contact n° 3 - E-mail n° 2 → Contacter des collègues
-Date d'envoi : 7 jours après le dernier message
+Date d&apos;envoi : 7 jours après le dernier message
 Objet : discussion avec {{colleaguename1}} ou {{colleaguename2}}
 Contenu :
 {% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
-Vaut-il mieux contacter {{colleague1}} ou {{colleague2}} concernant la qualité et l'amélioration des performances STARs chez {{companyName}} ?
+Vaut-il mieux contacter {{colleague1}} ou {{colleague2}} concernant la qualité et l&apos;amélioration des performances STARs chez {{companyName}} ?
 
 Cordialement,
 {{signature}}`,
@@ -197,7 +197,7 @@ En parlant de café, je vous en préparerai une tasse bien fraîche à votre nom
     channel: "call",
     label: "Appel téléphonique",
     timing: "3 jours après",
-    content: `[Géré par l'équipe du client]`,
+    content: `[Géré par l&apos;équipe du client]`,
   },
   {
     number: 6,
@@ -206,9 +206,9 @@ En parlant de café, je vous en préparerai une tasse bien fraîche à votre nom
     timing: "Le même jour an unsuccessful cold call",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
 
-Mon collègue {{salesRep}} n'a pas réussi à vous joindre aujourd'hui.
+Mon collègue {{salesRep}} n&apos;a pas réussi à vous joindre aujourd&apos;hui.
 
-Il souhaitait vous parler d'une rencontre avec notre vice-président autour d'un café lors d'un événement professionnel consacré au programme Medicare STARs aux États-Unis.
+Il souhaitait vous parler d&apos;une rencontre avec notre vice-président autour d&apos;un café lors d&apos;un événement professionnel consacré au programme Medicare STARs aux États-Unis.
 
 Avez-vous quelques minutes pour nous joindre et en discuter ?
 
@@ -220,7 +220,7 @@ Cordialement`,
     label: "Email #7",
     timing: "8 jours après",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}}, 
-Qu'avez-vous pensé de ma proposition de vous montrer pourquoi des régimes de santé similaires à {{companyName}} collaborent avec nous pour combler les lacunes en matière de soins et améliorer l'expérience des assurés ?
+Qu'avez-vous pensé de ma proposition de vous montrer pourquoi des régimes de santé similaires à {{companyName}} collaborent avec nous pour combler les lacunes en matière de soins et améliorer l&apos;expérience des assurés ?
 Nos clients soulignent régulièrement leur satisfaction quant à notre capacité à générer un retour sur investissement, à programmer immédiatement des soins pour leurs membres et à offrir une expérience exceptionnelle.  
 Ils comptent également sur nous pour répondre aux questions de leurs membres, remplir les évaluations de santé (HRA), expliquer les avantages ou les récompenses, et orienter les membres vers les ressources appropriées (ressources cliniques, CBO, ressources internes du régime de santé, etc.).
 Y a-t-il un jour et une heure en particulier qui vous conviendraient le mieux pour que nous puissions nous contacter ?
@@ -233,13 +233,13 @@ Y a-t-il un jour et une heure en particulier qui vous conviendraient le mieux po
     timing: "6 jours après",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
 
-Étant donné que vous êtes responsable de {{responsibilityfromjobtitle}} chez {{companyName}}, {{salesRep}}, j'ai essayé de vous contacter à plusieurs reprises.
+Étant donné que vous êtes responsable de {{responsibilityfromjobtitle}} chez {{companyName}}, {{salesRep}}, j&apos;ai essayé de vous contacter à plusieurs reprises.
 Nous avons pensé que vous seriez intéressé(e) de découvrir comment nos clients ont tiré parti de notre solution :
 Tirer parti de la programmation pour propulser leur régime de santé vers une note de 4 étoiles ou plus
 Étude de cas démontrant un retour sur investissement de 242 % sur le marché Medicare Advantage
 Amélioration de leurs scores CAHPS grâce à une communication et une prise de rendez-vous évolutives
 
-Vous pourriez également être intéressé par notre solution complète de bout en bout visant à améliorer l'expérience des membres, à optimiser les résultats de santé et à maximiser le retour sur investissement : Care Access Complete
+Vous pourriez également être intéressé par notre solution complète de bout en bout visant à améliorer l&apos;expérience des membres, à optimiser les résultats de santé et à maximiser le retour sur investissement : Care Access Complete
 
 Serait-il possible de vous joindre pour un bref appel téléphonique ?
 
@@ -367,7 +367,7 @@ export default function HealthcareTechnologyPage() {
               },
               {
                 value: "22%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

@@ -101,16 +101,16 @@ const touches: SequenceTouch[] = [
     label: "Connexion LinkedIn",
     timing: "Jour 1",
     content: `Demande de connexion LinkedIn
-Date d'envoi : le premier jour de la séquence
+Date d&apos;envoi : le premier jour de la séquence
 Expéditeurs : profil LinkedIn du client
 Contenu : laisser vide pour contourner la limite de 5 demandes de connexion LinkedIn personnalisées par jour et par profil
 
 ---
 
-→ Message LinkedIn (envoyé 1 jour après l'acceptation de la demande de connexion LinkedIn) - 59 mots :
+→ Message LinkedIn (envoyé 1 jour après l&apos;acceptation de la demande de connexion LinkedIn) - 59 mots :
 Bonjour {{firstName}},
-Vous avez peut-être reçu un e-mail de notre vice-présidente des ventes, {{salesRep}}, ou de sa collègue {{salesRep2}} concernant notre solution d'optimisation de vos opérations logistiques.
-Faites-moi savoir si vous avez eu l'occasion de l'examiner ou si vous souhaitez un bref aperçu.
+Vous avez peut-être reçu un e-mail de notre vice-présidente des ventes, {{salesRep}}, ou de sa collègue {{salesRep2}} concernant notre solution d&apos;optimisation de vos opérations logistiques.
+Faites-moi savoir si vous avez eu l&apos;occasion de l&apos;examiner ou si vous souhaitez un bref aperçu.
 
 ---
 
@@ -138,11 +138,11 @@ Dernier message, promis ! 🙂
 
 Nous avons développé une plateforme de gestion de la livraison du dernier kilomètre spécialement conçue pour les entreprises comme la vôtre, qui gèrent des milliers de livraisons chaque année.
 
-De grands acteurs tels que [ClientCostumer] utilisent [ClientCompanyName] pour réduire leurs coûts de livraison, améliorer l'expérience client et réduire de 35 % le temps consacré à la planification des itinéraires.
+De grands acteurs tels que [ClientCostumer] utilisent [ClientCompanyName] pour réduire leurs coûts de livraison, améliorer l&apos;expérience client et réduire de 35 % le temps consacré à la planification des itinéraires.
 
 Ils ont tous constaté une baisse de 35 % des réclamations clients ! 
 
-Utilisez-vous actuellement un outil pour vous aider à gérer vos livraisons ? Ou bien vous servez-vous d'un système entièrement interne ?
+Utilisez-vous actuellement un outil pour vous aider à gérer vos livraisons ? Ou bien vous servez-vous d&apos;un système entièrement interne ?
 
 Cordialement,
 
@@ -163,7 +163,7 @@ Après avoir mis en place [ClientCompanyName], elles ont constaté une baisse de
 
 Seriez-vous la personne idéale pour discuter de la manière dont nous pourrions faire de même pour {{companyName}} ?
 
-Dans l'attente de votre réponse.
+Dans l&apos;attente de votre réponse.
 
 P.S. N'hésitez pas à me faire savoir si vos outils actuels répondent déjà à vos besoins.
 
@@ -180,7 +180,7 @@ Se désabonner`,
 
 {% if colleaguename1 == blank %}Je sais que vous avez un emploi du temps chargé. Serait-il plus judicieux que je contacte un autre collègue au sujet de notre plateforme de livraison du dernier kilomètre ?{% else %}Je sais que vous avez un emploi du temps chargé. Serait-il plus judicieux que je contacte votre collègue {{colleaguename1} au sujet de notre plateforme de livraison du dernier kilomètre ?{% endif %}{% if colleaguename2 == blank %}{% else %}Ou peut-être {{colleaguename2}} ?{% endif %}
 
-Merci d'avance pour votre aide.
+Merci d&apos;avance pour votre aide.
 {{signature}}
 Lien de désabonnement`,
   },
@@ -190,7 +190,7 @@ Lien de désabonnement`,
     label: "Appel téléphonique",
     timing: "6 jours après",
     content: `Appel n° 1 - Tentatives de rappel + message vocal
-Date d'envoi : 6 jours après le dernier message
+Date d&apos;envoi : 6 jours après le dernier message
 Expéditeur : E-mails de {{salesRep}}
 
 
@@ -205,11 +205,11 @@ Gestion des objections (sera intégrée tout au long de la séquence)
       "{{firstName}}, je suis le [PhoneNumber]",
     content: `Bonjour {{firstName}},
 
-{% if phone == blank %}J'ai essayé de vous appeler aujourd'hui pour discuter de la manière dont nous pourrions calculer votre retour sur investissement avec et sans [ClientCompanyName].{% else %}J'ai essayé de vous contacter au {{phone}} pour discuter de la manière dont nous pourrions calculer votre retour sur investissement avec et sans [ClientCompanyName].{% endif %}
+{% if phone == blank %}J'ai essayé de vous appeler aujourd&apos;hui pour discuter de la manière dont nous pourrions calculer votre retour sur investissement avec et sans [ClientCompanyName].{% else %}J'ai essayé de vous contacter au {{phone}} pour discuter de la manière dont nous pourrions calculer votre retour sur investissement avec et sans [ClientCompanyName].{% endif %}
 
 {% spin %}{% variation %}Cela ne prendra pas plus de 30 minutes et ne vous engage à rien.
 
-Au pire, vous confirmerez que votre processus actuel est déjà optimal, et au mieux, vous découvrirez une nouvelle alternative intéressante.{% variation %}En seulement 30 minutes, vous pourrez soit confirmer que votre processus actuel fonctionne bien, soit explorer une solution qui pourrait l'optimiser davantage.{% variation %}En moins de 30 minutes, vous aurez l'occasion de vérifier que votre processus est déjà pleinement optimisé ou de découvrir une amélioration potentielle.{% endspin %}
+Au pire, vous confirmerez que votre processus actuel est déjà optimal, et au mieux, vous découvrirez une nouvelle alternative intéressante.{% variation %}En seulement 30 minutes, vous pourrez soit confirmer que votre processus actuel fonctionne bien, soit explorer une solution qui pourrait l&apos;optimiser davantage.{% variation %}En moins de 30 minutes, vous aurez l&apos;occasion de vérifier que votre processus est déjà pleinement optimisé ou de découvrir une amélioration potentielle.{% endspin %}
 
 Qu'en pensez-vous ?
 
@@ -230,13 +230,13 @@ Lien de désabonnement`,
       "Ce sera mon dernier e-mail — je vous souhaite tout le meilleur pour la suite. 🙂",
     content: `Bonjour {{firstName}},
 {% spin %}{% variation %}Il est donc temps de se dire au revoir 😢{% variation %}On dirait que nos chemins se séparent ici 😢{% variation %}Il est temps pour nous de nous dire adieu 😢{% endspin %}
- {% spin %}{% variation %}Chez [ClientCompanyName], nous accordons une grande importance aux retours d'expérience pour continuer à nous améliorer.
-Si vous avez 5 secondes, pourriez-vous m'indiquer pourquoi vous préférez en rester là ? Il vous suffit de répondre par une seule lettre !{% variation %}Chez [ClientCompanyName], nous apprécions sincèrement tout retour d'expérience qui nous aide à nous améliorer.
+ {% spin %}{% variation %}Chez [ClientCompanyName], nous accordons une grande importance aux retours d&apos;expérience pour continuer à nous améliorer.
+Si vous avez 5 secondes, pourriez-vous m'indiquer pourquoi vous préférez en rester là ? Il vous suffit de répondre par une seule lettre !{% variation %}Chez [ClientCompanyName], nous apprécions sincèrement tout retour d&apos;expérience qui nous aide à nous améliorer.
 Si vous avez 5 secondes, pourriez-vous nous dire pourquoi vous préférez ne pas continuer ? Une seule lettre suffit !{% variation %}Chez [ClientCompanyName], chaque commentaire nous aide à progresser.
 En seulement 5 secondes, pourriez-vous me dire, en une seule lettre, pourquoi vous préférez ne pas continuer ? 😊{% endspin %}
-A. « Non merci, je n'en ai absolument pas besoin. »
-B. « Ce n'est pas le bon moment ; peut-être un e-mail de suivi dans 3 mois ? »
-C. « Intéressant, mais j'ai besoin de plus de détails… Peut-on programmer un appel la semaine prochaine ? »
+A. « Non merci, je n&apos;en ai absolument pas besoin. »
+B. « Ce n&apos;est pas le bon moment ; peut-être un e-mail de suivi dans 3 mois ? »
+C. « Intéressant, mais j&apos;ai besoin de plus de détails… Peut-on programmer un appel la semaine prochaine ? »
 D. « Je me suis échoué sur une île déserte, et personne ne répond ! 🏝️ »
 Quoi qu’il en soit, j’espère que nos e-mails vous ont fait sourire 🙂
 Je vous souhaite, à vous et à votre équipe, beaucoup de succès pour la suite !
@@ -363,7 +363,7 @@ export default function SupplyChainPage() {
               },
               {
                 value: "14%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

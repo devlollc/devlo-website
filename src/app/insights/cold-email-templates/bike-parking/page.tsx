@@ -101,12 +101,12 @@ const touches: SequenceTouch[] = [
     label: "Connexion LinkedIn",
     timing: "Jour 1",
     content: `Demande de connexion sur LinkedIn
-Date d'envoi : premier jour de la séquence
+Date d&apos;envoi : premier jour de la séquence
 Expéditeur : [Client_Name]
 Contenu : depuis LinkedIn
 
 1. 1. Note de demande de connexion LinkedIn :
-Bonjour {{salutation}} {{lastName}}, j'ai lu vos différents posts sur LinkedIn en tant que responsable du patrimoine et du développement durable. Connectons-nous sur LinkedIn. Cordialement
+Bonjour {{salutation}} {{lastName}}, j&apos;ai lu vos différents posts sur LinkedIn en tant que responsable du patrimoine et du développement durable. Connectons-nous sur LinkedIn. Cordialement
 
 1. 2. Si la demande de connexion LinkedIn est acceptée, envoyer le message suivant 7 jours plus tard :
 Bonjour {{salutation}} {{lastName}}, mon collègue {{salesRep}}  va vous inviter par e-mail. C’est au sujet de notre offre spéciale pour cet automne afin de protéger vos {{audience}} contre le vol de vélo vu que vous êtes.
@@ -120,7 +120,7 @@ Bonjour {{salutation}} {{lastName}}, mon collègue {{salesRep}}  va vous inviter
     label: "Email #2",
     timing: "N/A",
     content: `Email n°1 - Introduction) + intitulé du poste (Touch n°7 - Email n°5 - Dernière tentative)
-Appel à l'action : Planifier un appel découverte pour qualifier les besoins du prospect
+Appel à l&apos;action : Planifier un appel découverte pour qualifier les besoins du prospect
 
 Touches
 
@@ -128,9 +128,9 @@ Touches
 
 Bonjour {{salutation}} {{lastName}},
 
-{{Icebreaker}} J'ai lu sur internet que Seneffe a installé quatre stations de réparation de vélos à différents endroits afin de promouvoir la mobilité douce et d'encourager l’utilisation du vélo comme moyen de transport ou de loisir. Belle initiative
+{{Icebreaker}} J'ai lu sur internet que Seneffe a installé quatre stations de réparation de vélos à différents endroits afin de promouvoir la mobilité douce et d&apos;encourager l’utilisation du vélo comme moyen de transport ou de loisir. Belle initiative
 
-En ce sens, j'imagine que de plus en plus d'entre eux se déplacent en deux-roues jusque dans vos locaux. Cependant vous savez que leur utilisation n'est plus sans risque. En 2022, environ 600 vélos ont été volés chaque jour en Belgique. C’est de ce constat qu’est né [Client_Name].
+En ce sens, j&apos;imagine que de plus en plus d&apos;entre eux se déplacent en deux-roues jusque dans vos locaux. Cependant vous savez que leur utilisation n&apos;est plus sans risque. En 2022, environ 600 vélos ont été volés chaque jour en Belgique. C’est de ce constat qu’est né [Client_Name].
 
 Nous avons développé des bornes de stationnement vélos 100% sécurisées, durables (matériaux recyclés) et autonomes (panneaux solaires). Nos utilisateurs gèrent la fixation de leur vélo à la station en quelques clics via notre app mobile gratuite. Nos bornes sécurisent la roue avant ET le cadre, rendant le vol et le démontage impossible.
 
@@ -158,7 +158,7 @@ C’est aussi ce qui nous pousse à contacter des {{ICP}} sensibles à la probl�
 
 À cet effet, j’aimerais vous présenter notre offre spéciale pour cet automne. Les 10 premiers candidats bénéficieront de remises jusqu’à 50% ainsi que des garanties élargies jusqu’à 5 ans pour certains contrats. 
 
-En bonus, l'installation qui normalement coûte €490 sera exceptionnellement offerte à l’achat de 3 stations minimum. Pour finir, nos équipes vous aideront à faire la promotion des stations [ClientCompanyName] afin d’assurer son utilité pour vos utilisateurs.
+En bonus, l&apos;installation qui normalement coûte €490 sera exceptionnellement offerte à l’achat de 3 stations minimum. Pour finir, nos équipes vous aideront à faire la promotion des stations [ClientCompanyName] afin d’assurer son utilité pour vos utilisateurs.
 
 Est-ce que ça vous intéresse d’explorer cette proposition avec [CEO_Name], notre CEO?
 
@@ -180,7 +180,7 @@ PS: ma liste des tâches en photo ci-dessous m'a rappelé de vous écrire 😉
 
 Est-il mieux de contacter vos collègues {{ColleagueName1}} ou {{ColleagueName2}} concernant nos bornes antivols pour vélos?
 
-Votre emploi du temps est certainement chargé, mais j’imagine que faciliter l'accès à vos locaux en favorisant une mobilité plus douce reste d'actualité. De plus, vous pourrez mettre cela en avant pour vous différencier des autres universités.
+Votre emploi du temps est certainement chargé, mais j’imagine que faciliter l&apos;accès à vos locaux en favorisant une mobilité plus douce reste d&apos;actualité. De plus, vous pourrez mettre cela en avant pour vous différencier des autres universités.
 
 Bien cordialement,
 {{signature}}`,
@@ -191,8 +191,8 @@ Bien cordialement,
     label: "Appel téléphonique",
     timing: "3 jours après",
     content: `Appel à froid n°1
-Date d'envoi : 3 jours après le dernier message
-Script d'appel :
+Date d&apos;envoi : 3 jours après le dernier message
+Script d&apos;appel :
 Si le prospect répond :
 Intro statement: C’est  [Client_Name] de [ClientCompanyName], je vous ai contacté par e-mail parce que vous êtes le {{jobtilte}} de la Ville de {{city}} et je vous ai écrit au sujet de la protection des vélos de vos {{audience}}. Est-ce que vous avez deux minutes pour discuter ensemble?
 Objectif : à définir
@@ -200,7 +200,7 @@ CTA: C’est la raison pour laquelle j’aimerais vous rencontrer et vous prése
 Contexte : à définir
 Arguments supplémentaires selon le rôle/secteur de votre prospect :
 
-Suivre le script d'appel à froid suivant
+Suivre le script d&apos;appel à froid suivant
 Si oui, poser ces questions pour personnaliser la démo et qualifier le prospect
 à définir
 Sinon, demander pourquoi et surmonter les objections : (Courtoisie - Problème - Action)
@@ -214,13 +214,13 @@ Sinon, demander pourquoi et surmonter les objections : (Courtoisie - Problème -
       "Appel manqué - bornes pour vélos",
     content: `Bonjour {{salutation}} {{lastName}},
 
-Je n'ai pas réussi à vous joindre par téléphone aujourd'hui.
+Je n&apos;ai pas réussi à vous joindre par téléphone aujourd&apos;hui.
 
 Comme les autres {{ICP}} de Belgique, vous souhaitez fournir un espace attrayant, sûr et durable à vos {{Audience}}.
 
 Vous le savez, les vols de vélos augmentent année après année. C'est un vrai problème qui crée du stress auprès des cyclistes et qui freine la pratique. 
 
-Ce n’est pas surprenant étant donné que n'importe quel cadenas peut être forcé en quelques secondes avec les bons outils.
+Ce n’est pas surprenant étant donné que n&apos;importe quel cadenas peut être forcé en quelques secondes avec les bons outils.
 
 Cependant, nous garantissons que nos stations protègent à 100% contre le vol. Les stations {{salesRep}} ont été pensées dans 2 uniques buts: être incassables et durables. 
 
@@ -371,7 +371,7 @@ export default function BikeParkingPage() {
               },
               {
                 value: "89%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

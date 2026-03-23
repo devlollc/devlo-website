@@ -103,17 +103,17 @@ const touches: SequenceTouch[] = [
     content: `Successfully getting past the switchboard
 Your objective is to be transferred to your prospect: there’s no point in presenting your solution to the wrong person. Be assertive and get straight to the point, as if you know very well the person you’re trying to reach. Here’s an example:
 
-"Bonjour, c'est la société X"
+"Bonjour, c&apos;est la société X"
 
-“Bonjour, c'est {{salesRep}} de chez [ClientCompanyName], pourais-je parler à {{FirstName}}”
+“Bonjour, c&apos;est {{salesRep}} de chez [ClientCompanyName], pourais-je parler à {{FirstName}}”
 
-"De quoi s'agit-il ?" 
+"De quoi s&apos;agit-il ?" 
 
-“C'est à propos d'un logiciel de gestion immobilière”
+“C'est à propos d&apos;un logiciel de gestion immobilière”
 
-“Est-ce qu'il/elle vous connaît?”​​
+“Est-ce qu&apos;il/elle vous connaît?”​​
 
-“Je l'espère" OU “Nous sommes en contact par email
+“Je l&apos;espère" OU “Nous sommes en contact par email
 
 
 ↙                                   ↓                                             ↓                                              ↘
@@ -140,13 +140,13 @@ Puis-je vous demander comment vous êtes organisé aujourd’hui pour gérer ces
     channel: "email",
     label: "Email #2",
     timing: "Après l&apos;appel",    subject:
-      "Notre service d'assistance téléphonique / gestion locative",
+      "Notre service d&apos;assistance téléphonique / gestion locative",
     content: `Bonjour {{salutation}} {{lastName}},
 J’ai essayé de vous joindre au [PhoneNumber] car {{icebreaker}}
 J’ai fait quelques recherches et je me demandais si vous et {{colleaguename1}} êtes responsables de votre logiciel de gestion immobilière chez {{companyName}}?
 Depuis un année{{C1_Addon}}, nous sommes  passés de 300 à 400 régies: elles se sont tournées vers notre solution[ClientCompanyName] pour gérer et centraliser au même endroit toute leur gestion administrative, financière, technique et juridique.
 Signature numérique, états des lieux sur iPad, interface avec les applications tierces (PropTech), voilà les sujets qui intéressent le plus nos clients dernièrement.
-Voudriez-vous recevoir un peu plus de détails lors d'un bref appel d'introduction ?
+Voudriez-vous recevoir un peu plus de détails lors d&apos;un bref appel d&apos;introduction ?
 Cordialement
 
 {signature}`,
@@ -166,8 +166,8 @@ Mon collègue {salesRep}  m'a parlé de...
 
 ---
 
-→ Note audio (envoyée 6 jours après l'acceptation de la connexion LinkedIn) :
-Merci d'avoir accepté ma demande. Mon collègue {salesRep} vous a envoyé un email concernant votre gestion locative. 400 régies utilisent notre solution AbaImmo pour gérer leurs 960’000 objets, et je me demandais si vous voulez en découvrir un peu plus lors d’une première rencontre d’introduction ensemble?
+→ Note audio (envoyée 6 jours après l&apos;acceptation de la connexion LinkedIn) :
+Merci d&apos;avoir accepté ma demande. Mon collègue {salesRep} vous a envoyé un email concernant votre gestion locative. 400 régies utilisent notre solution AbaImmo pour gérer leurs 960’000 objets, et je me demandais si vous voulez en découvrir un peu plus lors d’une première rencontre d’introduction ensemble?
 
 ---
 
@@ -175,7 +175,7 @@ message envoyé 7 jours plus tard
 Version A→ avec les noms des collègues:
 Bonjour {{salutation}} {{lastName}}, est-il préférable de contacter vos collègues {{colleaguename1}} ou {{colleaguename2}} pour discuter de votre logiciel de gestion immobilière?
 Version B→ sans les noms des collègues:
-Bonjour {{salutation}} {{lastName}}, Y a-t-il quelqu'un d'autre que je puisse contacter pour discuter de votre logiciel de gestion immobilière ?
+Bonjour {{salutation}} {{lastName}}, Y a-t-il quelqu&apos;un d&apos;autre que je puisse contacter pour discuter de votre logiciel de gestion immobilière ?
 
 ---
 
@@ -183,9 +183,9 @@ Bonjour {{salutation}} {{lastName}}, Y a-t-il quelqu'un d'autre que je puisse co
 Bonjour {{salutation}} {{lastName}}, je comprends que votre agenda du temps est chargé. N'hésitez pas à nous contacter si vous souhaitez savoir comment nos clients s’organisent avec notre solution. Cordialement
 → Envoyé manuellement si le prospect répond par un message non concluant qui interrompt la séquence
 tbc
-→ Envoyé manuellement si le prospect répond qu'il est la bonne personne à contacter
+→ Envoyé manuellement si le prospect répond qu&apos;il est la bonne personne à contacter
 tbc
-→ Envoyé manuellement si le prospect répond qu'il n'est pas intéressé
+→ Envoyé manuellement si le prospect répond qu&apos;il n&apos;est pas intéressé
 tbc
 → Envoyé manuellement si le prospect a discuté/transmis le message à un collègue
 tbc`,
@@ -209,7 +209,7 @@ Cordialement`,
     label: "Appel téléphonique",
     timing: "5 days after previous following up",
     content: `Appel n° 2
-Date d'envoi : 5 jours après le dernier rappel`,
+Date d&apos;envoi : 5 jours après le dernier rappel`,
   },
   {
     number: 6,
@@ -228,7 +228,7 @@ Bonne journée`,
     label: "Appel téléphonique",
     timing: "5 days after the previous following up",
     content: `Appel n° 3
-Date d'envoi : 5 jours après le dernier rappel`,
+Date d&apos;envoi : 5 jours après le dernier rappel`,
   },
   {
     number: 8,
@@ -244,14 +244,14 @@ gestion des honoraires
 versement des disponibles
 les portails (locataires, propriétaires, collaborateurs)
 
-Un bref appel d'introduction est-il hors de question? Faites-le moi savoir, je comprendrais parfaitement.
+Un bref appel d&apos;introduction est-il hors de question? Faites-le moi savoir, je comprendrais parfaitement.
 
-Je vous prie d'agréer, {{salutation}} {{lastName}}, l'expression de mes salutations distinguées.
+Je vous prie d&apos;agréer, {{salutation}} {{lastName}}, l&apos;expression de mes salutations distinguées.
 
 
 "Ok, je vous transfère"
-“Je suis désolé mais il n'est pas disponible pour le moment. Puis-je prendre un message?"
-"Je suis désolé mais je n'ai pas le droit de vous transférer"
+“Je suis désolé mais il n&apos;est pas disponible pour le moment. Puis-je prendre un message?"
+"Je suis désolé mais je n&apos;ai pas le droit de vous transférer"
 “Je ne trouve pas cette personne dans notre répertoire”
 [Aller à la page suivante]
 “Je rappellerai plus tard, pouvez-vous me donner sa ligne directe?”
@@ -269,12 +269,12 @@ nous ne sommes pas autorisés."
  ↓
 Vérifiez que vous appelez la bonne entreprise + le bon bureau/office 
 
-"Est-ce que j'appelle bien {{companyName}} à Zurich?”
+"Est-ce que j&apos;appelle bien {{companyName}} à Zurich?”
 
-Vérifiez le profil LinkedIn du prospect pour voir s'il y travaille toujours.
+Vérifiez le profil LinkedIn du prospect pour voir s&apos;il y travaille toujours.
 ↙
 [Aller à la page suivante]
-[Fin de l'appel : mettre à jour HubSpot et Lemlist]
+[Fin de l&apos;appel : mettre à jour HubSpot et Lemlist]
 
 [...] (contenu complet disponible sur demande)`,
   }
@@ -397,7 +397,7 @@ export default function PropertyManagementPage() {
               },
               {
                 value: "N/A",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#9ca3af",
                 text: "#ffffff",
               },

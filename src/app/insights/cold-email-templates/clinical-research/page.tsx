@@ -111,8 +111,8 @@ Mon collègue {{SalesRep}} m’a parlé de…
 
 ---
 
-→ Note audio (envoyée 6 jours après l'acceptation de la demande de connexion sur LinkedIn) :
-Ravi d'entrer en contact avec vous. Mon collègue {{SalesRep}}  vous a envoyé un e-mail concernant nos services de biométrie. Plus de 350 promoteurs nous font confiance en tant que prestataire spécialisé dans la gestion des données et les statistiques, et je me demandais si vous supervisiez actuellement des essais cliniques ?
+→ Note audio (envoyée 6 jours après l&apos;acceptation de la demande de connexion sur LinkedIn) :
+Ravi d&apos;entrer en contact avec vous. Mon collègue {{SalesRep}}  vous a envoyé un e-mail concernant nos services de biométrie. Plus de 350 promoteurs nous font confiance en tant que prestataire spécialisé dans la gestion des données et les statistiques, et je me demandais si vous supervisiez actuellement des essais cliniques ?
 
 ---
 
@@ -122,10 +122,10 @@ Bonjour {{firstName}}, vaut-il mieux contacter vos collègues {{colleaguename1}}
 ---
 
 → Message de rupture (envoyé 5 jours plus tard) :
-{{firstName}}, je comprends qu'il n'est pas certain que vous ayez besoin d'aide pour la conception d'essais, la gestion des données ou la biostatistique pour le moment. N'hésitez pas à me contacter si vous souhaitez savoir pourquoi les promoteurs nous préfèrent à leur ancien prestataire de services biométriques. Cordialement
+{{firstName}}, je comprends qu&apos;il n&apos;est pas certain que vous ayez besoin d&apos;aide pour la conception d&apos;essais, la gestion des données ou la biostatistique pour le moment. N'hésitez pas à me contacter si vous souhaitez savoir pourquoi les promoteurs nous préfèrent à leur ancien prestataire de services biométriques. Cordialement
 Autres modèles de réponses LinkedIn
 → Envoyé manuellement si le prospect répond par un message non concluant qui interrompt la séquence
-{{firstName}}, mon collègue {{SalesRep}} vous a envoyé un e-mail pour vous expliquer pourquoi les promoteurs font appel à nous pour leurs services d'études cliniques, de gestion des données, de biostatistique, etc. 
+{{firstName}}, mon collègue {{SalesRep}} vous a envoyé un e-mail pour vous expliquer pourquoi les promoteurs font appel à nous pour leurs services d&apos;études cliniques, de gestion des données, de biostatistique, etc. 
 
 [...] (contenu complet disponible sur demande)`,
   },
@@ -137,9 +137,9 @@ Autres modèles de réponses LinkedIn
       "appel téléphonique {{firstname}}",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Bonjour{% endif %} {{firstName}},
 {{icebreaker}}
-Plus de 350 organisations nous font confiance en tant que partenaire biométrique pour la conception d'essais cliniques, la gestion des données et les services de biostatistique.
-Nos clients étaient déterminés à optimiser le calendrier de leurs essais cliniques et leurs processus de traitement des données afin d'améliorer leur rentabilité. Ils recherchaient des conseils en matière d'intégrité des données et de conformité réglementaire. Ils devaient également s'assurer que leurs données étaient prêtes à être soumises.
-[ClientCompanyName]  a assuré la gestion des données pour nos essais cliniques de phase I/II, et je suis très satisfait de cette collaboration, déclare le responsable de projet clinique d'une entreprise suisse de biotechnologie.
+Plus de 350 organisations nous font confiance en tant que partenaire biométrique pour la conception d&apos;essais cliniques, la gestion des données et les services de biostatistique.
+Nos clients étaient déterminés à optimiser le calendrier de leurs essais cliniques et leurs processus de traitement des données afin d&apos;améliorer leur rentabilité. Ils recherchaient des conseils en matière d&apos;intégrité des données et de conformité réglementaire. Ils devaient également s&apos;assurer que leurs données étaient prêtes à être soumises.
+[ClientCompanyName]  a assuré la gestion des données pour nos essais cliniques de phase I/II, et je suis très satisfait de cette collaboration, déclare le responsable de projet clinique d&apos;une entreprise suisse de biotechnologie.
 Vaut-il la peine de donner un peu plus de contexte lors d’un bref appel téléphonique, ou est-ce hors sujet ? 
 Cordialement,
 {{signature}}`,
@@ -152,7 +152,7 @@ Cordialement,
       "Discutez avec {{colleaguename1}} ou {{colleaguename2}}",
     content: `{% spin %}{% variation %}Bonjour{% variation %}Cher{% variation %}Salut{% endspin %} {{firstName}},
 Vaut-il mieux contacter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour les questions relatives à vos programmes de développement clinique ?
-Je comprends que vous soyez occupé, mais je ne voudrais pas manquer l'occasion de travailler avec {{companyName}}. Nous souhaitons voir s'il vaut la peine d'apporter une aide précieuse et de soutenir la mission de {{company name}}.
+Je comprends que vous soyez occupé, mais je ne voudrais pas manquer l&apos;occasion de travailler avec {{companyName}}. Nous souhaitons voir s&apos;il vaut la peine d&apos;apporter une aide précieuse et de soutenir la mission de {{company name}}.
     
 Ma liste de tâches ci-dessous m'a rappelé de vous écrire 😊 Passez une bonne journée
 
@@ -178,9 +178,9 @@ Auriez-vous un peu de temps cette semaine pour en discuter par téléphone ?`,
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Bonjour{% endif %} {{firstName}},
 Que pensez-vous de ma suggestion : découvrir comment des promoteurs tels que {{companyName}} ont mené à bien leurs essais cliniques en recueillant des données de la plus haute qualité ?
 Nos clients ne cessent de souligner leur satisfaction de ne plus avoir à traiter avec des personnes inexpérimentées.
-Pour vous le prouver, nous vous invitons à un [ProductName]  d'une durée maximale de 5 heures afin de discuter du plan de développement clinique de {{companyname}}.
-Cet appel de présentation avec notre équipe d'experts est 100 % gratuit.
-Tout d'abord, seriez-vous intéressé par un café virtuel pour en savoir un peu plus ?
+Pour vous le prouver, nous vous invitons à un [ProductName]  d&apos;une durée maximale de 5 heures afin de discuter du plan de développement clinique de {{companyname}}.
+Cet appel de présentation avec notre équipe d&apos;experts est 100 % gratuit.
+Tout d&apos;abord, seriez-vous intéressé par un café virtuel pour en savoir un peu plus ?
 
 {{signature}}`,
   },
@@ -193,13 +193,13 @@ Tout d'abord, seriez-vous intéressé par un café virtuel pour en savoir un peu
 
 Notre directeur [Director_Name] et moi-même avons essayé de vous contacter.
 Nous avons pensé que vous seriez intéressé(e) de découvrir comment nos clients ont résolu
-Pourquoi tant d'essais cliniques de phase III échouent-ils ? (webinaire)
+Pourquoi tant d&apos;essais cliniques de phase III échouent-ils ? (webinaire)
 Autorisations accélérées (AA) : pas si vite ! (livre blanc)
 Le guide ultime de la gestion des données cliniques (eBook)
 
-Serait-il possible d'avoir un bref entretien téléphonique ?
+Serait-il possible d&apos;avoir un bref entretien téléphonique ?
 
-Si cela ne vous intéresse pas, merci de me le faire savoir ; c'est tout à fait compréhensible.
+Si cela ne vous intéresse pas, merci de me le faire savoir ; c&apos;est tout à fait compréhensible.
 
 Cordialement,
 {{signature}}
@@ -207,11 +207,11 @@ Cordialement,
 
 Objections :
 « Nous travaillons avec une CRO offrant une gamme complète de services (à la fois une CRO clinique et une CRO biométrique) :
-Travailler avec une CRO biométrique dédiée garantit la plus haute qualité pour vos programmes d'essais cliniques en matière de gestion des données et de biostatistique.
+Travailler avec une CRO biométrique dédiée garantit la plus haute qualité pour vos programmes d&apos;essais cliniques en matière de gestion des données et de biostatistique.
 Contexte : Les grandes CRO excellent dans la gestion des opérations cliniques, telles que le recrutement des patients et la surveillance des sites. Les CRO biométriques ({{clientCompanyName}}), en revanche, sont spécialisées dans l’analyse statistique, la gestion des données et le reporting des données cliniques. Un partenariat avec une CRO clinique et une CRO biométrique vous donne accès à ces deux aspects.
 « Nous avons déjà un partenaire » :
 « Vous bénéficiez donc déjà du soutien adéquat de votre partenaire clinique, une CRO spécialisée en biométrie, et si oui, comment se passe la collaboration avec eux ? »​
-« Ne vaut-il pas la peine d'explorer les autres options disponibles pour savoir ce qui existe et à quel prix ? »
+« Ne vaut-il pas la peine d&apos;explorer les autres options disponibles pour savoir ce qui existe et à quel prix ? »
 « Avez-vous constaté une communication fluide entre les équipes cliniques et celles chargées de la gestion des données ? »
 
 [...] (contenu complet disponible sur demande)`,
@@ -335,7 +335,7 @@ export default function ClinicalResearchPage() {
               },
               {
                 value: "N/A",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#9ca3af",
                 text: "#ffffff",
               },

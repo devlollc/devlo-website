@@ -133,7 +133,7 @@ pas de commande en ligne
 23ème en recherche Google
 Examples of {{pain}}:
 De plus, il apparaît que vous ne disposez pas de la prise de rdv en ligne sur votre site.
-De plus, il apparaît que vous ne disposez pas d'un système de vente en ligne.
+De plus, il apparaît que vous ne disposez pas d&apos;un système de vente en ligne.
 De plus, vous n’avez pas publié de contenu sur votre page Facebook depuis 7 mois, avec moins de 500 followers sur FB.
 De plus, vous êtes actuellement le 15e   bureau référencé en tapant “bureau d’architecte Wavre”.
 Examples de {{painproof}}:
@@ -207,7 +207,7 @@ Un an plus tard, ce sont des milliers de nouveaux inscrits qui arrivent chaque a
 
 Pour ce faire, nous avons mis en place une stratégie {{productname}}: refonte du site internet, mise en place d’agenda connecté et développement du référencement naturel sur Google.
 
-Nos formules flexibles avec paiements mensuels permettent à n’importe quelle PME de s'offrir les talents d’experts dans le domaine!
+Nos formules flexibles avec paiements mensuels permettent à n’importe quelle PME de s&apos;offrir les talents d’experts dans le domaine!
 
 En images, voici ce que nous pouvons réaliser pour {{companyName}}:
 
@@ -232,7 +232,7 @@ Votre emploi du temps est certainement chargé, mais j’imagine que générer p
 
 Une excellente journée à toute l’équipe,
 
-PS: Notre {{productname}} et abonnements modulables pourront s'aligner sur tous les budgets!
+PS: Notre {{productname}} et abonnements modulables pourront s&apos;aligner sur tous les budgets!
 {{signature}}`,
   },
   {
@@ -241,7 +241,7 @@ PS: Notre {{productname}} et abonnements modulables pourront s'aligner sur tous 
     label: "Appel téléphonique",
     timing: "5 jours après",
     content: `Appel n°1 - Prise de rendez-vous
-Date d'envoi : 5 jours après le dernier message
+Date d&apos;envoi : 5 jours après le dernier message
 Appelant : {{salesRep}}
 Contenu/Script :
 “Bonjour {{Gender}} {{LastName}} OR {{FirstName}}, c’est {{salesRep}} de l’entreprise {{clientCompanyName}}. Je vous ai envoyé un mail la semaine passée concernant notre expertise marketing pour les cabinets vétérinaires. Cela vous dit quelque chose?”
@@ -278,7 +278,7 @@ L’expert vous proposera différentes pistes d’amélioration et les classera 
 
 Aucun contrat ni proposition Webforce ne sera envoyé à la suite de ce meeting. L’unique but étant de vous aider à y voir plus clair sur votre potentiel digital. 
 
-Voici l'agenda d'un de nos experts, si cela vous parle (+5 ans d'expérience, quand même).
+Voici l&apos;agenda d&apos;un de nos experts, si cela vous parle (+5 ans d&apos;expérience, quand même).
 
 Bien cordialement,
 
@@ -302,7 +302,7 @@ L’expert vous proposera différentes pistes d’amélioration et les classera 
 
 Aucun contrat ni proposition Webforce ne sera envoyé à la suite de ce meeting. L’unique but est de vous aider à y voir plus clair sur votre potentiel digital.
 
-Voici l'agenda d'un de nos experts, si cela vous parle (+5 ans d'expérience, quand même).
+Voici l&apos;agenda d&apos;un de nos experts, si cela vous parle (+5 ans d&apos;expérience, quand même).
 
 Bien cordialement,
 
@@ -453,7 +453,7 @@ export default function DigitalMarketingPage() {
               },
               {
                 value: "59%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

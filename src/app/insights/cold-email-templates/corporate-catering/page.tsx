@@ -112,9 +112,9 @@ Que diriez-vous de profiter de nos préparations équilibrées et variées, à b
 Je vous écris car nous sommes une entreprise genevoise qui propose une cantine 2.0 pour les entreprises. Dois-je vous contacter, vous, ou votre collègue {{colleaguename}} ?
 Via notre site web, vos employés peuvent facilement commander leur déjeuner, qui sera livré le jour même à midi, le tout dans des emballages recyclés ou recyclables.
 
-En tant qu'employeur, cela présente également des avantages pour vous. Tout d'abord, vous investissez directement dans le bien-être de vos employés. Ensuite, ce service est financièrement abordable – bien plus qu'un restaurant d'entreprise, par exemple. Enfin, nous pourrions créer un menu personnalisé en fonction des souhaits de vos employés.
+En tant qu&apos;employeur, cela présente également des avantages pour vous. Tout d&apos;abord, vous investissez directement dans le bien-être de vos employés. Ensuite, ce service est financièrement abordable – bien plus qu&apos;un restaurant d&apos;entreprise, par exemple. Enfin, nous pourrions créer un menu personnalisé en fonction des souhaits de vos employés.
 
-Souhaiteriez-vous en savoir plus ? Je serais ravi de vous en parler au téléphone pour vous donner plus de détails. Je vous remercie d'avance pour votre réponse,
+Souhaiteriez-vous en savoir plus ? Je serais ravi de vous en parler au téléphone pour vous donner plus de détails. Je vous remercie d&apos;avance pour votre réponse,
 
 Bonne journée, 
 {{salesRep}}
@@ -131,7 +131,7 @@ Vous pouvez voir ici mon collègue {{salesRep2}}  livrer nos petits plats faits 
 
 Que diriez-vous de profiter de nos préparations équilibrées et variées, à base de produits locaux, pour votre pause déjeuner ?
 
-Je vous écris car nous sommes une entreprise genevoise qui propose un service de restauration d'entreprise. Je me demandais si c'est à vous ou à votre collègue {{colleaguename}} que je devrais m'adresser ?
+Je vous écris car nous sommes une entreprise genevoise qui propose un service de restauration d&apos;entreprise. Je me demandais si c&apos;est à vous ou à votre collègue {{colleaguename}} que je devrais m'adresser ?
 
 
 [...] (contenu complet disponible sur demande)`,
@@ -162,7 +162,7 @@ Passez une excellente journée,
     label: "Connexion LinkedIn",
     timing: "4 jours après",
     content: `[Message envoyé depuis le profil LinkedIn de notre client]
-Bonjour {{firstName}}, j'espère que vous allez bien. Mon collègue {{salesRep}} vous a envoyé un e-mail il y a quelques jours au sujet de nos services de restauration d'entreprise. Je me réjouis de faire votre connaissance et de suivre l'actualité de {{companyName}}. Cordialement, [Client_FirstName]`,
+Bonjour {{firstName}}, j&apos;espère que vous allez bien. Mon collègue {{salesRep}} vous a envoyé un e-mail il y a quelques jours au sujet de nos services de restauration d&apos;entreprise. Je me réjouis de faire votre connaissance et de suivre l&apos;actualité de {{companyName}}. Cordialement, [Client_FirstName]`,
   },
   {
     number: 4,
@@ -175,9 +175,9 @@ J'espère que vous allez bien.
 
 Je me permets de vous écrire à la suite de mon e-mail concernant [ClientCompanyName], la cantine 2.0. Je me demandais si vous aviez déjà mis en place un service similaire ?
 
-Je vous pose cette question car nous proposons à nos partenaires de contribuer financièrement à la mise en place de repas sains, frais et gastronomiques. De plus, nous les déchargeons de toute la logistique. En fonction des avantages que vous souhaitez mettre en place, c'est une piste que nous pourrions explorer ensemble.
+Je vous pose cette question car nous proposons à nos partenaires de contribuer financièrement à la mise en place de repas sains, frais et gastronomiques. De plus, nous les déchargeons de toute la logistique. En fonction des avantages que vous souhaitez mettre en place, c&apos;est une piste que nous pourrions explorer ensemble.
 
-Si tel est le cas, je vous propose d'en discuter par téléphone dès que possible. Je vous transmets mon agenda dans lequel vous pouvez directement réserver un créneau qui vous convient.
+Si tel est le cas, je vous propose d&apos;en discuter par téléphone dès que possible. Je vous transmets mon agenda dans lequel vous pouvez directement réserver un créneau qui vous convient.
 
 Passez une excellente journée,
 
@@ -199,7 +199,7 @@ Seriez-vous disponible pour un bref entretien téléphonique afin de discuter de
 
 Si cela vous convient, voici mon agenda où vous pouvez directement réserver le créneau horaire de votre choix.
 
-Je vous remercie d'avance pour votre réponse.
+Je vous remercie d&apos;avance pour votre réponse.
 
 Cordialement,
 {{salesRep}}
@@ -212,14 +212,14 @@ Cordialement,
     label: "Appel téléphonique",
     timing: "4 jours après",
     content: `Appel à froid
-Date d'envoi : 4 jours après le dernier message
-Script d'appel :
+Date d&apos;envoi : 4 jours après le dernier message
+Script d&apos;appel :
 Si le prospect répond :
 Bonjour {{firstName}}, ici {{salesRep}} de [ClientCompanyName]. 
-Je vous ai contacté par e-mail au sujet de nos services de restauration d'entreprise pour vos employés. Seriez-vous intéressé(e) pour discuter de la manière dont nos services pourraient profiter à votre entreprise ? [...]
+Je vous ai contacté par e-mail au sujet de nos services de restauration d&apos;entreprise pour vos employés. Seriez-vous intéressé(e) pour discuter de la manière dont nos services pourraient profiter à votre entreprise ? [...]
 —---—---—---—---—---—---—---—---—---—---—---— -------------—---—---—---—---—---—---—-----—---—--- —---—- -------------------------
 Si oui :
-En tant qu'employeur, le bien-être de vos employés est une priorité. Notre entreprise propose des services de cantine quotidiens avec des produits frais et sains qui seront livrés à vos bureaux à l'heure du déjeuner selon vos commandes. De plus, comme pour de nombreuses entreprises, le développement durable doit être l'une de vos préoccupations. En effet, tous nos produits sont emballés dans des matériaux recyclés et recyclables. Cette initiative peut vous intéresser car vous investissez directement dans le bien-être de vos employés, la pause déjeuner sera mieux encadrée et, enfin, vous pourrez réduire vos coûts. 
+En tant qu&apos;employeur, le bien-être de vos employés est une priorité. Notre entreprise propose des services de cantine quotidiens avec des produits frais et sains qui seront livrés à vos bureaux à l&apos;heure du déjeuner selon vos commandes. De plus, comme pour de nombreuses entreprises, le développement durable doit être l&apos;une de vos préoccupations. En effet, tous nos produits sont emballés dans des matériaux recyclés et recyclables. Cette initiative peut vous intéresser car vous investissez directement dans le bien-être de vos employés, la pause déjeuner sera mieux encadrée et, enfin, vous pourrez réduire vos coûts. 
 
 S'ils sont intéressés, 
 posez ces questions pour qualifier le prospect :
@@ -241,7 +241,7 @@ J'espère que vous allez bien.
 
 J'ai essayé de vous contacter pour discuter de notre offre proposant des repas raffinés à nos employés. Seriez-vous disponible à un autre moment pour un bref entretien téléphonique ?
 
-Je vous remercie d'avance pour votre réponse.
+Je vous remercie d&apos;avance pour votre réponse.
 
 {{salesRep}}
 
@@ -253,10 +253,10 @@ Je vous remercie d'avance pour votre réponse.
     label: "Email #8",
     timing: "day after the last message",
     content: `Bonjour {{firstName}},
-Même si j'aurais aimé avoir de vos nouvelles, je comprends que vous ayez un emploi du temps très chargé. 
-Si vous disposez d'un peu de temps libre et que vous souhaitez discuter ensemble de la manière dont nous pourrions vous aider, n'hésitez pas à me le faire savoir :) 
-Cet e-mail est ma dernière tentative pour vous contacter, et je serais ravi d'avoir de vos nouvelles.
-Je vous souhaite tout le meilleur pour l'avenir.
+Même si j&apos;aurais aimé avoir de vos nouvelles, je comprends que vous ayez un emploi du temps très chargé. 
+Si vous disposez d&apos;un peu de temps libre et que vous souhaitez discuter ensemble de la manière dont nous pourrions vous aider, n&apos;hésitez pas à me le faire savoir :) 
+Cet e-mail est ma dernière tentative pour vous contacter, et je serais ravi d&apos;avoir de vos nouvelles.
+Je vous souhaite tout le meilleur pour l&apos;avenir.
 Passez une excellente journée,
 Cordialement,
 {{salesRep}}
@@ -321,7 +321,7 @@ export default function CorporateCateringPage() {
                   textWrap: "balance",
                 } as React.CSSProperties}
               >
-                Séquence cold email pour restauration d'entreprise — 35% de taux de réponse
+                Séquence cold email pour restauration d&apos;entreprise — 35% de taux de réponse
               </h1>
               <p
                 className="mx-auto max-w-xl text-white/80"
@@ -382,7 +382,7 @@ export default function CorporateCateringPage() {
               },
               {
                 value: "76%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

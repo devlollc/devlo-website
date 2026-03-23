@@ -105,18 +105,18 @@ const touches: SequenceTouch[] = [
 
 {{Icebreaker - example: I read your annual report, which presents the actions of your solidarity commitment for the last year.}}
 
-L'engagement des employés et le développement durable sont sans doute deux sujets qui vous tiennent à cœur. Plusieurs organisations telles que l'OMC, le FEM ou Caran d'Ache collaborent avec notre association à but non lucratif. 
+L&apos;engagement des employés et le développement durable sont sans doute deux sujets qui vous tiennent à cœur. Plusieurs organisations telles que l&apos;OMC, le FEM ou Caran d&apos;Ache collaborent avec notre association à but non lucratif. 
 
-Ensemble, nous agissons en faveur de la biodiversité : pour protéger les abeilles, nos clients accueillent des ruches sur le site de leur entreprise ou les adoptent dans nos ruchers si leur lieu de travail ne permet pas d'accueillir de ruches.
+Ensemble, nous agissons en faveur de la biodiversité : pour protéger les abeilles, nos clients accueillent des ruches sur le site de leur entreprise ou les adoptent dans nos ruchers si leur lieu de travail ne permet pas d&apos;accueillir de ruches.
 
 Nous nous occupons de tout. Vous bénéficiez de nombreux avantages, tels que :
 Sensibiliser, mobiliser et rassembler vos collaborateurs autour de différentes activités de team building
-Renforcer/diversifier votre programme d'engagement en matière de développement durable et de solidarité
+Renforcer/diversifier votre programme d&apos;engagement en matière de développement durable et de solidarité
 Communiquer sur votre engagement en interne et en externe (rapports annuels, ISO)
 
-Si la protection de la biodiversité est essentielle pour {{companyName}}, seriez-vous intéressé(e) d'en discuter ensemble lors d'un premier contact téléphonique ?
+Si la protection de la biodiversité est essentielle pour {{companyName}}, seriez-vous intéressé(e) d&apos;en discuter ensemble lors d&apos;un premier contact téléphonique ?
 
-Dans l'attente de votre réponse,
+Dans l&apos;attente de votre réponse,
 
 Meilleures salutations,
 {{salesRep}} pour [ClientCompanyName]
@@ -144,7 +144,7 @@ Nous serions ravis de venir vous rendre visite et de vous présenter certaines d
 
 Auriez-vous 45 minutes à nous consacrer ? Par exemple, jeudi prochain en début de matinée ?
 
-Dans l'attente de votre réponse.
+Dans l&apos;attente de votre réponse.
 
 Cordialement,
 {{salesRep}}
@@ -157,13 +157,13 @@ Cordialement,
     label: "Email #3",
     timing: "5 jours après",
     content: `Bonjour {{firstName}},
-Vaut-il mieux contacter votre collègue {{colleaguename}} ? Ou peut-être quelqu'un d'autre ?
+Vaut-il mieux contacter votre collègue {{colleaguename}} ? Ou peut-être quelqu&apos;un d&apos;autre ?
 Ou est-ce parce que :
 Vous préférez en discuter ensemble à un autre moment
 Cette proposition ne vous intéresse pas
 Vous avez déjà un partenariat en place
 Ou pour une autre raison ?
-Merci d'avance pour votre réponse,
+Merci d&apos;avance pour votre réponse,
 
 Cordialement,
 {{salesRep}}
@@ -178,19 +178,19 @@ PS : Ma liste de tâches avec photo ci-dessous m'a rappelé de vous écrire 😉
     label: "Appel téléphonique",
     timing: "3 jours après",
     content: `Premier appel à froid
-Date d'envoi : 3 jours après le dernier message
-Script d'appel :
+Date d&apos;envoi : 3 jours après le dernier message
+Script d&apos;appel :
 Si le prospect répond :
 
-Bonjour {{firstName}}, c'est {{salesRep}} de chez [ClientCompanyName]. Comment allez-vous ? … [« Oui, merci, et vous ? »]
+Bonjour {{firstName}}, c&apos;est {{salesRep}} de chez [ClientCompanyName]. Comment allez-vous ? … [« Oui, merci, et vous ? »]
 
 Eh bien, merci. Je vous ai contacté par e-mail au sujet de notre projet sur la biodiversité et les ruches. J'ai vu que vous êtes [JobTitle] chez [ProspectCompanyName]. Je voulais vous appeler. Avez-vous une minute pour discuter ? 
 
 Si oui :
 
-Nous sommes une association d'utilité publique reconnue qui met en place des partenariats avec des entreprises comme la vôtre pour agir en faveur de la biodiversité et lutter contre la disparition des abeilles.
+Nous sommes une association d&apos;utilité publique reconnue qui met en place des partenariats avec des entreprises comme la vôtre pour agir en faveur de la biodiversité et lutter contre la disparition des abeilles.
 
-Nous installons de petites ruches sur les sites de nos clients ; nous nous occupons de tout. Nous organisons également des activités de team building, des ateliers et des cadeaux que vous pouvez offrir à vos clients. C'est pourquoi je souhaitais savoir si vous seriez intéressé(e) par une rencontre avec mon responsable [ClientFirstName] pour obtenir plus d'informations sur le projet.
+Nous installons de petites ruches sur les sites de nos clients ; nous nous occupons de tout. Nous organisons également des activités de team building, des ateliers et des cadeaux que vous pouvez offrir à vos clients. C'est pourquoi je souhaitais savoir si vous seriez intéressé(e) par une rencontre avec mon responsable [ClientFirstName] pour obtenir plus d&apos;informations sur le projet.
 —---—---—---—---—---—---—---—---—---—---—---—---—- -------__PROTÉGÉ_19____PROTÉGÉ_20____PROTÉGÉ_21____PROTÉGÉ_22____PROTÉGÉ_23____PROTÉGÉ_24____PROTÉGÉ_25____PROTÉGÉ_26____PROTÉGÉ_27____PROTÉGÉ_28____PROTÉGÉ_29__ -------------------------
 S'ils sont intéressés, 
 posez ces questions pour qualifier le prospect :
@@ -211,7 +211,7 @@ ________________________________________________________________________________
 
 Vous avez peut-être reçu un appel manqué de ma part hier. Seriez-vous disponible à un autre moment ?
 
-Ce serait formidable de discuter ensemble de l'engagement de vos collaborateurs et de vos projets de RSE. Vous pouvez également nous parler de vos projets de team building ou de journées de bénévolat, et je pourrais vous expliquer comment nous aidons nos clients dans ce domaine.
+Ce serait formidable de discuter ensemble de l&apos;engagement de vos collaborateurs et de vos projets de RSE. Vous pouvez également nous parler de vos projets de team building ou de journées de bénévolat, et je pourrais vous expliquer comment nous aidons nos clients dans ce domaine.
 
 Je vous souhaite une excellente journée,
 {{salesRep}}
@@ -233,11 +233,11 @@ J'espère que vous allez bien.
  
 Nous avons essayé de vous contacter à plusieurs reprises, et si notre association ne vous intéresse pas, nous le comprendrons.
  
-L'un de vos collègues serait-il intéressé par le projet que nous proposons ? Peut-être {{colleaguename}} ?
+L&apos;un de vos collègues serait-il intéressé par le projet que nous proposons ? Peut-être {{colleaguename}} ?
  
 Nous restons à votre entière disposition si vous avez des questions.
  
-Je vous souhaite tout le meilleur pour l'avenir.
+Je vous souhaite tout le meilleur pour l&apos;avenir.
 
 Cordialement,
 {{salesRep}}
@@ -250,7 +250,7 @@ Cordialement,
     label: "Connexion LinkedIn",
     timing: "1 jours après",
     content: `Demande de connexion sur LinkedIn
-Date d'envoi : 1 jour après le dernier message
+Date d&apos;envoi : 1 jour après le dernier message
 Contenu : provenant de LinkedIn
 Bonjour {{firstName}}, je suis [President_FirstName], président de [ClientCompanyName]. Notre membre {{salesRep}} vous a contacté par e-mail. J'espère avoir bientôt de vos nouvelles`,
   }
@@ -373,7 +373,7 @@ export default function ApiaryServicesPage() {
               },
               {
                 value: "71%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },

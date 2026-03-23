@@ -105,7 +105,7 @@ const touches: SequenceTouch[] = [
 Le message LinkedIn commence ainsi :
 
 « Je tenais à nouveau à vous féliciter pour… »
-Et il se termine par « Je suis ravi d'entrer en contact avec vous. »
+Et il se termine par « Je suis ravi d&apos;entrer en contact avec vous. »
 
 ---
 
@@ -128,13 +128,13 @@ Autres modèles de réponses LinkedIn
 → Envoyé manuellement si le prospect répond par un message non concluant qui interrompt la séquence
 {{salutation}} {{lastName}} Je vous ai envoyé un e-mail à {{email}}. Je me demandais si vous seriez intéressé(e) par notre conférence du 3 décembre à Bâle ?
 → Envoyé manuellement si le prospect répond qu’il n’est PAS la bonne personne à contacter ou qu’il a quitté l’entreprise
-{{salutation}} {{lastName}}, merci de m'avoir répondu, j'en ai pris note.
-Connaissez-vous quelqu'un chez {{companyName}} qui pourrait être intéressé par une participation ?
-→ Envoyé manuellement si le prospect répond qu'il n'est PAS intéressé
-{{salutation}} {{lastName}} merci pour votre réponse. Nous restons à votre disposition si vous changez d'avis.
-→ À envoyer manuellement si le prospect a discuté du message ou l'a transféré à un collègue
-{{salutation}} {{lastName}}, merci pour votre réponse et pour avoir transmis l'information à votre collègue X.
-Dans l'attente d'un retour de {{him/her}} pour en discuter plus en détail.`,
+{{salutation}} {{lastName}}, merci de m'avoir répondu, j&apos;en ai pris note.
+Connaissez-vous quelqu&apos;un chez {{companyName}} qui pourrait être intéressé par une participation ?
+→ Envoyé manuellement si le prospect répond qu&apos;il n&apos;est PAS intéressé
+{{salutation}} {{lastName}} merci pour votre réponse. Nous restons à votre disposition si vous changez d&apos;avis.
+→ À envoyer manuellement si le prospect a discuté du message ou l&apos;a transféré à un collègue
+{{salutation}} {{lastName}}, merci pour votre réponse et pour avoir transmis l&apos;information à votre collègue X.
+Dans l&apos;attente d&apos;un retour de {{him/her}} pour en discuter plus en détail.`,
   },
   {
     number: 2,
@@ -144,10 +144,10 @@ Dans l'attente d'un retour de {{him/her}} pour en discuter plus en détail.`,
       "Invitation à une conférence à Bâle / décembre",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Cher{% endif %} {{gender}} {{lastName}},
 {{icebreaker; Congrats for…}}
-60 professionnels occupant un poste de {{jobtitleresponsability}} sont invités à notre conférence sur le thème « Gestion des risques informatiques et de la conformité à l'ère du cloud ».
+60 professionnels occupant un poste de {{jobtitleresponsability}} sont invités à notre conférence sur le thème « Gestion des risques informatiques et de la conformité à l&apos;ère du cloud ».
 {{jobtitleresponsability}}
-Elle se tiendra dans la région {{region}} le {{date}}, et l'entrée est gratuite.
-J'ai vu que vous êtes basé(e) à {{city}} et que vous travaillez pour {{companyName}}. Je me demandais si cela vous intéresserait d'y participer ? Ou suis-je à côté de la plaque ?
+Elle se tiendra dans la région {{region}} le {{date}}, et l&apos;entrée est gratuite.
+J'ai vu que vous êtes basé(e) à {{city}} et que vous travaillez pour {{companyName}}. Je me demandais si cela vous intéresserait d&apos;y participer ? Ou suis-je à côté de la plaque ?
 Cordialement,
 {{signature}}
 
@@ -160,8 +160,8 @@ PS : La conférence commence à 15h30 et se termine à 20h par un moment de rés
     timing: "4 jours après",    subject:
       "discussion avec {{colleaguename1}} ou {{colleaguename2}}",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Cher{% endif %} {{gender}} {{lastName}},
-L'une des sessions de la conférence aborde la question de savoir pourquoi la gestion de la conformité informatique favorise l'innovation plutôt que d'être perçue comme un fardeau par certains.
-Serait-il préférable d'inviter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour discuter de la conformité DevOps et de l'auditabilité dans le cloud ?
+L&apos;une des sessions de la conférence aborde la question de savoir pourquoi la gestion de la conformité informatique favorise l&apos;innovation plutôt que d&apos;être perçue comme un fardeau par certains.
+Serait-il préférable d&apos;inviter votre collègue {{colleaguename1}} ou {{colleaguename2}} pour discuter de la conformité DevOps et de l&apos;auditabilité dans le cloud ?
 
 Bonne journée
 {{signature}}`,
@@ -172,9 +172,9 @@ Bonne journée
     label: "Email #4",
     timing: "5 jours après",
     content: `{% assign ampm = "now" | date: "%P" %}{% if ampm contains "am" %}Bonjour{% else %}Cher{% endif %} {{gender}} {{lastName}},
-Je sais que vous êtes très occupé, mais je tenais simplement à vous rappeler la conférence qui se tiendra à {{region}} le {{date}}. Elle s'annonce comme un formidable mélange d'idées et de rencontres, toutes axées sur les risques informatiques, la conformité et l'innovation dans le cloud.
-Nous aborderons des sujets tels que la gestion de la conformité DevOps, les tests de résilience DORA de l'UE et la loi européenne sur l'IA, et vous aurez l'occasion d'échanger avec d'autres personnes confrontées aux mêmes défis.
-Nous serions ravis de vous compter parmi nous (c'est gratuit) ! Serez-vous des nôtres ?`,
+Je sais que vous êtes très occupé, mais je tenais simplement à vous rappeler la conférence qui se tiendra à {{region}} le {{date}}. Elle s&apos;annonce comme un formidable mélange d&apos;idées et de rencontres, toutes axées sur les risques informatiques, la conformité et l&apos;innovation dans le cloud.
+Nous aborderons des sujets tels que la gestion de la conformité DevOps, les tests de résilience DORA de l&apos;UE et la loi européenne sur l&apos;IA, et vous aurez l&apos;occasion d&apos;échanger avec d&apos;autres personnes confrontées aux mêmes défis.
+Nous serions ravis de vous compter parmi nous (c&apos;est gratuit) ! Serez-vous des nôtres ?`,
   },
   {
     number: 5,
@@ -307,7 +307,7 @@ export default function ItRiskCompliancePage() {
               },
               {
                 value: "48%",
-                label: "Taux d'ouverture",
+                label: "Taux d&apos;ouverture",
                 bg: "#059669",
                 text: "#ffffff",
               },
