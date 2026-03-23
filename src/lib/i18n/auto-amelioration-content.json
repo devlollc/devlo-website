@@ -1,0 +1,670 @@
+{
+  "fr": {
+    "metaTitle": "Auto-amélioration outbound : comment nos campagnes B2B s'optimisent en continu | devlo",
+    "metaDescription": "Découvrez comment devlo utilise une boucle d'intelligence automatique pour améliorer chaque campagne de prospection B2B. 30+ variables analysées, 5 axes statistiques, feedback loop continu.",
+    "breadcrumbs": {
+      "home": "Accueil",
+      "insights": "Insights",
+      "page": "Auto-amélioration outbound"
+    },
+    "hero": {
+      "tag": "Insight — Méthodologie propriétaire",
+      "h1": "Comment nos campagnes de prospection s'améliorent automatiquement",
+      "subtitle": "Chaque email envoyé, chaque réponse reçue, chaque objection — tout nourrit notre intelligence. Vos campagnes s'optimisent en continu, sans intervention manuelle.",
+      "authorName": "Par Charles Perret",
+      "dateLabel": "Mars 2026 · 8 min de lecture"
+    },
+    "section1": {
+      "title": "Pourquoi la plupart des campagnes outbound ne s'améliorent pas",
+      "p1": "La majorité des agences de prospection fonctionnent en mode linéaire : on lance une campagne, on regarde les résultats, on ajuste manuellement au feeling, on relance. Le problème ? Les ajustements sont subjectifs, lents, et rarement basés sur des données suffisantes.",
+      "p2": "Quand un email ne fonctionne pas, on change le message. Mais était-ce vraiment le message le problème ? Ou le timing ? Ou le ciblage ? Ou la longueur ? Sans données structurées, chaque ajustement est un pari.",
+      "calloutTitle": "Le vrai problème n'est pas le manque de données — c'est l'absence de boucle de feedback structurée.",
+      "calloutText": "Les données existent dans chaque campagne. Mais sans système pour les collecter, les analyser et les transformer en actions, elles disparaissent à chaque nouveau lancement."
+    },
+    "section2": {
+      "title": "La boucle d'auto-amélioration en 4 phases",
+      "intro": "Chez devlo, nous avons construit un système qui transforme chaque interaction de prospection en apprentissage. Ce n'est pas un dashboard — c'est un moteur d'intelligence qui alimente automatiquement les campagnes suivantes.",
+      "loopNote": "Le cycle se répète automatiquement. Chaque campagne démarre avec les apprentissages de toutes les précédentes."
+    },
+    "howToSteps": [
+      {
+        "title": "Collecter les données de chaque interaction",
+        "description": "Chaque envoi, ouverture, réponse et objection est capturé automatiquement avec plus de 30 variables : titre de poste, industrie, taille d'entreprise, canal, jour, heure, longueur du message, signal d'achat, et plus."
+      },
+      {
+        "title": "Analyser sur 5 axes statistiques",
+        "description": "Ciblage, contenu, séquence, timing et patterns cross-client. Chaque dimension est évaluée avec des tests de significativité statistique (z-test, p < 0.05) pour éliminer le bruit."
+      },
+      {
+        "title": "Détecter les patterns significatifs",
+        "description": "Seuls les patterns qui dépassent les seuils statistiques sont retenus. Un taux de réponse 2x supérieur à la moyenne avec un échantillon suffisant ? C'est un pattern. En dessous ? C'est du bruit."
+      },
+      {
+        "title": "Optimiser les campagnes suivantes",
+        "description": "Ciblage, messages, séquences et timing sont mis à jour sur la base des patterns confirmés. Le cycle recommence — chaque campagne démarre avec de meilleures données que la précédente."
+      }
+    ],
+    "section3": {
+      "title": "5 axes d'analyse, plus de 30 variables — pas d'intuition, des preuves",
+      "intro": "Chaque email envoyé, chaque message LinkedIn, chaque réponse génère des données structurées. Notre système croise ces données sur 5 axes indépendants pour identifier des patterns que l'œil humain ne verrait pas.",
+      "totalLabel": "variables actives, analysées automatiquement à chaque campagne.",
+      "statsTitle": "Rigueur statistique",
+      "statsText": "Un pattern n'est retenu que s'il passe un test de significativité statistique (z-test, p < 0.05) avec un échantillon minimum de 30 envois. Pas de faux positifs, pas de conclusions hâtives."
+    },
+    "analysisAxes": [
+      {
+        "axis": "Ciblage",
+        "description": "Quels profils répondent ? Quelles industries convertissent ? Quelle taille d'entreprise est la plus réactive ?",
+        "variables": ["Titre de poste", "Industrie / secteur", "Taille d'entreprise", "Pays / région", "Langue du prospect", "Signal d'achat (intent data)", "Ancienneté dans le poste"]
+      },
+      {
+        "axis": "Contenu",
+        "description": "Quelle longueur d'email performe le mieux ? Quel niveau de personnalisation ? Quelles formulations déclenchent une réponse ?",
+        "variables": ["Longueur email (4 brackets)", "Longueur objet d'email", "Longueur message LinkedIn", "Mention d'un collègue", "Niveau de personnalisation (L0-L4)", "Nombre de mots", "Formulations et angles d'approche"]
+      },
+      {
+        "axis": "Séquence",
+        "description": "À quelle étape le prospect répond-il ? Quel canal génère le plus de réponses pour ce type de profil ?",
+        "variables": ["Étape qui génère la réponse", "Canal (email / LinkedIn / multicanal)", "Délai entre les étapes", "Nombre total d'étapes", "Combinaison de canaux"]
+      },
+      {
+        "axis": "Timing",
+        "description": "Quel jour, quel créneau horaire ? Combien de temps entre les relances ? Y a-t-il un pattern saisonnier ?",
+        "variables": ["Jour de la semaine (lundi-dimanche)", "Créneau horaire (7 buckets)", "Temps avant ouverture", "Temps avant réponse", "Saisonnalité"]
+      },
+      {
+        "axis": "Cross-client",
+        "description": "Certains patterns sont universels. D'autres sont spécifiques à un secteur. Notre système fait la distinction automatiquement.",
+        "variables": ["Patterns universels vs spécifiques", "Benchmarks par industrie", "Signaux d'achat par secteur", "Performance par taille d'entreprise", "Comparaison des taux de réponse"]
+      }
+    ],
+    "section4": {
+      "title": "Chaque « non » nous rend meilleurs",
+      "intro": "Quand un prospect répond négativement, la plupart des agences passent au suivant. Chez devlo, chaque objection est une source d'apprentissage. Notre système classifie automatiquement chaque réponse négative en 12 types distincts.",
+      "flowTitle": "Comment ça fonctionne concrètement",
+      "flowSteps": [
+        "Un prospect répond avec une objection (ex : « Nous avons déjà une équipe interne »)",
+        "Notre IA classifie l'objection (type : In-house) et identifie l'argument déclencheur dans notre message",
+        "Quand 3+ prospects formulent la même objection, elle est promue en pattern confirmé",
+        "Un contre-argument est généré et intégré automatiquement dans les prochains messages",
+        "Le cycle continue — l'objection qui revenait souvent ne revient plus"
+      ],
+      "validityTitle": "Validité des objections",
+      "validityText": "Notre système distingue les objections **valides** (notre argument était faible — il faut l'améliorer) des objections **invalides** (le prospect est mal informé — il faut mieux éduquer). Cette distinction change fondamentalement la stratégie de réponse."
+    },
+    "objectionTypes": [
+      { "type": "Timing", "desc": "Le prospect n'est pas prêt maintenant" },
+      { "type": "Concurrent", "desc": "Utilise déjà un service similaire" },
+      { "type": "In-house", "desc": "Gère en interne" },
+      { "type": "Budget", "desc": "Pas de budget disponible" },
+      { "type": "Pas de besoin", "desc": "Ne perçoit pas le problème" },
+      { "type": "Pas décisionnaire", "desc": "N'a pas l'autorité" },
+      { "type": "Déjà client", "desc": "Relation existante" },
+      { "type": "Objection technique", "desc": "Incompatibilité perçue" },
+      { "type": "Positif", "desc": "Intérêt confirmé" },
+      { "type": "Neutre", "desc": "Réponse sans engagement clair" },
+      { "type": "Out of office", "desc": "Absence temporaire" },
+      { "type": "Spam complaint", "desc": "Rejet du format outreach" }
+    ],
+    "section5": {
+      "title": "Pourquoi on ne fait pas de A/B testing classique",
+      "p1": "L'A/B testing traditionnel nécessite un volume élevé pour atteindre la significativité statistique. En prospection B2B, les volumes sont souvent trop faibles pour tester deux variantes en parallèle de manière fiable.",
+      "p2": "Notre approche est différente : **l'évolution séquentielle**. On compare le Batch N+1 au Batch N sur les mêmes métriques. Une seule variable change par hypothèse. Si le résultat s'améliore, on garde. Sinon, on revient en arrière.",
+      "classicTitle": "A/B testing classique",
+      "classicItems": ["Nécessite des milliers d'envois", "Deux variantes en parallèle", "Dilue le volume par variante", "Résultats ambigus à faible volume"],
+      "sequentialTitle": "Évolution séquentielle (devlo)",
+      "sequentialItems": ["Fonctionne à partir de 30 envois par variable", "Comparaison Batch N vs N+1", "Une variable à la fois — cause claire", "Seuil de rollback prédéfini"],
+      "conclusion": "Chaque hypothèse est documentée avant test : quelle variable change, quel résultat est attendu, et à quel seuil on annule. Pas de place pour le hasard."
+    },
+    "section6": {
+      "title": "Ce qu'on transfère d'un client à l'autre — et ce qu'on ne mélange jamais",
+      "intro": "Notre système analyse les patterns sur deux niveaux. Certaines découvertes sont universelles et bénéficient à tous nos clients. D'autres sont spécifiques à un secteur, une audience, un produit — et restent strictement cloisonnées.",
+      "transferableTitle": "Transférable (cross-client)",
+      "transferableItems": [
+        "**Timing :** jours et créneaux horaires optimaux",
+        "**Longueur :** nombre de mots idéal par canal",
+        "**Structure :** étapes de séquence qui performent",
+        "**Personnalisation :** niveau optimal (L0-L4)",
+        "**Délivrabilité :** pratiques de warm-up et hygiène"
+      ],
+      "isolatedTitle": "Isolé (client-spécifique)",
+      "isolatedItems": [
+        "**Contenu :** proposition de valeur, arguments",
+        "**Objections :** spécifiques à l'industrie du client",
+        "**ICP :** profils cibles propres au produit",
+        "**Données :** contacts, entreprises, conversations",
+        "**Signaux :** intent data et triggers spécifiques"
+      ],
+      "privacyTitle": "Confidentialité garantie",
+      "privacyText": "Les données de prospection d'un client ne sont jamais partagées avec un autre. Seuls les patterns statistiques agrégés (ex : « les emails de 80 mots performent mieux que ceux de 120 ») sont transférés. Aucune donnée nominative, aucun contenu spécifique."
+    },
+    "section7": {
+      "title": "Avant / Après : ce qui a changé",
+      "intro": "Nous avons toujours analysé nos campagnes et cherché à les améliorer. La différence ? Ce qui prenait des heures d'analyse manuelle et subjective est maintenant automatique, continu et statistiquement rigoureux.",
+      "beforeTitle": "Avant — analyse manuelle",
+      "beforeItems": ["Revue mensuelle des résultats", "Ajustements au feeling", "Pas de suivi des objections", "Impossible de croiser les variables", "Les apprentissages se perdent", "Chaque client repart de zéro"],
+      "afterTitle": "Maintenant — boucle automatique",
+      "afterItems": ["Collecte quotidienne automatique", "Analyse statistique hebdomadaire", "12 types d'objections classifiés", "5 axes croisés simultanément", "Patterns documentés et cumulés", "Nouveaux clients bénéficient de l'historique cross-client"],
+      "conclusion": "Le résultat : des campagnes qui démarrent mieux, s'améliorent plus vite, et accumulent de l'intelligence au lieu de la perdre."
+    },
+    "cta": {
+      "heading": "Vos campagnes pourraient s'améliorer automatiquement",
+      "body": "Discutons de votre prospection B2B. Nous vous montrerons comment notre boucle d'auto-amélioration peut transformer vos résultats.",
+      "primaryButton": "Planifier une consultation",
+      "secondaryButton": "Voir nos résultats"
+    },
+    "sidebar": {
+      "ctaTitle": "Envie d'en bénéficier ?",
+      "ctaBody": "Discutons de votre prospection B2B. Nous vous montrerons comment cette méthode peut transformer vos résultats.",
+      "ctaButton": "Consultation gratuite",
+      "linksTitle": "Également sur devlo",
+      "links": [
+        { "label": "Nos études de cas", "href": "/etudes-de-cas" },
+        { "label": "Prospection multicanal", "href": "/services/outbound-multicanal" },
+        { "label": "Outbound Academy", "href": "/academy" }
+      ]
+    },
+    "backLink": "Retour à l'accueil"
+  },
+  "en": {
+    "metaTitle": "Outbound self-improvement: how our B2B campaigns optimise themselves continuously | devlo",
+    "metaDescription": "Discover how devlo uses an automated intelligence loop to improve every B2B prospecting campaign. 30+ variables analysed, 5 statistical dimensions, continuous feedback loop.",
+    "breadcrumbs": {
+      "home": "Home",
+      "insights": "Insights",
+      "page": "Outbound self-improvement"
+    },
+    "hero": {
+      "tag": "Insight — Proprietary methodology",
+      "h1": "How our prospecting campaigns improve automatically",
+      "subtitle": "Every email sent, every reply received, every objection — everything feeds our intelligence. Your campaigns optimise continuously, with no manual intervention.",
+      "authorName": "By Charles Perret",
+      "dateLabel": "March 2026 · 8 min read"
+    },
+    "section1": {
+      "title": "Why most outbound campaigns never improve",
+      "p1": "Most prospecting agencies operate in a linear fashion: launch a campaign, review the results, adjust manually based on gut feeling, and relaunch. The problem? Adjustments are subjective, slow, and rarely grounded in sufficient data.",
+      "p2": "When an email underperforms, the message gets changed. But was the message really the issue? Or was it the timing? The targeting? The length? Without structured data, every adjustment is a gamble.",
+      "calloutTitle": "The real problem is not a lack of data — it is the absence of a structured feedback loop.",
+      "calloutText": "Data exists in every campaign. But without a system to collect it, analyse it, and turn it into actions, it vanishes with every new launch."
+    },
+    "section2": {
+      "title": "The self-improvement loop in 4 phases",
+      "intro": "At devlo, we built a system that transforms every prospecting interaction into learning. It is not a dashboard — it is an intelligence engine that automatically feeds into subsequent campaigns.",
+      "loopNote": "The cycle repeats automatically. Every campaign starts with the learnings from all previous ones."
+    },
+    "howToSteps": [
+      {
+        "title": "Collect data from every interaction",
+        "description": "Every send, open, reply, and objection is captured automatically with over 30 variables: job title, industry, company size, channel, day, time, message length, buying signal, and more."
+      },
+      {
+        "title": "Analyse across 5 statistical dimensions",
+        "description": "Targeting, content, sequence, timing, and cross-client patterns. Each dimension is evaluated with statistical significance tests (z-test, p < 0.05) to eliminate noise."
+      },
+      {
+        "title": "Detect significant patterns",
+        "description": "Only patterns that exceed statistical thresholds are retained. A reply rate 2x above average with a sufficient sample size? That is a pattern. Below that? It is noise."
+      },
+      {
+        "title": "Optimise subsequent campaigns",
+        "description": "Targeting, messaging, sequences, and timing are updated based on confirmed patterns. The cycle restarts — every campaign launches with better data than the last."
+      }
+    ],
+    "section3": {
+      "title": "5 analysis dimensions, over 30 variables — no intuition, only evidence",
+      "intro": "Every email sent, every LinkedIn message, every reply generates structured data. Our system cross-references this data across 5 independent dimensions to identify patterns the human eye would miss.",
+      "totalLabel": "active variables, analysed automatically with every campaign.",
+      "statsTitle": "Statistical rigour",
+      "statsText": "A pattern is only retained if it passes a statistical significance test (z-test, p < 0.05) with a minimum sample of 30 sends. No false positives, no hasty conclusions."
+    },
+    "analysisAxes": [
+      {
+        "axis": "Targeting",
+        "description": "Which profiles respond? Which industries convert? What company size is the most responsive?",
+        "variables": ["Job title", "Industry / sector", "Company size", "Country / region", "Prospect language", "Buying signal (intent data)", "Tenure in role"]
+      },
+      {
+        "axis": "Content",
+        "description": "Which email length performs best? What level of personalisation? Which phrases trigger a reply?",
+        "variables": ["Email length (4 brackets)", "Subject line length", "LinkedIn message length", "Colleague mention", "Personalisation level (L0-L4)", "Word count", "Phrasing and angles of approach"]
+      },
+      {
+        "axis": "Sequence",
+        "description": "At which step does the prospect reply? Which channel generates the most responses for this profile type?",
+        "variables": ["Step that generates the reply", "Channel (email / LinkedIn / multichannel)", "Delay between steps", "Total number of steps", "Channel combination"]
+      },
+      {
+        "axis": "Timing",
+        "description": "Which day, which time slot? How long between follow-ups? Is there a seasonal pattern?",
+        "variables": ["Day of the week (Monday-Sunday)", "Time slot (7 buckets)", "Time to open", "Time to reply", "Seasonality"]
+      },
+      {
+        "axis": "Cross-client",
+        "description": "Some patterns are universal. Others are specific to a sector. Our system distinguishes between them automatically.",
+        "variables": ["Universal vs specific patterns", "Industry benchmarks", "Buying signals by sector", "Performance by company size", "Reply rate comparison"]
+      }
+    ],
+    "section4": {
+      "title": "Every \"no\" makes us better",
+      "intro": "When a prospect responds negatively, most agencies move on to the next one. At devlo, every objection is a source of learning. Our system automatically classifies every negative reply into 12 distinct types.",
+      "flowTitle": "How it works in practice",
+      "flowSteps": [
+        "A prospect replies with an objection (e.g. \"We already have an in-house team\")",
+        "Our AI classifies the objection (type: In-house) and identifies the triggering argument in our message",
+        "When 3+ prospects raise the same objection, it is promoted to a confirmed pattern",
+        "A counter-argument is generated and automatically integrated into future messages",
+        "The cycle continues — the objection that kept recurring no longer comes up"
+      ],
+      "validityTitle": "Objection validity",
+      "validityText": "Our system distinguishes **valid** objections (our argument was weak — it needs improving) from **invalid** objections (the prospect is misinformed — we need to educate better). This distinction fundamentally changes the response strategy."
+    },
+    "objectionTypes": [
+      { "type": "Timing", "desc": "The prospect is not ready right now" },
+      { "type": "Competitor", "desc": "Already using a similar service" },
+      { "type": "In-house", "desc": "Handled internally" },
+      { "type": "Budget", "desc": "No budget available" },
+      { "type": "No need", "desc": "Does not perceive the problem" },
+      { "type": "Not a decision-maker", "desc": "Does not have the authority" },
+      { "type": "Already a client", "desc": "Existing relationship" },
+      { "type": "Technical objection", "desc": "Perceived incompatibility" },
+      { "type": "Positive", "desc": "Interest confirmed" },
+      { "type": "Neutral", "desc": "Reply without clear commitment" },
+      { "type": "Out of office", "desc": "Temporary absence" },
+      { "type": "Spam complaint", "desc": "Rejection of the outreach format" }
+    ],
+    "section5": {
+      "title": "Why we do not run traditional A/B testing",
+      "p1": "Traditional A/B testing requires high volume to reach statistical significance. In B2B prospecting, volumes are often too low to reliably test two variants in parallel.",
+      "p2": "Our approach is different: **sequential evolution**. We compare Batch N+1 against Batch N on the same metrics. Only one variable changes per hypothesis. If the result improves, we keep it. If not, we roll back.",
+      "classicTitle": "Traditional A/B testing",
+      "classicItems": ["Requires thousands of sends", "Two variants in parallel", "Dilutes volume per variant", "Ambiguous results at low volume"],
+      "sequentialTitle": "Sequential evolution (devlo)",
+      "sequentialItems": ["Works from just 30 sends per variable", "Batch N vs N+1 comparison", "One variable at a time — clear causation", "Pre-defined rollback threshold"],
+      "conclusion": "Every hypothesis is documented before testing: which variable changes, what result is expected, and at what threshold we revert. No room for chance."
+    },
+    "section6": {
+      "title": "What we transfer between clients — and what we never mix",
+      "intro": "Our system analyses patterns on two levels. Some findings are universal and benefit all our clients. Others are specific to a sector, an audience, a product — and remain strictly siloed.",
+      "transferableTitle": "Transferable (cross-client)",
+      "transferableItems": [
+        "**Timing:** optimal days and time slots",
+        "**Length:** ideal word count per channel",
+        "**Structure:** sequence steps that perform",
+        "**Personalisation:** optimal level (L0-L4)",
+        "**Deliverability:** warm-up and hygiene practices"
+      ],
+      "isolatedTitle": "Isolated (client-specific)",
+      "isolatedItems": [
+        "**Content:** value proposition, arguments",
+        "**Objections:** specific to the client's industry",
+        "**ICP:** target profiles unique to the product",
+        "**Data:** contacts, companies, conversations",
+        "**Signals:** intent data and specific triggers"
+      ],
+      "privacyTitle": "Privacy guaranteed",
+      "privacyText": "One client's prospecting data is never shared with another. Only aggregated statistical patterns (e.g. \"80-word emails outperform 120-word ones\") are transferred. No personally identifiable data, no specific content."
+    },
+    "section7": {
+      "title": "Before / After: what has changed",
+      "intro": "We have always analysed our campaigns and sought to improve them. The difference? What used to take hours of manual, subjective analysis is now automatic, continuous, and statistically rigorous.",
+      "beforeTitle": "Before — manual analysis",
+      "beforeItems": ["Monthly results review", "Adjustments based on gut feeling", "No objection tracking", "Impossible to cross-reference variables", "Learnings get lost", "Each client starts from scratch"],
+      "afterTitle": "Now — automated loop",
+      "afterItems": ["Daily automated collection", "Weekly statistical analysis", "12 objection types classified", "5 dimensions cross-referenced simultaneously", "Patterns documented and cumulative", "New clients benefit from cross-client history"],
+      "conclusion": "The result: campaigns that start stronger, improve faster, and accumulate intelligence instead of losing it."
+    },
+    "cta": {
+      "heading": "Your campaigns could improve automatically",
+      "body": "Let us discuss your B2B prospecting. We will show you how our self-improvement loop can transform your results.",
+      "primaryButton": "Schedule a consultation",
+      "secondaryButton": "See our results"
+    },
+    "sidebar": {
+      "ctaTitle": "Want to benefit from this?",
+      "ctaBody": "Let us discuss your B2B prospecting. We will show you how this methodology can transform your results.",
+      "ctaButton": "Free consultation",
+      "linksTitle": "Also on devlo",
+      "links": [
+        { "label": "Our case studies", "href": "/en/case-studies" },
+        { "label": "Multichannel prospecting", "href": "/en/services/outbound-multicanal" },
+        { "label": "Outbound Academy", "href": "/en/academy" }
+      ]
+    },
+    "backLink": "Back to home"
+  },
+  "de": {
+    "metaTitle": "Outbound-Selbstoptimierung: wie sich unsere B2B-Kampagnen kontinuierlich verbessern | devlo",
+    "metaDescription": "Erfahren Sie, wie devlo eine automatisierte Intelligenzschleife nutzt, um jede B2B-Prospecting-Kampagne zu verbessern. Über 30 Variablen analysiert, 5 statistische Dimensionen, kontinuierliche Feedbackschleife.",
+    "breadcrumbs": {
+      "home": "Startseite",
+      "insights": "Insights",
+      "page": "Outbound-Selbstoptimierung"
+    },
+    "hero": {
+      "tag": "Insight — Proprietäre Methodik",
+      "h1": "Wie sich unsere Prospecting-Kampagnen automatisch verbessern",
+      "subtitle": "Jede versandte E-Mail, jede erhaltene Antwort, jeder Einwand — alles fließt in unsere Intelligenz ein. Ihre Kampagnen optimieren sich kontinuierlich, ohne manuellen Eingriff.",
+      "authorName": "Von Charles Perret",
+      "dateLabel": "März 2026 · 8 Min. Lesezeit"
+    },
+    "section1": {
+      "title": "Warum sich die meisten Outbound-Kampagnen nicht verbessern",
+      "p1": "Die Mehrheit der Prospecting-Agenturen arbeitet linear: Man startet eine Kampagne, betrachtet die Ergebnisse, passt manuell nach Bauchgefühl an und startet neu. Das Problem? Die Anpassungen sind subjektiv, langsam und selten auf ausreichenden Daten basiert.",
+      "p2": "Wenn eine E-Mail nicht funktioniert, wird die Nachricht geändert. Aber war wirklich die Nachricht das Problem? Oder das Timing? Oder die Zielgruppe? Oder die Länge? Ohne strukturierte Daten ist jede Anpassung ein Glücksspiel.",
+      "calloutTitle": "Das wahre Problem ist nicht der Mangel an Daten — es ist das Fehlen einer strukturierten Feedbackschleife.",
+      "calloutText": "Die Daten existieren in jeder Kampagne. Aber ohne ein System, das sie erfasst, analysiert und in Maßnahmen umwandelt, gehen sie bei jedem neuen Start verloren."
+    },
+    "section2": {
+      "title": "Die Selbstoptimierungsschleife in 4 Phasen",
+      "intro": "Bei devlo haben wir ein System aufgebaut, das jede Prospecting-Interaktion in Lernen verwandelt. Es ist kein Dashboard — es ist ein Intelligenzmotor, der automatisch die nachfolgenden Kampagnen speist.",
+      "loopNote": "Der Zyklus wiederholt sich automatisch. Jede Kampagne startet mit den Erkenntnissen aller vorherigen."
+    },
+    "howToSteps": [
+      {
+        "title": "Daten aus jeder Interaktion erfassen",
+        "description": "Jeder Versand, jede Öffnung, jede Antwort und jeder Einwand wird automatisch mit über 30 Variablen erfasst: Berufsbezeichnung, Branche, Unternehmensgröße, Kanal, Tag, Uhrzeit, Nachrichtenlänge, Kaufsignal und mehr."
+      },
+      {
+        "title": "Über 5 statistische Dimensionen analysieren",
+        "description": "Zielgruppe, Inhalt, Sequenz, Timing und kundenübergreifende Muster. Jede Dimension wird mit statistischen Signifikanztests (z-Test, p < 0,05) bewertet, um Rauschen zu eliminieren."
+      },
+      {
+        "title": "Signifikante Muster erkennen",
+        "description": "Nur Muster, die die statistischen Schwellenwerte überschreiten, werden beibehalten. Eine Antwortquote, die bei ausreichender Stichprobe doppelt so hoch wie der Durchschnitt ist? Das ist ein Muster. Darunter? Das ist Rauschen."
+      },
+      {
+        "title": "Nachfolgende Kampagnen optimieren",
+        "description": "Zielgruppe, Nachrichten, Sequenzen und Timing werden auf Basis bestätigter Muster aktualisiert. Der Zyklus beginnt von vorne — jede Kampagne startet mit besseren Daten als die vorherige."
+      }
+    ],
+    "section3": {
+      "title": "5 Analysedimensionen, über 30 Variablen — keine Intuition, nur Belege",
+      "intro": "Jede versandte E-Mail, jede LinkedIn-Nachricht, jede Antwort erzeugt strukturierte Daten. Unser System verknüpft diese Daten über 5 unabhängige Dimensionen, um Muster zu erkennen, die dem menschlichen Auge entgehen würden.",
+      "totalLabel": "aktive Variablen, bei jeder Kampagne automatisch analysiert.",
+      "statsTitle": "Statistische Sorgfalt",
+      "statsText": "Ein Muster wird nur beibehalten, wenn es einen statistischen Signifikanztest (z-Test, p < 0,05) mit einer Mindeststichprobe von 30 Versendungen besteht. Keine Fehlalarme, keine voreiligen Schlüsse."
+    },
+    "analysisAxes": [
+      {
+        "axis": "Zielgruppe",
+        "description": "Welche Profile antworten? Welche Branchen konvertieren? Welche Unternehmensgröße ist am reaktionsstärksten?",
+        "variables": ["Berufsbezeichnung", "Branche / Sektor", "Unternehmensgröße", "Land / Region", "Sprache des Prospects", "Kaufsignal (Intent Data)", "Betriebszugehörigkeit in der Position"]
+      },
+      {
+        "axis": "Inhalt",
+        "description": "Welche E-Mail-Länge liefert die besten Ergebnisse? Welches Personalisierungsniveau? Welche Formulierungen lösen eine Antwort aus?",
+        "variables": ["E-Mail-Länge (4 Stufen)", "Betreffzeilenlänge", "LinkedIn-Nachrichtenlänge", "Erwähnung eines Kollegen", "Personalisierungsgrad (L0-L4)", "Wortanzahl", "Formulierungen und Ansprachewinkel"]
+      },
+      {
+        "axis": "Sequenz",
+        "description": "In welchem Schritt antwortet der Prospect? Welcher Kanal generiert die meisten Antworten für diesen Profiltyp?",
+        "variables": ["Schritt, der die Antwort auslöst", "Kanal (E-Mail / LinkedIn / Multikanal)", "Abstand zwischen den Schritten", "Gesamtzahl der Schritte", "Kanalkombination"]
+      },
+      {
+        "axis": "Timing",
+        "description": "Welcher Tag, welches Zeitfenster? Wie viel Zeit zwischen den Nachfassaktionen? Gibt es ein saisonales Muster?",
+        "variables": ["Wochentag (Montag–Sonntag)", "Zeitfenster (7 Kategorien)", "Zeit bis zur Öffnung", "Zeit bis zur Antwort", "Saisonalität"]
+      },
+      {
+        "axis": "Kundenübergreifend",
+        "description": "Einige Muster sind universell. Andere sind branchenspezifisch. Unser System unterscheidet automatisch.",
+        "variables": ["Universelle vs. spezifische Muster", "Branchen-Benchmarks", "Kaufsignale nach Branche", "Leistung nach Unternehmensgröße", "Vergleich der Antwortquoten"]
+      }
+    ],
+    "section4": {
+      "title": "Jedes \u201ENein\u201C macht uns besser",
+      "intro": "Wenn ein Prospect negativ antwortet, gehen die meisten Agenturen zum Nächsten über. Bei devlo ist jeder Einwand eine Quelle des Lernens. Unser System klassifiziert automatisch jede negative Antwort in 12 unterschiedliche Typen.",
+      "flowTitle": "So funktioniert es in der Praxis",
+      "flowSteps": [
+        "Ein Prospect antwortet mit einem Einwand (z. B. \u201EWir haben bereits ein internes Team\u201C)",
+        "Unsere KI klassifiziert den Einwand (Typ: In-house) und identifiziert das auslösende Argument in unserer Nachricht",
+        "Wenn 3+ Prospects denselben Einwand formulieren, wird er zum bestätigten Muster befördert",
+        "Ein Gegenargument wird generiert und automatisch in die nächsten Nachrichten integriert",
+        "Der Zyklus geht weiter — der Einwand, der häufig vorkam, tritt nicht mehr auf"
+      ],
+      "validityTitle": "Gültigkeit der Einwände",
+      "validityText": "Unser System unterscheidet **gültige** Einwände (unser Argument war schwach — es muss verbessert werden) von **ungültigen** Einwänden (der Prospect ist falsch informiert — wir müssen besser aufklären). Diese Unterscheidung verändert die Antwortstrategie grundlegend."
+    },
+    "objectionTypes": [
+      { "type": "Timing", "desc": "Der Prospect ist jetzt nicht bereit" },
+      { "type": "Wettbewerber", "desc": "Nutzt bereits einen ähnlichen Dienst" },
+      { "type": "In-house", "desc": "Wird intern abgewickelt" },
+      { "type": "Budget", "desc": "Kein Budget verfügbar" },
+      { "type": "Kein Bedarf", "desc": "Erkennt das Problem nicht" },
+      { "type": "Nicht entscheidungsbefugt", "desc": "Hat nicht die Befugnis" },
+      { "type": "Bereits Kunde", "desc": "Bestehende Geschäftsbeziehung" },
+      { "type": "Technischer Einwand", "desc": "Wahrgenommene Inkompatibilität" },
+      { "type": "Positiv", "desc": "Interesse bestätigt" },
+      { "type": "Neutral", "desc": "Antwort ohne klare Zusage" },
+      { "type": "Abwesend", "desc": "Vorübergehende Abwesenheit" },
+      { "type": "Spam-Beschwerde", "desc": "Ablehnung des Outreach-Formats" }
+    ],
+    "section5": {
+      "title": "Warum wir kein klassisches A/B-Testing durchführen",
+      "p1": "Traditionelles A/B-Testing erfordert ein hohes Volumen, um statistische Signifikanz zu erreichen. Im B2B-Prospecting sind die Volumen oft zu gering, um zwei Varianten parallel zuverlässig zu testen.",
+      "p2": "Unser Ansatz ist anders: **sequenzielle Weiterentwicklung**. Wir vergleichen Batch N+1 mit Batch N anhand derselben Metriken. Nur eine Variable ändert sich pro Hypothese. Wenn sich das Ergebnis verbessert, behalten wir es bei. Wenn nicht, machen wir die Änderung rückgängig.",
+      "classicTitle": "Klassisches A/B-Testing",
+      "classicItems": ["Erfordert Tausende von Versendungen", "Zwei Varianten parallel", "Verdünnt das Volumen pro Variante", "Mehrdeutige Ergebnisse bei geringem Volumen"],
+      "sequentialTitle": "Sequenzielle Weiterentwicklung (devlo)",
+      "sequentialItems": ["Funktioniert ab 30 Versendungen pro Variable", "Vergleich Batch N vs. N+1", "Eine Variable gleichzeitig — klare Ursache", "Vordefinierter Rollback-Schwellenwert"],
+      "conclusion": "Jede Hypothese wird vor dem Test dokumentiert: Welche Variable sich ändert, welches Ergebnis erwartet wird und bei welchem Schwellenwert wir zurückkehren. Kein Raum für Zufall."
+    },
+    "section6": {
+      "title": "Was wir zwischen Kunden übertragen — und was wir niemals vermischen",
+      "intro": "Unser System analysiert Muster auf zwei Ebenen. Einige Erkenntnisse sind universell und kommen allen unseren Kunden zugute. Andere sind spezifisch für eine Branche, eine Zielgruppe, ein Produkt — und bleiben strikt getrennt.",
+      "transferableTitle": "Übertragbar (kundenübergreifend)",
+      "transferableItems": [
+        "**Timing:** optimale Tage und Zeitfenster",
+        "**Länge:** ideale Wortanzahl pro Kanal",
+        "**Struktur:** Sequenzschritte, die performen",
+        "**Personalisierung:** optimales Niveau (L0-L4)",
+        "**Zustellbarkeit:** Warm-up- und Hygienepraktiken"
+      ],
+      "isolatedTitle": "Isoliert (kundenspezifisch)",
+      "isolatedItems": [
+        "**Inhalt:** Wertversprechen, Argumente",
+        "**Einwände:** spezifisch für die Branche des Kunden",
+        "**ICP:** produktspezifische Zielprofile",
+        "**Daten:** Kontakte, Unternehmen, Konversationen",
+        "**Signale:** Intent Data und spezifische Auslöser"
+      ],
+      "privacyTitle": "Vertraulichkeit garantiert",
+      "privacyText": "Die Prospecting-Daten eines Kunden werden niemals mit einem anderen geteilt. Nur aggregierte statistische Muster (z. B. \u201EE-Mails mit 80 Wörtern performen besser als solche mit 120\u201C) werden übertragen. Keine personenbezogenen Daten, keine spezifischen Inhalte."
+    },
+    "section7": {
+      "title": "Vorher / Nachher: was sich verändert hat",
+      "intro": "Wir haben unsere Kampagnen schon immer analysiert und versucht, sie zu verbessern. Der Unterschied? Was früher Stunden manueller, subjektiver Analyse erforderte, ist jetzt automatisch, kontinuierlich und statistisch fundiert.",
+      "beforeTitle": "Vorher — manuelle Analyse",
+      "beforeItems": ["Monatliche Ergebnisauswertung", "Anpassungen nach Bauchgefühl", "Keine Einwandverfolgung", "Unmöglich, Variablen zu kreuzen", "Erkenntnisse gehen verloren", "Jeder Kunde startet bei null"],
+      "afterTitle": "Jetzt — automatisierte Schleife",
+      "afterItems": ["Tägliche automatische Erfassung", "Wöchentliche statistische Analyse", "12 Einwandtypen klassifiziert", "5 Dimensionen gleichzeitig gekreuzt", "Muster dokumentiert und kumuliert", "Neue Kunden profitieren von kundenübergreifender Historie"],
+      "conclusion": "Das Ergebnis: Kampagnen, die stärker starten, sich schneller verbessern und Intelligenz ansammeln, statt sie zu verlieren."
+    },
+    "cta": {
+      "heading": "Ihre Kampagnen könnten sich automatisch verbessern",
+      "body": "Lassen Sie uns über Ihr B2B-Prospecting sprechen. Wir zeigen Ihnen, wie unsere Selbstoptimierungsschleife Ihre Ergebnisse transformieren kann.",
+      "primaryButton": "Beratungsgespräch vereinbaren",
+      "secondaryButton": "Unsere Ergebnisse ansehen"
+    },
+    "sidebar": {
+      "ctaTitle": "Interesse geweckt?",
+      "ctaBody": "Lassen Sie uns über Ihr B2B-Prospecting sprechen. Wir zeigen Ihnen, wie diese Methodik Ihre Ergebnisse transformieren kann.",
+      "ctaButton": "Kostenlose Beratung",
+      "linksTitle": "Ebenfalls auf devlo",
+      "links": [
+        { "label": "Unsere Fallstudien", "href": "/de/fallstudien" },
+        { "label": "Multikanal-Prospecting", "href": "/de/services/outbound-multicanal" },
+        { "label": "Outbound Academy", "href": "/de/academy" }
+      ]
+    },
+    "backLink": "Zurück zur Startseite"
+  },
+  "nl": {
+    "metaTitle": "Outbound-zelfverbetering: hoe onze B2B-campagnes zichzelf continu optimaliseren | devlo",
+    "metaDescription": "Ontdek hoe devlo een geautomatiseerde intelligentielus gebruikt om elke B2B-prospectiecampagne te verbeteren. 30+ variabelen geanalyseerd, 5 statistische dimensies, continue feedbacklus.",
+    "breadcrumbs": {
+      "home": "Home",
+      "insights": "Insights",
+      "page": "Outbound-zelfverbetering"
+    },
+    "hero": {
+      "tag": "Insight — Eigen methodologie",
+      "h1": "Hoe onze prospectiecampagnes zichzelf automatisch verbeteren",
+      "subtitle": "Elke verstuurde e-mail, elk ontvangen antwoord, elk bezwaar — alles voedt onze intelligentie. Uw campagnes optimaliseren zich continu, zonder handmatige tussenkomst.",
+      "authorName": "Door Charles Perret",
+      "dateLabel": "Maart 2026 · 8 min leestijd"
+    },
+    "section1": {
+      "title": "Waarom de meeste outbound-campagnes niet verbeteren",
+      "p1": "De meeste prospectie-agencies werken lineair: een campagne lanceren, de resultaten bekijken, handmatig bijsturen op gevoel en opnieuw starten. Het probleem? De aanpassingen zijn subjectief, traag en zelden gebaseerd op voldoende data.",
+      "p2": "Wanneer een e-mail niet werkt, wordt de boodschap aangepast. Maar was de boodschap werkelijk het probleem? Of was het de timing? De doelgroep? De lengte? Zonder gestructureerde data is elke aanpassing een gok.",
+      "calloutTitle": "Het echte probleem is niet een gebrek aan data — het is het ontbreken van een gestructureerde feedbacklus.",
+      "calloutText": "De data bestaan in elke campagne. Maar zonder een systeem om ze te verzamelen, te analyseren en om te zetten in acties, verdwijnen ze bij elke nieuwe lancering."
+    },
+    "section2": {
+      "title": "De zelfverbeteringslus in 4 fasen",
+      "intro": "Bij devlo hebben we een systeem gebouwd dat elke prospectie-interactie omzet in leerervaring. Het is geen dashboard — het is een intelligentiemotor die automatisch de volgende campagnes voedt.",
+      "loopNote": "De cyclus herhaalt zich automatisch. Elke campagne start met de inzichten van alle voorgaande."
+    },
+    "howToSteps": [
+      {
+        "title": "Data verzamelen van elke interactie",
+        "description": "Elke verzending, opening, reactie en bezwaar wordt automatisch vastgelegd met meer dan 30 variabelen: functietitel, branche, bedrijfsgrootte, kanaal, dag, tijdstip, berichtlengte, koopsignaal en meer."
+      },
+      {
+        "title": "Analyseren over 5 statistische dimensies",
+        "description": "Doelgroep, inhoud, sequentie, timing en klantoverschrijdende patronen. Elke dimensie wordt getoetst met statistische significantietests (z-test, p < 0,05) om ruis te elimineren."
+      },
+      {
+        "title": "Significante patronen detecteren",
+        "description": "Alleen patronen die de statistische drempels overschrijden, worden behouden. Een antwoordpercentage dat 2x boven het gemiddelde ligt bij een voldoende steekproef? Dat is een patroon. Daaronder? Dat is ruis."
+      },
+      {
+        "title": "Vervolgcampagnes optimaliseren",
+        "description": "Doelgroep, berichten, sequenties en timing worden bijgewerkt op basis van bevestigde patronen. De cyclus begint opnieuw — elke campagne start met betere data dan de vorige."
+      }
+    ],
+    "section3": {
+      "title": "5 analysedimensies, meer dan 30 variabelen — geen intuïtie, alleen bewijs",
+      "intro": "Elke verstuurde e-mail, elk LinkedIn-bericht, elk antwoord genereert gestructureerde data. Ons systeem kruist deze data over 5 onafhankelijke dimensies om patronen te herkennen die het menselijk oog zou missen.",
+      "totalLabel": "actieve variabelen, automatisch geanalyseerd bij elke campagne.",
+      "statsTitle": "Statistische nauwkeurigheid",
+      "statsText": "Een patroon wordt alleen behouden als het een statistische significantietest doorstaat (z-test, p < 0,05) met een minimale steekproef van 30 verzendingen. Geen valse positieven, geen overhaaste conclusies."
+    },
+    "analysisAxes": [
+      {
+        "axis": "Doelgroep",
+        "description": "Welke profielen reageren? Welke branches converteren? Welke bedrijfsgrootte is het meest responsief?",
+        "variables": ["Functietitel", "Branche / sector", "Bedrijfsgrootte", "Land / regio", "Taal van de prospect", "Koopsignaal (intent data)", "Anciënniteit in de functie"]
+      },
+      {
+        "axis": "Inhoud",
+        "description": "Welke e-maillengte presteert het best? Welk personaliseringsniveau? Welke formuleringen leiden tot een reactie?",
+        "variables": ["E-maillengte (4 categorieën)", "Lengte onderwerpregel", "LinkedIn-berichtlengte", "Vermelding van een collega", "Personaliseringsniveau (L0-L4)", "Aantal woorden", "Formuleringen en benaderingshoeken"]
+      },
+      {
+        "axis": "Sequentie",
+        "description": "In welke stap reageert de prospect? Welk kanaal genereert de meeste reacties voor dit profieltype?",
+        "variables": ["Stap die de reactie genereert", "Kanaal (e-mail / LinkedIn / multikanaal)", "Interval tussen stappen", "Totaal aantal stappen", "Kanaalcombinatie"]
+      },
+      {
+        "axis": "Timing",
+        "description": "Welke dag, welk tijdslot? Hoeveel tijd tussen opvolgingen? Is er een seizoensgebonden patroon?",
+        "variables": ["Dag van de week (maandag-zondag)", "Tijdslot (7 categorieën)", "Tijd tot opening", "Tijd tot antwoord", "Seizoensgebondenheid"]
+      },
+      {
+        "axis": "Klantoverschrijdend",
+        "description": "Sommige patronen zijn universeel. Andere zijn sectorspecifiek. Ons systeem maakt automatisch het onderscheid.",
+        "variables": ["Universele vs. specifieke patronen", "Branchebenchmarks", "Koopsignalen per sector", "Prestatie per bedrijfsgrootte", "Vergelijking van antwoordpercentages"]
+      }
+    ],
+    "section4": {
+      "title": "Elk \"nee\" maakt ons beter",
+      "intro": "Wanneer een prospect negatief reageert, gaan de meeste agencies over naar de volgende. Bij devlo is elk bezwaar een bron van leren. Ons systeem classificeert automatisch elke negatieve reactie in 12 verschillende typen.",
+      "flowTitle": "Hoe het in de praktijk werkt",
+      "flowSteps": [
+        "Een prospect reageert met een bezwaar (bijv. \"We hebben al een intern team\")",
+        "Onze AI classificeert het bezwaar (type: In-house) en identificeert het uitlokkende argument in ons bericht",
+        "Wanneer 3+ prospects hetzelfde bezwaar uiten, wordt het gepromoveerd tot een bevestigd patroon",
+        "Een tegenargument wordt gegenereerd en automatisch geïntegreerd in toekomstige berichten",
+        "De cyclus gaat door — het bezwaar dat steeds terugkwam, komt niet meer voor"
+      ],
+      "validityTitle": "Geldigheid van bezwaren",
+      "validityText": "Ons systeem onderscheidt **geldige** bezwaren (ons argument was zwak — het moet verbeterd worden) van **ongeldige** bezwaren (de prospect is verkeerd geïnformeerd — we moeten beter informeren). Dit onderscheid verandert de responsstrategie fundamenteel."
+    },
+    "objectionTypes": [
+      { "type": "Timing", "desc": "De prospect is nu niet gereed" },
+      { "type": "Concurrent", "desc": "Gebruikt al een vergelijkbare dienst" },
+      { "type": "In-house", "desc": "Wordt intern afgehandeld" },
+      { "type": "Budget", "desc": "Geen budget beschikbaar" },
+      { "type": "Geen behoefte", "desc": "Ziet het probleem niet" },
+      { "type": "Niet de beslisser", "desc": "Heeft niet de bevoegdheid" },
+      { "type": "Al klant", "desc": "Bestaande relatie" },
+      { "type": "Technisch bezwaar", "desc": "Waargenomen incompatibiliteit" },
+      { "type": "Positief", "desc": "Interesse bevestigd" },
+      { "type": "Neutraal", "desc": "Reactie zonder duidelijke toezegging" },
+      { "type": "Afwezig", "desc": "Tijdelijke afwezigheid" },
+      { "type": "Spamklacht", "desc": "Afwijzing van het outreach-formaat" }
+    ],
+    "section5": {
+      "title": "Waarom we geen klassieke A/B-tests uitvoeren",
+      "p1": "Traditionele A/B-tests vereisen een hoog volume om statistische significantie te bereiken. Bij B2B-prospectie zijn de volumes vaak te laag om twee varianten parallel betrouwbaar te testen.",
+      "p2": "Onze aanpak is anders: **sequentiële evolutie**. We vergelijken Batch N+1 met Batch N op dezelfde metrieken. Slechts één variabele verandert per hypothese. Als het resultaat verbetert, behouden we het. Zo niet, dan draaien we terug.",
+      "classicTitle": "Klassieke A/B-test",
+      "classicItems": ["Vereist duizenden verzendingen", "Twee varianten parallel", "Verdunt het volume per variant", "Onduidelijke resultaten bij laag volume"],
+      "sequentialTitle": "Sequentiële evolutie (devlo)",
+      "sequentialItems": ["Werkt vanaf slechts 30 verzendingen per variabele", "Vergelijking Batch N vs. N+1", "Eén variabele tegelijk — duidelijke oorzaak", "Vooraf gedefinieerde terugdraaidrempel"],
+      "conclusion": "Elke hypothese wordt vóór de test gedocumenteerd: welke variabele verandert, welk resultaat wordt verwacht en bij welke drempel we terugdraaien. Geen ruimte voor toeval."
+    },
+    "section6": {
+      "title": "Wat we overdragen tussen klanten — en wat we nooit vermengen",
+      "intro": "Ons systeem analyseert patronen op twee niveaus. Sommige bevindingen zijn universeel en komen al onze klanten ten goede. Andere zijn specifiek voor een sector, een doelgroep, een product — en blijven strikt gescheiden.",
+      "transferableTitle": "Overdraagbaar (klantoverschrijdend)",
+      "transferableItems": [
+        "**Timing:** optimale dagen en tijdsloten",
+        "**Lengte:** ideaal aantal woorden per kanaal",
+        "**Structuur:** sequentiestappen die presteren",
+        "**Personalisering:** optimaal niveau (L0-L4)",
+        "**Afleverbaarheid:** opwarm- en hygiënepraktijken"
+      ],
+      "isolatedTitle": "Geïsoleerd (klantspecifiek)",
+      "isolatedItems": [
+        "**Inhoud:** waardepropositie, argumenten",
+        "**Bezwaren:** specifiek voor de branche van de klant",
+        "**ICP:** doelprofielen eigen aan het product",
+        "**Data:** contacten, bedrijven, gesprekken",
+        "**Signalen:** intent data en specifieke triggers"
+      ],
+      "privacyTitle": "Vertrouwelijkheid gegarandeerd",
+      "privacyText": "De prospectiedata van een klant worden nooit gedeeld met een andere. Alleen geaggregeerde statistische patronen (bijv. \"e-mails van 80 woorden presteren beter dan die van 120\") worden overgedragen. Geen persoonsgegevens, geen specifieke inhoud."
+    },
+    "section7": {
+      "title": "Voor / Na: wat er is veranderd",
+      "intro": "We hebben onze campagnes altijd geanalyseerd en geprobeerd te verbeteren. Het verschil? Wat vroeger uren handmatige, subjectieve analyse kostte, is nu automatisch, continu en statistisch onderbouwd.",
+      "beforeTitle": "Voorheen — handmatige analyse",
+      "beforeItems": ["Maandelijkse resultatenreview", "Aanpassingen op gevoel", "Geen opvolging van bezwaren", "Onmogelijk om variabelen te kruisen", "Inzichten raken verloren", "Elke klant begint vanaf nul"],
+      "afterTitle": "Nu — geautomatiseerde lus",
+      "afterItems": ["Dagelijkse automatische verzameling", "Wekelijkse statistische analyse", "12 bezwaartypen geclassificeerd", "5 dimensies gelijktijdig gekruist", "Patronen gedocumenteerd en cumulatief", "Nieuwe klanten profiteren van klantoverschrijdende historie"],
+      "conclusion": "Het resultaat: campagnes die sterker starten, sneller verbeteren en intelligentie opbouwen in plaats van verliezen."
+    },
+    "cta": {
+      "heading": "Uw campagnes zouden zichzelf automatisch kunnen verbeteren",
+      "body": "Laten we het hebben over uw B2B-prospectie. We laten u zien hoe onze zelfverbeteringslus uw resultaten kan transformeren.",
+      "primaryButton": "Gesprek inplannen",
+      "secondaryButton": "Onze resultaten bekijken"
+    },
+    "sidebar": {
+      "ctaTitle": "Interesse gewekt?",
+      "ctaBody": "Laten we het hebben over uw B2B-prospectie. We laten u zien hoe deze methodologie uw resultaten kan transformeren.",
+      "ctaButton": "Gratis consultatie",
+      "linksTitle": "Ook op devlo",
+      "links": [
+        { "label": "Onze casestudy's", "href": "/nl/case-studies" },
+        { "label": "Multikanaal-prospectie", "href": "/nl/services/outbound-multicanal" },
+        { "label": "Outbound Academy", "href": "/nl/academy" }
+      ]
+    },
+    "backLink": "Terug naar home"
+  }
+}

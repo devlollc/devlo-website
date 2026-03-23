@@ -317,6 +317,12 @@
     "de": "/de/alternative-b2b-akquise-agenturen",
     "nl": "/nl/alternatief-b2b-prospectie-bureaus"
   },
+  "insight:auto-amelioration-outbound": {
+    "fr": "/insights/auto-amelioration-outbound",
+    "en": "/en/insights/outbound-self-improvement",
+    "de": "/de/insights/outbound-selbstoptimierung",
+    "nl": "/nl/insights/outbound-zelfverbetering"
+  },
   "insight:dictation-clean": {
     "fr": "/insights/dictation-clean",
     "en": "/en/insights/dictation-clean",

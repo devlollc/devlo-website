@@ -26,7 +26,8 @@ import { ALTERNATIVE_PAGES } from "@/content/alternatives";
 import { agencyContent } from "@/content/agency";
 import { SERVICE_PAGE_DATA, type ServiceSlug } from "@/content/services";
 import { academySeo, caseStudiesSeo, conditionsSeo, consultationSeo, homeSeo } from "@/content/masterfile.fr";
-import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedColdEmailSequenceShared } from "@/lib/i18n/insights-helpers";
+import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedAutoAmelioration } from "@/lib/i18n/insights-helpers";
+import { AutoAmeliorationMasterPage } from "@/components/pages/auto-amelioration-master-page";
 import { getLocalizedBlogArticle } from "@/lib/i18n/blog-content";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
@@ -253,6 +254,15 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
     };
   }
 
+  if (path === "/insights/auto-amelioration-outbound") {
+    return {
+      title: "Auto-amélioration outbound : comment nos campagnes B2B s'optimisent en continu",
+      description:
+        "Découvrez comment devlo utilise une boucle d'intelligence automatique pour améliorer chaque campagne de prospection B2B.",
+      type: "article" as const,
+    };
+  }
+
   if (path === "/insights/buying-signals") {
     return {
       title: "94 Signaux d'Intention d'Achat B2B — Le Guide Complet pour Identifier vos Prospects",
@@ -412,6 +422,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedAlternativeSeo = resolved.frPath.startsWith("/alternative-")
     ? getLocalizedAlternativeContent(resolved.frPath.slice(1), resolved.locale)
     : null;
+  const localizedAutoAmeliorationSeo = resolved.frPath === "/insights/auto-amelioration-outbound"
+    ? getLocalizedAutoAmelioration(resolved.locale)
+    : null;
   const localizedInsightsHubSeo = resolved.frPath === "/insights"
     ? getLocalizedInsightsHub(resolved.locale)
     : null;
@@ -429,6 +442,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         title: getLocalizedAiSalesOpsContent(resolved.locale).metaTitle,
         description: getLocalizedAiSalesOpsContent(resolved.locale).metaDescription,
       }
+    : localizedAutoAmeliorationSeo
+      ? {
+          title: localizedAutoAmeliorationSeo.metaTitle,
+          description: localizedAutoAmeliorationSeo.metaDescription,
+          type: "article" as const,
+        }
     : localizedInsightsHubSeo
       ? {
           title: localizedInsightsHubSeo.metaTitle,
@@ -601,6 +620,10 @@ export default async function LocalizedRoutePage({ params }: Params) {
 
   if (frPath === "/insights") {
     return <InsightsHubMasterPage locale={resolved.locale} />;
+  }
+
+  if (frPath === "/insights/auto-amelioration-outbound") {
+    return <AutoAmeliorationMasterPage locale={resolved.locale} />;
   }
 
   if (frPath === "/insights/buying-signals") {

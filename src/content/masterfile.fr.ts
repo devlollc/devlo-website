@@ -17,6 +17,12 @@ export type MethodStep = {
   title: string;
   text: string;
   icon: "Target" | "PenTool" | "LayoutTemplate" | "Database" | "Send" | "CalendarCheck";
+  feedback?: string;
+};
+
+export type FeedbackLoopStep = {
+  title: string;
+  description: string;
 };
 
 export type WrittenTestimonial = {
@@ -72,7 +78,7 @@ export const homeContent = {
     h1: "Boostez votre prospection commerciale B2B avec notre agence de génération de leads et de téléprospection",
     h2: "Nous prenons des rendez-vous qualifiés pour vous : externalisez votre développement commercial B2B à notre agence.",
     paragraph:
-      "La **prospection commerciale B2B** est définie comme l'ensemble des actions permettant d'identifier, contacter et convertir des décideurs professionnels en opportunités de vente qualifiées. devlo est votre partenaire de confiance pour la **génération de leads**, la **prospection multicanal** et la **prise de rendez-vous qualifiés** — avec plus de 1'000 campagnes déployées depuis 2020. Selon le rapport [State of Sales de Salesforce](https://www.salesforce.com/resources/research-reports/state-of-sales/), 60% du temps des commerciaux est absorbé par des tâches non commerciales — devlo automatise ces tâches pour que vos équipes se concentrent uniquement sur le closing.",
+      "devlo est votre partenaire pour la **génération de leads**, la **prospection multicanal** et la **prise de rendez-vous qualifiés** — avec plus de 1'000 campagnes déployées depuis 2020. Nous automatisons la prospection pour que vos équipes se concentrent sur le closing.",
     ctaPrimary: { label: "Planifier votre consultation gratuite →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
     ctaServices: { label: "Voir nos services →", href: "/services" },
@@ -241,39 +247,71 @@ export const homeContent = {
       text: "La croissance exige des **tests rapides**. Par conséquent, devlo explore de nouveaux marchés et teste vos offres pour que vous puissiez valider l'**adéquation produit-marché** sans risque — avec des premiers résultats dès la 3e semaine.",
     },
   ] as HomeCard[],
-  methodTitle: "Notre méthodologie de prospection outbound en 6 étapes",
+  methodTitle: "Notre méthodologie de prospection — améliorée en continu",
   methodSteps: [
     {
       title: "Ciblage de précision",
-      text: "Nous ne devinons jamais. Nous créons un **Profil Client Idéal (ICP)** précis avec vous. Nous sélectionnons les secteurs, tailles d'entreprise et fonctions qui génèrent votre chiffre d'affaires.",
+      text: "Nous créons un **Profil Client Idéal (ICP)** précis avec vous. Secteurs, tailles d'entreprise et fonctions — rien n'est laissé au hasard.",
       icon: "Target",
+      feedback: "Notre système identifie quels profils répondent le mieux — titres de poste, industries, tailles d'entreprise. Votre ciblage s'affine campagne après campagne.",
     },
     {
       title: "Alignement de la proposition de valeur",
-      text: "Nous étudions votre marque. Nous extrayons vos arguments commerciaux et vos success stories. Nous construisons un message que les **décideurs** remarquent.",
+      text: "Nous extrayons vos arguments commerciaux et vos success stories. Nous construisons un message que les **décideurs** remarquent.",
       icon: "PenTool",
+      feedback: "Chaque objection reçue est classifiée automatiquement. Les contre-arguments sont intégrés dans vos prochains messages — votre proposition de valeur se renforce à chaque campagne.",
     },
     {
       title: "Stratégie de campagne",
-      text: "Nous concevons des séquences de prospection sur mesure — **email**, **LinkedIn** et **téléphone** — pour maintenir votre marque en top of mind.",
+      text: "Nous concevons des séquences sur mesure — **email**, **LinkedIn** et **téléphone** — pour maintenir votre marque en top of mind.",
       icon: "LayoutTemplate",
+      feedback: "Canal, jour d'envoi, créneau horaire, structure de séquence — nos données déterminent la combinaison optimale pour votre audience spécifique.",
     },
     {
       title: "Sourcing et vérification des données",
-      text: "Nous trouvons les prospects qui correspondent à votre ICP. Nous vérifions les informations de contact pour garantir une **haute délivrabilité** et un faible taux de rebond.",
+      text: "Nous trouvons les prospects qui correspondent à votre ICP et vérifions les informations de contact pour garantir une **haute délivrabilité**.",
       icon: "Database",
+      feedback: "De nouveaux segments de marché émergent des patterns cross-client. Les signaux d'achat les plus performants sont automatiquement priorisés.",
     },
     {
       title: "Activation multicanal",
-      text: "Nous lançons la prospection. Nous gérons les réponses et filtrons les contacts non intéressés pour ne vous transmettre que l'**intérêt réel**.",
+      text: "Nous lançons la prospection, gérons les réponses et filtrons les contacts non intéressés pour ne transmettre que l'**intérêt réel**.",
       icon: "Send",
+      feedback: "Longueur des emails, niveau de personnalisation, formulations — chaque variable est testée et optimisée statistiquement sur vos vrais résultats.",
     },
     {
       title: "Qualification et prise de rendez-vous",
       text: "Nous qualifions les leads par **budget** et **autorité décisionnelle**. Quand un lead est prêt, nous planifions votre rendez-vous.",
       icon: "CalendarCheck",
+      feedback: "Les questions de qualification sont affinées en continu. Les informations collectées accélèrent la conversion de chaque réponse en rendez-vous.",
     },
   ] as MethodStep[],
+  feedbackLoop: {
+    title: "Auto-amélioration continue",
+    subtitle: "Chaque interaction nourrit la suivante. Ce n'est pas un process linéaire — c'est une boucle d'intelligence qui s'améliore automatiquement, pour tous nos clients.",
+    steps: [
+      {
+        title: "Collecter",
+        description: "Chaque envoi, ouverture, réponse et objection est capturée — plus de 30 variables par interaction.",
+      },
+      {
+        title: "Analyser",
+        description: "5 axes d'analyse statistique : ciblage, contenu, séquence, timing et patterns cross-client.",
+      },
+      {
+        title: "Détecter",
+        description: "Seuls les patterns statistiquement significatifs sont retenus. Pas d'intuition — des preuves.",
+      },
+      {
+        title: "Optimiser",
+        description: "Ciblage, messages et séquences sont mis à jour. Le cycle recommence avec de meilleures données.",
+      },
+    ] as FeedbackLoopStep[],
+    cta: {
+      label: "Découvrir notre méthode en détail",
+      href: "/insights/auto-amelioration-outbound",
+    },
+  },
   whyTitle: "Pourquoi choisir devlo comme partenaire ?",
   whyAnswer: "devlo est le partenaire idéal pour les entreprises B2B qui veulent des rendez-vous qualifiés rapidement, sans recruter. Résultats visibles dès la 3e semaine.",
   whyCards: [

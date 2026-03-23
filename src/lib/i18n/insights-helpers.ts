@@ -1,6 +1,7 @@
 import insightsContent from "@/lib/i18n/insights-content.json";
 import coldEmailHubContent from "@/lib/i18n/cold-email-hub-content.json";
 import coldEmailSequencesContent from "@/lib/i18n/cold-email-sequences-content.json";
+import autoAmeliorationContent from "@/lib/i18n/auto-amelioration-content.json";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 type Signal = {
@@ -281,4 +282,26 @@ export function getLocalizedColdEmailSequenceShared(locale: SupportedLocale) {
 
 export function getColdEmailSequenceSlugs(): string[] {
   return coldEmailSequencesContent._meta.slugs;
+}
+
+export function getLocalizedAutoAmelioration(locale: SupportedLocale) {
+  return (autoAmeliorationContent as Record<string, unknown>)[locale] as {
+    metaTitle: string;
+    metaDescription: string;
+    breadcrumbs: { home: string; insights: string; page: string };
+    hero: { tag: string; h1: string; subtitle: string; authorName: string; dateLabel: string };
+    section1: { title: string; p1: string; p2: string; calloutTitle: string; calloutText: string };
+    section2: { title: string; intro: string; loopNote: string };
+    howToSteps: Array<{ title: string; description: string }>;
+    section3: { title: string; intro: string; totalLabel: string; statsTitle: string; statsText: string };
+    analysisAxes: Array<{ axis: string; description: string; variables: string[] }>;
+    section4: { title: string; intro: string; flowTitle: string; flowSteps: string[]; validityTitle: string; validityText: string };
+    objectionTypes: Array<{ type: string; desc: string }>;
+    section5: { title: string; p1: string; p2: string; classicTitle: string; classicItems: string[]; sequentialTitle: string; sequentialItems: string[]; conclusion: string };
+    section6: { title: string; intro: string; transferableTitle: string; transferableItems: string[]; isolatedTitle: string; isolatedItems: string[]; privacyTitle: string; privacyText: string };
+    section7: { title: string; intro: string; beforeTitle: string; beforeItems: string[]; afterTitle: string; afterItems: string[]; conclusion: string };
+    cta: { heading: string; body: string; primaryButton: string; secondaryButton: string };
+    sidebar: { ctaTitle: string; ctaBody: string; ctaButton: string; linksTitle: string; links: Array<{ label: string; href: string }> };
+    backLink: string;
+  };
 }

@@ -11,6 +11,7 @@ import {
   LayoutTemplate,
   PenTool,
   PiggyBank,
+  RefreshCw,
   Rocket,
   Send,
   ShieldCheck,
@@ -33,6 +34,7 @@ import { WistiaThumbnailTrigger } from "@/components/ui/wistia-thumbnail-trigger
 import { caseStudiesCards, homeContent } from "@/content/masterfile.fr";
 import type { CaseStudyCard as MasterCaseStudyCard } from "@/content/masterfile.fr";
 import { SERVICE_HUB_CARDS, type ServiceHubCard } from "@/content/services";
+import { FeedbackLoopDiagram } from "@/components/home/feedback-loop-diagram";
 
 const noRecruitIcons = [Target, PiggyBank, Rocket] as const;
 const whyIcons = [
@@ -316,33 +318,104 @@ export function HomePage({
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.methodTitle}</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-7 text-neutral-600">
+            6 étapes éprouvées, chacune améliorée en continu par les données réelles de vos campagnes.
+          </p>
         </FadeInOnScroll>
 
-        <div className="mx-auto mt-10 max-w-[980px] space-y-3">
-          {methodSteps.map((step, index) => {
-            const Icon = methodIconMap[step.icon];
-            return (
-              <FadeInOnScroll key={step.title} delay={index * 0.1}>
-                <article className="relative rounded-2xl border border-neutral-200 bg-white p-4 md:p-5 shadow-soft">
-                  {index < methodSteps.length - 1 ? (
-                    <div className="absolute left-[23px] top-[46px] h-[calc(100%+12px)] border-l-2 border-dashed border-devlo-100" />
-                  ) : null}
-                  <div className="flex items-start gap-4">
-                    <div className="relative z-10 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-devlo-800 text-xs font-bold text-white">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3">
-                        <Icon className="h-5 w-5 text-devlo-700" aria-hidden />
-                        <h3 className="text-xl font-semibold text-devlo-900">{step.title}</h3>
+        <div className="mx-auto mt-10 grid max-w-[1200px] gap-10 lg:grid-cols-[1fr_380px]">
+          {/* Left column — 6 methodology steps with feedback */}
+          <div className="space-y-3">
+            {methodSteps.map((step, index) => {
+              const Icon = methodIconMap[step.icon];
+              const isLast = index === methodSteps.length - 1;
+              return (
+                <FadeInOnScroll key={step.title} delay={index * 0.08}>
+                  <article className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4 shadow-soft transition-all duration-300 hover:shadow-panel md:p-5">
+                    {!isLast ? (
+                      <div className="absolute left-[23px] top-[46px] h-[calc(100%+12px)] border-l-2 border-dashed border-devlo-100" />
+                    ) : null}
+                    <div className="flex items-start gap-4">
+                      <div className="relative z-10 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-devlo-800 text-xs font-bold text-white">
+                        {String(index + 1).padStart(2, "0")}
                       </div>
-                      <RichParagraph className="mt-2 text-sm leading-6 text-neutral-600">{step.text}</RichParagraph>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3">
+                          <Icon className="h-5 w-5 text-devlo-700" aria-hidden />
+                          <h3 className="text-lg font-semibold text-devlo-900">{step.title}</h3>
+                        </div>
+                        <RichParagraph className="mt-1.5 text-sm leading-6 text-neutral-600">{step.text}</RichParagraph>
+                        {step.feedback ? (
+                          <div className="mt-2.5 flex items-start gap-2 rounded-lg bg-devlo-50 px-3 py-2">
+                            <RefreshCw className="mt-0.5 h-3.5 w-3.5 shrink-0 text-devlo-600" aria-hidden />
+                            <p className="text-xs leading-5 text-devlo-700">{step.feedback}</p>
+                          </div>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </FadeInOnScroll>
+              );
+            })}
+            {/* Return arrow — visual indicator that the loop closes */}
+            <FadeInOnScroll delay={0.5}>
+              <div className="flex items-center gap-3 pl-[23px]">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-devlo-600 text-white">
+                  <RefreshCw className="h-4 w-4" aria-hidden />
+                </div>
+                <p className="text-sm font-semibold text-devlo-700">
+                  Retour à l&apos;étape 1 — le cycle recommence avec de meilleures données
+                </p>
+              </div>
+            </FadeInOnScroll>
+          </div>
+
+          {/* Right column — Feedback loop diagram (sticky spans all 6 steps) */}
+          <div className="hidden lg:block">
+            <div className="sticky top-24">
+              <FadeInOnScroll delay={0.3} direction="right">
+                <div className="rounded-2xl border border-devlo-100 bg-devlo-50 p-6 shadow-soft lg:p-8">
+                  <h3 className="text-center text-xl font-bold text-devlo-900">
+                    {content.feedbackLoop?.title ?? "Auto-amélioration continue"}
+                  </h3>
+                  <p className="mx-auto mt-2 max-w-[300px] text-center text-xs leading-relaxed text-devlo-700/70">
+                    Active sur les 6 étapes de notre méthodologie
+                  </p>
+                  {content.feedbackLoop ? (
+                    <div className="mt-6">
+                      <FeedbackLoopDiagram
+                        steps={content.feedbackLoop.steps}
+                        subtitle={content.feedbackLoop.subtitle}
+                        cta={content.feedbackLoop.cta}
+                      />
+                    </div>
+                  ) : null}
+                </div>
               </FadeInOnScroll>
-            );
-          })}
+            </div>
+          </div>
+          {/* Mobile: show feedback loop after all steps */}
+          <div className="lg:hidden">
+            <FadeInOnScroll delay={0.3}>
+              <div className="rounded-2xl border border-devlo-100 bg-devlo-50 p-6 shadow-soft">
+                <h3 className="text-center text-xl font-bold text-devlo-900">
+                  {content.feedbackLoop?.title ?? "Auto-amélioration continue"}
+                </h3>
+                <p className="mx-auto mt-2 max-w-[300px] text-center text-xs leading-relaxed text-devlo-700/70">
+                  Active sur les 6 étapes de notre méthodologie
+                </p>
+                {content.feedbackLoop ? (
+                  <div className="mt-6">
+                    <FeedbackLoopDiagram
+                      steps={content.feedbackLoop.steps}
+                      subtitle={content.feedbackLoop.subtitle}
+                      cta={content.feedbackLoop.cta}
+                    />
+                  </div>
+                ) : null}
+              </div>
+            </FadeInOnScroll>
+          </div>
         </div>
       </SectionWrapper>
 
