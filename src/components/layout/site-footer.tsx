@@ -177,7 +177,7 @@ function FooterList({
 }
 
 const caseStudiesLinkClassName =
-  "block whitespace-normal break-words text-sm leading-6 text-neutral-600 transition hover:text-devlo-900";
+  "block whitespace-nowrap overflow-hidden text-ellipsis text-xs leading-5 text-neutral-600 transition hover:text-devlo-900";
 
 export function SiteFooter() {
   const pathname = usePathname();
@@ -308,7 +308,6 @@ export function SiteFooter() {
           <FooterList
             title={labels.caseStudies}
             links={caseStudyLinks}
-            scrollable
             linkClassName={caseStudiesLinkClassName}
           />
         </div>
