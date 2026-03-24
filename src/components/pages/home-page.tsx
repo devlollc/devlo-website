@@ -319,7 +319,7 @@ export function HomePage({
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.methodTitle}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-7 text-neutral-600">
-            6 étapes éprouvées, chacune améliorée en continu par les données réelles de vos campagnes.
+            {(content as Record<string, unknown>).methodDesc as string ?? "6 étapes éprouvées, chacune améliorée en continu par les données réelles de vos campagnes."}
           </p>
         </FadeInOnScroll>
 
@@ -364,7 +364,7 @@ export function HomePage({
                   <RefreshCw className="h-4 w-4" aria-hidden />
                 </div>
                 <p className="text-sm font-semibold text-devlo-700">
-                  Retour à l&apos;étape 1 — le cycle recommence avec de meilleures données
+                  {(content as Record<string, unknown>).methodReturnLabel as string ?? "Retour à l'étape 1 — le cycle recommence avec de meilleures données"}
                 </p>
               </div>
             </FadeInOnScroll>
@@ -379,7 +379,7 @@ export function HomePage({
                     {content.feedbackLoop?.title ?? "Auto-amélioration continue"}
                   </h3>
                   <p className="mx-auto mt-2 max-w-[300px] text-center text-xs leading-relaxed text-devlo-700/70">
-                    Active sur les 6 étapes de notre méthodologie
+                    {(content.feedbackLoop as Record<string, unknown> | undefined)?.activeLabel as string ?? "Active sur les 6 étapes de notre méthodologie"}
                   </p>
                   {content.feedbackLoop ? (
                     <div className="mt-6">
@@ -387,6 +387,8 @@ export function HomePage({
                         steps={content.feedbackLoop.steps}
                         subtitle={content.feedbackLoop.subtitle}
                         cta={content.feedbackLoop.cta}
+                        centerLabel={(content.feedbackLoop as Record<string, unknown>).centerLabel as [string, string] | undefined}
+                        hoverHint={(content.feedbackLoop as Record<string, unknown>).hoverHint as string | undefined}
                       />
                     </div>
                   ) : null}
@@ -402,7 +404,7 @@ export function HomePage({
                   {content.feedbackLoop?.title ?? "Auto-amélioration continue"}
                 </h3>
                 <p className="mx-auto mt-2 max-w-[300px] text-center text-xs leading-relaxed text-devlo-700/70">
-                  Active sur les 6 étapes de notre méthodologie
+                  {(content.feedbackLoop as Record<string, unknown> | undefined)?.activeLabel as string ?? "Active sur les 6 étapes de notre méthodologie"}
                 </p>
                 {content.feedbackLoop ? (
                   <div className="mt-6">
@@ -410,6 +412,8 @@ export function HomePage({
                       steps={content.feedbackLoop.steps}
                       subtitle={content.feedbackLoop.subtitle}
                       cta={content.feedbackLoop.cta}
+                      centerLabel={(content.feedbackLoop as Record<string, unknown>).centerLabel as [string, string] | undefined}
+                      hoverHint={(content.feedbackLoop as Record<string, unknown>).hoverHint as string | undefined}
                     />
                   </div>
                 ) : null}

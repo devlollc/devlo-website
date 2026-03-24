@@ -248,6 +248,8 @@ export const homeContent = {
     },
   ] as HomeCard[],
   methodTitle: "Notre méthodologie de prospection — améliorée en continu",
+  methodDesc: "6 étapes éprouvées, chacune améliorée en continu par les données réelles de vos campagnes.",
+  methodReturnLabel: "Retour à l'étape 1 — le cycle recommence avec de meilleures données",
   methodSteps: [
     {
       title: "Ciblage de précision",
@@ -289,6 +291,9 @@ export const homeContent = {
   feedbackLoop: {
     title: "Auto-amélioration continue",
     subtitle: "Chaque interaction nourrit la suivante. Ce n'est pas un process linéaire — c'est une boucle d'intelligence qui s'améliore automatiquement, pour tous nos clients.",
+    centerLabel: ["Boucle", "continue"] as [string, string],
+    hoverHint: "Survolez une étape pour en savoir plus",
+    activeLabel: "Active sur les 6 étapes de notre méthodologie",
     steps: [
       {
         title: "Collecter",

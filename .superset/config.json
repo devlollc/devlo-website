@@ -1,0 +1,9 @@
+{
+  "setup": [
+    "secrets-sync --project devlo-website\nbun install"
+  ],
+  "teardown": [],
+  "run": [
+    "bun dev"
+  ]
+}

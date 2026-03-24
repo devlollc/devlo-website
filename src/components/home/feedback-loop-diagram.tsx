@@ -10,6 +10,8 @@ type FeedbackLoopDiagramProps = {
   steps: FeedbackLoopStep[];
   subtitle: string;
   cta: { label: string; href: string };
+  centerLabel?: [string, string];
+  hoverHint?: string;
 };
 
 const LOOP_COLORS = [
@@ -19,7 +21,13 @@ const LOOP_COLORS = [
   { bg: "bg-devlo-800", border: "border-devlo-700", text: "text-white" },
 ] as const;
 
-export function FeedbackLoopDiagram({ steps, subtitle, cta }: FeedbackLoopDiagramProps) {
+export function FeedbackLoopDiagram({
+  steps,
+  subtitle,
+  cta,
+  centerLabel = ["Boucle", "continue"],
+  hoverHint = "Survolez une étape pour en savoir plus",
+}: FeedbackLoopDiagramProps) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
@@ -63,8 +71,8 @@ export function FeedbackLoopDiagram({ steps, subtitle, cta }: FeedbackLoopDiagra
         {/* Center label */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="rounded-full bg-devlo-900 px-3 py-1.5 text-center shadow-panel">
-            <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-white/60">Boucle</p>
-            <p className="text-[11px] font-bold text-white">continue</p>
+            <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-white/60">{centerLabel[0]}</p>
+            <p className="text-[11px] font-bold text-white">{centerLabel[1]}</p>
           </div>
         </div>
 
@@ -72,9 +80,9 @@ export function FeedbackLoopDiagram({ steps, subtitle, cta }: FeedbackLoopDiagra
         {steps.map((step, i) => {
           const positions = [
             { top: "-4px", left: "50%", tx: "-50%", ty: "0" },
-            { top: "50%", right: "-4px", tx: "0", ty: "-50%" },
+            { top: "50%", right: "-14px", tx: "45%", ty: "-50%" },
             { bottom: "-4px", left: "50%", tx: "-50%", ty: "0" },
-            { top: "50%", left: "-4px", tx: "0", ty: "-50%" },
+            { top: "50%", left: "-14px", tx: "-45%", ty: "-50%" },
           ];
           const pos = positions[i];
           const colors = LOOP_COLORS[i];
@@ -113,7 +121,7 @@ export function FeedbackLoopDiagram({ steps, subtitle, cta }: FeedbackLoopDiagra
           </p>
         ) : (
           <p className="mx-auto max-w-[280px] text-xs leading-relaxed text-neutral-400 italic">
-            Survolez une étape pour en savoir plus
+            {hoverHint}
           </p>
         )}
       </div>

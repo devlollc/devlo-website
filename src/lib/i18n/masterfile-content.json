@@ -618,7 +618,41 @@
         "**Prospection multicanal** : combiner email froid, LinkedIn et téléphone génère jusqu'à 3× plus de réponses qualifiées que le canal unique selon [RAIN Group Research](https://www.rainsalestraining.com/blog/stats-on-sales-prospecting).",
         "**Personnalisation IA** : les équipes qui personnalisent leurs séquences avec l'IA voient leur taux de conversion augmenter de 50% selon [McKinsey & Company](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/next-in-personalization-2021).",
         "**Réactivité décisive** : contacter un prospect dans les [5 premières minutes](https://hbr.org/2011/03/the-short-life-of-online-sales-leads) après un signal d'intérêt multiplie les chances de conversion par 100× (Harvard Business Review)."
-      ]
+      ],
+      "feedbackLoop": {
+        "title": "Auto-amélioration continue",
+        "subtitle": "Chaque interaction nourrit la suivante. Ce n'est pas un process linéaire — c'est une boucle d'intelligence qui s'améliore automatiquement, pour tous nos clients.",
+        "centerLabel": [
+          "Boucle",
+          "continue"
+        ],
+        "hoverHint": "Survolez une étape pour en savoir plus",
+        "activeLabel": "Active sur les 6 étapes de notre méthodologie",
+        "steps": [
+          {
+            "title": "Collecter",
+            "description": "Chaque envoi, ouverture, réponse et objection est capturée — plus de 30 variables par interaction."
+          },
+          {
+            "title": "Analyser",
+            "description": "5 axes d'analyse statistique : ciblage, contenu, séquence, timing et patterns cross-client."
+          },
+          {
+            "title": "Détecter",
+            "description": "Seuls les patterns statistiquement significatifs sont retenus. Pas d'intuition — des preuves."
+          },
+          {
+            "title": "Optimiser",
+            "description": "Ciblage, messages et séquences sont mis à jour. Le cycle recommence avec de meilleures données."
+          }
+        ],
+        "cta": {
+          "label": "Découvrir notre méthode en détail",
+          "href": "/insights/auto-amelioration-outbound"
+        }
+      },
+      "methodDesc": "6 étapes éprouvées, chacune améliorée en continu par les données réelles de vos campagnes.",
+      "methodReturnLabel": "Retour à l'étape 1 — le cycle recommence avec de meilleures données"
     },
     "consultationSeo": {
       "title": "Consultation gratuite | Stratégie de prospection B2B sur mesure",
@@ -1815,7 +1849,41 @@
         "**Multi-channel prospecting**: according to RAIN Group Research, combining email, LinkedIn and telephone generates up to [3× more responses](https://www.rainsalestraining.com/blog/stats-on-sales-prospecting) than a single channel.",
         "**AI automation**: according to McKinsey, teams that personalise their sequences with AI see their conversion rate increase by [50%](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/next-in-personalization-2021)."
       ],
-      "whyAnswer": "devlo is the ideal partner for B2B companies that want qualified appointments quickly, without recruiting. Visible results from the 3rd week."
+      "whyAnswer": "devlo is the ideal partner for B2B companies that want qualified appointments quickly, without recruiting. Visible results from the 3rd week.",
+      "feedbackLoop": {
+        "title": "Continuous self-improvement",
+        "subtitle": "Each interaction feeds the next. This is not a linear process — it is an intelligence loop that improves automatically, for all our clients.",
+        "centerLabel": [
+          "Continuous",
+          "loop"
+        ],
+        "hoverHint": "Hover over a step to learn more",
+        "activeLabel": "Active across all 6 steps of our methodology",
+        "steps": [
+          {
+            "title": "Collect",
+            "description": "Every send, open, reply and objection is captured — over 30 variables per interaction."
+          },
+          {
+            "title": "Analyse",
+            "description": "5 statistical analysis axes: targeting, content, sequence, timing and cross-client patterns."
+          },
+          {
+            "title": "Detect",
+            "description": "Only statistically significant patterns are retained. No intuition — evidence."
+          },
+          {
+            "title": "Optimise",
+            "description": "Targeting, messages and sequences are updated. The cycle restarts with better data."
+          }
+        ],
+        "cta": {
+          "label": "Discover our method in detail",
+          "href": "/insights/auto-amelioration-outbound"
+        }
+      },
+      "methodDesc": "6 proven steps, each continuously improved by real data from your campaigns.",
+      "methodReturnLabel": "Back to step 1 — the cycle restarts with better data"
     },
     "consultationSeo": {
       "title": "Free consultation | Tailor-made B2B prospecting strategy",
@@ -2961,7 +3029,41 @@
         "**Multi-Channel-Werbung**: Laut RAIN Group Research führt die Kombination von E-Mail, LinkedIn und Telefon zu bis zu [3× mehr Antworten](https://www.rainsalestraining.com/blog/stats-on-sales-prospecting) als ein einzelner Kanal.",
         "**Automatisierte KI**: Laut McKinsey steigt die Konversionsrate bei Teams, die ihre Sequenzen mithilfe von KI personalisieren, um [50%](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/next-in-personalization-2021)."
       ],
-      "whyAnswer": "devlo ist der ideale Partner für B2B-Unternehmen, die schnell qualifizierte Termine haben möchten, ohne jemanden einzustellen. Sichtbare Ergebnisse ab der dritten Woche."
+      "whyAnswer": "devlo ist der ideale Partner für B2B-Unternehmen, die schnell qualifizierte Termine haben möchten, ohne jemanden einzustellen. Sichtbare Ergebnisse ab der dritten Woche.",
+      "feedbackLoop": {
+        "title": "Kontinuierliche Selbstverbesserung",
+        "subtitle": "Jede Interaktion bereichert die nächste. Das ist kein linearer Prozess — es ist eine Intelligenzschleife, die sich automatisch verbessert, für alle unsere Kunden.",
+        "centerLabel": [
+          "Kontinuierliche",
+          "Schleife"
+        ],
+        "hoverHint": "Fahren Sie über einen Schritt, um mehr zu erfahren",
+        "activeLabel": "Aktiv in allen 6 Schritten unserer Methodik",
+        "steps": [
+          {
+            "title": "Erfassen",
+            "description": "Jeder Versand, jede Öffnung, jede Antwort und jeder Einwand wird erfasst — über 30 Variablen pro Interaktion."
+          },
+          {
+            "title": "Analysieren",
+            "description": "5 statistische Analyseachsen: Zielgruppe, Inhalt, Sequenz, Timing und kundenübergreifende Muster."
+          },
+          {
+            "title": "Erkennen",
+            "description": "Nur statistisch signifikante Muster werden beibehalten. Keine Intuition — Beweise."
+          },
+          {
+            "title": "Optimieren",
+            "description": "Zielgruppe, Nachrichten und Sequenzen werden aktualisiert. Der Zyklus beginnt mit besseren Daten von vorne."
+          }
+        ],
+        "cta": {
+          "label": "Unsere Methode im Detail entdecken",
+          "href": "/insights/auto-amelioration-outbound"
+        }
+      },
+      "methodDesc": "6 bewährte Schritte, die jeweils durch reale Daten aus Ihren Kampagnen kontinuierlich verbessert werden.",
+      "methodReturnLabel": "Zurück zu Schritt 1 — der Zyklus beginnt mit besseren Daten von vorne"
     },
     "consultationSeo": {
       "title": "Kostenlose Beratung | Maßgeschneiderte B2B-Prospektionsstrategie",
@@ -4107,7 +4209,41 @@
         "**Multi-channel prospectie**: volgens RAIN Group Research genereert het combineren van e-mail, LinkedIn en telefoon tot [3× meer reacties] (https://www.rainsalestraining.com/blog/stats-on-sales-prospecting) dan een enkel kanaal.",
         "**AI-automatisering**: volgens McKinsey zien teams die hun sequenties personaliseren met AI hun conversiepercentage met [50%] stijgen (https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/next-in-personalization-2021)."
       ],
-      "whyAnswer": "devlo is de ideale partner voor B2B-bedrijven die snel gekwalificeerde afspraken willen, zonder te werven. Zichtbare resultaten vanaf de 3e week."
+      "whyAnswer": "devlo is de ideale partner voor B2B-bedrijven die snel gekwalificeerde afspraken willen, zonder te werven. Zichtbare resultaten vanaf de 3e week.",
+      "feedbackLoop": {
+        "title": "Continue zelfverbetering",
+        "subtitle": "Elke interactie voedt de volgende. Dit is geen lineair proces — het is een intelligentielus die automatisch verbetert, voor al onze klanten.",
+        "centerLabel": [
+          "Continue",
+          "lus"
+        ],
+        "hoverHint": "Beweeg over een stap voor meer informatie",
+        "activeLabel": "Actief in alle 6 stappen van onze methodologie",
+        "steps": [
+          {
+            "title": "Verzamelen",
+            "description": "Elke verzending, opening, antwoord en bezwaar wordt vastgelegd — meer dan 30 variabelen per interactie."
+          },
+          {
+            "title": "Analyseren",
+            "description": "5 statistische analyse-assen: targeting, inhoud, sequentie, timing en cross-client patronen."
+          },
+          {
+            "title": "Detecteren",
+            "description": "Alleen statistisch significante patronen worden behouden. Geen intuïtie — bewijzen."
+          },
+          {
+            "title": "Optimaliseren",
+            "description": "Targeting, berichten en sequenties worden bijgewerkt. De cyclus herstart met betere gegevens."
+          }
+        ],
+        "cta": {
+          "label": "Ontdek onze methode in detail",
+          "href": "/insights/auto-amelioration-outbound"
+        }
+      },
+      "methodDesc": "6 bewezen stappen, elk continu verbeterd door echte gegevens uit uw campagnes.",
+      "methodReturnLabel": "Terug naar stap 1 — de cyclus herstart met betere gegevens"
     },
     "consultationSeo": {
       "title": "Gratis advies | B2B prospectie strategie op maat",
