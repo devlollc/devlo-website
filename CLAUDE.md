@@ -4,6 +4,20 @@
 **Domain:** https://devlo.ch
 **Languages:** fr (default), en, de, nl
 
+## Constitution (cross-repo rules)
+@~/alldevlo/devlo-aios/constitution/repo-registry.md
+@~/alldevlo/devlo-aios/constitution/save-rules.md
+
+## What this repo does NOT own
+| Topic | Go to |
+|-------|-------|
+| Business context, strategy, team | devlo-aios (`devlo/self/context/`) |
+| Email/LinkedIn automation | devlo-inbox |
+| Prospection, outbound | devlo-outbound |
+| Client portals | devlo-clients |
+| Content creation (LinkedIn, YouTube) | devlo-internal |
+| Architecture decisions | devlo-aios (`constitution/`) |
+
 ---
 
 ## Mandatory pre-deploy validation
