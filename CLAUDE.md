@@ -4,6 +4,21 @@
 **Domain:** https://devlo.ch
 **Languages:** fr (default), en, de, nl
 
+## This repo does NOT own
+| If you need... | Go to |
+|----------------|-------|
+| Client ICP, voice, strategy | devlo-aios → `devlo/clients/{slug}/context/` |
+| SOPs, playbooks, guidelines | devlo-aios → `devlo/self/sources/` |
+| Email/LinkedIn automation | devlo-inbox |
+| Prospection, Clay signals | devlo-outbound → `clay-signals/` |
+| Client portals | devlo-clients |
+| Content creation (LinkedIn, YouTube) | devlo-internal → `content-creation/` |
+| Expert brains | expert-brains |
+| Architecture decisions, conventions | devlo-aios → `constitution/` |
+| Credentials | devlo-aios → `devlo/self/context/access.md` |
+
+**If not in this table:** `grep -r "keyword" ~/alldevlo/*/CLAUDE.md`
+
 ---
 
 ## Mandatory pre-deploy validation
