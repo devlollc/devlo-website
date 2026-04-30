@@ -1,20 +1,16 @@
 name: Notify AIOS on Content Change
 
-# Triggers aios-devlo sync whenever content files are updated in devlo.ch
+# Disabled after the GitHub org migration: the old alldevlo/aios-devlo
+# repository no longer receives website sync events, and devlo-aios does not
+# currently define a repository_dispatch listener for this event.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "src/content/**"
-      - "src/data/**"
+  workflow_dispatch:
 
 jobs:
-  notify:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger aios-devlo sync
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.AIOS_SYNC_TOKEN }}
-          repository: alldevlo/aios-devlo
-          event-type: devloch-content-updated
+      - name: Explain disabled sync
+        run: |
+          echo "Website-to-AIOS repository_dispatch is disabled."
+          echo "Re-enable only after devlo-aios owns a documented sync listener."
