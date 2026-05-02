@@ -1,6 +1,6 @@
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
-import { HubspotForm } from "@/components/ui/hubspot-form";
+import { PaidAwareHubspotForm } from "@/components/shared/paid-aware-hubspot-form";
 import { consultationContent } from "@/content/masterfile.fr";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
@@ -53,7 +53,7 @@ export function ConsultationMasterPage({ content = consultationContent, locale =
               {c.formTitle}
             </h2>
             <p className="mb-6 text-neutral-600">{c.formSubtitle}</p>
-            <HubspotForm
+            <PaidAwareHubspotForm
               portalId={c.hubspot.portalId}
               formId={c.hubspot.formId}
               region={c.hubspot.region}

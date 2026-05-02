@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { headers } from "next/headers";
 import Script from "next/script";
 
+import { PaidAttributionTracker } from "@/components/analytics/paid-attribution-tracker";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -300,9 +301,9 @@ export default function RootLayout({
       >
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -310,6 +311,7 @@ export default function RootLayout({
             gtag('config', '${gaMeasurementId}');
           `}
         </Script>
+        <PaidAttributionTracker />
         <JsonLd schema={buildLayoutSchemas(htmlLang)} />
         <a
           href="#main-content"
