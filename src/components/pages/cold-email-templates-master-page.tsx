@@ -10,10 +10,10 @@ import {
   buildFaqPageSchema,
 } from "@/lib/seo/schema-builders";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
-import { getLocalizedColdEmailHub } from "@/lib/i18n/insights-helpers";
+import { getLocalizedColdEmailHub, getLocalizedColdEmailSequence } from "@/lib/i18n/insights-helpers";
 import { normalizeLocalizedCopyDeep } from "@/lib/i18n/text-normalization";
 
-import { SEQUENCES } from "@/app/insights/cold-email-templates/sequence-data";
+import { SEQUENCES, type Sequence } from "@/app/insights/cold-email-templates/sequence-data";
 import { SequenceBrowser } from "@/app/insights/cold-email-templates/sequence-browser";
 
 const LOCALE_CONSULTATION_HREFS: Record<SupportedLocale, string> = {
@@ -30,10 +30,73 @@ const LOCALE_SERVICES_HREFS: Record<SupportedLocale, string> = {
   nl: "/nl/services/cold-email",
 };
 
+const SEQUENCE_SLUG_BY_ID: Record<number, string> = {
+  1: "b2b-sales-training",
+  2: "cybersecurity-outreach",
+  3: "apiary-services",
+  4: "employee-engagement",
+  5: "learning-development",
+  6: "cleaning-management",
+  8: "recruiting-platform",
+  9: "bike-parking",
+  10: "it-integrator",
+  11: "merchandise-products",
+  12: "corporate-catering",
+  13: "devops-engineering",
+  14: "market-intelligence",
+  17: "property-management",
+  18: "it-security-soc",
+  19: "clinical-research",
+  20: "solar-energy",
+  22: "it-risk-compliance",
+  23: "healthcare-technology",
+  24: "web-technology",
+  25: "cybersecurity-risk-management",
+  26: "biotech-rwe",
+  27: "digital-marketing",
+  28: "hr-services",
+  29: "supply-chain",
+};
+
+function channelTypeForBrowser(channel: "email" | "call" | "linkedin") {
+  if (channel === "call") return "Call";
+  if (channel === "linkedin") return "LinkedIn";
+  return "Email";
+}
+
+function buildLocalizedBrowserSequence(sequence: Sequence, locale: SupportedLocale): Sequence {
+  const fallback = normalizeLocalizedCopyDeep(sequence, locale);
+  const localized = getLocalizedColdEmailSequence(SEQUENCE_SLUG_BY_ID[sequence.id], locale);
+
+  if (!localized) return fallback;
+
+  const channels = Array.from(new Set(localized.touches.map((touch) => channelTypeForBrowser(touch.channel))));
+  const targetItems = [...localized.whenToUse.items, ...localized.whoCanUse.items]
+    .map((item) => item.title)
+    .filter(Boolean);
+
+  return {
+    ...fallback,
+    industry: localized.lastBreadcrumb,
+    language: locale.toUpperCase(),
+    icp: targetItems.join(", ") || fallback.icp,
+    numTouches: localized.touches.length,
+    channels,
+    abTesting: localized.whyItWorks.heading,
+    touches: localized.touches.map((touch) => ({
+      number: touch.number,
+      type: channelTypeForBrowser(touch.channel),
+      timing: touch.timing,
+      subject: touch.subject,
+      content: touch.content,
+    })),
+  };
+}
+
 export function ColdEmailTemplatesMasterPage({ locale }: { locale: SupportedLocale }) {
   const content = getLocalizedColdEmailHub(locale);
   const prefix = locale === "fr" ? "" : `/${locale}`;
-  const localizedSequences = normalizeLocalizedCopyDeep(SEQUENCES, locale);
+  const localizedSequences = SEQUENCES.map((sequence) => buildLocalizedBrowserSequence(sequence, locale));
 
   const totalTouches = localizedSequences.reduce((sum, s) => sum + s.numTouches, 0);
   const sequencesWithResults = localizedSequences.filter(

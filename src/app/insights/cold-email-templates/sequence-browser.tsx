@@ -403,7 +403,7 @@ export function SequenceBrowser({
         visible: matchesIndustry && matchesCh && matchesQ,
       };
     });
-  }, [sequences, industryFilter, channelFilter, search]);
+  }, [sequences, industryFilter, channelFilter, search, L.allFilter]);
 
   const visibleCount = filtered.filter((f) => f.visible).length;
   const showFallback = visibleCount === 0;

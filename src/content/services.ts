@@ -730,7 +730,7 @@ export const SERVICE_PAGE_DATA: Record<ServiceSlug, ServicePageData> = {
     ],
     editorialTitle: "Le bon message au bon décideur",
     editorialParagraphs: [
-      "Sur LinkedIn, la pertinence contextuelle prime sur la longueur du message. Nos séquences sont construites pour déclencher une réponse rapide sans friction, avec un angle business clair et un call-to-action simple.",
+      "Sur LinkedIn, la pertinence contextuelle prime sur la longueur du message. Nos séquences sont construites pour déclencher une réponse rapide sans friction, avec un angle business clair et un appel à l’action simple.",
       "L'objectif n'est pas de maximiser le volume d'invitations, mais de maximiser les conversations qualifiées. Nous calibrons donc les volumes pour préserver la santé du compte et la qualité du ciblage.",
     ],
     configuratorTitle: "Configurer votre stratégie LinkedIn",

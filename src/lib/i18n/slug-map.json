@@ -151,7 +151,7 @@
   },
   "page:terms": {
     "fr": "/terms",
-    "en": "/en/terms",
+    "en": null,
     "de": "/de/terms",
     "nl": "/nl/terms"
   },
