@@ -693,33 +693,33 @@
       }
     },
     "consultationSeo": {
-      "title": "Consultation gratuite | Stratégie de prospection B2B sur mesure",
-      "description": "Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d'action complet sous 24h. Agence B2B suisse."
+      "title": "Consultation gratuite | Audit lead generation et prospection B2B",
+      "description": "Auditez votre potentiel de leads qualifiés avec devlo. ICP, TAM, signaux d'achat, séquences et plan d'action pour générer des rendez-vous B2B."
     },
     "consultationContent": {
-      "h1": "Obtenez votre stratégie outbound gratuite et ultra-ciblée pour vos meilleurs clients B2B",
+      "h1": "Auditez votre potentiel de leads qualifiés avant de lancer une campagne B2B",
       "reassurance": [
         "Gratuit et sans engagement",
         "Réponse sous 24h",
         "Top agence sur Outbound-experts.com"
       ],
-      "intro": "Partagez quelques détails sur votre Profil Client Idéal et nous construirons un plan de prospection personnalisé pour vous, avant même notre premier échange.",
+      "intro": "Partagez votre marché, votre ICP et vos objectifs. Nous préparons une lecture concrète de votre potentiel : comptes prioritaires, signaux exploitables, séquences à lancer et conditions nécessaires pour générer des rendez-vous qualifiés.",
       "deliverablesTitle": "Ce que vous recevez",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "Résumé ICP",
-          "desc": "Vos meilleurs comptes cibles et intitulés de poste clairement définis pour cibler les bons prospects"
+          "title": "Audit ICP et TAM",
+          "desc": "Les segments qui méritent d'être priorisés, ceux à éviter, et le volume réaliste de comptes activables"
         },
         {
           "icon": "📨",
-          "title": "Plan multicanal",
-          "desc": "1 à 2 flux de prospection email, LinkedIn et téléphone entièrement adaptés à votre marché"
+          "title": "Plan de séquences",
+          "desc": "Les angles email, LinkedIn et téléphone à tester selon le marché, le timing et les signaux d'achat disponibles"
         },
         {
           "icon": "✍️",
-          "title": "Accroches & CTA",
-          "desc": "Idées concrètes d'objets d'emails, accroches et call-to-actions qui génèrent des réponses"
+          "title": "Priorités de lancement",
+          "desc": "Les conditions à valider avant le premier batch : données, décideurs, messages, CRM, délivrabilité et mesure"
         }
       ],
       "proof": {
@@ -786,14 +786,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Planifiez votre consultation gratuite",
-      "formSubtitle": "Notre équipe prépare votre stratégie outbound avant même notre premier appel.",
+      "formTitle": "Planifiez votre audit gratuit",
+      "formSubtitle": "Notre équipe prépare une première lecture de votre potentiel de leads avant l'appel.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec votre stratégie outbound personnalisée."
+      "postForm": "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec les prochaines étapes pour cadrer votre potentiel de leads qualifiés."
     },
     "academySeo": {
       "title": "Outbound Academy | Formation prospection B2B pour SDR et BDR",
@@ -1962,33 +1962,33 @@
       }
     },
     "consultationSeo": {
-      "title": "Free consultation | Tailor-made B2B prospecting strategy",
-      "description": "Get your free, personalised outbound prospecting strategy. Share your KPI and receive a complete action plan within 24 hours. Swiss B2B agency."
+      "title": "Free consultation | B2B lead generation and prospecting audit",
+      "description": "Audit your qualified lead potential with devlo. ICP, TAM, buying signals, sequences and an action plan to generate B2B meetings."
     },
     "consultationContent": {
-      "h1": "Get your free, ultra-targeted outbound strategy for your best B2B customers",
+      "h1": "Audit your qualified lead potential before launching a B2B campaign",
       "reassurance": [
         "Free and without obligation",
         "Response within 24 hours",
         "Top agency on Outbound-experts.com"
       ],
-      "intro": "Share a few details about your Ideal Customer Profile and we'll build a personalised prospecting plan for you, even before our first meeting.",
+      "intro": "Share your market, ICP and objectives. We prepare a concrete readout of your potential: priority accounts, usable signals, sequences to launch and the conditions required to generate qualified meetings.",
       "deliverablesTitle": "What you receive",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "ICP summary",
-          "desc": "Your best target accounts and job titles clearly defined to target the right prospects"
+          "title": "ICP and TAM audit",
+          "desc": "The segments worth prioritizing, the ones to avoid and the realistic volume of activable accounts"
         },
         {
           "icon": "📨",
-          "title": "Multi-channel plan",
-          "desc": "1 to 2 email, LinkedIn and telephone prospecting flows tailored to your market"
+          "title": "Sequence plan",
+          "desc": "Email, LinkedIn and phone angles to test based on market, timing and available buying signals"
         },
         {
           "icon": "✍️",
-          "title": "Hangers & CTA",
-          "desc": "Concrete ideas for email subject lines, taglines and call-to-actions that generate responses"
+          "title": "Launch priorities",
+          "desc": "What must be validated before the first batch: data, decision-makers, messages, CRM, deliverability and measurement"
         }
       ],
       "proof": {
@@ -2055,14 +2055,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Schedule your free consultation",
-      "formSubtitle": "Our team prepares your outbound strategy before we even make our first call.",
+      "formTitle": "Schedule your free audit",
+      "formSubtitle": "Our team prepares an initial readout of your lead potential before the call.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "By submitting this form, our team will contact you within 24 hours with your personalised outbound strategy."
+      "postForm": "By submitting this form, our team will contact you within 24 hours with the next steps to frame your qualified lead potential."
     },
     "academySeo": {
       "title": "Outbound Academy | B2B prospecting training for SDR and BDR",
@@ -3231,33 +3231,33 @@
       }
     },
     "consultationSeo": {
-      "title": "Kostenlose Beratung | Maßgeschneiderte B2B-Prospektionsstrategie",
-      "description": "Erhalten Sie Ihre kostenlose und individuelle Outbound-Prospektionsstrategie. Teilen Sie Ihre PKI und erhalten Sie innerhalb von 24 Stunden einen vollständigen Aktionsplan. Schweizer B2B-Agentur."
+      "title": "Kostenlose Beratung | Audit für B2B Leadgenerierung und Akquise",
+      "description": "Prüfen Sie Ihr Potenzial für qualifizierte Leads mit devlo. ICP, TAM, Kaufsignale, Sequenzen und Aktionsplan für B2B-Termine."
     },
     "consultationContent": {
-      "h1": "Erhalten Sie Ihre kostenlose, ultra-gezielte Outbound-Strategie für Ihre besten B2B-Kunden",
+      "h1": "Prüfen Sie Ihr Potenzial für qualifizierte Leads vor dem Start einer B2B-Kampagne",
       "reassurance": [
         "Kostenlos und unverbindlich",
         "Antwort innerhalb von 24 Stunden",
         "Top-Agentur auf Outbound-experts.com"
       ],
-      "intro": "Teilen Sie uns einige Details über Ihr Ideales Kundenprofil mit, und wir werden noch vor unserem ersten Gespräch einen individuellen Akquiseplan für Sie erstellen.",
+      "intro": "Teilen Sie uns Markt, ICP und Ziele mit. Wir bereiten eine konkrete Einschätzung Ihres Potenzials vor: priorisierte Accounts, nutzbare Signale, zu startende Sequenzen und Bedingungen für qualifizierte Termine.",
       "deliverablesTitle": "Was Sie erhalten",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "ICP-Zusammenfassung",
-          "desc": "Ihre besten Zielkonten und klar definierten Jobtitel, um die richtigen Interessenten anzusprechen"
+          "title": "ICP- und TAM-Audit",
+          "desc": "Segmente, die priorisiert werden sollten, Segmente, die vermieden werden sollten, und das realistische Volumen aktivierbarer Accounts"
         },
         {
           "icon": "📨",
-          "title": "Mehrkanalplan",
-          "desc": "1 bis 2 vollständig auf Ihren Markt zugeschnittene E-Mail-, LinkedIn- und Telefon-Akquise-Feeds"
+          "title": "Sequenzplan",
+          "desc": "E-Mail-, LinkedIn- und Telefonwinkel, die je nach Markt, Timing und verfügbaren Kaufsignalen getestet werden sollten"
         },
         {
           "icon": "✍️",
-          "title": "Aufhänger & CTA",
-          "desc": "Konkrete Ideen für E-Mail-Betreffzeilen, Teaser und Call-to-Actions, die Antworten generieren"
+          "title": "Launch-Prioritäten",
+          "desc": "Was vor dem ersten Batch validiert werden muss: Daten, Entscheider, Messages, CRM, Zustellbarkeit und Messung"
         }
       ],
       "proof": {
@@ -3324,14 +3324,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Planen Sie Ihre kostenlose Beratung",
-      "formSubtitle": "Unser Team bereitet Ihre Outbound-Strategie schon vor unserem ersten Anruf vor.",
+      "formTitle": "Planen Sie Ihr kostenloses Audit",
+      "formSubtitle": "Unser Team bereitet vor dem Gespräch eine erste Einschätzung Ihres Lead-Potenzials vor.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "Wenn Sie dieses Formular absenden, wird sich unser Team innerhalb von 24 Stunden mit Ihrer individuellen Outbound-Strategie bei Ihnen melden."
+      "postForm": "Wenn Sie dieses Formular absenden, kontaktiert Sie unser Team innerhalb von 24 Stunden mit den nächsten Schritten zur Einschätzung Ihres Potenzials für qualifizierte Leads."
     },
     "academySeo": {
       "title": "Outbound Academy | B2B Prospektionstraining für SDR und BDR",
@@ -4500,33 +4500,33 @@
       }
     },
     "consultationSeo": {
-      "title": "Gratis advies | B2B prospectie strategie op maat",
-      "description": "Ontvang je gratis, gepersonaliseerde outbound prospectiestrategie. Deel je KPI en ontvang binnen 24 uur een compleet actieplan. Zwitsers B2B-agentschap."
+      "title": "Gratis consultatie | Audit voor B2B leadgeneratie en prospectie",
+      "description": "Audit uw potentieel voor gekwalificeerde leads met devlo. ICP, TAM, koopsignalen, sequenties en actieplan voor B2B-afspraken."
     },
     "consultationContent": {
-      "h1": "Ontvang uw gratis, ultra-gerichte outbound strategie voor uw beste B2B klanten",
+      "h1": "Audit uw potentieel voor gekwalificeerde leads vóór de lancering van een B2B-campagne",
       "reassurance": [
         "Gratis en vrijblijvend",
         "Antwoord binnen 24 uur",
         "Topbureau op Outbound-experts.com"
       ],
-      "intro": "Deel een paar details over je ideale klantenprofiel en we stellen een gepersonaliseerd prospectieplan voor je op, nog voor onze eerste ontmoeting.",
-      "deliverablesTitle": "Wat je ontvangt",
+      "intro": "Deel uw markt, ICP en doelstellingen. Wij bereiden een concrete lezing van uw potentieel voor: prioritaire accounts, bruikbare signalen, te lanceren sequenties en voorwaarden om gekwalificeerde afspraken te genereren.",
+      "deliverablesTitle": "Wat u ontvangt",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "Samenvatting ICP",
-          "desc": "Je beste doelaccounts en functietitels duidelijk gedefinieerd om je op de juiste prospects te richten"
+          "title": "ICP- en TAM-audit",
+          "desc": "De segmenten die prioriteit verdienen, de segmenten om te vermijden en het realistische volume activeerbare accounts"
         },
         {
           "icon": "📨",
-          "title": "Plan voor meerdere kanalen",
-          "desc": "1 tot 2 e-mail, LinkedIn en telefonische prospectiestromen op maat van jouw markt"
+          "title": "Sequentieplan",
+          "desc": "E-mail-, LinkedIn- en telefoonhoeken om te testen op basis van markt, timing en beschikbare koopsignalen"
         },
         {
           "icon": "✍️",
-          "title": "Hangers & CTA",
-          "desc": "Concrete ideeën voor e-mailonderwerpregels, taglines en call-to-actions die reacties genereren"
+          "title": "Lanceringsprioriteiten",
+          "desc": "Wat moet worden gevalideerd vóór de eerste batch: data, beslissers, berichten, CRM, deliverability en meting"
         }
       ],
       "proof": {
@@ -4593,14 +4593,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Plan uw gratis consultatie",
-      "formSubtitle": "Ons team bereidt uw outbound strategie al voor ons eerste gesprek voor.",
+      "formTitle": "Plan uw gratis audit",
+      "formSubtitle": "Ons team bereidt vóór het gesprek een eerste lezing van uw leadpotentieel voor.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "Als je dit formulier verstuurt, neemt ons team binnen 24 uur contact met je op met jouw gepersonaliseerde outbound strategie."
+      "postForm": "Door dit formulier te verzenden, neemt ons team binnen 24 uur contact met u op met de volgende stappen om uw potentieel voor gekwalificeerde leads te kaderen."
     },
     "academySeo": {
       "title": "Outbound Academy | B2B training voor SDR en BDR",

@@ -28,14 +28,14 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
   "prospection-commerciale-suisse": {
     country: "ch",
     slug: "prospection-commerciale-suisse",
-    metaTitle: "Prospection commerciale B2B en Suisse — devlo",
+    metaTitle: "Prospection B2B Suisse : leads qualifiés et rendez-vous — devlo",
     metaDescription:
-      "Agence de prospection commerciale B2B basée en Suisse. Générez des leads qualifiés et des rendez-vous avec des décideurs suisses via cold email, LinkedIn et calling.",
-    h1: "Prospection commerciale B2B en Suisse",
+      "Agence B2B basée en Suisse pour lead generation, séquences outbound et rendez-vous qualifiés en Romandie, Suisse alémanique et Tessin.",
+    h1: "Prospection B2B en Suisse pour générer des rendez-vous qualifiés",
     intro: [
-      "Basée à Rivaz dans le canton de Vaud, devlo accompagne les entreprises suisses et internationales dans leur développement commercial B2B sur le marché helvétique.",
-      "Notre connaissance du tissu économique suisse — romand, alémanique et tessinois — nous permet de construire des campagnes outbound multicanales adaptées aux spécificités locales.",
-      "Plus de 200 campagnes déployées en Suisse depuis 2018, avec un taux de réponse moyen de 7% sur les décideurs contactés.",
+      "Basée à Rivaz dans le canton de Vaud, devlo aide les entreprises suisses et internationales à transformer le marché helvétique en comptes prioritaires, séquences multicanales et rendez-vous commerciaux qualifiés.",
+      "Notre connaissance du tissu économique suisse - Romandie, Suisse alémanique et Tessin - permet d'adapter l'ICP, les signaux d'achat, les messages et les langues avant de lancer les campagnes.",
+      "L'objectif n'est pas de contacter plus d'entreprises suisses. L'objectif est d'identifier les bons décideurs, au bon moment, avec un contexte assez précis pour créer une conversation commerciale utile.",
     ],
     caseStudySlugs: [
       "hr-54-rendez-vous-dach",
@@ -59,7 +59,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
       {
         question: "Prospectez-vous en Suisse alémanique ?",
         answer:
-          "Oui, notre équipe maîtrise le français, l'allemand et l'anglais. Nous déployons des campagnes en Romandie, en Suisse alémanique et au Tessin avec des messages natifs.",
+          "Oui, notre équipe opère en français, allemand et anglais. Nous déployons des campagnes en Romandie, en Suisse alémanique et au Tessin avec des messages adaptés aux codes locaux.",
       },
       {
         question: "Quel est le coût d'une campagne de prospection en Suisse ?",

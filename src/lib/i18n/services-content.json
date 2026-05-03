@@ -59,8 +59,8 @@
         "href": "/services/generation-leads",
         "icon": "🎯",
         "title": "Génération de leads",
-        "subtitle": "Lead gen + construction ICP",
-        "description": "Identification des ICPs, construction du TAM, qualification manuelle des comptes et génération de listes prêtes à prospecter.",
+        "subtitle": "ICP, TAM et signaux d'achat",
+        "description": "Identification des comptes cibles, signaux d'achat, décideurs vérifiés et segments prêts à lancer en séquence.",
         "kpi": "1 600 → 300 comptes qualifiés pour Abacus",
         "tag": "generation-leads"
       },
@@ -98,7 +98,7 @@
         "path": "/services/outbound-multicanal",
         "navTitle": "Outbound Multicanal",
         "pageTitle": "Prospection Outbound Multicanal B2B : Cold Email, LinkedIn et Cold Calling",
-        "pageSubtitle": "Cold Email + LinkedIn + Calling pour générer un pipeline qualifié et prévisible.",
+        "pageSubtitle": "Cold email + LinkedIn + calling coordonnés pour générer des rendez-vous qualifiés avec les bons décideurs.",
         "metadataTitle": "Prospection Outbound Multicanal B2B",
         "metadataDescription": "Agence de prospection outbound multicanal B2B basée en Suisse : cold email, LinkedIn et calling pour générer des rendez-vous qualifiés.",
         "metadataKeywords": [
@@ -109,8 +109,8 @@
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "La prospection outbound multicanal consiste à contacter vos prospects idéaux via plusieurs canaux simultanément : cold email personnalisé, messages LinkedIn, appels à froid et relances coordonnées. devlo conçoit et exécute ces campagnes de A à Z — de la définition de l'ICP à la qualification des leads et à la prise de rendez-vous directement dans l'agenda de votre équipe commerciale.",
-          "Contrairement à une approche mono-canal, le multicanal augmente significativement les taux de réponse en touchant le prospect au bon moment sur son canal préféré. Nos campagnes combinent lemlist pour les séquences email, LinkedIn Sales Navigator pour le ciblage, et un script téléphonique adapté pour les relances. Le résultat : des rendez-vous qualifiés avec les bons décideurs dans un délai de 1 à 5 semaines."
+          "La prospection outbound multicanal consiste à contacter vos comptes prioritaires via plusieurs canaux coordonnés : cold email personnalisé, messages LinkedIn, appels ciblés et relances synchronisées. devlo conçoit et exécute ces campagnes de A à Z, de la définition de l'ICP à la qualification des réponses et à la prise de rendez-vous directement dans l'agenda de votre équipe commerciale.",
+          "Contrairement à une approche mono-canal, le multicanal réduit la dépendance à une seule boîte de réception. Nos campagnes combinent lemlist pour les séquences email, LinkedIn Sales Navigator pour le ciblage, et un script téléphonique adapté aux objections du marché. Le résultat attendu n'est pas un volume de contacts : ce sont des conversations commerciales avec les bons décideurs au bon moment."
         ],
         "coverageTitle": "Ce que couvre ce service",
         "coverageItems": [
@@ -150,8 +150,8 @@
         ],
         "editorialTitle": "Pourquoi le multicanal est-il plus performant que le mono-canal ?",
         "editorialParagraphs": [
-          "Le **cold email** seul atteint les prospects qui lisent leurs emails. Le **LinkedIn outreach** atteint ceux qui interagissent davantage sur le réseau. Le **cold calling** déclenche des conversations avec des décideurs très sollicités qui répondent peu par écrit. En combinant ces canaux, vous augmentez mécaniquement votre **surface de contact**.",
-          "En effet, l'important n'est pas le volume brut, mais la **coordination des canaux**. Selon une étude HubSpot (2024), les campagnes multicanales génèrent en moyenne **2,5x plus de réponses** que les approches mono-canal. Chez devlo, chaque canal sert un objectif précis dans la séquence : l'email ouvre, LinkedIn crédibilise, l'appel accélère. Cette orchestration réduit la dépendance à un canal unique et améliore la **régularité du pipeline**."
+          "Le cold email seul atteint les prospects qui lisent leurs emails. Le LinkedIn outreach atteint ceux qui interagissent davantage sur le réseau. Le cold calling déclenche des conversations avec des décideurs très sollicités qui répondent peu par écrit. En combinant ces canaux, vous augmentez mécaniquement votre surface de contact.",
+          "L'important n'est pas le volume brut, mais la coordination. Chez devlo, chaque canal sert un objectif précis dans la séquence : l'email ouvre, LinkedIn crédibilise, l'appel accélère. Cette orchestration réduit la dépendance à un canal unique et améliore la régularité du pipeline."
         ],
         "configuratorTitle": "Configurer votre stratégie outbound multicanal",
         "configuratorIntro": "Sélectionnez votre contexte pour recevoir une recommandation opérationnelle adaptée.",
@@ -259,7 +259,11 @@
           },
           {
             "question": "Quelle différence entre outbound multicanal et cold email seul ?",
-            "answer": "Le cold email couvre les prospects réactifs à l'email. Le multicanal ajoute LinkedIn et téléphone pour capter les décideurs qui préfèrent d'autres canaux, ce qui améliore fréquemment les taux de réponse de 30 à 60%."
+            "answer": "Le cold email couvre les prospects réactifs à l'email. Le multicanal ajoute LinkedIn et téléphone pour capter les décideurs qui préfèrent d'autres canaux, qualifier les objections plus vite et réduire la dépendance à une seule séquence."
+          },
+          {
+            "question": "Quels signaux déclenchent une séquence multicanale ?",
+            "answer": "Nous priorisons les comptes à partir du fit ICP, du marché ciblé, des signaux d'achat disponibles, du niveau de séniorité, de la joignabilité des décideurs et de la probabilité qu'un rendez-vous soit commercialement utile."
           },
           {
             "question": "Devlo gère-t-il toute la prospection ?",
@@ -277,49 +281,50 @@
           "linkedin-outreach",
           "cold-calling"
         ],
-        "summaryTitle": "En résumé",
+        "summaryTitle": "En résumé : le multicanal sert la qualification",
         "summaryPoints": [
-          "Le **multicanal** combine email, LinkedIn et téléphone pour maximiser la surface de contact avec vos décideurs cibles.",
-          "Chaque canal joue un rôle précis dans la **séquence de prospection** : ouvrir, crédibiliser, accélérer.",
-          "Les campagnes multicanales génèrent en moyenne **2,5x plus de réponses** que les approches mono-canal.",
-          "devlo orchestre l'ensemble du cycle, de la définition **ICP** à la prise de rendez-vous dans votre agenda."
+          "Le **cold email** ouvre la conversation avec un angle personnalisé et mesurable.",
+          "**LinkedIn** ajoute un signal de présence et crédibilise le contact auprès des décideurs ciblés.",
+          "Le **calling** accélère quand l'enjeu est urgent, complexe ou trop stratégique pour rester uniquement par écrit.",
+          "La séquence doit être pilotée par l'**ICP, le timing et les signaux d'achat**, pas par le volume brut.",
+          "devlo livre une orchestration complète : comptes qualifiés, messages, relances, qualification des réponses et passage au CRM."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01",
+        "dateModified": "2026-05-03",
         "comparisonTable": {
-          "caption": "Comparatif entre prospection multicanal externalisée avec devlo et prospection en interne",
+          "caption": "Outbound multicanal vs cold email seul",
           "headers": [
             "Critère",
-            "En interne",
-            "Avec devlo"
+            "Cold email seul",
+            "Outbound multicanal devlo"
           ],
           "rows": [
             {
-              "criterion": "Temps de mise en place",
-              "colA": "3-6 mois (recrutement, formation, stack)",
-              "colB": "2-3 semaines, campagnes live"
+              "criterion": "Couverture des décideurs",
+              "colA": "Dépend fortement de la lecture email",
+              "colB": "Email, LinkedIn et téléphone se renforcent sur le même compte"
             },
             {
-              "criterion": "Coût annuel",
-              "colA": "80-120k CHF (salaire SDR + outils)",
-              "colB": "À partir de 3k CHF/mois"
+              "criterion": "Signal commercial",
+              "colA": "Réponse écrite ou absence de réponse",
+              "colB": "Réponses, connexions, objections téléphoniques et intérêt qualifié"
             },
             {
-              "criterion": "Canaux activés",
-              "colA": "Souvent 1 seul canal maîtrisé",
-              "colB": "Email + LinkedIn + Calling coordonnés"
+              "criterion": "Priorisation",
+              "colA": "Souvent basée sur une liste statique",
+              "colB": "Basée sur ICP, signaux d'achat, séniorité et joignabilité"
             },
             {
-              "criterion": "Expertise copywriting",
-              "colA": "Apprentissage par essai/erreur",
-              "colB": "+1 000 campagnes d'expérience"
-            },
-            {
-              "criterion": "Scalabilité",
-              "colA": "Limitée par la taille de l'équipe",
-              "colB": "Volume ajustable chaque mois"
+              "criterion": "Passage aux ventes",
+              "colA": "Réponses à trier manuellement",
+              "colB": "Rendez-vous et contexte transmis dans le CRM ou l'agenda"
             }
           ]
+        },
+        "faqSecondAnswer": "Le cold email couvre les prospects réactifs à l'email. Le multicanal ajoute LinkedIn et téléphone pour capter les décideurs qui préfèrent d'autres canaux, qualifier les objections plus vite et réduire la dépendance à une seule séquence.",
+        "signalFaq": {
+          "question": "Quels signaux déclenchent une séquence multicanale ?",
+          "answer": "Nous priorisons les comptes à partir du fit ICP, du marché ciblé, des signaux d'achat disponibles, du niveau de séniorité, de la joignabilité des décideurs et de la probabilité qu'un rendez-vous soit commercialement utile."
         }
       },
       "cold-email": {
@@ -1368,20 +1373,21 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Génération de leads",
-        "pageTitle": "Génération de Leads B2B : construire un pipeline de prospects qualifiés",
-        "pageSubtitle": "ICP, TAM et qualification des comptes pour alimenter vos campagnes.",
-        "metadataTitle": "Génération de leads B2B : ICP et listes qualifiées",
-        "metadataDescription": "Agence de génération de leads B2B en Suisse : définition ICP, mapping TAM, qualification manuelle et listes prêtes à prospecter.",
+        "pageTitle": "Lead Generation B2B : listes qualifiées basées sur ICP, TAM et signaux d'achat",
+        "pageSubtitle": "Nous transformons votre marché cible en comptes priorisés, décideurs vérifiés et segments prêts pour vos séquences.",
+        "metadataTitle": "Lead Generation B2B Suisse : listes ICP qualifiées",
+        "metadataDescription": "Agence de lead generation B2B en Suisse : ICP, TAM, signaux d'achat, décideurs, emails vérifiés et scoring pour séquences outbound.",
         "metadataKeywords": [
-          "génération leads B2B",
+          "lead generation B2B",
           "construction ICP",
           "TAM SAM ICP",
-          "qualification prospects"
+          "qualification prospects",
+          "signaux d'achat B2B"
         ],
         "heroParagraphs": [
-          "La **génération de leads B2B** est le processus qui consiste à identifier et qualifier des prospects qui correspondent réellement à votre profil de client idéal (ICP). C'est la base de toute **prospection performante**.",
-          "Notre méthode démarre par un cadrage ICP précis, puis une construction du TAM, une qualification compte par compte, et l'identification des bons décideurs. Les listes livrées sont enrichies et directement activables.",
-          "La performance vient de la précision, pas du volume brut. Une liste courte mais qualifiée convertit mieux qu'une base massive peu filtrée."
+          "La lead generation B2B ne consiste pas à acheter une base de contacts. Elle consiste à déterminer quelles entreprises peuvent réellement devenir clientes, quels décideurs doivent être approchés, et quel signal rend le timing commercial pertinent.",
+          "Notre méthode croise ICP, TAM, signaux d'achat, séniorité, joignabilité et validation de données. Chaque compte est priorisé pour que les séquences outbound partent sur un segment cohérent, défendable et exploitable par les ventes.",
+          "La livraison finale n'est pas seulement un CSV : c'est une base prête à lancer dans vos séquences, avec les règles de qualification documentées pour reproduire le processus sur les prochains batchs."
         ],
         "coverageTitle": "Ce que couvre ce service",
         "coverageItems": [
@@ -1422,10 +1428,10 @@
             "description": "Exporter une base propre et actionnable."
           }
         ],
-        "editorialTitle": "Pourquoi un pipeline de leads se construit-il avant de s'envoyer ?",
+        "editorialTitle": "Un pipeline se construit avant la première séquence",
         "editorialParagraphs": [
-          "Les meilleures **séquences outbound** échouent avec une mauvaise base. Selon Salesforce (2024), **les équipes qui investissent dans la qualité de leur base** génèrent 50% de pipeline en plus que celles qui misent uniquement sur le volume. Nous traitons la génération de leads comme une **discipline à part entière**, avec un standard de qualification clair.",
-          "En effet, la valeur livrée n'est pas seulement la **liste finale** : c'est aussi la méthode reproductible qui vous permet d'**industrialiser votre acquisition** de manière autonome."
+          "Les meilleures séquences outbound échouent avec une mauvaise base. Nous traitons la lead generation comme une discipline à part entière : cadrage ICP, construction du marché adressable, priorisation des comptes, identification des décideurs et contrôle de la donnée avant activation.",
+          "La valeur livrée n'est pas seulement la liste finale. C'est aussi la méthode reproductible qui permet à votre équipe de savoir pourquoi un compte entre dans le batch, quel message lui correspond, et quand il doit passer en séquence."
         ],
         "configuratorTitle": "Configurer votre besoin de lead generation",
         "configuratorIntro": "Partagez vos attentes de volume et de précision pour cadrer la mission.",
@@ -1533,7 +1539,11 @@
         "faqItems": [
           {
             "question": "Différence entre génération de leads et prospection ?",
-            "answer": "La génération de leads construit la base (qui contacter). La prospection exécute le contact (comment et quand contacter)."
+            "answer": "La lead generation construit la base : qui contacter, pourquoi maintenant, avec quel niveau de priorité. La prospection exécute le contact : séquence, canal, message, relance et qualification de la réponse."
+          },
+          {
+            "question": "Comment priorisez-vous les comptes ?",
+            "answer": "Nous croisons le fit ICP, la taille du marché adressable, les signaux d'achat, la séniorité des décideurs, la qualité des données et la capacité du compte à accepter un rendez-vous commercial utile."
           },
           {
             "question": "Délai pour une liste de 500 prospects ?",
@@ -1555,15 +1565,56 @@
           "outbound-multicanal",
           "qualification-leads"
         ],
-        "summaryTitle": "En résumé",
+        "summaryTitle": "En résumé : une bonne liste réduit le CAC",
         "summaryPoints": [
-          "La génération de leads commence par un **cadrage ICP** précis (firmographie, séniorité, signaux comportementaux).",
-          "Le mapping **TAM -> SAM -> ICP qualifié** permet de dimensionner le marché réellement adressable.",
-          "Une liste courte mais **qualifiée** convertit toujours mieux qu'une base massive peu filtrée.",
-          "La méthode livrée est **reproductible** : votre équipe peut industrialiser l'acquisition en autonomie."
+          "Le cadrage **ICP** définit les comptes qui ont une vraie probabilité de signer, pas seulement de répondre.",
+          "Le mapping **TAM -> segments -> batchs** évite de mélanger des marchés qui ne répondent pas aux mêmes messages.",
+          "Les **signaux d'achat** priorisent le timing : recrutement, expansion, levée, changement d'outil, événement ou actualité compte.",
+          "Les **décideurs vérifiés** réduisent les rebonds, les mauvais contacts et le temps perdu en qualification.",
+          "Les règles de qualification sont documentées pour réutiliser le système sur les prochains batchs."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-05-03",
+        "comparisonTable": {
+          "caption": "Lead generation qualifiée vs liste brute",
+          "headers": [
+            "Critère",
+            "Liste brute",
+            "Lead generation devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Fit ICP",
+              "colA": "Filtrage large par secteur ou taille",
+              "colB": "Critères firmographiques, marché, maturité et potentiel commercial"
+            },
+            {
+              "criterion": "Timing",
+              "colA": "Aucun signal ou signal non vérifié",
+              "colB": "Signaux d'achat et contexte compte utilisés pour prioriser les batchs"
+            },
+            {
+              "criterion": "Décideur",
+              "colA": "Contacts parfois génériques ou obsolètes",
+              "colB": "Rôles cibles, séniorité, LinkedIn, email et contexte vérifiés"
+            },
+            {
+              "criterion": "Activation",
+              "colA": "CSV à retravailler avant campagne",
+              "colB": "Segments prêts pour séquence, CRM ou outil outbound"
+            },
+            {
+              "criterion": "Réutilisation",
+              "colA": "Difficile à reproduire",
+              "colB": "Framework de qualification réutilisable pour les prochains lots"
+            }
+          ]
+        },
+        "faqFirstAnswer": "La lead generation construit la base : qui contacter, pourquoi maintenant, avec quel niveau de priorité. La prospection exécute le contact : séquence, canal, message, relance et qualification de la réponse.",
+        "priorityFaq": {
+          "question": "Comment priorisez-vous les comptes ?",
+          "answer": "Nous croisons le fit ICP, la taille du marché adressable, les signaux d'achat, la séniorité des décideurs, la qualité des données et la capacité du compte à accepter un rendez-vous commercial utile."
+        }
       },
       "qualification-leads": {
         "slug": "qualification-leads",
@@ -2504,8 +2555,8 @@
         "href": "/services/generation-leads",
         "icon": "🎯",
         "title": "Lead generation",
-        "subtitle": "Lead gen + ICP construction",
-        "description": "Identification of ICPs, construction of the TAM, manual qualification of accounts and generation of prospect-ready lists.",
+        "subtitle": "ICP, TAM and buying signals",
+        "description": "Target accounts, buying signals, verified decision-makers and sequence-ready segments.",
         "kpi": "1,600 → 300 qualified accounts for Abacus",
         "tag": "generation-leads"
       },
@@ -2543,7 +2594,7 @@
         "path": "/services/outbound-multicanal",
         "navTitle": "Outbound Multichannel",
         "pageTitle": "B2B Multichannel Outbound Prospecting: Cold Email, LinkedIn and Cold Calling",
-        "pageSubtitle": "Cold Email + LinkedIn + Calling to generate a qualified and predictable pipeline.",
+        "pageSubtitle": "Coordinated cold email, LinkedIn and calling to create qualified meetings with the right decision-makers.",
         "metadataTitle": "B2B Outbound Multichannel Prospecting",
         "metadataDescription": "Outbound multi-channel B2B prospecting agency based in Switzerland: cold email, LinkedIn and calling to generate qualified appointments.",
         "metadataKeywords": [
@@ -2554,8 +2605,8 @@
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "Multi-channel outbound prospecting **is a B2B sales strategy** that involves contacting your ideal prospects via several channels simultaneously: personalised cold email, LinkedIn messages, cold calls and coordinated follow-ups. devlo designs and executes these campaigns from A to Z - from defining the ICP to qualifying leads and booking appointments directly in your sales team's diary.",
-          "Unlike a single-channel approach, multi-channel significantly increases response rates by reaching prospects at the right time on their preferred channel. Our campaigns combine lemlist for email sequences, LinkedIn Sales Navigator for targeting, and an adapted telephone script for follow-up. The result: qualified appointments with the right decision-makers within 1 to 5 weeks."
+          "Multichannel outbound prospecting means contacting priority accounts through coordinated channels: personalized cold email, LinkedIn messages, targeted calls and synchronized follow-ups. devlo designs and runs the campaign end to end, from ICP definition to reply qualification and booked meetings in your sales calendar.",
+          "Unlike a single-channel approach, multichannel outbound reduces dependence on one inbox. We combine lemlist for email sequences, LinkedIn Sales Navigator for targeting and a phone script adapted to market objections. The expected output is not contact volume: it is commercial conversations with the right decision-makers at the right time."
         ],
         "coverageTitle": "What this service covers",
         "coverageItems": [
@@ -2595,8 +2646,8 @@
         ],
         "editorialTitle": "Why does multi-channel outperform single-channel prospecting?",
         "editorialParagraphs": [
-          "Cold email alone reaches prospects who read their emails. **LinkedIn outreach** reaches those who interact more on the network. **Cold calling** triggers conversations with busy decision-makers who rarely respond in writing. By combining these channels, you mechanically increase your **contact surface** and reduce dependency on any single touchpoint.",
-          "Indeed, what matters is not raw volume, but coordination. According to HubSpot (2024), multi-channel sequences generate 30-50% more qualified responses than single-channel campaigns. At devlo, each channel serves a precise objective in the sequence: email opens the door, LinkedIn gives credibility, and calls speed up the process. This **orchestration** improves the regularity of the pipeline."
+          "Cold email reaches prospects who read and answer their inbox. LinkedIn outreach reaches people who interact more on the network. Calling creates conversations with busy decision-makers who rarely answer in writing. Combining these channels increases the number of ways a target account can engage.",
+          "The point is not raw volume but coordination. At devlo, each channel has a precise role in the sequence: email opens, LinkedIn builds credibility, calls accelerate. This orchestration reduces dependency on one channel and improves pipeline consistency."
         ],
         "configuratorTitle": "Configuring your multi-channel outbound strategy",
         "configuratorIntro": "Select your context to receive a tailored operational recommendation.",
@@ -2704,7 +2755,11 @@
           },
           {
             "question": "What's the difference between multi-channel outbound and cold email alone?",
-            "answer": "Cold email covers prospects who are responsive to email. Multi-channel adds LinkedIn and telephone to capture decision-makers who prefer other channels, which frequently improves response rates by 30-60%."
+            "answer": "Cold email reaches prospects who respond by email. Multichannel adds LinkedIn and phone to reach decision-makers who prefer other channels, qualify objections faster and reduce dependence on one sequence."
+          },
+          {
+            "question": "Which signals trigger a multichannel sequence?",
+            "answer": "We prioritize accounts using ICP fit, target market, available buying signals, seniority level, decision-maker reachability and the likelihood that a meeting will be commercially useful."
           },
           {
             "question": "Does Devlo manage all the prospecting?",
@@ -2722,49 +2777,50 @@
           "linkedin-outreach",
           "cold-calling"
         ],
-        "summaryTitle": "Key takeaways",
+        "summaryTitle": "In short: multichannel serves qualification",
         "summaryPoints": [
-          "**Multi-channel prospecting** increases response rates by 30-60% compared to single-channel",
-          "Each channel serves a distinct purpose: **email opens, LinkedIn builds trust, calls accelerate**",
-          "**Coordination and sequencing** matter more than raw volume of outreach",
-          "Qualified appointments typically arrive within **1 to 5 weeks** of campaign launch"
+          "**Cold email** opens the conversation with a personalized and measurable angle.",
+          "**LinkedIn** adds a presence signal and builds credibility with target decision-makers.",
+          "**Calling** accelerates when the issue is urgent, complex or too strategic to stay only in writing.",
+          "The sequence should be driven by **ICP, timing and buying signals**, not raw volume.",
+          "devlo delivers the full orchestration: qualified accounts, messaging, follow-ups, reply qualification and CRM handoff."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01",
+        "dateModified": "2026-05-03",
         "comparisonTable": {
-          "caption": "Comparison between outsourced multi-channel prospecting with devlo and in-house prospecting",
+          "caption": "Multichannel outbound vs cold email only",
           "headers": [
             "Criterion",
-            "In-house",
-            "With devlo"
+            "Cold email only",
+            "devlo multichannel outbound"
           ],
           "rows": [
             {
-              "criterion": "Time to launch",
-              "colA": "3-6 months (hiring, training, stack)",
-              "colB": "2-3 weeks, campaigns live"
+              "criterion": "Decision-maker coverage",
+              "colA": "Depends heavily on email reading behavior",
+              "colB": "Email, LinkedIn and phone reinforce each other on the same account"
             },
             {
-              "criterion": "Annual cost",
-              "colA": "CHF 80-120k (SDR salary + tools)",
-              "colB": "Starting from CHF 3k/month"
+              "criterion": "Commercial signal",
+              "colA": "Written reply or no reply",
+              "colB": "Replies, connections, phone objections and qualified interest"
             },
             {
-              "criterion": "Channels activated",
-              "colA": "Often only 1 channel mastered",
-              "colB": "Email + LinkedIn + Calling coordinated"
+              "criterion": "Prioritization",
+              "colA": "Often based on a static list",
+              "colB": "Based on ICP, buying signals, seniority and reachability"
             },
             {
-              "criterion": "Copywriting expertise",
-              "colA": "Learning by trial and error",
-              "colB": "1,000+ campaigns of experience"
-            },
-            {
-              "criterion": "Scalability",
-              "colA": "Limited by team size",
-              "colB": "Volume adjustable every month"
+              "criterion": "Sales handoff",
+              "colA": "Replies need manual sorting",
+              "colB": "Meetings and context passed into the CRM or calendar"
             }
           ]
+        },
+        "faqSecondAnswer": "Cold email reaches prospects who respond by email. Multichannel adds LinkedIn and phone to reach decision-makers who prefer other channels, qualify objections faster and reduce dependence on one sequence.",
+        "signalFaq": {
+          "question": "Which signals trigger a multichannel sequence?",
+          "answer": "We prioritize accounts using ICP fit, target market, available buying signals, seniority level, decision-maker reachability and the likelihood that a meeting will be commercially useful."
         }
       },
       "cold-email": {
@@ -3813,20 +3869,21 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Lead generation",
-        "pageTitle": "B2B lead generation: building a pipeline of qualified prospects",
-        "pageSubtitle": "KPI, TAM and account qualification to fuel your campaigns.",
-        "metadataTitle": "B2B lead generation: ICP and qualified lists",
-        "metadataDescription": "B2B lead generation agency in Switzerland: ICP definition, TAM mapping, manual qualification and ready-to-prospect lists.",
+        "pageTitle": "B2B Lead Generation: qualified lists based on ICP, TAM and buying signals",
+        "pageSubtitle": "We turn your target market into prioritized accounts, verified decision-makers and segments ready for outbound sequences.",
+        "metadataTitle": "B2B Lead Generation Switzerland: qualified ICP lists",
+        "metadataDescription": "devlo builds qualified B2B lists for Switzerland and Europe: ICP, TAM, buying signals, decision-makers, verified emails and scoring for outbound sequences.",
         "metadataKeywords": [
-          "génération leads B2B",
-          "construction ICP",
+          "B2B lead generation",
+          "ICP building",
           "TAM SAM ICP",
-          "qualification prospects"
+          "prospect qualification",
+          "B2B buying signals"
         ],
         "heroParagraphs": [
-          "B2B lead generation **is the foundational process** of identifying and qualifying prospects who genuinely correspond to your ideal customer profile. It is the basis of all successful prospecting and determines the quality of every downstream campaign.",
-          "Our method starts with a precise KPI framework, followed by the construction of the TAM, an account-by-account qualification and the identification of the right decision-makers. The lists delivered are enriched and can be activated directly.",
-          "Performance comes from precision, not raw volume. A short but qualified list converts better than a massive, unfiltered database."
+          "B2B lead generation is not buying a contact database. It is deciding which companies can realistically become customers, which decision-makers should be approached and which signal makes the timing commercially relevant.",
+          "Our method combines ICP, TAM, buying signals, seniority, reachability and data validation. Each account is prioritized so outbound sequences start from a coherent, defensible and sales-ready segment.",
+          "The final delivery is not only a CSV. It is a sequence-ready base with documented qualification rules so the process can be repeated on the next batches."
         ],
         "coverageTitle": "What this service covers",
         "coverageItems": [
@@ -3867,10 +3924,10 @@
             "description": "Export a clean, actionable database."
           }
         ],
-        "editorialTitle": "Why is a lead pipeline built before it is sent?",
+        "editorialTitle": "A pipeline is built before the first sequence",
         "editorialParagraphs": [
-          "The best outbound sequences fail with a poor foundation. According to Forrester, companies with a **structured lead generation process** close 50% more sales-ready leads at 33% lower cost. We treat lead generation as a discipline in its own right, with a clear **qualification standard**.",
-          "Therefore, the value delivered is not just the final list: it is also the reproducible method that enables you to **industrialise your acquisition**. A short but qualified list converts better than a massive, unfiltered database because **precision drives pipeline quality**."
+          "The best outbound sequences fail with a weak base. We treat lead generation as a discipline in its own right: ICP framing, addressable-market mapping, account prioritization, decision-maker identification and data checks before activation.",
+          "The value delivered is not just the final list. It is also the repeatable method that tells your team why an account enters a batch, which message fits it and when it should move into sequence."
         ],
         "configuratorTitle": "Configuring your lead generation needs",
         "configuratorIntro": "Share your expectations of volume and precision to frame the assignment.",
@@ -3978,7 +4035,11 @@
         "faqItems": [
           {
             "question": "The difference between lead generation and prospecting?",
-            "answer": "Lead generation builds the base (who to contact). Prospecting executes the contact (how and when to contact)."
+            "answer": "Lead generation builds the base: who to contact, why now and with what priority. Prospecting executes the contact: sequence, channel, message, follow-up and reply qualification."
+          },
+          {
+            "question": "How do you prioritize accounts?",
+            "answer": "We combine ICP fit, addressable-market size, buying signals, decision-maker seniority, data quality and the account’s ability to accept a commercially useful meeting."
           },
           {
             "question": "Lead time for a list of 500 prospects?",
@@ -4000,15 +4061,56 @@
           "outbound-multicanal",
           "qualification-leads"
         ],
-        "summaryTitle": "Key takeaways",
+        "summaryTitle": "In short: a good list lowers CAC",
         "summaryPoints": [
-          "**Lead generation** is a discipline that precedes and determines outbound success",
-          "Structured lead gen closes **50% more sales-ready leads** at lower cost",
-          "Start with a precise **ICP framework**, then build TAM and qualify account-by-account",
-          "A reproducible method enables you to **industrialise acquisition** over time"
+          "**ICP** framing defines accounts with a real probability of signing, not just replying.",
+          "**TAM -> segments -> batches** prevents mixing markets that do not respond to the same messages.",
+          "**Buying signals** prioritize timing: hiring, expansion, funding, tool change, event or account news.",
+          "**Verified decision-makers** reduce bounces, wrong contacts and qualification waste.",
+          "Qualification rules are documented so the system can be reused on future batches."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-05-03",
+        "comparisonTable": {
+          "caption": "Qualified lead generation vs raw list",
+          "headers": [
+            "Criterion",
+            "Raw list",
+            "devlo lead generation"
+          ],
+          "rows": [
+            {
+              "criterion": "ICP fit",
+              "colA": "Broad filter by industry or size",
+              "colB": "Firmographic criteria, market maturity and commercial potential"
+            },
+            {
+              "criterion": "Timing",
+              "colA": "No signal or unverified signal",
+              "colB": "Buying signals and account context used to prioritize batches"
+            },
+            {
+              "criterion": "Decision-maker",
+              "colA": "Contacts can be generic or outdated",
+              "colB": "Target roles, seniority, LinkedIn, email and context verified"
+            },
+            {
+              "criterion": "Activation",
+              "colA": "CSV needs rework before campaign launch",
+              "colB": "Segments ready for sequence, CRM or outbound tool"
+            },
+            {
+              "criterion": "Reuse",
+              "colA": "Hard to reproduce",
+              "colB": "Reusable qualification framework for the next batches"
+            }
+          ]
+        },
+        "faqFirstAnswer": "Lead generation builds the base: who to contact, why now and with what priority. Prospecting executes the contact: sequence, channel, message, follow-up and reply qualification.",
+        "priorityFaq": {
+          "question": "How do you prioritize accounts?",
+          "answer": "We combine ICP fit, addressable-market size, buying signals, decision-maker seniority, data quality and the account’s ability to accept a commercially useful meeting."
+        }
       },
       "qualification-leads": {
         "slug": "qualification-leads",
@@ -4949,8 +5051,8 @@
         "href": "/services/generation-leads",
         "icon": "🎯",
         "title": "Lead-Generierung",
-        "subtitle": "Lead Gen + ICP-Bau",
-        "description": "Identifizierung der ICPs, Aufbau des TAM, manuelle Qualifizierung der Konten und Generierung von akquisitionsbereiten Listen.",
+        "subtitle": "ICP, TAM und Kaufsignale",
+        "description": "Zielaccounts, Kaufsignale, geprüfte Entscheider und sequenzbereite Segmente.",
         "kpi": "1.600 → 300 qualifizierte Konten für Abacus",
         "tag": "generation-leads"
       },
@@ -4988,7 +5090,7 @@
         "path": "/services/outbound-multicanal",
         "navTitle": "Outbound Mehrkanal",
         "pageTitle": "B2B Multichannel Outbound Prospecting: Cold Email, LinkedIn und Cold Calling",
-        "pageSubtitle": "Cold Email + LinkedIn + Calling, um eine qualifizierte und vorhersehbare Pipeline zu generieren.",
+        "pageSubtitle": "Koordinierte Cold E-Mail, LinkedIn und Calling für qualifizierte Termine mit den richtigen Entscheidern.",
         "metadataTitle": "Outbound Multichannel B2B Akquise",
         "metadataDescription": "B2B-Multichannel-Outbound-Prospektionsagentur mit Sitz in der Schweiz: Cold E-Mail, LinkedIn und Calling zur Generierung qualifizierter Termine.",
         "metadataKeywords": [
@@ -4999,8 +5101,8 @@
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "**Outbound-Multichannel-Akquise** ist eine Prospektionsmethode, die darin besteht, Ihre idealen Interessenten über mehrere Kanäle gleichzeitig zu kontaktieren: personalisierte Cold E-Mail, LinkedIn-Nachrichten, Cold Calls und koordinierte Nachfassaktionen. devlo konzipiert und führt diese Kampagnen von A bis Z durch — von der Definition des ICP über die Lead-Qualifizierung bis hin zur Terminvereinbarung direkt im Terminkalender Ihres Vertriebsteams.",
-          "Im Gegensatz zu einem Ein-Kanal-Ansatz erhöht der **Mehrkanal-Ansatz** die Antwortraten deutlich, indem er den Interessenten zum richtigen Zeitpunkt auf seinem bevorzugten Kanal erreicht. Unsere Kampagnen kombinieren lemlist für die **E-Mail-Sequenzen**, LinkedIn Sales Navigator für die Zielgruppenansprache und ein angepasstes Telefonskript für die Nachfassaktionen. Das Ergebnis: qualifizierte Termine mit den richtigen Entscheidungsträgern innerhalb von 1 bis 5 Wochen."
+          "Multichannel-Outbound bedeutet, priorisierte Accounts über koordinierte Kanäle zu kontaktieren: personalisierte Cold E-Mail, LinkedIn-Nachrichten, gezielte Anrufe und synchronisierte Follow-ups. devlo konzipiert und steuert die Kampagne von der ICP-Definition bis zur Antwortqualifizierung und Terminbuchung im Kalender Ihres Vertriebsteams.",
+          "Anders als ein Einzelkanal-Ansatz reduziert Multichannel die Abhängigkeit von einer einzigen Inbox. Wir kombinieren lemlist für E-Mail-Sequenzen, LinkedIn Sales Navigator für das Targeting und ein Telefonskript für die Einwände des Marktes. Das Ziel ist nicht Kontaktvolumen, sondern kommerzielle Gespräche mit den richtigen Entscheidern zum richtigen Zeitpunkt."
         ],
         "coverageTitle": "Was dieser Dienst abdeckt",
         "coverageItems": [
@@ -5040,8 +5142,8 @@
         ],
         "editorialTitle": "Warum übertrifft Multichanneling das Singlechanneling?",
         "editorialParagraphs": [
-          "**Cold Email** allein erreicht Interessenten, die ihre E-Mails lesen. **LinkedIn Outreach** erreicht diejenigen, die mehr im Netzwerk interagieren. **Cold Calling** löst Gespräche mit vielbeschäftigten Entscheidungsträgern aus, die wenig schriftlich antworten. Tatsächlich, wenn Sie diese Kanäle kombinieren, vergrößern Sie mechanisch Ihre **Kontaktfläche**.",
-          "Daher, wichtig ist nicht das Bruttovolumen, sondern die **Koordination der Kanäle**. Laut einer HubSpot-Studie (2024), generieren Multichannel-Kampagnen im Durchschnitt **2,5x mehr Antworten** als Ein-Kanal-Ansätze. Bei devlo dient jeder Kanal einem bestimmten Ziel in der Abfolge: Die E-Mail öffnet, LinkedIn verleiht **Glaubwürdigkeit**, der Anruf beschleunigt. Diese Orchestrierung verringert die Abhängigkeit von einem einzelnen Kanal und verbessert die **Regelmäßigkeit der Pipeline**."
+          "Cold E-Mail erreicht Prospects, die ihre Inbox lesen. LinkedIn Outreach erreicht Personen, die auf dem Netzwerk aktiver sind. Calling schafft Gespräche mit stark ausgelasteten Entscheidern, die schriftlich selten antworten. Die Kombination dieser Kanäle erhöht die Kontaktfläche pro Zielaccount.",
+          "Entscheidend ist nicht das Rohvolumen, sondern die Koordination. Bei devlo hat jeder Kanal eine klare Rolle in der Sequenz: E-Mail öffnet, LinkedIn schafft Glaubwürdigkeit, der Anruf beschleunigt. Diese Orchestrierung reduziert die Abhängigkeit von einem einzelnen Kanal und stabilisiert die Pipeline."
         ],
         "configuratorTitle": "Konfigurieren Sie Ihre Multichannel-Outbound-Strategie",
         "configuratorIntro": "Wählen Sie Ihren Kontext aus, um eine passende operative Empfehlung zu erhalten.",
@@ -5149,7 +5251,11 @@
           },
           {
             "question": "Was ist der Unterschied zwischen Multichannel-Outbound und Cold E-Mail allein?",
-            "answer": "Cold E-Mail deckt Interessenten ab, die auf E-Mails reagieren. Multichannel fügt LinkedIn und Telefon hinzu, um Entscheidungsträger zu erfassen, die andere Kanäle bevorzugen, was häufig die Antwortraten um 30-60% verbessert."
+            "answer": "Cold E-Mail erreicht Prospects, die per E-Mail reagieren. Multichannel ergänzt LinkedIn und Telefon, um Entscheider über andere Kanäle zu erreichen, Einwände schneller zu qualifizieren und die Abhängigkeit von einer Sequenz zu reduzieren."
+          },
+          {
+            "question": "Welche Signale lösen eine Multichannel-Sequenz aus?",
+            "answer": "Wir priorisieren Accounts anhand von ICP-Fit, Zielmarkt, verfügbaren Kaufsignalen, Seniorität, Erreichbarkeit der Entscheider und der Wahrscheinlichkeit, dass ein Termin kommerziell sinnvoll ist."
           },
           {
             "question": "Verwaltet Devlo die gesamte Akquise?",
@@ -5167,49 +5273,50 @@
           "linkedin-outreach",
           "cold-calling"
         ],
-        "summaryTitle": "Zusammenfassung",
+        "summaryTitle": "Kurz gesagt: Multichannel dient der Qualifizierung",
         "summaryPoints": [
-          "Der **Mehrkanal-Ansatz** kombiniert E-Mail, LinkedIn und Telefon, um die Kontaktfläche mit Ihren Zielentscheidern zu maximieren.",
-          "Jeder Kanal spielt eine präzise Rolle in der **Akquisesequenz**: öffnen, Glaubwürdigkeit aufbauen, beschleunigen.",
-          "Multichannel-Kampagnen generieren im Durchschnitt **2,5x mehr Antworten** als Ein-Kanal-Ansätze.",
-          "devlo orchestriert den gesamten Zyklus, von der **ICP-Definition** bis zur Terminvereinbarung in Ihrem Kalender."
+          "**Cold E-Mail** eröffnet die Konversation mit einem personalisierten und messbaren Ansatz.",
+          "**LinkedIn** liefert ein Präsenzsignal und stärkt die Glaubwürdigkeit bei Zielentscheidern.",
+          "**Calling** beschleunigt, wenn das Thema dringend, komplex oder zu strategisch für rein schriftliche Kommunikation ist.",
+          "Die Sequenz sollte durch **ICP, Timing und Kaufsignale** gesteuert werden, nicht durch Rohvolumen.",
+          "devlo liefert die gesamte Orchestrierung: qualifizierte Accounts, Messaging, Follow-ups, Antwortqualifizierung und CRM-Übergabe."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01",
+        "dateModified": "2026-05-03",
         "comparisonTable": {
-          "caption": "Vergleich zwischen ausgelagerter Multichannel-Akquise mit devlo und interner Akquise",
+          "caption": "Multichannel-Outbound vs. nur Cold E-Mail",
           "headers": [
             "Kriterium",
-            "Intern",
-            "Mit devlo"
+            "Nur Cold E-Mail",
+            "devlo Multichannel-Outbound"
           ],
           "rows": [
             {
-              "criterion": "Anlaufzeit",
-              "colA": "3-6 Monate (Rekrutierung, Schulung, Stack)",
-              "colB": "2-3 Wochen, Kampagnen live"
+              "criterion": "Abdeckung der Entscheider",
+              "colA": "Hängt stark vom E-Mail-Leseverhalten ab",
+              "colB": "E-Mail, LinkedIn und Telefon verstärken sich auf demselben Account"
             },
             {
-              "criterion": "Jahreskosten",
-              "colA": "80-120k CHF (SDR-Gehalt + Tools)",
-              "colB": "Ab 3k CHF/Monat"
+              "criterion": "Kommerzielles Signal",
+              "colA": "Schriftliche Antwort oder keine Antwort",
+              "colB": "Antworten, Verbindungen, Telefon-Einwände und qualifiziertes Interesse"
             },
             {
-              "criterion": "Aktivierte Kanäle",
-              "colA": "Oft nur 1 Kanal beherrscht",
-              "colB": "E-Mail + LinkedIn + Calling koordiniert"
+              "criterion": "Priorisierung",
+              "colA": "Oft auf Basis einer statischen Liste",
+              "colB": "Basierend auf ICP, Kaufsignalen, Seniorität und Erreichbarkeit"
             },
             {
-              "criterion": "Copywriting-Expertise",
-              "colA": "Lernen durch Versuch und Irrtum",
-              "colB": "Über 1.000 Kampagnen Erfahrung"
-            },
-            {
-              "criterion": "Skalierbarkeit",
-              "colA": "Begrenzt durch die Teamgrösse",
-              "colB": "Volumen monatlich anpassbar"
+              "criterion": "Übergabe an Sales",
+              "colA": "Antworten müssen manuell sortiert werden",
+              "colB": "Termine und Kontext werden ins CRM oder in den Kalender übergeben"
             }
           ]
+        },
+        "faqSecondAnswer": "Cold E-Mail erreicht Prospects, die per E-Mail reagieren. Multichannel ergänzt LinkedIn und Telefon, um Entscheider über andere Kanäle zu erreichen, Einwände schneller zu qualifizieren und die Abhängigkeit von einer Sequenz zu reduzieren.",
+        "signalFaq": {
+          "question": "Welche Signale lösen eine Multichannel-Sequenz aus?",
+          "answer": "Wir priorisieren Accounts anhand von ICP-Fit, Zielmarkt, verfügbaren Kaufsignalen, Seniorität, Erreichbarkeit der Entscheider und der Wahrscheinlichkeit, dass ein Termin kommerziell sinnvoll ist."
         }
       },
       "cold-email": {
@@ -6258,20 +6365,21 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Lead-Generierung",
-        "pageTitle": "B2B-Leadgenerierung: Aufbau einer Pipeline mit qualifizierten Leads",
-        "pageSubtitle": "PKI, TAM und Kontenqualifizierung, um Ihre Kampagnen zu versorgen.",
-        "metadataTitle": "B2B-Leadgenerierung: PKI und qualifizierte Listen",
-        "metadataDescription": "Agentur für B2B-Leadgenerierung in der Schweiz: ICP-Definition, TAM-Mapping, manuelle Qualifizierung und akquisitionsbereite Listen.",
+        "pageTitle": "B2B Leadgenerierung: qualifizierte Listen auf Basis von ICP, TAM und Kaufsignalen",
+        "pageSubtitle": "Wir verwandeln Ihren Zielmarkt in priorisierte Accounts, geprüfte Entscheider und Segmente, die bereit für Outbound-Sequenzen sind.",
+        "metadataTitle": "B2B Leadgenerierung Schweiz: qualifizierte ICP-Listen",
+        "metadataDescription": "devlo erstellt qualifizierte B2B-Listen für die Schweiz und Europa: ICP, TAM, Kaufsignale, Entscheider, verifizierte E-Mails und Scoring für Outbound-Sequenzen.",
         "metadataKeywords": [
-          "génération leads B2B",
-          "construction ICP",
+          "B2B Leadgenerierung",
+          "ICP Aufbau",
           "TAM SAM ICP",
-          "qualification prospects"
+          "Prospect Qualifizierung",
+          "B2B Kaufsignale"
         ],
         "heroParagraphs": [
-          "**B2B-Leadgenerierung** ist eine Methode, die darin besteht, Interessenten zu identifizieren und zu qualifizieren, die tatsächlich Ihrem idealen Kundenprofil entsprechen. Dies ist die Grundlage jeder erfolgreichen Akquise.",
-          "Unsere Methode beginnt mit einem präzisen PKI-Rahmen, gefolgt von einem Aufbau des TAM, einer Qualifizierung Konto für Konto und der Identifizierung der richtigen Entscheidungsträger. Die gelieferten Listen sind angereichert und direkt aktivierbar.",
-          "Leistung entsteht durch Präzision, nicht durch Bruttovolumen. Eine kurze, aber qualifizierte Liste konvertiert besser als eine massive, wenig gefilterte Basis."
+          "B2B Leadgenerierung bedeutet nicht, eine Kontaktliste zu kaufen. Sie entscheidet, welche Unternehmen realistisch Kunden werden können, welche Entscheider angesprochen werden sollten und welches Signal das Timing kommerziell relevant macht.",
+          "Unsere Methode kombiniert ICP, TAM, Kaufsignale, Seniorität, Erreichbarkeit und Datenvalidierung. Jeder Account wird priorisiert, damit Outbound-Sequenzen mit einem kohärenten, belastbaren und vertriebsfähigen Segment starten.",
+          "Die finale Lieferung ist nicht nur eine CSV-Datei. Es ist eine sequenzbereite Basis mit dokumentierten Qualifizierungsregeln, damit der Prozess für die nächsten Batches wiederholt werden kann."
         ],
         "coverageTitle": "Was dieser Dienst abdeckt",
         "coverageItems": [
@@ -6312,10 +6420,10 @@
             "description": "Exportieren Sie eine saubere und handlungsfähige Grundlage."
           }
         ],
-        "editorialTitle": "Warum muss eine Pipeline aufgebaut werden, bevor sie verschickt wird?",
+        "editorialTitle": "Eine Pipeline entsteht vor der ersten Sequenz",
         "editorialParagraphs": [
-          "Tatsächlich, die besten Outbound-Sequenzen scheitern an einer schlechten Basis. Wir behandeln die **Leadgenerierung** wie eine eigene Disziplin mit einem klaren **Qualifikationsstandard**.",
-          "Darüber hinaus, der gelieferte Wert ist nicht nur die endgültige Liste: Er ist auch die **wiederholbare Methode**, mit der Sie Ihre Beschaffung industrialisieren können. Laut einer Salesforce-Studie (2024), konvertieren sauber qualifizierte Listen **2x besser** als massiv generierte Kontaktlisten."
+          "Die besten Outbound-Sequenzen scheitern an einer schwachen Basis. Wir behandeln Leadgenerierung als eigene Disziplin: ICP-Rahmen, Mapping des adressierbaren Marktes, Account-Priorisierung, Entscheideridentifikation und Datenprüfung vor der Aktivierung.",
+          "Der gelieferte Wert ist nicht nur die finale Liste. Es ist auch die wiederholbare Methode, mit der Ihr Team versteht, warum ein Account in einen Batch kommt, welche Botschaft passt und wann er in die Sequenz gehen sollte."
         ],
         "configuratorTitle": "Konfigurieren Sie Ihren Bedarf an Lead-Generierung",
         "configuratorIntro": "Teilen Sie Ihre Erwartungen an Umfang und Genauigkeit mit, um den Rahmen der Aufgabe abzustecken.",
@@ -6423,7 +6531,11 @@
         "faqItems": [
           {
             "question": "Unterschied zwischen Leadgenerierung und Akquise?",
-            "answer": "Die Lead-Generierung baut die Basis auf (wen man kontaktieren sollte). Die Akquise führt den Kontakt aus (wie und wann man Kontakt aufnimmt)."
+            "answer": "Leadgenerierung baut die Basis: wen kontaktieren, warum jetzt und mit welcher Priorität. Akquise führt den Kontakt aus: Sequenz, Kanal, Nachricht, Follow-up und Antwortqualifizierung."
+          },
+          {
+            "question": "Wie priorisieren Sie Accounts?",
+            "answer": "Wir kombinieren ICP-Fit, Größe des adressierbaren Marktes, Kaufsignale, Seniorität der Entscheider, Datenqualität und die Fähigkeit des Accounts, einen kommerziell sinnvollen Termin anzunehmen."
           },
           {
             "question": "Frist für eine Liste mit 500 potenziellen Kunden?",
@@ -6445,15 +6557,56 @@
           "outbound-multicanal",
           "qualification-leads"
         ],
-        "summaryTitle": "Zusammenfassung",
+        "summaryTitle": "Kurz gesagt: eine gute Liste senkt den CAC",
         "summaryPoints": [
-          "**Leadgenerierung** beginnt mit einem präzisen ICP-Framework und der Konstruktion des TAM.",
-          "Die **manuelle Qualifizierung** Konto für Konto sichert die Relevanz der gelieferten Listen.",
-          "Qualifizierte Listen konvertieren **2x besser** als massiv generierte Kontaktlisten.",
-          "devlo liefert angereicherte, direkt aktivierbare Listen mit einer **wiederholbaren Methode** für Ihr Team."
+          "**ICP** definiert Accounts mit echter Abschlusswahrscheinlichkeit, nicht nur Antwortwahrscheinlichkeit.",
+          "**TAM -> Segmente -> Batches** verhindert, dass Märkte vermischt werden, die nicht auf dieselben Botschaften reagieren.",
+          "**Kaufsignale** priorisieren das Timing: Einstellung, Expansion, Finanzierung, Toolwechsel, Event oder Account-News.",
+          "**Verifizierte Entscheider** reduzieren Bounces, falsche Kontakte und Qualifizierungsverlust.",
+          "Qualifizierungsregeln werden dokumentiert, damit das System für künftige Batches wiederverwendet werden kann."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-05-03",
+        "comparisonTable": {
+          "caption": "Qualifizierte Leadgenerierung vs. Roh-Liste",
+          "headers": [
+            "Kriterium",
+            "Roh-Liste",
+            "devlo Leadgenerierung"
+          ],
+          "rows": [
+            {
+              "criterion": "ICP-Fit",
+              "colA": "Breiter Filter nach Branche oder Größe",
+              "colB": "Firmografische Kriterien, Markt, Reife und kommerzielles Potenzial"
+            },
+            {
+              "criterion": "Timing",
+              "colA": "Kein Signal oder ungeprüftes Signal",
+              "colB": "Kaufsignale und Account-Kontext priorisieren die Batches"
+            },
+            {
+              "criterion": "Entscheider",
+              "colA": "Kontakte teils generisch oder veraltet",
+              "colB": "Zielrollen, Seniorität, LinkedIn, E-Mail und Kontext geprüft"
+            },
+            {
+              "criterion": "Aktivierung",
+              "colA": "CSV muss vor Kampagnenstart überarbeitet werden",
+              "colB": "Segmente bereit für Sequenz, CRM oder Outbound-Tool"
+            },
+            {
+              "criterion": "Wiederverwendung",
+              "colA": "Schwer reproduzierbar",
+              "colB": "Wiederverwendbares Qualifizierungsframework für nächste Batches"
+            }
+          ]
+        },
+        "faqFirstAnswer": "Leadgenerierung baut die Basis: wen kontaktieren, warum jetzt und mit welcher Priorität. Akquise führt den Kontakt aus: Sequenz, Kanal, Nachricht, Follow-up und Antwortqualifizierung.",
+        "priorityFaq": {
+          "question": "Wie priorisieren Sie Accounts?",
+          "answer": "Wir kombinieren ICP-Fit, Größe des adressierbaren Marktes, Kaufsignale, Seniorität der Entscheider, Datenqualität und die Fähigkeit des Accounts, einen kommerziell sinnvollen Termin anzunehmen."
+        }
       },
       "qualification-leads": {
         "slug": "qualification-leads",
@@ -7394,8 +7547,8 @@
         "href": "/services/generation-leads",
         "icon": "🎯",
         "title": "Leads genereren",
-        "subtitle": "Leadgen + ICP-constructie",
-        "description": "Identificatie van ICP's, constructie van de TAM, handmatige kwalificatie van accounts en het genereren van lijsten die klaar zijn voor prospects.",
+        "subtitle": "ICP, TAM en koopsignalen",
+        "description": "Doelaccounts, koopsignalen, geverifieerde beslissers en sequentieklare segmenten.",
         "kpi": "1.600 → 300 gekwalificeerde accounts voor Abacus",
         "tag": "generation-leads"
       },
@@ -7433,7 +7586,7 @@
         "path": "/services/outbound-multicanal",
         "navTitle": "Uitgaande multichannel",
         "pageTitle": "B2B Multichannel Outbound Prospecting: Koude e-mail, LinkedIn en koud bellen",
-        "pageSubtitle": "Koude e-mail + LinkedIn + bellen om een gekwalificeerde en voorspelbare pijplijn te genereren.",
+        "pageSubtitle": "Gecoördineerde cold email, LinkedIn en calling om gekwalificeerde afspraken met de juiste beslissers te creëren.",
         "metadataTitle": "B2B prospectie via meerdere kanalen",
         "metadataDescription": "Outbound multi-channel B2B prospectiebureau gevestigd in Zwitserland: koude e-mail, LinkedIn en bellen om gekwalificeerde afspraken te genereren.",
         "metadataKeywords": [
@@ -7444,8 +7597,8 @@
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "**Outbound multichannel prospectie** is een prospectiemethode die erin bestaat uw ideale prospects via verschillende kanalen tegelijk te benaderen: gepersonaliseerde koude e-mails, LinkedIn-berichten, koude oproepen en gecoördineerde follow-ups. devlo ontwerpt en voert deze campagnes van A tot Z uit — van het definiëren van de ICP tot het kwalificeren van leads en het maken van afspraken rechtstreeks in de agenda van uw verkoopteam.",
-          "In tegenstelling tot een aanpak via één kanaal, verhoogt multi-channel de respons aanzienlijk door prospects op het juiste moment te bereiken via het kanaal van hun voorkeur. Onze campagnes combineren The List voor e-mailsequenties, LinkedIn Sales Navigator voor targeting en een aangepast telefoonscript voor follow-up. Het resultaat: gekwalificeerde afspraken met de juiste beslissers binnen 1 tot 5 weken."
+          "Multichannel outbound prospectie betekent dat prioritaire accounts via gecoördineerde kanalen worden benaderd: gepersonaliseerde cold email, LinkedIn-berichten, gerichte telefoongesprekken en gesynchroniseerde follow-ups. devlo ontwerpt en voert de campagne end-to-end uit, van ICP-definitie tot reply-kwalificatie en geboekte afspraken in de agenda van uw salesteam.",
+          "In tegenstelling tot een aanpak via één kanaal vermindert multichannel de afhankelijkheid van één inbox. We combineren lemlist voor e-mailsequenties, LinkedIn Sales Navigator voor targeting en een telefoonscript dat is aangepast aan marktbezwaren. Het doel is niet contactvolume, maar commerciële gesprekken met de juiste beslissers op het juiste moment."
         ],
         "coverageTitle": "Wat deze service omvat",
         "coverageItems": [
@@ -7485,8 +7638,8 @@
         ],
         "editorialTitle": "Waarom presteert meerkanaals beter dan eenkanaals?",
         "editorialParagraphs": [
-          "**Koude e-mails** alleen bereiken prospects die hun e-mails lezen. **LinkedIn** bereikt diegenen die meer interactie hebben op het netwerk. **Koud bellen** brengt gesprekken op gang met drukke besluitvormers die zelden schriftelijk reageren. Inderdaad, door deze kanalen te combineren, vergroot je mechanisch je **contactoppervlak**.",
-          "Daarom, wat belangrijk is, is niet het ruwe volume, maar de **coördinatie van kanalen**. Volgens een HubSpot-onderzoek (2024), genereren multichannel-campagnes gemiddeld **2,5x meer reacties** dan benaderingen via één kanaal. Bij devlo dient elk kanaal een precies doel in de reeks: e-mail opent de deur, LinkedIn geeft **geloofwaardigheid** en telefoontjes versnellen het proces. Deze orkestratie vermindert de afhankelijkheid van één kanaal en verbetert de **regelmatigheid van de pijplijn**."
+          "Cold email bereikt prospects die hun inbox lezen. LinkedIn outreach bereikt mensen die actiever zijn op het netwerk. Calling creëert gesprekken met drukbezette beslissers die zelden schriftelijk antwoorden. Door deze kanalen te combineren vergroot u de contactoppervlakte per doelaccount.",
+          "Het gaat niet om ruw volume, maar om coördinatie. Bij devlo heeft elk kanaal een duidelijke rol in de sequentie: e-mail opent, LinkedIn bouwt geloofwaardigheid op, bellen versnelt. Deze orkestratie vermindert de afhankelijkheid van één kanaal en maakt de pipeline consistenter."
         ],
         "configuratorTitle": "Uw outbound strategie voor meerdere kanalen configureren",
         "configuratorIntro": "Selecteer je context om een operationeel advies op maat te ontvangen.",
@@ -7597,6 +7750,10 @@
             "answer": "Koude e-mail heeft betrekking op prospects die reageren op e-mail. Multi-channel voegt LinkedIn en telefoon toe om besluitvormers te bereiken die de voorkeur geven aan andere kanalen, wat de respons vaak met 30-60% verbetert."
           },
           {
+            "question": "Welke signalen starten een multichannel-sequentie?",
+            "answer": "We prioriteren accounts op ICP-fit, doelmarkt, beschikbare koopsignalen, senioriteit, bereikbaarheid van beslissers en de kans dat een afspraak commercieel nuttig is."
+          },
+          {
             "question": "Beheert Devlo alle prospectie?",
             "answer": "Ja, we kunnen de hele cyclus beheren (lead gen, outreach, kwalificatie, afspraken maken) of ingrijpen in een specifiek deel van de keten, afhankelijk van uw interne organisatie."
           },
@@ -7612,49 +7769,50 @@
           "linkedin-outreach",
           "cold-calling"
         ],
-        "summaryTitle": "Samenvatting",
+        "summaryTitle": "Kort gezegd: multichannel dient kwalificatie",
         "summaryPoints": [
-          "De **multichannel-aanpak** combineert e-mail, LinkedIn en telefoon om het contactoppervlak met uw doelbeslissers te maximaliseren.",
-          "Elk kanaal speelt een precieze rol in de **prospectiesequentie**: openen, geloofwaardigheid opbouwen, versnellen.",
-          "Multichannel-campagnes genereren gemiddeld **2,5x meer reacties** dan benaderingen via één kanaal.",
-          "devlo orkestreert de hele cyclus, van de **ICP-definitie** tot het boeken van afspraken in uw agenda."
+          "**Cold email** opent het gesprek met een gepersonaliseerde en meetbare invalshoek.",
+          "**LinkedIn** voegt een aanwezigheidssignaal toe en bouwt geloofwaardigheid op bij doelbeslissers.",
+          "**Calling** versnelt wanneer het onderwerp urgent, complex of te strategisch is om alleen schriftelijk te blijven.",
+          "De sequentie moet worden gestuurd door **ICP, timing en koopsignalen**, niet door ruw volume.",
+          "devlo levert de volledige orkestratie: gekwalificeerde accounts, messaging, follow-ups, reply-kwalificatie en CRM-overdracht."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01",
+        "dateModified": "2026-05-03",
         "comparisonTable": {
-          "caption": "Vergelijking tussen uitbestede multichannel-prospectie met devlo en interne prospectie",
+          "caption": "Multichannel outbound vs alleen cold email",
           "headers": [
             "Criterium",
-            "Intern",
-            "Met devlo"
+            "Alleen cold email",
+            "devlo multichannel outbound"
           ],
           "rows": [
             {
-              "criterion": "Opstartijd",
-              "colA": "3-6 maanden (werving, training, stack)",
-              "colB": "2-3 weken, campagnes live"
+              "criterion": "Bereik van beslissers",
+              "colA": "Hangt sterk af van e-mailleesgedrag",
+              "colB": "E-mail, LinkedIn en telefoon versterken elkaar op hetzelfde account"
             },
             {
-              "criterion": "Jaarlijkse kosten",
-              "colA": "CHF 80-120k (SDR-salaris + tools)",
-              "colB": "Vanaf CHF 3k/maand"
+              "criterion": "Commercieel signaal",
+              "colA": "Schriftelijk antwoord of geen antwoord",
+              "colB": "Antwoorden, connecties, telefonische bezwaren en gekwalificeerde interesse"
             },
             {
-              "criterion": "Geactiveerde kanalen",
-              "colA": "Vaak slechts 1 kanaal beheerst",
-              "colB": "E-mail + LinkedIn + Calling gecoordineerd"
+              "criterion": "Prioritering",
+              "colA": "Vaak gebaseerd op een statische lijst",
+              "colB": "Gebaseerd op ICP, koopsignalen, senioriteit en bereikbaarheid"
             },
             {
-              "criterion": "Copywriting-expertise",
-              "colA": "Leren door vallen en opstaan",
-              "colB": "Meer dan 1.000 campagnes ervaring"
-            },
-            {
-              "criterion": "Schaalbaarheid",
-              "colA": "Beperkt door teamgrootte",
-              "colB": "Volume maandelijks aanpasbaar"
+              "criterion": "Sales-overdracht",
+              "colA": "Antwoorden moeten handmatig worden gesorteerd",
+              "colB": "Afspraken en context worden in CRM of agenda gezet"
             }
           ]
+        },
+        "faqSecondAnswer": "Cold email bereikt prospects die per e-mail reageren. Multichannel voegt LinkedIn en telefoon toe om beslissers via andere kanalen te bereiken, bezwaren sneller te kwalificeren en afhankelijkheid van één sequentie te verminderen.",
+        "signalFaq": {
+          "question": "Welke signalen starten een multichannel-sequentie?",
+          "answer": "We prioriteren accounts op ICP-fit, doelmarkt, beschikbare koopsignalen, senioriteit, bereikbaarheid van beslissers en de kans dat een afspraak commercieel nuttig is."
         }
       },
       "cold-email": {
@@ -8703,20 +8861,21 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Leads genereren",
-        "pageTitle": "B2B-leadgeneratie: een pijplijn van gekwalificeerde prospects opbouwen",
-        "pageSubtitle": "KPI, TAM en accountkwalificatie om je campagnes te voeden.",
-        "metadataTitle": "B2B-leadgeneratie: ICP en gekwalificeerde lijsten",
-        "metadataDescription": "B2B lead generation agency in Zwitserland: ICP-definitie, TAM in kaart brengen, handmatige kwalificatie en kant-en-klare prospectlijsten.",
+        "pageTitle": "B2B leadgeneratie: gekwalificeerde lijsten op basis van ICP, TAM en koopsignalen",
+        "pageSubtitle": "We zetten uw doelmarkt om in geprioriteerde accounts, geverifieerde beslissers en segmenten die klaar zijn voor outbound sequenties.",
+        "metadataTitle": "B2B leadgeneratie Zwitserland: gekwalificeerde ICP-lijsten",
+        "metadataDescription": "devlo bouwt gekwalificeerde B2B-lijsten voor Zwitserland en Europa: ICP, TAM, koopsignalen, beslissers, geverifieerde e-mails en scoring voor outbound sequenties.",
         "metadataKeywords": [
-          "génération leads B2B",
-          "construction ICP",
+          "B2B leadgeneratie",
+          "ICP opbouw",
           "TAM SAM ICP",
-          "qualification prospects"
+          "prospectkwalificatie",
+          "B2B koopsignalen"
         ],
         "heroParagraphs": [
-          "**B2B-leadgeneratie** is een prospectiemethode die erin bestaat prospects te identificeren en te kwalificeren die echt overeenkomen met uw ideale klantprofiel. Dit is de basis van alle succesvolle prospectie.",
-          "Onze methode begint met een nauwkeurig KPI-raamwerk, gevolgd door de constructie van de TAM, een account-per-account kwalificatie en de identificatie van de juiste beslissers. De geleverde lijsten worden verrijkt en kunnen direct worden geactiveerd.",
-          "Prestaties komen van precisie, niet van het ruwe volume. Een korte maar gekwalificeerde lijst converteert beter dan een enorme, ongefilterde database."
+          "B2B leadgeneratie is niet het kopen van een contactdatabase. Het bepaalt welke bedrijven realistisch klant kunnen worden, welke beslissers moeten worden benaderd en welk signaal de timing commercieel relevant maakt.",
+          "Onze methode combineert ICP, TAM, koopsignalen, senioriteit, bereikbaarheid en datavalidatie. Elk account wordt geprioriteerd zodat outbound sequenties starten vanuit een coherent, verdedigbaar en sales-ready segment.",
+          "De uiteindelijke levering is niet alleen een CSV. Het is een sequentieklare basis met gedocumenteerde kwalificatieregels zodat het proces op volgende batches kan worden herhaald."
         ],
         "coverageTitle": "Wat deze service omvat",
         "coverageItems": [
@@ -8757,10 +8916,10 @@
             "description": "Exporteer een schone, bruikbare database."
           }
         ],
-        "editorialTitle": "Waarom moet een pijplijn worden gebouwd voordat deze wordt verzonden?",
+        "editorialTitle": "Een pipeline wordt gebouwd vóór de eerste sequentie",
         "editorialParagraphs": [
-          "Inderdaad, de beste outbound-sequenties falen met een slechte basis. Wij behandelen **leadgeneratie** als een discipline op zich, met een duidelijke **kwalificatienorm**.",
-          "Bovendien, de geleverde waarde is niet alleen de uiteindelijke lijst: het is ook de **reproduceerbare methode** waarmee u uw acquisitie kunt industrialiseren. Volgens een Salesforce-onderzoek (2024), converteren zorgvuldig gekwalificeerde lijsten **2x beter** dan massaal gegenereerde contactlijsten."
+          "De beste outbound sequenties falen met een zwakke basis. Wij behandelen leadgeneratie als een eigen discipline: ICP-kadering, mapping van de adresseerbare markt, accountprioritering, identificatie van beslissers en datacontrole vóór activatie.",
+          "De geleverde waarde is niet alleen de uiteindelijke lijst. Het is ook de herhaalbare methode waarmee uw team weet waarom een account in een batch komt, welke boodschap past en wanneer het in sequentie moet gaan."
         ],
         "configuratorTitle": "Uw behoeften voor leadgeneratie configureren",
         "configuratorIntro": "Deel je verwachtingen over volume en precisie om de opdracht in te kaderen.",
@@ -8868,7 +9027,11 @@
         "faqItems": [
           {
             "question": "Het verschil tussen leadgeneratie en prospectie?",
-            "answer": "Leadgeneratie bouwt de basis (met wie contact opnemen). Prospectie voert het contact uit (hoe en wanneer contact opnemen)."
+            "answer": "Leadgeneratie bouwt de basis: wie contacteren, waarom nu en met welke prioriteit. Prospectie voert het contact uit: sequentie, kanaal, boodschap, follow-up en reply-kwalificatie."
+          },
+          {
+            "question": "Hoe prioriteren jullie accounts?",
+            "answer": "We combineren ICP-fit, grootte van de adresseerbare markt, koopsignalen, senioriteit van beslissers, datakwaliteit en de kans dat het account een commercieel nuttige afspraak kan aanvaarden."
           },
           {
             "question": "Doorlooptijd voor een lijst van 500 prospects?",
@@ -8890,15 +9053,56 @@
           "outbound-multicanal",
           "qualification-leads"
         ],
-        "summaryTitle": "Samenvatting",
+        "summaryTitle": "Kort gezegd: een goede lijst verlaagt CAC",
         "summaryPoints": [
-          "**Leadgeneratie** begint met een nauwkeurig ICP-framework en de constructie van de TAM.",
-          "De **handmatige kwalificatie** per account garandeert de relevantie van de geleverde lijsten.",
-          "Gekwalificeerde lijsten converteren **2x beter** dan massaal gegenereerde contactlijsten.",
-          "devlo levert verrijkte, direct activeerbare lijsten met een **reproduceerbare methode** voor uw team."
+          "**ICP** definieert accounts met een echte kans om te tekenen, niet alleen om te antwoorden.",
+          "**TAM -> segmenten -> batches** voorkomt dat markten worden gemengd die niet op dezelfde boodschappen reageren.",
+          "**Koopsignalen** prioriteren timing: aanwerving, expansie, financiering, toolwissel, event of accountnieuws.",
+          "**Geverifieerde beslissers** verminderen bounces, verkeerde contacten en kwalificatieverlies.",
+          "Kwalificatieregels worden gedocumenteerd zodat het systeem opnieuw kan worden gebruikt voor toekomstige batches."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-05-03",
+        "comparisonTable": {
+          "caption": "Gekwalificeerde leadgeneratie vs ruwe lijst",
+          "headers": [
+            "Criterium",
+            "Ruwe lijst",
+            "devlo leadgeneratie"
+          ],
+          "rows": [
+            {
+              "criterion": "ICP-fit",
+              "colA": "Brede filter op sector of grootte",
+              "colB": "Firmografische criteria, markt, maturiteit en commercieel potentieel"
+            },
+            {
+              "criterion": "Timing",
+              "colA": "Geen signaal of ongeverifieerd signaal",
+              "colB": "Koopsignalen en accountcontext prioriteren batches"
+            },
+            {
+              "criterion": "Beslisser",
+              "colA": "Contacten soms generiek of verouderd",
+              "colB": "Doelrollen, senioriteit, LinkedIn, e-mail en context geverifieerd"
+            },
+            {
+              "criterion": "Activatie",
+              "colA": "CSV moet worden herwerkt voor campagnelancering",
+              "colB": "Segmenten klaar voor sequentie, CRM of outbound tool"
+            },
+            {
+              "criterion": "Hergebruik",
+              "colA": "Moeilijk te reproduceren",
+              "colB": "Herbruikbaar kwalificatieframework voor volgende batches"
+            }
+          ]
+        },
+        "faqFirstAnswer": "Leadgeneratie bouwt de basis: wie contacteren, waarom nu en met welke prioriteit. Prospectie voert het contact uit: sequentie, kanaal, boodschap, follow-up en reply-kwalificatie.",
+        "priorityFaq": {
+          "question": "Hoe prioriteren jullie accounts?",
+          "answer": "We combineren ICP-fit, grootte van de adresseerbare markt, koopsignalen, senioriteit van beslissers, datakwaliteit en de kans dat het account een commercieel nuttige afspraak kan aanvaarden."
+        }
       },
       "qualification-leads": {
         "slug": "qualification-leads",

@@ -34,6 +34,16 @@
 
 A qualified lead is a B2B account that matches the client's ICP, shows an actionable buying signal, and can reasonably accept a commercial meeting. devlo qualifies opportunities on ICP fit, timing, decision-maker access, and message relevance before launching outreach.
 
+## Primary Conversion Path
+
+- [Free Consultation](https://devlo.ch/consultation): Audit ICP, TAM, buying signals, sequence readiness, data quality, CRM readiness and the next batch needed to generate qualified B2B meetings.
+
+## Priority Qualification Pages
+
+- [Lead Generation](https://devlo.ch/services/generation-leads): Builds qualified B2B account lists from ICP, TAM, buying signals, verified decision-makers and sequence-ready segments.
+- [Multichannel Outbound Prospecting](https://devlo.ch/services/outbound-multicanal): Coordinates cold email, LinkedIn and calling to turn qualified accounts into commercial conversations.
+- [B2B Prospecting in Switzerland](https://devlo.ch/prospection-commerciale-suisse): Swiss-market outbound for Romandy, German-speaking Switzerland and Ticino.
+
 ## Case Studies
 
 - [Horus Software — EUR 200K in signed contracts](https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca): Accounting software, 80 qualified meetings, 45 new clients in Belgium.
@@ -99,4 +109,4 @@ A qualified lead is a B2B account that matches the client's ICP, shows an action
 - [Deutsch](https://devlo.ch/de/)
 - [Nederlands](https://devlo.ch/nl/)
 
-Last-Updated: 2026-05-02
+Last-Updated: 2026-05-03

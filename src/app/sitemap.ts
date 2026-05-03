@@ -22,7 +22,7 @@ function normalizeSitemapPath(path: string): string | null {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const urls = new Set<string>();
-  const latestSeoRefreshDate = new Date("2026-05-02");
+  const latestSeoRefreshDate = new Date("2026-05-03");
   const evergreenContentRefreshDate = new Date("2026-03-09");
   const fallbackRefreshDate = new Date("2026-03-01");
 

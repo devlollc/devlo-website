@@ -409,27 +409,27 @@
   },
   "consultation": {
     "title": {
-      "de": "Kostenlose Beratung | Maßgeschneiderte B2B-Akquise-Strategie | devlo",
-      "en": "Free consultation | Tailor-made B2B prospecting strategy | devlo",
-      "fr": "Consultation gratuite | Stratégie de prospection B2B sur mesure | devlo",
-      "nl": "Gratis advies | B2B prospectie strategie op maat | devlo"
+      "de": "Kostenlose Beratung | Audit für B2B Leadgenerierung und Akquise | devlo",
+      "en": "Free consultation | B2B lead generation and prospecting audit | devlo",
+      "fr": "Consultation gratuite | Audit lead generation et prospection B2B | devlo",
+      "nl": "Gratis consultatie | Audit voor B2B leadgeneratie en prospectie | devlo"
     },
     "description": {
-      "de": "Erhalten Sie Ihre kostenlose und personalisierte Outbound-Strategie zur Kundengewinnung. Teilen Sie Ihre PKI und erhalten Sie innerhalb von 24 Stunden einen vollständigen Aktionsplan. Schweizer B2B-Agentur.",
-      "en": "Get your free, personalised outbound prospecting strategy. Share your KPI and receive a complete action plan within 24 hours. Swiss B2B agency.",
-      "fr": "Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d'action complet sous 24h. Agence B2B suisse.",
-      "nl": "Ontvang je gratis, gepersonaliseerde outbound prospectiestrategie. Deel je KPI en ontvang binnen 24 uur een compleet actieplan. Zwitsers B2B-agentschap."
+      "de": "Prüfen Sie Ihr Potenzial für qualifizierte Leads mit devlo. ICP, TAM, Kaufsignale, Sequenzen und Aktionsplan für B2B-Termine.",
+      "en": "Audit your qualified lead potential with devlo. ICP, TAM, buying signals, sequences and an action plan to generate B2B meetings.",
+      "fr": "Auditez votre potentiel de leads qualifiés avec devlo. ICP, TAM, signaux d'achat, séquences et plan d'action pour générer des rendez-vous B2B.",
+      "nl": "Audit uw potentieel voor gekwalificeerde leads met devlo. ICP, TAM, koopsignalen, sequenties en actieplan voor B2B-afspraken."
     },
     "body": {
-      "de": "Kostenlose Beratung | Maßgeschneiderte B2B-Akquise-Strategie | devlo\n\nErhalten Sie Ihre kostenlose und maßgeschneiderte Outbound-Prospektionsstrategie. Teilen Sie Ihre PKI und erhalten Sie innerhalb von 24 Stunden einen umfassenden Aktionsplan. Schweizer B2B-Agentur.",
-      "en": "Free consultation | Tailor-made B2B prospecting strategy | devlo\n\nGet your free, customised outbound prospecting strategy. Share your KPI and receive a complete action plan within 24 hours. Swiss B2B agency.",
+      "de": "Kostenlose Beratung | Audit für B2B Leadgenerierung und Akquise | devlo\n\nPrüfen Sie Ihr Potenzial für qualifizierte Leads mit devlo. ICP, TAM, Kaufsignale, Sequenzen und Aktionsplan für B2B-Termine.",
+      "en": "Free consultation | B2B lead generation and prospecting audit | devlo\n\nAudit your qualified lead potential with devlo. ICP, TAM, buying signals, sequences and an action plan to generate B2B meetings.",
       "fr": null,
-      "nl": "Gratis advies | B2B prospectie strategie op maat | devlo\n\nOntvang uw gratis outbound prospectiestrategie op maat. Deel je KPI en ontvang binnen 24 uur een volledig actieplan. Zwitsers B2B agentschap."
+      "nl": "Gratis consultatie | Audit voor B2B leadgeneratie en prospectie | devlo\n\nAudit uw potentieel voor gekwalificeerde leads met devlo. ICP, TAM, koopsignalen, sequenties en actieplan voor B2B-afspraken."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"
     },
-    "updatedAt": "2026-03-05T06:52:06.762Z"
+    "updatedAt": "2026-05-03T00:00:00.000Z"
   },
   "home": {
     "title": {
@@ -1823,27 +1823,27 @@
   },
   "service:generation-leads": {
     "title": {
-      "de": "B2B-Leadgenerierung: PKI und qualifizierte Listen | devlo",
-      "en": "B2B lead generation: ICP and qualified lists | devlo",
-      "fr": "Génération de leads B2B : ICP et listes qualifiées | devlo",
-      "nl": "B2B-leadgeneratie: ICP en gekwalificeerde lijsten | devlo"
+      "de": "B2B Leadgenerierung Schweiz: qualifizierte ICP-Listen | devlo",
+      "en": "B2B Lead Generation Switzerland: qualified ICP lists | devlo",
+      "fr": "Lead Generation B2B Suisse : listes ICP qualifiées | devlo",
+      "nl": "B2B leadgeneratie Zwitserland: gekwalificeerde ICP-lijsten | devlo"
     },
     "description": {
-      "de": "Agentur für B2B-Leadgenerierung in der Schweiz: ICP-Definition, TAM-Mapping, manuelle Qualifizierung und akquisitionsbereite Listen.",
-      "en": "B2B lead generation agency in Switzerland: ICP definition, TAM mapping, manual qualification and ready-to-prospect lists.",
-      "fr": "Agence de génération de leads B2B en Suisse : définition ICP, mapping TAM, qualification manuelle et listes prêtes à prospecter.",
-      "nl": "B2B lead generation agency in Zwitserland: ICP-definitie, TAM in kaart brengen, handmatige kwalificatie en kant-en-klare prospectlijsten."
+      "de": "devlo erstellt qualifizierte B2B-Listen für die Schweiz und Europa: ICP, TAM, Kaufsignale, Entscheider, verifizierte E-Mails und Scoring für Outbound-Sequenzen.",
+      "en": "devlo builds qualified B2B lists for Switzerland and Europe: ICP, TAM, buying signals, decision-makers, verified emails and scoring for outbound sequences.",
+      "fr": "Agence de lead generation B2B en Suisse : ICP, TAM, signaux d'achat, décideurs, emails vérifiés et scoring pour séquences outbound.",
+      "nl": "devlo bouwt gekwalificeerde B2B-lijsten voor Zwitserland en Europa: ICP, TAM, koopsignalen, beslissers, geverifieerde e-mails en scoring voor outbound sequenties."
     },
     "body": {
-      "de": "B2B-Leadgenerierung: PKI und qualifizierte Listen | devlo\n\nAgentur für B2B-Leadgenerierung in der Schweiz: PKI-Definition, TAM-Mapping, manuelle Qualifizierung und akquisitionsbereite Listen.",
-      "en": "B2B lead generation: ICP and qualified lists | devlo\n\nB2B lead generation agency in Switzerland: PKI definition, TAM mapping, manual qualification and ready-to-prospect lists.",
+      "de": "B2B Leadgenerierung Schweiz: qualifizierte ICP-Listen | devlo\n\ndevlo erstellt qualifizierte B2B-Listen für die Schweiz und Europa: ICP, TAM, Kaufsignale, Entscheider, verifizierte E-Mails und Scoring für Outbound-Sequenzen.",
+      "en": "B2B Lead Generation Switzerland: qualified ICP lists | devlo\n\ndevlo builds qualified B2B lists for Switzerland and Europe: ICP, TAM, buying signals, decision-makers, verified emails and scoring for outbound sequences.",
       "fr": null,
-      "nl": "B2B-leadgeneratie: ICP en gekwalificeerde lijsten | devlo\n\nB2B lead generation agency in Zwitserland: PKI definitie, TAM in kaart brengen, handmatige kwalificatie en kant-en-klare prospectlijsten."
+      "nl": "B2B leadgeneratie Zwitserland: gekwalificeerde ICP-lijsten | devlo\n\ndevlo bouwt gekwalificeerde B2B-lijsten voor Zwitserland en Europa: ICP, TAM, koopsignalen, beslissers, geverifieerde e-mails en scoring voor outbound sequenties."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"
     },
-    "updatedAt": "2026-03-05T06:53:21.445Z"
+    "updatedAt": "2026-05-03T00:00:00.000Z"
   },
   "service:intent-data": {
     "title": {
@@ -1895,27 +1895,27 @@
   },
   "service:outbound-multicanal": {
     "title": {
-      "de": "Outbound Multichannel B2B Akquise | devlo",
-      "en": "B2B Outbound Multichannel Prospecting | devlo",
-      "fr": "Prospection Outbound Multicanal B2B | devlo",
-      "nl": "B2B prospectie via meerdere kanalen | devlo"
+      "de": "B2B Multichannel-Outbound | Cold E-Mail + LinkedIn + Calling | devlo",
+      "en": "B2B Multichannel Outbound | Cold Email + LinkedIn + Calling | devlo",
+      "fr": "Outbound Multicanal B2B | Cold email + LinkedIn + Calling | devlo",
+      "nl": "B2B multichannel outbound | Cold email + LinkedIn + Calling | devlo"
     },
     "description": {
-      "de": "B2B-Multichannel-Outbound-Prospektionsagentur mit Sitz in der Schweiz: Cold E-Mail, LinkedIn und Calling zur Generierung qualifizierter Termine.",
-      "en": "Outbound multi-channel B2B prospecting agency based in Switzerland: cold email, LinkedIn and calling to generate qualified appointments.",
-      "fr": "Agence de prospection outbound multicanal B2B basée en Suisse : cold email, LinkedIn et calling pour générer des rendez-vous qualifiés.",
-      "nl": "Outbound multi-channel B2B prospectiebureau gevestigd in Zwitserland: koude e-mail, LinkedIn en bellen om gekwalificeerde afspraken te genereren."
+      "de": "Schweizer B2B-Agentur für Multichannel-Outbound: koordinierte Cold E-Mail, LinkedIn und Calling für qualifizierte Termine mit den richtigen Entscheidern.",
+      "en": "Swiss B2B multichannel outbound agency: coordinated cold email, LinkedIn and calling to generate qualified meetings with the right decision-makers.",
+      "fr": "Agence outbound multicanal B2B en Suisse : cold email, LinkedIn et calling coordonnés pour générer des rendez-vous qualifiés avec les bons décideurs.",
+      "nl": "Zwitserse B2B agency voor multichannel outbound: gecoördineerde cold email, LinkedIn en calling voor gekwalificeerde afspraken met de juiste beslissers."
     },
     "body": {
-      "de": "Outbound Multichannel B2B Akquise | devlo\n\nAgentur für B2B-Multichannel-Outbound-Prospektion mit Sitz in der Schweiz: Cold E-Mail, LinkedIn und Calling, um qualifizierte Termine zu generieren.",
-      "en": "B2B Outbound Multichannel Prospecting | devlo\n\nOutbound multi-channel B2B prospecting agency based in Switzerland: cold email, LinkedIn and calling to generate qualified appointments.",
+      "de": "B2B Multichannel-Outbound | Cold E-Mail + LinkedIn + Calling | devlo\n\nSchweizer B2B-Agentur für Multichannel-Outbound: koordinierte Cold E-Mail, LinkedIn und Calling für qualifizierte Termine mit den richtigen Entscheidern.",
+      "en": "B2B Multichannel Outbound | Cold Email + LinkedIn + Calling | devlo\n\nSwiss B2B multichannel outbound agency: coordinated cold email, LinkedIn and calling to generate qualified meetings with the right decision-makers.",
       "fr": null,
-      "nl": "B2B prospectie via meerdere kanalen | devlo\n\nOutbound multi-channel B2B prospectiebureau gevestigd in Zwitserland: koude e-mail, LinkedIn en bellen om gekwalificeerde afspraken te genereren."
+      "nl": "B2B multichannel outbound | Cold email + LinkedIn + Calling | devlo\n\nZwitserse B2B agency voor multichannel outbound: gecoördineerde cold email, LinkedIn en calling voor gekwalificeerde afspraken met de juiste beslissers."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"
     },
-    "updatedAt": "2026-03-05T06:53:24.388Z"
+    "updatedAt": "2026-05-03T00:00:00.000Z"
   },
   "service:prise-de-rendez-vous": {
     "title": {

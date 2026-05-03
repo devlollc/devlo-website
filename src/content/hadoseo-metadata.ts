@@ -31,8 +31,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/consultation",
-    title: "Consultation gratuite | Stratégie B2B | devlo",
-    description: "Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Plan d'action complet sous 24h. Agence B2B suisse.",
+    title: "Consultation gratuite | Audit lead generation B2B | devlo",
+    description: "Auditez votre potentiel de leads qualifiés : ICP TAM signaux d'achat séquences et plan d'action pour générer des rendez-vous B2B.",
     canonical: "https://devlo.ch/consultation",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -64,7 +64,7 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   {
     route: "/services/outbound-multicanal",
     title: "Outbound Multicanal B2B | Cold email + LinkedIn + Calling | devlo",
-    description: "Agence outbound multicanal B2B en Suisse : cold email, LinkedIn outreach et cold calling combinés pour maximiser les rendez-vous qualifiés. 14 cas clients.",
+    description: "Agence outbound multicanal B2B en Suisse : cold email LinkedIn et calling coordonnés pour générer des rendez-vous qualifiés avec les bons décideurs.",
     canonical: "https://devlo.ch/services/outbound-multicanal",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -111,8 +111,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/services/generation-leads",
-    title: "Lead Generation B2B | Génération de leads qualifiés Suisse | devlo",
-    description: "Agence lead generation B2B en Suisse : définition ICP, mapping TAM, qualification manuelle. Listes 100% vérifiées, prêtes à prospecter dès J+5.",
+    title: "Lead Generation B2B Suisse | Listes ICP qualifiées | devlo",
+    description: "Agence lead generation B2B en Suisse : ICP TAM signaux d'achat décideurs emails vérifiés et scoring pour séquences outbound.",
     canonical: "https://devlo.ch/services/generation-leads",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -263,8 +263,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/prospection-commerciale-suisse",
-    title: "Prospection commerciale Suisse | Agence B2B multicanale | devlo",
-    description: "Agence de prospection commerciale B2B en Suisse. Cold email, LinkedIn et téléprospection en FR/DE/EN. +200 clients suisses accompagnés depuis 2020.",
+    title: "Prospection B2B Suisse | Leads qualifiés et RDV | devlo",
+    description: "Agence B2B basée en Suisse pour lead generation séquences outbound et rendez-vous qualifiés en Romandie Suisse alémanique et Tessin.",
     canonical: "https://devlo.ch/prospection-commerciale-suisse",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",

@@ -928,13 +928,13 @@ export const academyContent = {
 };
 
 export const consultationSeo = {
-  title: "Consultation gratuite | Stratégie de prospection B2B sur mesure",
+  title: "Consultation gratuite | Audit lead generation et prospection B2B",
   description:
-    "Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d'action complet sous 24h. Agence B2B suisse.",
+    "Auditez votre potentiel de leads qualifiés avec devlo. ICP, TAM, signaux d'achat, séquences et plan d'action pour générer des rendez-vous B2B.",
 };
 
 export const consultationContent = {
-  h1: "Obtenez votre stratégie outbound gratuite et ultra-ciblée pour vos meilleurs clients B2B",
+  h1: "Auditez votre potentiel de leads qualifiés avant de lancer une campagne B2B",
 
   reassurance: [
     "Gratuit et sans engagement",
@@ -943,24 +943,24 @@ export const consultationContent = {
   ],
 
   intro:
-    "Partagez quelques détails sur votre Profil Client Idéal et nous construirons un plan de prospection personnalisé pour vous, avant même notre premier échange.",
+    "Partagez votre marché, votre ICP et vos objectifs. Nous préparons une lecture concrète de votre potentiel : comptes prioritaires, signaux exploitables, séquences à lancer et conditions nécessaires pour générer des rendez-vous qualifiés.",
 
   deliverablesTitle: "Ce que vous recevez",
   deliverables: [
     {
       icon: "🎯",
-      title: "Résumé ICP",
-      desc: "Vos meilleurs comptes cibles et intitulés de poste clairement définis pour cibler les bons prospects",
+      title: "Audit ICP et TAM",
+      desc: "Les segments qui méritent d'être priorisés, ceux à éviter, et le volume réaliste de comptes activables",
     },
     {
       icon: "📨",
-      title: "Plan multicanal",
-      desc: "1 à 2 flux de prospection email, LinkedIn et téléphone entièrement adaptés à votre marché",
+      title: "Plan de séquences",
+      desc: "Les angles email, LinkedIn et téléphone à tester selon le marché, le timing et les signaux d'achat disponibles",
     },
     {
       icon: "✍️",
-      title: "Accroches & CTA",
-      desc: "Idées concrètes d'objets d'emails, accroches et call-to-actions qui génèrent des réponses",
+      title: "Priorités de lancement",
+      desc: "Les conditions à valider avant le premier batch : données, décideurs, messages, CRM, délivrabilité et mesure",
     },
   ],
 
@@ -979,9 +979,9 @@ export const consultationContent = {
     "Industriels, immobilier et associations B2B",
   ],
 
-  formTitle: "Planifiez votre consultation gratuite",
+  formTitle: "Planifiez votre audit gratuit",
   formSubtitle:
-    "Notre équipe prépare votre stratégie outbound avant même notre premier appel.",
+    "Notre équipe prépare une première lecture de votre potentiel de leads avant l'appel.",
 
   hubspot: {
     portalId: "8082524",
@@ -990,18 +990,18 @@ export const consultationContent = {
   },
 
   postForm:
-    "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec votre stratégie outbound personnalisée.",
+    "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec les prochaines étapes pour cadrer votre potentiel de leads qualifiés.",
 
   faqs: [
     {
       question: "Est-ce vraiment gratuit ?",
       answer:
-        "Oui, la consultation est 100% gratuite et sans engagement. Vous recevez un plan de prospection personnalisé basé sur votre ICP, sans aucune obligation de travailler avec nous.",
+        "Oui, l'audit est gratuit et sans engagement. Vous recevez une première lecture de votre ICP, de votre marché adressable et des prochaines actions à prioriser, sans obligation de travailler avec nous.",
     },
     {
       question: "Combien de temps dure la consultation ?",
       answer:
-        "La consultation dure environ 30 minutes. Avant l'appel, notre équipe prépare déjà votre stratégie outbound. Pendant l'appel, nous affinons ensemble les priorités et vous repartez avec un plan d'action concret.",
+        "La consultation dure environ 30 minutes. Avant l'appel, notre équipe prépare déjà une première analyse de votre marché. Pendant l'appel, nous validons les hypothèses, les contraintes et les priorités de lancement.",
     },
     {
       question: "Quels résultats puis-je attendre ?",
@@ -1016,7 +1016,7 @@ export const consultationContent = {
     {
       question: "Que se passe-t-il après la consultation ?",
       answer:
-        "Vous recevez votre stratégie outbound complète (résumé ICP, plan multicanal, accroches et CTA). Vous pouvez l'exécuter vous-même ou nous confier l'implémentation. Aucune pression commerciale.",
+        "Vous repartez avec les priorités pour lancer ou améliorer votre acquisition : segments à tester, signaux à utiliser, séquences à préparer et points bloquants à résoudre. Vous pouvez l'exécuter vous-même ou nous confier l'implémentation.",
     },
     {
       question: "Travaillez-vous avec des entreprises hors de Suisse ?",
