@@ -27,7 +27,7 @@ import { ALTERNATIVE_PAGES } from "@/content/alternatives";
 import { type ServiceSlug } from "@/content/services";
 import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedAutoAmelioration } from "@/lib/i18n/insights-helpers";
 import { AutoAmeliorationMasterPage } from "@/components/pages/auto-amelioration-master-page";
-import { getLocalizedBlogArticle } from "@/lib/i18n/blog-content";
+import { getLocalizedBlogArticle, getLocalizedBlogHub } from "@/lib/i18n/blog-content";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
 import { getLocalizedAiSalesOpsContent } from "@/lib/i18n/ai-sales-ops-content";
@@ -115,6 +115,29 @@ const openGraphImageAltByLanguage: Record<SupportedLocale, string> = {
   en: "devlo - Swiss B2B outreach agency",
   de: "devlo - Schweizer B2B Akquise Agentur",
   nl: "devlo - Zwitsers B2B prospectiebureau",
+};
+
+const privacySeoByLanguage: Record<SupportedLocale, { title: string; description: string }> = {
+  fr: {
+    title: "Politique de confidentialité",
+    description:
+      "Consultez la politique de confidentialité de devlo.ch: données collectées, finalités, conservation, droits des utilisateurs et contact.",
+  },
+  en: {
+    title: "Privacy policy",
+    description:
+      "Read the devlo.ch privacy policy: collected data, processing purposes, retention, user rights and contact details.",
+  },
+  de: {
+    title: "Datenschutzerklärung",
+    description:
+      "Lesen Sie die Datenschutzerklärung von devlo.ch: erhobene Daten, Verarbeitungszwecke, Aufbewahrung, Nutzerrechte und Kontakt.",
+  },
+  nl: {
+    title: "Privacybeleid",
+    description:
+      "Lees het privacybeleid van devlo.ch: verzamelde gegevens, verwerkingsdoeleinden, bewaring, gebruikersrechten en contact.",
+  },
 };
 
 function isPrefixedLocale(value: string): value is Exclude<SupportedLocale, "fr"> {
@@ -304,16 +327,16 @@ function resolveLocalizedSeo(
   }
 
   if (path === "/blog") {
+    const hub = getLocalizedBlogHub(locale);
     return {
-      title: "Blog — Prospection B2B, cold email et outbound",
-      description:
-        "Articles et guides pratiques sur la prospection commerciale B2B : cold email, LinkedIn outreach, intent data et stratégies outbound.",
+      title: hub.h1,
+      description: hub.description,
     };
   }
 
   if (path.startsWith("/blog/")) {
     const frSlug = path.slice("/blog/".length);
-    const article = getLocalizedBlogArticle(frSlug, "fr");
+    const article = getLocalizedBlogArticle(frSlug, locale);
     if (article) {
       return { title: article.title, description: article.description, type: "article" as const };
     }
@@ -451,7 +474,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedColdEmailSequenceSeo = resolved.frPath.startsWith("/insights/cold-email-templates/")
     ? getLocalizedColdEmailSequence(resolved.frPath.slice("/insights/cold-email-templates/".length), resolved.locale)
     : null;
-  const baseSeo = resolved.frPath === "/ai-sales-ops"
+  const baseSeo: { title: string; description: string; imagePath?: string; type?: "website" | "article" } =
+    resolved.pageId === "politique-confidentialite"
+    ? privacySeoByLanguage[resolved.locale]
+    : resolved.frPath === "/ai-sales-ops"
     ? {
         title: getLocalizedAiSalesOpsContent(resolved.locale).metaTitle,
         description: getLocalizedAiSalesOpsContent(resolved.locale).metaDescription,

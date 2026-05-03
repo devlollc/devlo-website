@@ -464,7 +464,7 @@ export const homeContent = {
       quote:
         "J'ai terminé avec succès la devlo Academy. Elle couvre tout ce qui est nécessaire pour mettre en œuvre des campagnes outbound entièrement automatisées pour promouvoir nos services. Époustouflé par les connaissances et les directives fournies, j'ai beaucoup appris des tutoriels approfondis et des études de cas. Notre équipe a pu économiser beaucoup de temps et d'argent en tirant parti des stratégies et outils présentés dans l'Academy. Je recommande vivement cette Academy.",
       author: "Fabio Oliva",
-      role: "Founder",
+      role: "Fondateur",
       company: "Workflowed",
       photo: "/images/Fabio_Oliva.webp",
     },

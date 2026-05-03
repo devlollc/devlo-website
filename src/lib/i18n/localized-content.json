@@ -124,7 +124,7 @@
       "de": "Fallstudie Saporo: B2B-Prospektionsergebnisse | devlo",
       "en": "Saporo case study: B2B prospecting results | devlo",
       "fr": "Étude de cas Saporo: résultats prospection B2B | devlo",
-      "nl": "Saporo case study: B2B prospectie resultaten | devlo"
+      "nl": "Saporo praktijkvoorbeeld: B2B-prospectieresultaten | devlo"
     },
     "description": {
       "de": "Saporo, ein Anbieter von Cybersecurity-Lösungen, wollte seinen Product-Market-Fit in mehreren Zielgruppen validieren und seine B2B-Verkaufsakquise auslagern, um...",
@@ -136,7 +136,7 @@
       "de": "Fallstudie Saporo: B2B-Prospektionsergebnisse | devlo\n\nSaporo, ein Anbieter von Cybersecurity-Lösungen, wollte seinen Produkt-Markt-Fit für mehrere Zielgruppen validieren und seine B2B-Akquise auslagern, um...",
       "en": "Saporo case study: B2B prospecting results | devlo\n\nSaporo, a publisher of cybersecurity solutions, wanted to validate its product-market fit across several targets and outsource its B2B sales prospecting to...",
       "fr": null,
-      "nl": "Saporo case study: B2B prospectie resultaten | devlo\n\nSaporo, een uitgever van cyberbeveiligingsoplossingen, wilde zijn product-market fit valideren voor verschillende doelgroepen en zijn B2B sales prospecting uitbesteden aan..."
+      "nl": "Saporo praktijkvoorbeeld: B2B-prospectieresultaten | devlo\n\nSaporo, een uitgever van cyberbeveiligingsoplossingen, wilde zijn product-market fit valideren voor verschillende doelgroepen en zijn B2B sales prospecting uitbesteden aan..."
     },
     "ogImage": {
       "fr": "/images/Saporo_Banner.webp"
@@ -1847,7 +1847,7 @@
   },
   "service:intent-data": {
     "title": {
-      "de": "Intent Data B2B : signal-based selling | devlo",
+      "de": "Intent Data B2B: Signalbasiertes Verkaufen | devlo",
       "en": "Intent Data B2B : signal-based selling | devlo",
       "fr": "Intent Data B2B : signal-based selling | devlo",
       "nl": "Intent Data B2B: verkoop op basis van signalen | devlo"
@@ -1859,7 +1859,7 @@
       "nl": "Activering van B2B-intentiesignalen: fondsenwerving, werving, technologische migraties, G2-signalen en multi-source intentiegegevens."
     },
     "body": {
-      "de": "Intent Data B2B : signal-based selling | devlo\n\nAktivierung von B2B-Intentionssignalen: Kapitalbeschaffung, Neueinstellungen, Technologiemigration, G2-Signale und Intent Data aus mehreren Quellen.",
+      "de": "Intent Data B2B: Signalbasiertes Verkaufen | devlo\n\nAktivierung von B2B-Intentionssignalen: Finanzierungsrunden, Einstellungen, Technologiemigration, G2-Signale und Intent Data aus mehreren Quellen.",
       "en": "Intent Data B2B : signal-based selling | devlo\n\nActivation of B2B intent signals: fund-raising, recruitment, technological migrations, G2 signals and multi-source intent data.",
       "fr": null,
       "nl": "Intent Data B2B: verkoop op basis van signalen | devlo\n\nActivering van B2B intentiedata: fondsenwerving, werving, technologische migraties, G2-signalen en multi-source intentiedata."

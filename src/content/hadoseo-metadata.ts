@@ -111,8 +111,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/services/generation-leads",
-    title: "Agence Lead Generation B2B Suisse | Listes ICP | devlo",
-    description: "Agence lead generation B2B suisse pour transformer votre TAM en comptes ICP décideurs vérifiés et segments prêts à prospecter.",
+    title: "Agence génération de leads B2B Suisse | Listes ICP | devlo",
+    description: "Agence de génération de leads B2B en Suisse pour transformer votre TAM en comptes ICP, décideurs vérifiés et segments prêts à prospecter.",
     canonical: "https://devlo.ch/services/generation-leads",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",

@@ -1189,11 +1189,11 @@ export const SERVICE_PAGE_DATA: Record<ServiceSlug, ServicePageData> = {
     slug: "generation-leads",
     path: "/services/generation-leads",
     navTitle: "Génération de leads",
-    pageTitle: "Agence Lead Generation B2B Suisse : listes qualifiées ICP, TAM et signaux",
+    pageTitle: "Agence de génération de leads B2B en Suisse : listes qualifiées ICP, TAM et signaux",
     pageSubtitle: "Nous transformons votre marché cible en comptes priorisés, décideurs vérifiés et segments prêts pour vos séquences.",
-    metadataTitle: "Agence Lead Generation B2B Suisse : listes ICP",
+    metadataTitle: "Agence génération de leads B2B Suisse : listes ICP",
     metadataDescription:
-      "Agence lead generation B2B suisse pour transformer votre TAM en comptes ICP, décideurs vérifiés et segments prêts à prospecter.",
+      "Agence de génération de leads B2B en Suisse pour transformer votre TAM en comptes ICP, décideurs vérifiés et segments prêts à prospecter.",
     metadataKeywords: [
       "lead generation B2B",
       "agence lead generation B2B suisse",
