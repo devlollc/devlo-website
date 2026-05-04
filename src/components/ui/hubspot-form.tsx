@@ -285,6 +285,7 @@ export function HubspotForm({
           const form = resolveFormElement(formRef, targetId);
           if (form) {
             syncHiddenFields(form, hiddenFieldsRef.current);
+            onFormSubmitCapture?.(serializeFormFields(form));
           }
           syncFormInstanceValues(formInstanceRef.current, hiddenFieldsRef.current);
         },
