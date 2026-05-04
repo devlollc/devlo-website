@@ -7,6 +7,7 @@ import type { SupportedLocale } from "@/lib/i18n/slug-map";
 import {
   buildPaidAttributionSnapshot,
   buildPaidStrategySelections,
+  compactPaidAttribution,
   hasPaidAttribution,
   isPaidHostname,
   PAID_ATTRIBUTION_STORAGE_KEY,
@@ -43,6 +44,30 @@ function resolveAttribution() {
   });
 }
 
+function buildPaidHiddenFields(attribution: PaidAttribution) {
+  const compact = compactPaidAttribution(attribution);
+
+  return {
+    strategy_selections: buildPaidStrategySelections(attribution),
+    ...(compact.paid_host ? { paid_host: compact.paid_host } : {}),
+    ...(compact.utm_source ? { paid_utm_source: compact.utm_source } : {}),
+    ...(compact.utm_medium ? { paid_utm_medium: compact.utm_medium } : {}),
+    ...(compact.utm_campaign ? { paid_utm_campaign: compact.utm_campaign } : {}),
+    ...(compact.utm_content ? { paid_utm_content: compact.utm_content } : {}),
+    ...(compact.utm_term ? { paid_utm_term: compact.utm_term } : {}),
+    ...(compact.gclid ? { paid_gclid: compact.gclid } : {}),
+    ...(compact.wbraid ? { paid_wbraid: compact.wbraid } : {}),
+    ...(compact.gbraid ? { paid_gbraid: compact.gbraid } : {}),
+    ...(compact.landing_page_url ? { paid_landing_page_url: compact.landing_page_url } : {}),
+    ...(compact.current_page_url ? { paid_current_page_url: compact.current_page_url } : {}),
+    ...(compact.referrer ? { paid_referrer: compact.referrer } : {}),
+    ...(compact.paid_session_id ? { paid_session_id: compact.paid_session_id } : {}),
+    ...(compact.paid_first_seen_at ? { paid_first_seen_at: compact.paid_first_seen_at } : {}),
+    paid_qualification_status: "submitted_pending_review",
+    paid_demo_status: "not_booked",
+  };
+}
+
 export function PaidAwareHubspotForm({
   formId,
   locale = "fr",
@@ -60,9 +85,7 @@ export function PaidAwareHubspotForm({
   const hiddenFields = useMemo(() => {
     if (!hasPaidAttribution(attribution)) return undefined;
 
-    return {
-      strategy_selections: buildPaidStrategySelections(attribution),
-    };
+    return buildPaidHiddenFields(attribution);
   }, [attribution]);
 
   const trackFormStart = () => {
