@@ -88,6 +88,34 @@ function sendPaidSubmissionBackup(fields: Record<string, string | string[]>) {
   });
 }
 
+function serializeHubSpotMessageFields(data: unknown) {
+  if (!Array.isArray(data)) return null;
+
+  const fields: Record<string, string | string[]> = {};
+  data.forEach((field) => {
+    if (!field || typeof field !== "object") return;
+
+    const entry = field as { name?: unknown; value?: unknown };
+    if (typeof entry.name !== "string" || entry.name === "hs_context") return;
+
+    if (typeof entry.value === "string") {
+      fields[entry.name] = entry.value;
+      return;
+    }
+
+    if (Array.isArray(entry.value)) {
+      const values = entry.value.filter((value): value is string => typeof value === "string");
+      if (values.length === 1) {
+        fields[entry.name] = values[0];
+      } else if (values.length > 1) {
+        fields[entry.name] = values;
+      }
+    }
+  });
+
+  return Object.keys(fields).length > 0 ? fields : null;
+}
+
 export function PaidAwareHubspotForm({
   formId,
   locale = "fr",
@@ -97,6 +125,7 @@ export function PaidAwareHubspotForm({
 }: PaidAwareHubspotFormProps) {
   const [attribution, setAttribution] = useState<PaidAttribution>({});
   const trackedFormStart = useRef(false);
+  const backedUpSubmission = useRef(false);
 
   useEffect(() => {
     setAttribution(resolveAttribution());
@@ -115,8 +144,29 @@ export function PaidAwareHubspotForm({
   };
 
   const handleFormSubmitCapture = useCallback((fields: Record<string, string | string[]>) => {
+    if (backedUpSubmission.current) return;
+    backedUpSubmission.current = true;
     sendPaidSubmissionBackup(fields);
   }, []);
+
+  useEffect(() => {
+    const onMessage = (event: MessageEvent) => {
+      if (backedUpSubmission.current || typeof event.data !== "object" || !event.data) return;
+
+      const payload = event.data as { id?: string; type?: string; eventName?: string; data?: unknown };
+      if (payload.type !== "hsFormCallback" || payload.id !== formId) return;
+      if (payload.eventName !== "onFormSubmit" && payload.eventName !== "onBeforeFormSubmit") return;
+
+      const fields = serializeHubSpotMessageFields(payload.data);
+      if (!fields) return;
+
+      backedUpSubmission.current = true;
+      sendPaidSubmissionBackup(fields);
+    };
+
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [formId]);
 
   return (
     <div onClickCapture={trackFormStart} onFocusCapture={trackFormStart}>
