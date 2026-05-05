@@ -8,7 +8,7 @@ import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 declare global {
   interface Window {
-    dataLayer?: Array<Record<string, unknown>>;
+    dataLayer?: Array<Record<string, unknown> | unknown[]>;
   }
 }
 

@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { ConsentMode } from "@/components/analytics/consent-mode";
 import { JsonLd } from "@/components/seo/json-ld";
 import { buildLanguageAlternates, defaultOgImagePath, toAbsoluteUrl } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/site";
@@ -298,6 +299,19 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} min-h-screen bg-canvas font-sans text-ink antialiased`}
       >
+        <Script id="google-consent-mode-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = window.gtag || gtag;
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied'
+            });
+          `}
+        </Script>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
           strategy="lazyOnload"
@@ -305,9 +319,9 @@ export default function RootLayout({
         <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${gaMeasurementId}');
+            window.gtag = window.gtag || function gtag(){dataLayer.push(arguments);};
+            window.gtag('js', new Date());
+            window.gtag('config', '${gaMeasurementId}');
           `}
         </Script>
         <JsonLd schema={buildLayoutSchemas(htmlLang)} />
@@ -324,6 +338,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
         </div>
+        <ConsentMode />
       </body>
     </html>
   );
