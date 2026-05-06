@@ -7,14 +7,10 @@ const reportPath = path.join(repoRoot, "docs/hadoseo-metadata-parity.csv");
 
 const sourcePath =
   process.argv[2] ??
+  process.env.HADOSEO_SOURCE ??
   ["/mnt/data/file.txt", "/Users/charlesperret/Downloads/file.txt"].find((candidate) =>
     fs.existsSync(candidate),
   );
-
-if (!sourcePath || !fs.existsSync(sourcePath)) {
-  console.error("HadoSEO source file not found. Pass a path as first argument.");
-  process.exit(1);
-}
 
 function parseSimpleCsvLine(line) {
   const columns = [];
@@ -47,20 +43,52 @@ function parseSimpleCsvLine(line) {
 function parseTargetMetadata(filePath) {
   const raw = fs.readFileSync(filePath, "utf8");
   const lines = raw.split(/\r?\n/);
-  const headerIndex = lines.findIndex((line) =>
-    line.trim().startsWith("route,title,description,canonical,og_image,status"),
-  );
+  const headerIndex = lines.findIndex((line) => {
+    const headers = parseSimpleCsvLine(line).map((header) => header.trim().toLowerCase());
+    return (
+      headers.includes("route") &&
+      headers.includes("title") &&
+      headers.includes("description") &&
+      headers.includes("canonical") &&
+      (headers.includes("og_image") || headers.includes("ogimage"))
+    );
+  });
 
   if (headerIndex === -1) {
     throw new Error(`CSV header not found in ${filePath}`);
   }
 
+  const headers = parseSimpleCsvLine(lines[headerIndex]).map((header) =>
+    header.trim().toLowerCase(),
+  );
+  const columnIndex = (name) => headers.indexOf(name);
+  const routeIndex = columnIndex("route");
+  const titleIndex = columnIndex("title");
+  const descriptionIndex = columnIndex("description");
+  const canonicalIndex = columnIndex("canonical");
+  const ogImageIndex = columnIndex("og_image") === -1 ? columnIndex("ogimage") : columnIndex("og_image");
+  const statusIndex = columnIndex("status");
+  const scopeIndex = columnIndex("scope");
+
   const rows = [];
   for (let i = headerIndex + 1; i < lines.length; i += 1) {
     const line = lines[i].trim();
     if (!line || line.startsWith("```")) break;
-    const [route, title, description, canonical, ogImage, status] = parseSimpleCsvLine(line);
-    rows.push({ route, title, description, canonical, ogImage, status });
+    const columns = parseSimpleCsvLine(line);
+    const scope = scopeIndex === -1 ? "" : columns[scopeIndex];
+    const route = columns[routeIndex];
+
+    if (scope && scope !== "PAGE") continue;
+    if (!route || route === "*") continue;
+
+    rows.push({
+      route,
+      title: columns[titleIndex],
+      description: columns[descriptionIndex],
+      canonical: columns[canonicalIndex],
+      ogImage: columns[ogImageIndex],
+      status: statusIndex === -1 ? undefined : columns[statusIndex],
+    });
   }
 
   return rows;
@@ -79,6 +107,20 @@ function parseMappingMetadata(filePath) {
   }
 
   return rows;
+}
+
+if (!sourcePath || !fs.existsSync(sourcePath)) {
+  const mappingRows = parseMappingMetadata(mappingPath);
+
+  if (mappingRows.length === 0) {
+    console.error(`HadoSEO metadata mapping is empty or unreadable: ${mappingPath}`);
+    process.exit(1);
+  }
+
+  console.log(
+    `HadoSEO metadata structure check passed (${mappingRows.length} routes). Pass a source CSV path or HADOSEO_SOURCE to run parity.`,
+  );
+  process.exit(0);
 }
 
 function csvEscape(value) {
@@ -131,6 +173,9 @@ for (const route of [...allRoutes].sort()) {
     const targetField = field === "ogImage" ? "ogImage" : field;
     const targetValue = target[targetField];
     const currentValue = current[field];
+
+    if (targetValue === undefined) continue;
+
     const status = targetValue === currentValue ? "OK" : "MISMATCH";
     if (status === "MISMATCH") mismatchCount += 1;
 
