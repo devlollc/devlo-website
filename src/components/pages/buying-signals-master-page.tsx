@@ -21,8 +21,8 @@ import { SignalBrowser } from "@/app/(fr)/insights/buying-signals/signal-browser
 const LOCALE_CONSULTATION_HREFS: Record<SupportedLocale, string> = {
   fr: "/consultation",
   en: "/en/consultation",
-  de: "/de/consultation",
-  nl: "/nl/consultation",
+  de: "/de/beratung",
+  nl: "/nl/adviesgesprek",
 };
 
 const LOCALE_SERVICES_HREFS: Record<SupportedLocale, string> = {
@@ -32,10 +32,57 @@ const LOCALE_SERVICES_HREFS: Record<SupportedLocale, string> = {
   nl: "/nl/services/cold-email",
 };
 
+const signalDecisionTables: Record<
+  SupportedLocale,
+  {
+    caption: string;
+    headers: [string, string, string];
+    rows: [string, string, string][];
+  }
+> = {
+  fr: {
+    caption: "Signaux d'achat B2B prioritaires et actions outbound recommandees",
+    headers: ["Signal", "Ce que cela indique", "Action outbound"],
+    rows: [
+      ["Recrutement", "Budget, croissance ou tension operationnelle visible.", "Contacter le dirigeant ou le manager avant saturation de l'equipe."],
+      ["Changement de direction", "Nouvelle priorite commerciale, IT, finance ou RH.", "Adapter le message aux 90 premiers jours du nouveau responsable."],
+      ["Intent data", "Recherche active autour d'une categorie, d'un outil ou d'un probleme.", "Prioriser le compte et synchroniser email, LinkedIn et appel."],
+    ],
+  },
+  en: {
+    caption: "Priority B2B buying signals and recommended outbound actions",
+    headers: ["Signal", "What it means", "Outbound action"],
+    rows: [
+      ["Hiring", "Visible budget, growth, or operational pressure.", "Reach the founder or manager before the team is overloaded."],
+      ["Leadership change", "A new commercial, IT, finance, or HR priority.", "Adapt the message to the new leader's first 90 days."],
+      ["Intent data", "Active research around a category, tool, or problem.", "Prioritize the account and coordinate email, LinkedIn, and calls."],
+    ],
+  },
+  de: {
+    caption: "Prioritaere B2B-Kaufsignale und empfohlene Outbound-Aktionen",
+    headers: ["Signal", "Was es zeigt", "Outbound-Aktion"],
+    rows: [
+      ["Rekrutierung", "Sichtbares Budget, Wachstum oder operativer Druck.", "Geschaeftsfuehrung oder Manager vor der Ueberlastung des Teams kontaktieren."],
+      ["Fuehrungswechsel", "Neue Prioritaet in Vertrieb, IT, Finanzen oder HR.", "Nachricht auf die ersten 90 Tage der neuen Rolle ausrichten."],
+      ["Intent Data", "Aktive Recherche zu Kategorie, Tool oder Problem.", "Account priorisieren und E-Mail, LinkedIn und Anruf synchronisieren."],
+    ],
+  },
+  nl: {
+    caption: "Prioritaire B2B-koopsignalen en aanbevolen outbound-acties",
+    headers: ["Signaal", "Wat het aangeeft", "Outbound-actie"],
+    rows: [
+      ["Werving", "Zichtbaar budget, groei of operationele druk.", "Benader de oprichter of manager voordat het team overbelast raakt."],
+      ["Leiderschapswissel", "Nieuwe prioriteit in sales, IT, finance of HR.", "Stem de boodschap af op de eerste 90 dagen van de nieuwe verantwoordelijke."],
+      ["Intent data", "Actief onderzoek rond een categorie, tool of probleem.", "Prioriteer het account en combineer e-mail, LinkedIn en bellen."],
+    ],
+  },
+};
+
 export function BuyingSignalsMasterPage({ locale }: { locale: SupportedLocale }) {
   const content = getLocalizedBuyingSignals(locale);
   const categories = getLocalizedCategories(locale);
   const prefix = locale === "fr" ? "" : `/${locale}`;
+  const signalDecisionTable = signalDecisionTables[locale];
 
   const totalSignals = categories.reduce((sum, cat) => sum + cat.count, 0);
 
@@ -127,8 +174,34 @@ export function BuyingSignalsMasterPage({ locale }: { locale: SupportedLocale })
 
         <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
 
+        <section className="mx-auto w-full max-w-5xl px-6 py-12">
+          <div className="overflow-x-auto rounded-xl border border-[#e0e4e6] bg-white">
+            <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+              <caption className="sr-only">{signalDecisionTable.caption}</caption>
+              <thead className="bg-[#F7F8FC] text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
+                <tr>
+                  {signalDecisionTable.headers.map((header) => (
+                    <th key={header} scope="col" className="px-5 py-3">
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#e0e4e6] text-[#334155]">
+                {signalDecisionTable.rows.map(([signal, meaning, action]) => (
+                  <tr key={signal}>
+                    <td className="px-5 py-4 font-semibold text-[#0D0D0D]">{signal}</td>
+                    <td className="px-5 py-4">{meaning}</td>
+                    <td className="px-5 py-4">{action}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* Newsletter */}
-        <section className="mx-auto w-full max-w-3xl px-6 py-12">
+        <section className="mx-auto w-full max-w-3xl px-6 pb-12">
           <div className="rounded-xl border border-[#e0e4e6] bg-[#F7F8FC] p-8 text-center">
             <h3 className="text-xl font-semibold text-[#0D0D0D]">
               {content.newsletter.title}

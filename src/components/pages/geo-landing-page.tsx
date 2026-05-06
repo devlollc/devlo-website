@@ -71,8 +71,55 @@ const copyByLocale: Record<
   },
 };
 
+const geoMarketTables: Record<
+  SupportedLocale,
+  {
+    caption: string;
+    headers: [string, string, string];
+    rows: [string, string, string][];
+  }
+> = {
+  fr: {
+    caption: "Adaptations de prospection B2B par region suisse",
+    headers: ["Region", "Adaptation necessaire", "Execution devlo"],
+    rows: [
+      ["Suisse romande", "Message direct, preuves locales et references francophones.", "Sequences FR avec cas clients suisses et relances multicanales."],
+      ["Suisse alemanique", "Ton plus factuel, allemand natif et precision sur le ROI.", "Copies DE, ciblage DACH et qualification des decideurs."],
+      ["Comptes nationaux", "Coordination entre langues, filiales et cycles de decision.", "Segmentation ICP par region, langue et signal d'achat."],
+    ],
+  },
+  en: {
+    caption: "B2B prospecting adaptations by Swiss region",
+    headers: ["Region", "Required adaptation", "devlo execution"],
+    rows: [
+      ["French-speaking Switzerland", "Direct messaging, local proof, and French-language references.", "FR sequences with Swiss case studies and multichannel follow-ups."],
+      ["German-speaking Switzerland", "More factual tone, native German, and clear ROI.", "DE copy, DACH targeting, and decision-maker qualification."],
+      ["National accounts", "Coordination across languages, subsidiaries, and decision cycles.", "ICP segmentation by region, language, and buying signal."],
+    ],
+  },
+  de: {
+    caption: "B2B-Prospecting-Anpassungen nach Schweizer Region",
+    headers: ["Region", "Noetige Anpassung", "devlo-Umsetzung"],
+    rows: [
+      ["Westschweiz", "Direkte Ansprache, lokale Belege und franzoesische Referenzen.", "FR-Sequenzen mit Schweizer Case Studies und Multichannel-Follow-ups."],
+      ["Deutschschweiz", "Faktischer Ton, natives Deutsch und klare ROI-Argumente.", "DE-Copy, DACH-Targeting und Entscheiderqualifikation."],
+      ["Nationale Accounts", "Koordination ueber Sprachen, Filialen und Entscheidungszyklen.", "ICP-Segmentierung nach Region, Sprache und Kaufsignal."],
+    ],
+  },
+  nl: {
+    caption: "B2B-prospectie-aanpassingen per Zwitserse regio",
+    headers: ["Regio", "Nodige aanpassing", "devlo-uitvoering"],
+    rows: [
+      ["Franstalig Zwitserland", "Directe boodschap, lokaal bewijs en Franstalige referenties.", "FR-sequences met Zwitserse cases en multichannel follow-up."],
+      ["Duitstalig Zwitserland", "Feitelijkere toon, native Duits en duidelijke ROI.", "DE-copy, DACH-targeting en beslisserkwalificatie."],
+      ["Nationale accounts", "Coordinatie tussen talen, filialen en beslissingscycli.", "ICP-segmentatie per regio, taal en koopsignaal."],
+    ],
+  },
+};
+
 export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; locale?: SupportedLocale }) {
   const copy = copyByLocale[locale];
+  const marketTable = geoMarketTables[locale];
   const localizedContent = getLocalizedGeoContent(data.slug, locale);
   const h1 = localizedContent?.h1 ?? data.h1;
   const intro = localizedContent?.intro ?? data.intro;
@@ -153,6 +200,36 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
       </section>
 
       <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
+
+      {data.country === "ch" && (
+        <section className="bg-white py-12">
+          <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+            <div className="overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+              <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+                <caption className="sr-only">{marketTable.caption}</caption>
+                <thead className="bg-neutral-50 text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
+                  <tr>
+                    {marketTable.headers.map((header) => (
+                      <th key={header} scope="col" className="px-5 py-3">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-neutral-200 text-neutral-700">
+                  {marketTable.rows.map(([region, adaptation, execution]) => (
+                    <tr key={region}>
+                      <td className="px-5 py-4 font-semibold text-[#153a54]">{region}</td>
+                      <td className="px-5 py-4">{adaptation}</td>
+                      <td className="px-5 py-4">{execution}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
 
       {editorialTitle && (
         <section className="bg-white py-12 md:py-16">

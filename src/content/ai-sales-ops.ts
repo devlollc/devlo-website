@@ -1,5 +1,5 @@
 export const aiSalesOpsContent = {
-  metaTitle: "AI Sales Ops B2B en Suisse",
+  metaTitle: "AI Sales Ops B2B en Suisse | Automatisation",
   metaDescription:
     "Systèmes AI Sales Ops pour équipes commerciales B2B : inbox, CRM, meeting prep et reporting. Diagnostic gratuit avec devlo, en Suisse.",
 

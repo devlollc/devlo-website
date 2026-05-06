@@ -9,8 +9,55 @@ type ConsultationMasterPageProps = {
   locale?: SupportedLocale;
 };
 
+const consultationAuditTables: Record<
+  SupportedLocale,
+  {
+    caption: string;
+    headers: [string, string, string];
+    rows: [string, string, string][];
+  }
+> = {
+  fr: {
+    caption: "Points audites pendant une demo devlo",
+    headers: ["Axe", "Ce que l'on verifie", "Impact attendu"],
+    rows: [
+      ["ICP et TAM", "Segments, comptes prioritaires et decideurs accessibles.", "Eviter le volume inutile et concentrer la prospection."],
+      ["Signaux d'achat", "Recrutements, changements, intent data et actualites marche.", "Approcher les comptes au bon moment."],
+      ["Sequences", "Canaux, messages, cadence et criteres de qualification.", "Lancer une campagne mesurable sans recruter."],
+    ],
+  },
+  en: {
+    caption: "Areas audited during a devlo demo",
+    headers: ["Area", "What we check", "Expected impact"],
+    rows: [
+      ["ICP and TAM", "Segments, priority accounts, and reachable decision makers.", "Avoid useless volume and focus prospecting."],
+      ["Buying signals", "Hiring, changes, intent data, and market news.", "Reach accounts at the right moment."],
+      ["Sequences", "Channels, messaging, cadence, and qualification criteria.", "Launch a measurable campaign without hiring."],
+    ],
+  },
+  de: {
+    caption: "Bereiche, die in einer devlo-Demo geprueft werden",
+    headers: ["Bereich", "Was wir pruefen", "Erwarteter Effekt"],
+    rows: [
+      ["ICP und TAM", "Segmente, Zielaccounts und erreichbare Entscheider.", "Unnuetzes Volumen vermeiden und Prospektion fokussieren."],
+      ["Kaufsignale", "Rekrutierung, Wechsel, Intent Data und Marktnews.", "Accounts zum richtigen Zeitpunkt ansprechen."],
+      ["Sequenzen", "Kanaele, Messaging, Kadenz und Qualifikationskriterien.", "Messbare Kampagne ohne Neueinstellung starten."],
+    ],
+  },
+  nl: {
+    caption: "Onderdelen die tijdens een devlo-demo worden geaudit",
+    headers: ["Onderdeel", "Wat we controleren", "Verwachte impact"],
+    rows: [
+      ["ICP en TAM", "Segmenten, prioritaire accounts en bereikbare beslissers.", "Onnodig volume vermijden en prospectie focussen."],
+      ["Koopsignalen", "Werving, veranderingen, intent data en marktnieuws.", "Accounts op het juiste moment benaderen."],
+      ["Sequences", "Kanalen, messaging, cadans en kwalificatiecriteria.", "Meetbare campagne lanceren zonder aan te werven."],
+    ],
+  },
+};
+
 export function ConsultationMasterPage({ content = consultationContent, locale = "fr" }: ConsultationMasterPageProps) {
   const c = content;
+  const auditTable = consultationAuditTables[locale];
 
   return (
     <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">
@@ -43,6 +90,32 @@ export function ConsultationMasterPage({ content = consultationContent, locale =
             <p className="mt-6 max-w-[560px] text-lg leading-8 text-neutral-600">
               {c.intro}
             </p>
+          </FadeInOnScroll>
+
+          <FadeInOnScroll delay={0.12}>
+            <div className="mt-6 max-w-[640px] overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+              <table className="min-w-[640px] w-full border-collapse text-left text-sm">
+                <caption className="sr-only">{auditTable.caption}</caption>
+                <thead className="bg-neutral-50 text-xs font-semibold uppercase tracking-[0.08em] text-devlo-700">
+                  <tr>
+                    {auditTable.headers.map((header) => (
+                      <th key={header} scope="col" className="px-4 py-3">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-neutral-200 text-neutral-700">
+                  {auditTable.rows.map(([area, check, impact]) => (
+                    <tr key={area}>
+                      <td className="px-4 py-3 font-semibold text-devlo-900">{area}</td>
+                      <td className="px-4 py-3">{check}</td>
+                      <td className="px-4 py-3">{impact}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </FadeInOnScroll>
         </div>
 

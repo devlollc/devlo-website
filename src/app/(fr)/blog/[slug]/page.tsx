@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
+import { ColdEmailGuideTable } from "@/components/shared/cold-email-guide-table";
 import { articles, getArticleBySlug } from "@/content/blog/articles";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
@@ -65,6 +66,8 @@ export default async function BlogArticlePage({ params }: BlogParams) {
         </div>
         <h1 className="text-3xl font-bold leading-tight text-[#153a54] md:text-4xl">{article.title}</h1>
         <p className="mt-4 text-base leading-7 text-neutral-600">{article.description}</p>
+
+        {article.slug === "cold-email-b2b-guide-complet" && <ColdEmailGuideTable locale="fr" />}
 
         <div className="mt-10 space-y-6">
           {article.body.map((block, i) => {

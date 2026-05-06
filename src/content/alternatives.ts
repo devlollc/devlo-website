@@ -23,7 +23,7 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
     competitorName: "Undersales",
     metaTitle: "Alternative à Undersales | Agence prospection B2B Suisse | devlo",
     metaDescription:
-      "Vous comparez devlo et Undersales pour externaliser votre prospection B2B ? Découvrez la différence : multicanal natif FR/DE/EN, 1000+ campagnes, résultats dès J+15.",
+      "Comparez devlo et Undersales pour externaliser votre prospection B2B : multicanal natif FR/DE/EN, 1000+ campagnes et résultats dès J+15.",
     h1: "devlo : l'alternative à Undersales pour votre prospection B2B",
     intro: [
       "Vous évaluez des agences de prospection B2B et comparez devlo à Undersales ? Cette page vous aide à prendre la bonne décision en fonction de vos besoins spécifiques.",
@@ -69,7 +69,7 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
     competitorName: "LalaLeads",
     metaTitle: "Alternative à LalaLeads | Agence prospection B2B Suisse | devlo",
     metaDescription:
-      "Vous comparez devlo et LalaLeads pour votre prospection B2B ? devlo apporte une approche multicanale, une expertise Suisse/DACH et des résultats mesurables dès J+15.",
+      "Comparez devlo et LalaLeads pour votre prospection B2B : multicanal, expertise Suisse/DACH et résultats mesurables dès J+15.",
     h1: "devlo : l'alternative à LalaLeads pour votre prospection B2B",
     intro: [
       "LalaLeads et devlo sont deux agences spécialisées dans la génération de leads B2B. Si vous hésitez entre les deux, voici une comparaison objective pour guider votre décision.",
@@ -117,7 +117,7 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
     competitorName: "les autres agences",
     metaTitle: "Meilleure agence prospection B2B Suisse | Comparatif 2026 | devlo",
     metaDescription:
-      "Comparez les agences de prospection B2B en Suisse et en France. devlo vs Undersales, LalaLeads, Sortlist agencies : critères, résultats et méthode pour bien choisir.",
+      "Comparez les agences de prospection B2B en Suisse et en France : critères, résultats, méthode et signaux pour choisir le bon partenaire.",
     h1: "Choisir son agence de prospection B2B : comparatif 2026",
     intro: [
       "Le marché des agences de prospection B2B s'est considérablement développé depuis 2020. Entre les agences spécialisées outbound, les plateformes de mise en relation et les freelances, il est difficile de s'y retrouver.",

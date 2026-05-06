@@ -409,10 +409,10 @@
   },
   "consultation": {
     "title": {
-      "de": "Kostenlose Beratung | Audit für B2B Leadgenerierung und Akquise | devlo",
-      "en": "Free consultation | B2B lead generation and prospecting audit | devlo",
+      "de": "Kostenlose Beratung | B2B-Akquise Audit | devlo",
+      "en": "Free consultation | B2B prospecting audit | devlo",
       "fr": "Consultation gratuite | Audit lead generation et prospection B2B | devlo",
-      "nl": "Gratis consultatie | Audit voor B2B leadgeneratie en prospectie | devlo"
+      "nl": "Gratis consultatie | B2B-prospectie audit | devlo"
     },
     "description": {
       "de": "Prüfen Sie Ihr Potenzial für qualifizierte Leads mit devlo. ICP, TAM, Kaufsignale, Sequenzen und Aktionsplan für B2B-Termine.",
@@ -421,10 +421,10 @@
       "nl": "Audit uw potentieel voor gekwalificeerde leads met devlo. ICP, TAM, koopsignalen, sequenties en actieplan voor B2B-afspraken."
     },
     "body": {
-      "de": "Kostenlose Beratung | Audit für B2B Leadgenerierung und Akquise | devlo\n\nPrüfen Sie Ihr Potenzial für qualifizierte Leads mit devlo. ICP, TAM, Kaufsignale, Sequenzen und Aktionsplan für B2B-Termine.",
-      "en": "Free consultation | B2B lead generation and prospecting audit | devlo\n\nAudit your qualified lead potential with devlo. ICP, TAM, buying signals, sequences and an action plan to generate B2B meetings.",
+      "de": "Kostenlose Beratung | B2B-Akquise Audit | devlo\n\nPrüfen Sie Ihr Potenzial für qualifizierte Leads mit devlo. ICP, TAM, Kaufsignale, Sequenzen und Aktionsplan für B2B-Termine.",
+      "en": "Free consultation | B2B prospecting audit | devlo\n\nAudit your qualified lead potential with devlo. ICP, TAM, buying signals, sequences and an action plan to generate B2B meetings.",
       "fr": null,
-      "nl": "Gratis consultatie | Audit voor B2B leadgeneratie en prospectie | devlo\n\nAudit uw potentieel voor gekwalificeerde leads met devlo. ICP, TAM, koopsignalen, sequenties en actieplan voor B2B-afspraken."
+      "nl": "Gratis consultatie | B2B-prospectie audit | devlo\n\nAudit uw potentieel voor gekwalificeerde leads met devlo. ICP, TAM, koopsignalen, sequenties en actieplan voor B2B-afspraken."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"
@@ -434,9 +434,9 @@
   "home": {
     "title": {
       "fr": "Agence de prospection B2B en Suisse | RDV qualifiés | devlo",
-      "en": "B2B Prospecting Agency in Switzerland | Qualified Meetings | devlo",
+      "en": "B2B Prospecting Switzerland | Qualified Meetings | devlo",
       "de": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine | devlo",
-      "nl": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken | devlo"
+      "nl": "B2B prospectiebureau Zwitserland | Afspraken | devlo"
     },
     "description": {
       "fr": "devlo génère des rendez-vous qualifiés en Suisse via lead generation, cold email, LinkedIn et calling. Campagnes multilingues et preuves clients.",
@@ -446,9 +446,9 @@
     },
     "body": {
       "fr": null,
-      "en": "B2B Prospecting Agency in Switzerland | Qualified Meetings | devlo\n\ndevlo generates qualified B2B meetings in Switzerland through lead generation, cold email, LinkedIn and calling. Multilingual campaigns with client proof.",
+      "en": "B2B Prospecting Switzerland | Qualified Meetings | devlo\n\ndevlo generates qualified B2B meetings in Switzerland through lead generation, cold email, LinkedIn and calling. Multilingual campaigns with client proof.",
       "de": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine | devlo\n\ndevlo generiert qualifizierte B2B-Termine in der Schweiz mit Leadgenerierung, Cold Email, LinkedIn und Calling. Mehrsprachige Kampagnen mit Nachweisen.",
-      "nl": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken | devlo\n\ndevlo genereert gekwalificeerde B2B-afspraken in Zwitserland via leadgeneratie, cold email, LinkedIn en calling. Meertalige campagnes met bewijs."
+      "nl": "B2B prospectiebureau Zwitserland | Afspraken | devlo\n\ndevlo genereert gekwalificeerde B2B-afspraken in Zwitserland via leadgeneratie, cold email, LinkedIn en calling. Meertalige campagnes met bewijs."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"

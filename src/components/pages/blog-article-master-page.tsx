@@ -7,6 +7,7 @@ import { buildArticleSchema, buildBreadcrumbSchema } from "@/lib/seo/schema-buil
 import { getLocalizedBlogArticle, getLocalizedBlogHub } from "@/lib/i18n/blog-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { SummarySection } from "@/components/shared/summary-section";
+import { ColdEmailGuideTable } from "@/components/shared/cold-email-guide-table";
 
 type BlogArticleMasterPageProps = {
   frSlug: string;
@@ -74,6 +75,8 @@ export function BlogArticleMasterPage({ frSlug, locale = "fr" }: BlogArticleMast
         </div>
         <h1 className="text-3xl font-bold leading-tight text-[#153a54] md:text-4xl">{article.title}</h1>
         <p className="mt-4 text-base leading-7 text-neutral-600">{article.description}</p>
+
+        {frSlug === "cold-email-b2b-guide-complet" && <ColdEmailGuideTable locale={locale} />}
 
         <div className="mt-10 space-y-6">
           {article.body.map((block, i) => {
