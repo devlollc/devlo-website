@@ -39,8 +39,59 @@ const breadcrumbLabelsByLocale: Record<SupportedLocale, { home: string; services
   nl: { home: "Home", services: "Diensten" },
 };
 
+const serviceSelectionTables: Record<
+  SupportedLocale,
+  {
+    caption: string;
+    headers: [string, string, string];
+    rows: [string, string, string][];
+  }
+> = {
+  fr: {
+    caption: "Choisir le bon service de prospection B2B devlo",
+    headers: ["Objectif", "Service prioritaire", "Quand l'utiliser"],
+    rows: [
+      ["Creer une liste ICP", "Generation de leads", "Quand le TAM existe mais que les comptes ne sont pas qualifies."],
+      ["Obtenir des rendez-vous", "Prise de rendez-vous", "Quand l'equipe commerciale doit parler a plus de decideurs."],
+      ["Fiabiliser les donnees", "Enrichissement Clay", "Quand les emails, roles ou domaines sont incomplets."],
+      ["Prioriser les comptes", "Intent data", "Quand il faut contacter les entreprises au bon moment."],
+    ],
+  },
+  en: {
+    caption: "Choose the right devlo B2B prospecting service",
+    headers: ["Goal", "Priority service", "When to use it"],
+    rows: [
+      ["Build an ICP list", "Lead generation", "When the TAM exists but accounts are not qualified."],
+      ["Book meetings", "Appointment setting", "When sales needs to speak with more decision makers."],
+      ["Improve data quality", "Clay enrichment", "When emails, roles, or domains are incomplete."],
+      ["Prioritize accounts", "Intent data", "When companies must be contacted at the right time."],
+    ],
+  },
+  de: {
+    caption: "Den passenden devlo B2B-Prospecting-Service waehlen",
+    headers: ["Ziel", "Prioritaerer Service", "Wann nutzen"],
+    rows: [
+      ["ICP-Liste erstellen", "Leadgenerierung", "Wenn der TAM existiert, aber Accounts nicht qualifiziert sind."],
+      ["Termine buchen", "Terminvereinbarung", "Wenn Sales mit mehr Entscheidern sprechen muss."],
+      ["Datenqualitaet verbessern", "Clay-Enrichment", "Wenn E-Mails, Rollen oder Domains fehlen."],
+      ["Accounts priorisieren", "Intent Data", "Wenn Unternehmen zum richtigen Zeitpunkt kontaktiert werden sollen."],
+    ],
+  },
+  nl: {
+    caption: "Kies de juiste devlo B2B-prospectiedienst",
+    headers: ["Doel", "Prioritaire dienst", "Wanneer gebruiken"],
+    rows: [
+      ["ICP-lijst bouwen", "Leadgeneratie", "Wanneer de TAM bestaat maar accounts niet gekwalificeerd zijn."],
+      ["Afspraken boeken", "Afspraakplanning", "Wanneer sales met meer beslissers moet praten."],
+      ["Datakwaliteit verbeteren", "Clay-verrijking", "Wanneer e-mails, rollen of domeinen ontbreken."],
+      ["Accounts prioriteren", "Intent data", "Wanneer bedrijven op het juiste moment benaderd moeten worden."],
+    ],
+  },
+};
+
 export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: ServicesHubPageProps) {
   const labels = breadcrumbLabelsByLocale[locale];
+  const serviceSelectionTable = serviceSelectionTables[locale];
   const toLocalePath = (frPath: string) => resolvePathForLocale(frPath, locale).path;
   const servicesHubPath = toLocalePath("/services");
   const breadcrumbItems = [
@@ -121,6 +172,30 @@ export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: Ser
         </section>
 
         <SectionWrapper id="nos-services" background="white" className="!pt-0">
+          <div className="mb-8 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+            <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+              <caption className="sr-only">{serviceSelectionTable.caption}</caption>
+              <thead className="bg-neutral-50 text-xs font-semibold uppercase tracking-[0.08em] text-devlo-700">
+                <tr>
+                  {serviceSelectionTable.headers.map((header) => (
+                    <th key={header} scope="col" className="px-5 py-3">
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-200 text-neutral-700">
+                {serviceSelectionTable.rows.map(([goal, service, timing]) => (
+                  <tr key={goal}>
+                    <td className="px-5 py-4 font-semibold text-devlo-900">{goal}</td>
+                    <td className="px-5 py-4">{service}</td>
+                    <td className="px-5 py-4">{timing}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {cards.map((service) => (
               <Link key={service.href} href={toLocalePath(service.href)} className="group">

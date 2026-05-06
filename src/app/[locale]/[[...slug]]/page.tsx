@@ -294,9 +294,9 @@ async function resolveLocalizedSeo(
 
   if (path === "/insights/buying-signals") {
     return {
-      title: "94 Signaux d'Intention d'Achat B2B — Le Guide Complet pour Identifier vos Prospects",
+      title: "94 signaux d'achat B2B pour identifier vos prospects",
       description:
-        "Decouvrez 94 signaux d'achat B2B classes par categorie (entreprise, personne, tech stack, usage produit, communaute, evenements). Detectez les prospects prets a acheter avant vos concurrents.",
+        "Decouvrez 94 signaux d'achat B2B : recrutements, changements, tech stack, usage produit, communaute et evenements pour prioriser vos prospects.",
       type: "article" as const,
     };
   }

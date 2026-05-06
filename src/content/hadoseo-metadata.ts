@@ -55,8 +55,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/services",
-    title: "Services prospection B2B | Cold email, LinkedIn, Téléprospection | devlo",
-    description: "10 services de prospection B2B externalisés : cold email, LinkedIn outreach, cold calling, génération de leads, enrichissement Clay et intent data. Basé en Suisse.",
+    title: "Services prospection B2B Suisse | devlo",
+    description: "Services de prospection B2B en Suisse : cold email, LinkedIn, calling, lead generation, Clay, intent data et rendez-vous qualifiés.",
     canonical: "https://devlo.ch/services",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
