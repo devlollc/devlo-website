@@ -8,6 +8,21 @@ import { siteConfig } from "@/lib/site";
 
 export const defaultOgImagePath = "/images/devlo_OG_Banner.webp";
 const defaultOgImageAlt = "devlo - agence suisse de prospection B2B";
+export type SeoMetadataLocale = "fr" | "en" | "de" | "nl";
+
+const titleSuffixByLocale: Record<SeoMetadataLocale, string> = {
+  fr: " | Prospection B2B",
+  en: " | B2B prospecting agency",
+  de: " | B2B-Akquise Agentur",
+  nl: " | B2B prospectie bureau",
+};
+
+const descriptionSuffixByLocale: Record<SeoMetadataLocale, string> = {
+  fr: " devlo structure vos campagnes pour generer des rendez-vous qualifies.",
+  en: " devlo builds outbound campaigns that generate qualified B2B meetings.",
+  de: " devlo baut Outbound-Kampagnen fuer qualifizierte B2B-Termine.",
+  nl: " devlo bouwt outbound campagnes voor gekwalificeerde B2B-afspraken.",
+};
 
 export function normalizeRoute(path: string): string {
   if (!path || path === "/") return "/";
@@ -17,6 +32,45 @@ export function normalizeRoute(path: string): string {
 
 export function stripDevloSuffix(title: string): string {
   return title.replace(/\s*(?:\|\s*devlo|[-—]\s*devlo)\s*$/i, "").trim();
+}
+
+function normalizeWhitespace(value: string): string {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+function clipAtWord(value: string, maxLength: number): string {
+  const normalized = normalizeWhitespace(value);
+  if (normalized.length <= maxLength) return normalized;
+
+  const clipped = normalized.slice(0, maxLength + 1);
+  const lastSpace = clipped.lastIndexOf(" ");
+  const candidate = (lastSpace > 40 ? clipped.slice(0, lastSpace) : normalized.slice(0, maxLength))
+    .replace(/[|,;:–—-]\s*$/g, "")
+    .trim();
+
+  if (candidate.endsWith(".")) return candidate;
+  const withPeriod = `${candidate}.`;
+  return withPeriod.length <= maxLength ? withPeriod : candidate.slice(0, maxLength).trim();
+}
+
+export function normalizeSeoTitle(title: string, locale: SeoMetadataLocale = "fr"): string {
+  const base = normalizeWhitespace(stripDevloSuffix(title));
+  const maxTitleBeforeTemplate = 57; // Root layout appends " | devlo".
+  if (base.length < 35) {
+    const withSuffix = `${base}${titleSuffixByLocale[locale]}`;
+    return withSuffix.length <= maxTitleBeforeTemplate ? withSuffix : clipAtWord(withSuffix, maxTitleBeforeTemplate);
+  }
+
+  return clipAtWord(base, maxTitleBeforeTemplate);
+}
+
+export function normalizeSeoDescription(description: string, locale: SeoMetadataLocale = "fr"): string {
+  const base = normalizeWhitespace(description);
+  if (base.length < 120) {
+    return clipAtWord(`${base}${descriptionSuffixByLocale[locale]}`, 160);
+  }
+
+  return clipAtWord(base, 160);
 }
 
 export function buildLanguageAlternates(path: string): NonNullable<Metadata["alternates"]>["languages"] {
@@ -64,8 +118,8 @@ export function buildPageMetadata({
 }: BuildPageMetadataInput): Metadata {
   const canonicalPath = normalizeRoute(path);
   const override = getHadoSeoMetadataOverride(canonicalPath);
-  const resolvedTitle = override ? stripDevloSuffix(override.title) : title;
-  const resolvedDescription = override?.description ?? description;
+  const resolvedTitle = normalizeSeoTitle(override ? stripDevloSuffix(override.title) : title);
+  const resolvedDescription = normalizeSeoDescription(override?.description ?? description);
   const ogImage = resolveOgImagePath(override?.ogImage ?? imagePath);
   const ogImageAbsoluteUrl = toAbsoluteUrl(ogImage);
   const ogTitle = resolvedTitle.toLowerCase().includes("devlo") ? resolvedTitle : `${resolvedTitle} | devlo`;

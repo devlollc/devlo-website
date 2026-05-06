@@ -1,7 +1,9 @@
 import Link from "next/link";
 
+import { SeoMeasurementBeacon } from "@/components/analytics/seo-measurement-beacon";
 import { AuthorByline } from "@/components/shared/author-byline";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { GeoConsultationLink } from "@/components/shared/geo-consultation-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { CTASection } from "@/components/shared/cta-section";
@@ -117,9 +119,86 @@ const geoMarketTables: Record<
   },
 };
 
+const swissRegionalLinks: Array<{ frPath: string; labels: Record<SupportedLocale, string> }> = [
+  {
+    frPath: "/prospection-commerciale-suisse-romande",
+    labels: {
+      fr: "Suisse romande",
+      en: "French-speaking Switzerland",
+      de: "Westschweiz",
+      nl: "Franstalig Zwitserland",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-suisse-alemanique",
+    labels: {
+      fr: "Suisse alemanique",
+      en: "German-speaking Switzerland",
+      de: "Deutschschweiz",
+      nl: "Duitstalig Zwitserland",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-geneve",
+    labels: {
+      fr: "Geneve",
+      en: "Geneva",
+      de: "Genf",
+      nl: "Geneve",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-lausanne",
+    labels: {
+      fr: "Lausanne",
+      en: "Lausanne",
+      de: "Lausanne",
+      nl: "Lausanne",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-zurich",
+    labels: {
+      fr: "Zurich",
+      en: "Zurich",
+      de: "Zuerich",
+      nl: "Zurich",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-dach",
+    labels: {
+      fr: "DACH",
+      en: "DACH",
+      de: "DACH",
+      nl: "DACH",
+    },
+  },
+];
+
+const swissRegionalSectionCopy: Record<SupportedLocale, { title: string; description: string }> = {
+  fr: {
+    title: "Marches suisses et DACH a cibler",
+    description: "Choisissez une page locale lorsque votre campagne doit isoler une region, une ville ou un marche germanophone precis.",
+  },
+  en: {
+    title: "Swiss and DACH markets to target",
+    description: "Use a local page when your campaign needs to isolate a region, city, or German-speaking market.",
+  },
+  de: {
+    title: "Schweizer und DACH-Maerkte im Fokus",
+    description: "Nutzen Sie eine lokale Seite, wenn Ihre Kampagne eine Region, Stadt oder einen deutschsprachigen Markt separat behandeln soll.",
+  },
+  nl: {
+    title: "Zwitserse en DACH-markten om te targeten",
+    description: "Gebruik een lokale pagina wanneer uw campagne een regio, stad of Duitstalige markt apart moet behandelen.",
+  },
+};
+
 export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; locale?: SupportedLocale }) {
   const copy = copyByLocale[locale];
   const marketTable = geoMarketTables[locale];
+  const regionalCopy = swissRegionalSectionCopy[locale];
   const localizedContent = getLocalizedGeoContent(data.slug, locale);
   const h1 = localizedContent?.h1 ?? data.h1;
   const intro = localizedContent?.intro ?? data.intro;
@@ -128,6 +207,7 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
   const editorialParagraphs = localizedContent?.editorialParagraphs ?? [];
   const summaryTitle = localizedContent?.summaryTitle;
   const summaryPoints = localizedContent?.summaryPoints ?? [];
+  const directAnswer = localizedContent?.directAnswer;
   const datePublished = localizedContent?.datePublished ?? "2024-06-15";
   const dateModified = localizedContent?.dateModified ?? "2026-03-01";
   const localizedCaseStudies = getLocalizedCaseStudyBySlug(locale);
@@ -159,6 +239,11 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
 
   return (
     <>
+      <SeoMeasurementBeacon
+        locale={locale}
+        market={data.slug}
+        pageType={data.slug === "prospection-commerciale-suisse" ? "geo" : "regional_geo"}
+      />
       <JsonLd
         schema={[
           buildBreadcrumbSchema(breadcrumbItems),
@@ -190,20 +275,40 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
               </p>
             ))}
           </div>
-          <Link
+          <GeoConsultationLink
             href={consultationPath}
+            locale={locale}
+            market={data.slug}
             className="mt-8 inline-flex h-12 items-center rounded-lg bg-white px-6 text-sm font-semibold uppercase tracking-[0.1em] text-[#074f74] transition hover:bg-white/90"
           >
             {copy.ctaConsultation}
-          </Link>
+          </GeoConsultationLink>
         </div>
       </section>
 
       <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
 
+      {directAnswer && (
+        <section className="bg-white py-10">
+          <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+            <div className="rounded-xl border border-neutral-200 bg-[#F7F8FC] p-6 md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#074f74]">
+                {directAnswer.label}
+              </p>
+              <h2 className="mt-2 text-2xl font-extrabold leading-tight text-[#153a54] md:text-3xl">
+                {directAnswer.title}
+              </h2>
+              <p className="mt-3 max-w-4xl text-sm leading-7 text-neutral-700 md:text-base">
+                {directAnswer.body}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {data.country === "ch" && (
         <section className="bg-white py-12">
-          <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+          <div className="mx-auto w-full max-w-screen-xl space-y-8 px-6 lg:px-10">
             <div className="overflow-x-auto rounded-xl border border-neutral-200 bg-white">
               <table className="min-w-[720px] w-full border-collapse text-left text-sm">
                 <caption className="sr-only">{marketTable.caption}</caption>
@@ -226,6 +331,35 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-extrabold leading-tight text-[#153a54]">
+                {regionalCopy.title}
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-7 text-neutral-600">
+                {regionalCopy.description}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                {swissRegionalLinks.map((item) => {
+                  const href = resolvePathForLocale(item.frPath, locale).path;
+                  const isCurrent = href === geoPath;
+                  return (
+                    <Link
+                      key={item.frPath}
+                      href={href}
+                      aria-current={isCurrent ? "page" : undefined}
+                      className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
+                        isCurrent
+                          ? "border-[#074f74] bg-[#074f74] text-white"
+                          : "border-neutral-200 bg-white text-[#153a54] hover:border-[#074f74]/40"
+                      }`}
+                    >
+                      {item.labels[locale]}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>

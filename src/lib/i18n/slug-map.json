@@ -251,6 +251,42 @@
     "de": "/de/b2b-akquise-schweiz",
     "nl": "/nl/b2b-prospectie-zwitserland"
   },
+  "geo:prospection-commerciale-suisse-romande": {
+    "fr": "/prospection-commerciale-suisse-romande",
+    "en": "/en/b2b-prospecting-french-speaking-switzerland",
+    "de": "/de/b2b-akquise-westschweiz",
+    "nl": "/nl/b2b-prospectie-franstalig-zwitserland"
+  },
+  "geo:prospection-commerciale-suisse-alemanique": {
+    "fr": "/prospection-commerciale-suisse-alemanique",
+    "en": "/en/b2b-prospecting-german-speaking-switzerland",
+    "de": "/de/b2b-akquise-deutschschweiz",
+    "nl": "/nl/b2b-prospectie-duitstalig-zwitserland"
+  },
+  "geo:prospection-commerciale-geneve": {
+    "fr": "/prospection-commerciale-geneve",
+    "en": "/en/b2b-prospecting-geneva",
+    "de": "/de/b2b-akquise-genf",
+    "nl": "/nl/b2b-prospectie-geneve"
+  },
+  "geo:prospection-commerciale-lausanne": {
+    "fr": "/prospection-commerciale-lausanne",
+    "en": "/en/b2b-prospecting-lausanne",
+    "de": "/de/b2b-akquise-lausanne",
+    "nl": "/nl/b2b-prospectie-lausanne"
+  },
+  "geo:prospection-commerciale-zurich": {
+    "fr": "/prospection-commerciale-zurich",
+    "en": "/en/b2b-prospecting-zurich",
+    "de": "/de/b2b-akquise-zuerich",
+    "nl": "/nl/b2b-prospectie-zurich"
+  },
+  "geo:prospection-commerciale-dach": {
+    "fr": "/prospection-commerciale-dach",
+    "en": "/en/b2b-prospecting-dach",
+    "de": "/de/b2b-akquise-dach",
+    "nl": "/nl/b2b-prospectie-dach"
+  },
   "geo:prospection-commerciale-belgique": {
     "fr": "/prospection-commerciale-belgique",
     "en": "/en/b2b-prospecting-belgium",

@@ -44,7 +44,7 @@ import {
   normalizePath,
   type SupportedLocale,
 } from "@/lib/i18n/slug-map";
-import { defaultOgImagePath, resolveOgImagePath, stripDevloSuffix, toAbsoluteUrl } from "@/lib/seo/metadata";
+import { defaultOgImagePath, normalizeSeoDescription, normalizeSeoTitle, resolveOgImagePath, stripDevloSuffix, toAbsoluteUrl } from "@/lib/seo/metadata";
 
 type Params = {
   params: Promise<{
@@ -516,8 +516,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
               }
             : await resolveLocalizedSeo(resolved.frPath, resolved.locale);
   const sanitySeo = await getSanityLocalizedSeo(resolved.pageId, resolved.locale);
-  const title = stripDevloSuffix(sanitySeo?.title ?? baseSeo.title);
-  const description = sanitySeo?.description ?? baseSeo.description;
+  const title = normalizeSeoTitle(stripDevloSuffix(sanitySeo?.title ?? baseSeo.title), resolved.locale);
+  const description = normalizeSeoDescription(sanitySeo?.description ?? baseSeo.description, resolved.locale);
   const imagePath = resolveOgImagePath(sanitySeo?.ogImage ?? baseSeo.imagePath ?? defaultOgImagePath);
   const alternates = buildAlternates(resolved.entry, resolved.frPath);
 

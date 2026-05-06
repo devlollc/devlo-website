@@ -1,4 +1,5 @@
 import type { ServiceFaq } from "@/content/services";
+import { SWISS_REGIONAL_GEO_PAGES } from "@/content/swiss-regional-geo-pages";
 
 export type GeoPageData = {
   country: "ch" | "be" | "fr";
@@ -80,6 +81,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
       },
     },
   },
+  ...SWISS_REGIONAL_GEO_PAGES,
   "prospection-commerciale-belgique": {
     country: "be",
     slug: "prospection-commerciale-belgique",
