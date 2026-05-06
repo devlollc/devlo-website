@@ -275,11 +275,47 @@
     "de": "/de/b2b-akquise-lausanne",
     "nl": "/nl/b2b-prospectie-lausanne"
   },
+  "geo:prospection-commerciale-fribourg": {
+    "fr": "/prospection-commerciale-fribourg",
+    "en": "/en/b2b-prospecting-fribourg",
+    "de": "/de/b2b-akquise-freiburg",
+    "nl": "/nl/b2b-prospectie-fribourg"
+  },
+  "geo:prospection-commerciale-neuchatel": {
+    "fr": "/prospection-commerciale-neuchatel",
+    "en": "/en/b2b-prospecting-neuchatel",
+    "de": "/de/b2b-akquise-neuenburg",
+    "nl": "/nl/b2b-prospectie-neuchatel"
+  },
+  "geo:prospection-commerciale-valais": {
+    "fr": "/prospection-commerciale-valais",
+    "en": "/en/b2b-prospecting-valais",
+    "de": "/de/b2b-akquise-wallis",
+    "nl": "/nl/b2b-prospectie-wallis"
+  },
   "geo:prospection-commerciale-zurich": {
     "fr": "/prospection-commerciale-zurich",
     "en": "/en/b2b-prospecting-zurich",
     "de": "/de/b2b-akquise-zuerich",
     "nl": "/nl/b2b-prospectie-zurich"
+  },
+  "geo:prospection-commerciale-bale": {
+    "fr": "/prospection-commerciale-bale",
+    "en": "/en/b2b-prospecting-basel",
+    "de": "/de/b2b-akquise-basel",
+    "nl": "/nl/b2b-prospectie-basel"
+  },
+  "geo:prospection-commerciale-berne": {
+    "fr": "/prospection-commerciale-berne",
+    "en": "/en/b2b-prospecting-bern",
+    "de": "/de/b2b-akquise-bern",
+    "nl": "/nl/b2b-prospectie-bern"
+  },
+  "geo:prospection-commerciale-st-gall": {
+    "fr": "/prospection-commerciale-st-gall",
+    "en": "/en/b2b-prospecting-st-gallen",
+    "de": "/de/b2b-akquise-st-gallen",
+    "nl": "/nl/b2b-prospectie-st-gallen"
   },
   "geo:prospection-commerciale-dach": {
     "fr": "/prospection-commerciale-dach",

@@ -64,11 +64,17 @@ A qualified lead is a B2B account that matches the client's ICP, shows an action
 ## Prospecting by Country
 
 - [B2B Prospecting in Switzerland](https://devlo.ch/prospection-commerciale-suisse): Targeted B2B campaigns for the Swiss market (Romandy, German-speaking, Ticino).
-- [B2B Prospecting in French-speaking Switzerland](https://devlo.ch/prospection-commerciale-suisse-romande): Localized campaigns for Geneva, Lausanne, Vaud, Valais, Fribourg and Neuchatel.
+- [B2B Prospecting in French-speaking Switzerland](https://devlo.ch/prospection-commerciale-suisse-romande): Localized campaigns for Geneva, Lausanne, Vaud, Valais, Fribourg and Neuchâtel.
 - [B2B Prospecting in German-speaking Switzerland](https://devlo.ch/prospection-commerciale-suisse-alemanique): German-language campaigns for Zurich, Basel, Bern, St. Gallen and Winterthur.
 - [B2B Prospecting in Geneva](https://devlo.ch/prospection-commerciale-geneve): FR/EN outreach for finance, services, NGOs, real estate, cybersecurity and enterprise accounts.
 - [B2B Prospecting in Lausanne](https://devlo.ch/prospection-commerciale-lausanne): Local outbound campaigns for Lausanne, Vaud, EPFL-related ecosystems, services, medtech and SMEs.
+- [B2B Prospecting in Fribourg](https://devlo.ch/prospection-commerciale-fribourg): Bilingual FR/DE campaigns for SMEs, industry, food, training and services.
+- [B2B Prospecting in Neuchâtel](https://devlo.ch/prospection-commerciale-neuchatel): Local campaigns for industry, microtechnology, watchmaking, medtech and specialized SMEs.
+- [B2B Prospecting in Valais](https://devlo.ch/prospection-commerciale-valais): Local outbound for energy, construction, B2B tourism, healthcare, industry and regional SMEs.
 - [B2B Prospecting in Zurich](https://devlo.ch/prospection-commerciale-zurich): German-language outbound for finance, SaaS, industry, consulting and enterprise accounts.
+- [B2B Prospecting in Basel](https://devlo.ch/prospection-commerciale-bale): DE/EN campaigns for pharma, biotech, medtech, industry, logistics and international accounts.
+- [B2B Prospecting in Bern](https://devlo.ch/prospection-commerciale-berne): Bilingual campaigns for administration, healthcare, associations, SMEs and professional services.
+- [B2B Prospecting in St. Gallen](https://devlo.ch/prospection-commerciale-st-gall): Eastern Switzerland outbound for industry, SMEs, textile, tech and manufacturing.
 - [B2B Prospecting in DACH](https://devlo.ch/prospection-commerciale-dach): Segmented campaigns for Germany, Austria and German-speaking Switzerland.
 - [B2B Prospecting in Belgium](https://devlo.ch/prospection-commerciale-belgique): B2B campaigns in French and Dutch for the Belgian market.
 - [B2B Prospecting in France](https://devlo.ch/prospection-commerciale-france): Outbound campaigns for the French market.

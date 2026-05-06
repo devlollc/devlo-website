@@ -197,6 +197,198 @@ export const SWISS_REGIONAL_GEO_PAGES: Record<string, GeoPageData> = {
     ],
     localBusiness: swissLocalBusiness,
   },
+  "prospection-commerciale-fribourg": {
+    country: "ch",
+    slug: "prospection-commerciale-fribourg",
+    metaTitle: "Prospection B2B Fribourg | PME & industrie | devlo",
+    metaDescription:
+      "Prospection B2B à Fribourg pour cibler PME, industrie, agroalimentaire, formation, services et organisations bilingues avec campagnes FR/DE.",
+    h1: "Prospection B2B à Fribourg pour marchés romands et bilingues",
+    intro: [
+      "Fribourg se trouve au croisement de la Suisse romande et de la Suisse alémanique. Pour la prospection B2B, cette position impose un ciblage précis par langue, secteur et bassin économique.",
+      "devlo structure des campagnes pour les PME, acteurs industriels, prestataires de services, organisations de formation et entreprises liées à l'agroalimentaire ou aux chaînes d'approvisionnement régionales.",
+      "L'enjeu n'est pas d'envoyer une campagne générique sur tout le canton, mais de distinguer les comptes francophones, bilingues et germanophones avant d'activer email, LinkedIn et calling.",
+    ],
+    caseStudySlugs: ["biodiversite-70-rendez-vous", "formation-14-rendez-vous", "immobilier-30-prospects"],
+    faqs: [
+      {
+        question: "Faut-il prospecter Fribourg en français ou en allemand ?",
+        answer:
+          "Les deux peuvent être nécessaires. Nous séparons les comptes francophones, bilingues et germanophones avant d'écrire les messages.",
+      },
+      {
+        question: "Quels secteurs cibler à Fribourg ?",
+        answer:
+          "PME, industrie, agroalimentaire, formation, services B2B, immobilier professionnel et organisations actives entre Romandie et Deutschschweiz.",
+      },
+      {
+        question: "Fribourg est-il un bon test avant la Suisse alémanique ?",
+        answer:
+          "Oui, si l'ICP est suffisamment dense. Fribourg permet souvent de tester une approche bilingue avant d'étendre vers Berne, Bâle ou Zurich.",
+      },
+    ],
+    localBusiness: swissLocalBusiness,
+  },
+  "prospection-commerciale-neuchatel": {
+    country: "ch",
+    slug: "prospection-commerciale-neuchatel",
+    metaTitle: "Prospection B2B Neuchâtel | Industrie & tech | devlo",
+    metaDescription:
+      "Prospection B2B à Neuchâtel pour cibler industrie, microtechnique, horlogerie, medtech, services et PME avec campagnes romandes.",
+    h1: "Prospection B2B à Neuchâtel pour industrie, tech et PME",
+    intro: [
+      "Neuchâtel est un marché plus concentré que Genève ou Lausanne, mais très pertinent pour les entreprises qui ciblent industrie, microtechnique, horlogerie, medtech, services et PME spécialisées.",
+      "devlo construit des campagnes neuchâteloises avec une approche sobre : comptes vérifiés, rôle décisionnaire clair, preuve sectorielle et relances mesurées.",
+      "Le canton demande une prospection précise. Une liste trop large dilue vite les résultats; une segmentation par secteur et bassin économique donne de meilleurs signaux.",
+    ],
+    caseStudySlugs: ["cybersecurite-4500-entreprises", "biocarburants-52-rendez-vous", "formation-14-rendez-vous"],
+    faqs: [
+      {
+        question: "Quels secteurs fonctionnent à Neuchâtel ?",
+        answer:
+          "Industrie, microtechnique, horlogerie, medtech, services B2B, formation et fournisseurs qui ciblent PME ou groupes industriels.",
+      },
+      {
+        question: "Neuchâtel suffit-il pour une campagne complète ?",
+        answer:
+          "Parfois, mais nous recommandons souvent un batch Neuchâtel/Jura/Berne ou Neuchâtel/Vaud selon la densité ICP.",
+      },
+      {
+        question: "Pouvez-vous adapter le message à des cibles industrielles ?",
+        answer:
+          "Oui. Nous utilisons des preuves factuelles, une proposition de valeur courte et des critères de qualification adaptés aux cycles industriels.",
+      },
+    ],
+    localBusiness: swissLocalBusiness,
+  },
+  "prospection-commerciale-valais": {
+    country: "ch",
+    slug: "prospection-commerciale-valais",
+    metaTitle: "Prospection B2B Valais | PME & énergie | devlo",
+    metaDescription:
+      "Prospection B2B en Valais pour cibler PME, énergie, construction, tourisme B2B, santé, industrie et services avec campagnes locales.",
+    h1: "Prospection B2B en Valais pour PME, énergie et services",
+    intro: [
+      "Le Valais combine PME locales, énergie, construction, tourisme B2B, santé, immobilier, industrie et prestataires régionaux. La prospection y fonctionne quand le message respecte le tissu économique local.",
+      "devlo segmente les campagnes valaisannes par bassin, secteur, langue et niveau de maturité commerciale avant de lancer les séquences.",
+      "L'objectif est de créer des conversations qualifiées sans forcer un volume artificiel sur un marché où la réputation et la pertinence du premier contact comptent beaucoup.",
+    ],
+    caseStudySlugs: ["biodiversite-70-rendez-vous", "biocarburants-52-rendez-vous", "immobilier-30-prospects"],
+    faqs: [
+      {
+        question: "Quels secteurs cibler en Valais ?",
+        answer:
+          "Énergie, construction, tourisme B2B, santé, immobilier professionnel, industrie, services et PME régionales.",
+      },
+      {
+        question: "Faut-il isoler le Valais du reste de la Romandie ?",
+        answer:
+          "Oui lorsque le message dépend du contexte local. Sinon, le Valais peut être intégré dans un batch Romandie avec reporting séparé.",
+      },
+      {
+        question: "La prospection téléphonique fonctionne-t-elle en Valais ?",
+        answer:
+          "Elle peut fonctionner si le ciblage est propre et si l'appel sert à qualifier le bon interlocuteur plutôt qu'à pousser un discours générique.",
+      },
+    ],
+    localBusiness: swissLocalBusiness,
+  },
+  "prospection-commerciale-bale": {
+    country: "ch",
+    slug: "prospection-commerciale-bale",
+    metaTitle: "Prospection B2B Bâle | Pharma & industrie | devlo",
+    metaDescription:
+      "Prospection B2B à Bâle pour cibler pharma, biotech, medtech, industrie, logistique et sièges internationaux avec campagnes DE/EN.",
+    h1: "Prospection B2B à Bâle pour pharma, biotech et industrie",
+    intro: [
+      "Bâle est un marché B2B très spécifique : pharma, biotech, medtech, industrie, logistique, services professionnels et sièges internationaux.",
+      "devlo traite Bâle comme un marché germanophone et international à part entière, avec copies DE/EN, comptes prioritaires et preuves adaptées aux secteurs techniques.",
+      "La qualité de la donnée compte particulièrement : les fonctions régionales, les filiales et les groupes internationaux doivent être séparés avant l'activation commerciale.",
+    ],
+    caseStudySlugs: ["cybersecurite-4500-entreprises", "iddi-generation-leads-biotech-pharma", "hr-54-rendez-vous-dach"],
+    faqs: [
+      {
+        question: "Faut-il prospecter Bâle en allemand ou en anglais ?",
+        answer:
+          "Les deux peuvent être nécessaires. L'allemand reste important pour les décideurs locaux; l'anglais fonctionne souvent pour les fonctions internationales.",
+      },
+      {
+        question: "Quels secteurs cibler à Bâle ?",
+        answer:
+          "Pharma, biotech, medtech, industrie, logistique, services professionnels, cybersécurité et prestataires liés aux grands comptes.",
+      },
+      {
+        question: "Bâle doit-il être séparé de Zurich ?",
+        answer:
+          "Oui dans la plupart des campagnes. Les secteurs, les signaux d'achat et les fonctions cibles ne sont pas les mêmes qu'à Zurich.",
+      },
+    ],
+    localBusiness: swissLocalBusiness,
+  },
+  "prospection-commerciale-berne": {
+    country: "ch",
+    slug: "prospection-commerciale-berne",
+    metaTitle: "Prospection B2B Berne | Public, PME & santé | devlo",
+    metaDescription:
+      "Prospection B2B à Berne pour cibler PME, santé, associations, administration, services et industrie avec campagnes bilingues.",
+    h1: "Prospection B2B à Berne pour comptes bilingues, publics et PME",
+    intro: [
+      "Berne combine administration, santé, associations, PME, industrie, services professionnels et organisations bilingues. Le marché exige une approche plus institutionnelle et factuelle que les grandes zones commerciales.",
+      "devlo construit des campagnes bernoises en distinguant comptes publics, parapublics, PME privées et fonctions régionales.",
+      "Le message doit être clair, prudent et crédible : à Berne, le contexte de décision et la conformité comptent autant que l'accroche commerciale.",
+    ],
+    caseStudySlugs: ["formation-14-rendez-vous", "biodiversite-70-rendez-vous", "hr-54-rendez-vous-dach"],
+    faqs: [
+      {
+        question: "Berne se prospecte-t-elle en français ou en allemand ?",
+        answer:
+          "Cela dépend des comptes. Nous séparons les cibles francophones, germanophones et bilingues avant la rédaction.",
+      },
+      {
+        question: "Quels secteurs cibler à Berne ?",
+        answer:
+          "Administration, santé, associations, formation, industrie, PME, services professionnels et fournisseurs de comptes publics ou parapublics.",
+      },
+      {
+        question: "Peut-on prospecter les organisations publiques ?",
+        answer:
+          "Oui, avec prudence. Les messages doivent respecter le cadre institutionnel et viser un échange qualifié plutôt qu'une vente immédiate.",
+      },
+    ],
+    localBusiness: swissLocalBusiness,
+  },
+  "prospection-commerciale-st-gall": {
+    country: "ch",
+    slug: "prospection-commerciale-st-gall",
+    metaTitle: "Prospection B2B St-Gall | Industrie & PME | devlo",
+    metaDescription:
+      "Prospection B2B à St-Gall et en Suisse orientale pour cibler industrie, PME, services, textile, tech et manufacturing avec campagnes DE.",
+    h1: "Prospection B2B à St-Gall et en Suisse orientale",
+    intro: [
+      "St-Gall et la Suisse orientale forment un marché B2B industriel, PME et exportateur : manufacturing, services, textile, tech, formation et fournisseurs spécialisés.",
+      "devlo prépare les campagnes St-Gall avec messages allemands, ciblage régional et preuves adaptées à un marché moins visible que Zurich mais souvent très qualifié.",
+      "L'approche consiste à isoler les entreprises avec un vrai potentiel commercial, puis à tester une séquence sobre avant d'étendre vers Zurich, Winterthour ou le reste du DACH.",
+    ],
+    caseStudySlugs: ["hr-54-rendez-vous-dach", "cybersecurite-4500-entreprises", "biocarburants-52-rendez-vous"],
+    faqs: [
+      {
+        question: "Pourquoi cibler St-Gall en prospection B2B ?",
+        answer:
+          "St-Gall donne accès à des PME industrielles, fournisseurs spécialisés et entreprises exportatrices souvent moins sollicitées que les comptes zurichois.",
+      },
+      {
+        question: "Les messages doivent-ils être en allemand ?",
+        answer:
+          "Oui dans la plupart des cas. L'anglais peut être utilisé pour certaines fonctions internationales, mais l'allemand est le point de départ.",
+      },
+      {
+        question: "St-Gall peut-il être un batch DACH ?",
+        answer:
+          "Oui. St-Gall peut servir de batch suisse oriental avant une extension Zurich, Allemagne du Sud ou Autriche.",
+      },
+    ],
+    localBusiness: swissLocalBusiness,
+  },
   "prospection-commerciale-dach": {
     country: "ch",
     slug: "prospection-commerciale-dach",

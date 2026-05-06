@@ -157,12 +157,66 @@ const swissRegionalLinks: Array<{ frPath: string; labels: Record<SupportedLocale
     },
   },
   {
+    frPath: "/prospection-commerciale-fribourg",
+    labels: {
+      fr: "Fribourg",
+      en: "Fribourg",
+      de: "Freiburg",
+      nl: "Fribourg",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-neuchatel",
+    labels: {
+      fr: "Neuchâtel",
+      en: "Neuchâtel",
+      de: "Neuenburg",
+      nl: "Neuchâtel",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-valais",
+    labels: {
+      fr: "Valais",
+      en: "Valais",
+      de: "Wallis",
+      nl: "Wallis",
+    },
+  },
+  {
     frPath: "/prospection-commerciale-zurich",
     labels: {
       fr: "Zurich",
       en: "Zurich",
       de: "Zürich",
       nl: "Zurich",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-bale",
+    labels: {
+      fr: "Bâle",
+      en: "Basel",
+      de: "Basel",
+      nl: "Basel",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-berne",
+    labels: {
+      fr: "Berne",
+      en: "Bern",
+      de: "Bern",
+      nl: "Bern",
+    },
+  },
+  {
+    frPath: "/prospection-commerciale-st-gall",
+    labels: {
+      fr: "St-Gall",
+      en: "St. Gallen",
+      de: "St. Gallen",
+      nl: "St. Gallen",
     },
   },
   {
