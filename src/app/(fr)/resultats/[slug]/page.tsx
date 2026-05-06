@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { generateMetadata as generateEtudesCaseStudyMetadata } from "@/app/etudes-de-cas/[slug]/page";
+import { generateMetadata as generateEtudesCaseStudyMetadata } from "@/app/(fr)/etudes-de-cas/[slug]/page";
 import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
 import { caseStudiesCards } from "@/content/masterfile.fr";
 import { caseStudies } from "@/lib/case-studies";
@@ -9,7 +9,7 @@ import { caseStudySlugRedirects, resolveCaseStudyCanonicalSlug } from "@/lib/cas
 import { buildLanguageAlternates, toAbsoluteUrl } from "@/lib/seo/metadata";
 
 type Params = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
   searchParams?: Record<string, string | string[] | undefined>;
 };
 
@@ -21,9 +21,10 @@ export function generateStaticParams() {
   return Array.from(slugs).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: Params): Metadata {
-  const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
-  const baseMetadata = generateEtudesCaseStudyMetadata({ params: { slug: canonicalSlug } });
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { slug } = await params;
+  const canonicalSlug = resolveCaseStudyCanonicalSlug(slug);
+  const baseMetadata = await generateEtudesCaseStudyMetadata({ params: Promise.resolve({ slug: canonicalSlug }) });
   const canonicalPath = `/etudes-de-cas/${canonicalSlug}`;
   const alternates = buildLanguageAlternates(canonicalPath);
 
@@ -40,8 +41,9 @@ export function generateMetadata({ params }: Params): Metadata {
   };
 }
 
-export default function Page({ params }: Params) {
-  const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
+export default async function Page({ params }: Params) {
+  const { slug } = await params;
+  const canonicalSlug = resolveCaseStudyCanonicalSlug(slug);
   const exists = caseStudiesCards.some((study) => study.slug === canonicalSlug) || caseStudies.some((study) => study.slug === canonicalSlug);
 
   if (!exists) {

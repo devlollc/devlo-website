@@ -13,8 +13,8 @@ import type { SupportedLocale } from "@/lib/i18n/slug-map";
 import { getLocalizedColdEmailHub, getLocalizedColdEmailSequence } from "@/lib/i18n/insights-helpers";
 import { normalizeLocalizedCopyDeep } from "@/lib/i18n/text-normalization";
 
-import { SEQUENCES, type Sequence } from "@/app/insights/cold-email-templates/sequence-data";
-import { SequenceBrowser } from "@/app/insights/cold-email-templates/sequence-browser";
+import { SEQUENCES, type Sequence } from "@/app/(fr)/insights/cold-email-templates/sequence-data";
+import { SequenceBrowser } from "@/app/(fr)/insights/cold-email-templates/sequence-browser";
 
 const LOCALE_CONSULTATION_HREFS: Record<SupportedLocale, string> = {
   fr: "/consultation",

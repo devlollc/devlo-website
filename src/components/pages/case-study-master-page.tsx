@@ -17,7 +17,6 @@ import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
 
 const DeferredCaseStudySwitcher = dynamic(
   () => import("@/components/shared/case-study-switcher").then((m) => m.CaseStudySwitcher),
-  { ssr: false },
 );
 
 const anchorIds = {

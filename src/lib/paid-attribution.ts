@@ -20,13 +20,6 @@ export type PaidAttribution = {
 const paidHostnames = new Set(["devlosales.com", "www.devlosales.com"]);
 const paidParamKeys = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"] as const;
 
-declare global {
-  interface Window {
-    dataLayer?: Array<Record<string, unknown> | IArguments | unknown[]>;
-    gtag?: (command: "event", eventName: string, params?: Record<string, unknown>) => void;
-  }
-}
-
 export function isPaidHostname(hostname: string) {
   return paidHostnames.has(hostname.toLowerCase());
 }

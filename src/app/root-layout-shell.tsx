@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { headers } from "next/headers";
 import Script from "next/script";
 
 import { PaidAttributionTracker } from "@/components/analytics/paid-attribution-tracker";
@@ -9,8 +8,6 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { JsonLd } from "@/components/seo/json-ld";
 import { buildLanguageAlternates, defaultOgImagePath, toAbsoluteUrl } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/site";
-
-import "./globals.css";
 
 const plusJakartaSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,8 +19,6 @@ const plusJakartaSans = localFont({
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-9CKZL9V2VN";
 
 type LayoutLocale = "fr" | "en" | "de" | "nl";
-
-export const revalidate = 3600;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -274,24 +269,22 @@ function buildLayoutSchemas(locale: LayoutLocale) {
   return [organizationSchema, swissLocalBusinessSchema, usLocalBusinessSchema, serviceSchema];
 }
 
-export default function RootLayout({
+const skipToContentByLocale: Record<LayoutLocale, string> = {
+  fr: "Aller au contenu",
+  en: "Skip to content",
+  de: "Zum Inhalt springen",
+  nl: "Naar de inhoud springen",
+};
+
+export function RootLayoutShell({
   children,
+  locale,
 }: Readonly<{
   children: React.ReactNode;
+  locale: LayoutLocale;
 }>) {
-  const localeHeader = headers().get("x-devlo-locale");
-  const htmlLang: LayoutLocale = localeHeader === "en" || localeHeader === "de" || localeHeader === "nl" ? localeHeader : "fr";
-  const skipToContentText =
-    htmlLang === "en"
-      ? "Skip to content"
-      : htmlLang === "de"
-        ? "Zum Inhalt springen"
-        : htmlLang === "nl"
-          ? "Naar de inhoud springen"
-          : "Aller au contenu";
-
   return (
-    <html lang={htmlLang}>
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
@@ -312,12 +305,12 @@ export default function RootLayout({
           `}
         </Script>
         <PaidAttributionTracker />
-        <JsonLd schema={buildLayoutSchemas(htmlLang)} />
+        <JsonLd schema={buildLayoutSchemas(locale)} />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-soft focus:bg-paper focus:px-4 focus:py-2 focus:text-sm"
         >
-          {skipToContentText}
+          {skipToContentByLocale[locale]}
         </a>
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />

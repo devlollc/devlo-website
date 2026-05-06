@@ -15,7 +15,6 @@ import type { SupportedLocale } from "@/lib/i18n/slug-map";
 const DeferredAccordionSingle = dynamic(
   () => import("@/components/ui/accordion-single").then((module) => module.AccordionSingle),
   {
-    ssr: false,
     loading: () => (
       <div className="space-y-3">
         <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />

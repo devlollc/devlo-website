@@ -31,8 +31,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/consultation",
-    title: "Consultation gratuite | Audit lead generation B2B | devlo",
-    description: "Auditez votre potentiel de leads qualifiés : ICP TAM signaux d'achat séquences et plan d'action pour générer des rendez-vous B2B.",
+    title: "Demande de démo prospection B2B | Audit lead generation | devlo",
+    description: "Demandez une démo devlo et auditez votre potentiel de leads qualifiés : ICP TAM signaux d'achat séquences et plan d'action rendez-vous B2B.",
     canonical: "https://devlo.ch/consultation",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",

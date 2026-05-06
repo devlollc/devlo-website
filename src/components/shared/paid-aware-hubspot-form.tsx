@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { HubspotForm } from "@/components/ui/hubspot-form";
+import { pushAnalyticsEvent } from "@/lib/analytics";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
 import {
   buildPaidAttributionSnapshot,
@@ -178,7 +179,15 @@ export function PaidAwareHubspotForm({
         locale={locale}
         hiddenFields={hiddenFields}
         onFormSubmitCapture={handleFormSubmitCapture}
-        onSubmitted={() => pushPaidAnalyticsEvent("paid_lead_submitted", attribution)}
+        onSubmitted={() => {
+          pushAnalyticsEvent("demo_requested", {
+            form_id: formId,
+            form_type: "consultation",
+            locale,
+            page_path: window.location.pathname,
+          });
+          pushPaidAnalyticsEvent("paid_lead_submitted", attribution);
+        }}
       />
     </div>
   );

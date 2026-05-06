@@ -12,8 +12,13 @@ export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const article = getArticleBySlug(params.slug);
+type BlogParams = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: BlogParams): Promise<Metadata> {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug);
   if (!article) return {};
   return buildPageMetadata({
     title: article.title,
@@ -22,8 +27,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   });
 }
 
-export default function BlogArticlePage({ params }: { params: { slug: string } }) {
-  const article = getArticleBySlug(params.slug);
+export default async function BlogArticlePage({ params }: BlogParams) {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug);
   if (!article) notFound();
 
   const breadcrumbItems = [

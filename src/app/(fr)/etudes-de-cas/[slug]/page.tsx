@@ -14,7 +14,7 @@ import {
 import { buildArticleSchema, buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
 
 type Params = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 function normalizeDescription(description: string, fallback: string): string {
@@ -40,11 +40,12 @@ export function generateStaticParams() {
   return Array.from(slugs).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: Params): Metadata {
-  const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { slug } = await params;
+  const canonicalSlug = resolveCaseStudyCanonicalSlug(slug);
   const canonicalPath = `/etudes-de-cas/${canonicalSlug}`;
-  const cardStudy = caseStudiesCards.find((item) => item.slug === params.slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
-  const detailedStudy = caseStudies.find((item) => item.slug === params.slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
+  const cardStudy = caseStudiesCards.find((item) => item.slug === slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
+  const detailedStudy = caseStudies.find((item) => item.slug === slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
   const override = getHadoSeoMetadataOverride(canonicalPath);
 
   if (override) {
@@ -81,10 +82,11 @@ export function generateMetadata({ params }: Params): Metadata {
   });
 }
 
-export default function Page({ params }: Params) {
-  const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
-  const cardStudy = caseStudiesCards.find((item) => item.slug === params.slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
-  const detailedStudy = caseStudies.find((item) => item.slug === params.slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
+export default async function Page({ params }: Params) {
+  const { slug } = await params;
+  const canonicalSlug = resolveCaseStudyCanonicalSlug(slug);
+  const cardStudy = caseStudiesCards.find((item) => item.slug === slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
+  const detailedStudy = caseStudies.find((item) => item.slug === slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
   const breadcrumbLabel = cardStudy?.title ?? detailedStudy?.title ?? "Étude de cas";
 
   const articleSchema = buildArticleSchema({
@@ -109,7 +111,7 @@ export default function Page({ params }: Params) {
           articleSchema,
         ]}
       />
-      <CaseStudyMasterPage slug={params.slug} />
+      <CaseStudyMasterPage slug={slug} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { generateMetadata as generateCaseStudyFrMetadata } from "@/app/etudes-de-cas/[slug]/page";
+import { generateMetadata as generateCaseStudyFrMetadata } from "@/app/(fr)/etudes-de-cas/[slug]/page";
 import { AcademyMasterPage } from "@/components/pages/academy-master-page";
 import { AiSalesOpsMasterPage } from "@/components/pages/ai-sales-ops-master-page";
 import { AgencyMasterPage } from "@/components/pages/agency-master-page";
@@ -47,10 +47,10 @@ import {
 import { defaultOgImagePath, resolveOgImagePath, stripDevloSuffix, toAbsoluteUrl } from "@/lib/seo/metadata";
 
 type Params = {
-  params: {
+  params: Promise<{
     locale: string;
     slug?: string[];
-  };
+  }>;
 };
 
 export const revalidate = 3600;
@@ -66,14 +66,6 @@ export function generateStaticParams() {
       params.push({
         locale,
         slug: withoutPrefix ? withoutPrefix.split("/") : undefined,
-      });
-    }
-
-    if (entry.fr && entry.fr !== "/") {
-      const frSegments = entry.fr.replace(/^\//, "").split("/");
-      params.push({
-        locale: frSegments[0],
-        slug: frSegments.length > 1 ? frSegments.slice(1) : undefined,
       });
     }
   }
@@ -205,10 +197,10 @@ function buildAlternates(entry: { fr: string | null; en: string | null; de: stri
   };
 }
 
-function resolveLocalizedSeo(
+async function resolveLocalizedSeo(
   frPath: string,
   locale: SupportedLocale,
-): { title: string; description: string; imagePath?: string; type?: "website" | "article" } {
+): Promise<{ title: string; description: string; imagePath?: string; type?: "website" | "article" }> {
   const path = normalizePath(frPath);
   const masterfile = getLocalizedMasterfileContent(locale);
   const services = getLocalizedServicesContent(locale);
@@ -252,7 +244,7 @@ function resolveLocalizedSeo(
         type: "article",
       };
     }
-    const metadata = generateCaseStudyFrMetadata({ params: { slug: caseStudySlug } });
+    const metadata = await generateCaseStudyFrMetadata({ params: Promise.resolve({ slug: caseStudySlug }) });
     const title = typeof metadata.title === "string" ? metadata.title : caseStudiesSeo.title;
     const description = metadata.description ?? caseStudiesSeo.description;
     return { title, description, imagePath: defaultOgImagePath, type: "article" };
@@ -448,7 +440,8 @@ function resolveLocalizedTemplateFromPath(
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const resolved = resolveRoute(params.locale, params.slug);
+  const { locale, slug } = await params;
+  const resolved = resolveRoute(locale, slug);
   if (!resolved) {
     return {};
   }
@@ -521,7 +514,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
                 title: localizedAlternativeSeo.metaTitle,
                 description: localizedAlternativeSeo.metaDescription,
               }
-            : resolveLocalizedSeo(resolved.frPath, resolved.locale);
+            : await resolveLocalizedSeo(resolved.frPath, resolved.locale);
   const sanitySeo = await getSanityLocalizedSeo(resolved.pageId, resolved.locale);
   const title = stripDevloSuffix(sanitySeo?.title ?? baseSeo.title);
   const description = sanitySeo?.description ?? baseSeo.description;
@@ -566,7 +559,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export default async function LocalizedRoutePage({ params }: Params) {
-  const resolved = resolveRoute(params.locale, params.slug);
+  const { locale, slug } = await params;
+  const resolved = resolveRoute(locale, slug);
   if (!resolved) {
     notFound();
   }
@@ -711,7 +705,7 @@ export default async function LocalizedRoutePage({ params }: Params) {
 
   const pageData = await getSanityLocalizedPageData(resolved.pageId, resolved.locale);
 
-  const baseSeo = resolveLocalizedSeo(frPath, resolved.locale);
+  const baseSeo = await resolveLocalizedSeo(frPath, resolved.locale);
   let localizedData = pageData;
 
   if (frPath.startsWith("/etudes-de-cas/")) {

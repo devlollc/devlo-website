@@ -15,8 +15,8 @@ import {
   getLocalizedCategories,
 } from "@/lib/i18n/insights-helpers";
 
-import { AnimatedCounter } from "@/app/insights/buying-signals/animated-counter";
-import { SignalBrowser } from "@/app/insights/buying-signals/signal-browser";
+import { AnimatedCounter } from "@/app/(fr)/insights/buying-signals/animated-counter";
+import { SignalBrowser } from "@/app/(fr)/insights/buying-signals/signal-browser";
 
 const LOCALE_CONSULTATION_HREFS: Record<SupportedLocale, string> = {
   fr: "/consultation",

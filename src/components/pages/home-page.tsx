@@ -59,7 +59,6 @@ const methodIconMap = {
 const DeferredCaseStudiesCarousel = dynamic(
   () => import("@/components/home/case-studies-carousel").then((module) => module.CaseStudiesCarousel),
   {
-    ssr: false,
     loading: () => <div className="mt-10 h-[360px] rounded-2xl border border-neutral-200 bg-white/70" />,
   },
 );
@@ -67,7 +66,6 @@ const DeferredCaseStudiesCarousel = dynamic(
 const DeferredServicesCarousel = dynamic(
   () => import("@/components/home/services-carousel").then((module) => module.ServicesCarousel),
   {
-    ssr: false,
     loading: () => <div className="mt-10 h-[320px] rounded-2xl border border-neutral-200 bg-white/70" />,
   },
 );

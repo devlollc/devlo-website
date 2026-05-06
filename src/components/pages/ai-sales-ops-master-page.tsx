@@ -29,7 +29,6 @@ import { siteConfig } from "@/lib/site";
 
 const CaseStudyCarousel = dynamic(
   () => import("@/components/ai-sales-ops/case-study-carousel").then((mod) => mod.CaseStudyCarousel),
-  { ssr: false },
 );
 
 const DIAGNOSTIC_FORM_ID = "36da17df-406b-4e19-9774-d96396807187";

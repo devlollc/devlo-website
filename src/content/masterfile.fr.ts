@@ -928,22 +928,22 @@ export const academyContent = {
 };
 
 export const consultationSeo = {
-  title: "Consultation gratuite | Audit lead generation et prospection B2B",
+  title: "Demande de démo prospection B2B | Audit lead generation",
   description:
-    "Auditez votre potentiel de leads qualifiés avec devlo. ICP, TAM, signaux d'achat, séquences et plan d'action pour générer des rendez-vous B2B.",
+    "Demandez une démo devlo et auditez votre potentiel de leads qualifiés. ICP, TAM, signaux d'achat, séquences et plan d'action pour générer des rendez-vous B2B.",
 };
 
 export const consultationContent = {
-  h1: "Auditez votre potentiel de leads qualifiés avant de lancer une campagne B2B",
+  h1: "Demandez une démo de prospection B2B avant de lancer votre prochaine campagne",
 
   reassurance: [
-    "Gratuit et sans engagement",
+    "Démo et audit gratuits",
     "Réponse sous 24h",
     "Top agence sur Outbound-experts.com",
   ],
 
   intro:
-    "Partagez votre marché, votre ICP et vos objectifs. Nous préparons une lecture concrète de votre potentiel : comptes prioritaires, signaux exploitables, séquences à lancer et conditions nécessaires pour générer des rendez-vous qualifiés.",
+    "Partagez votre marché, votre ICP et vos objectifs. Nous préparons une démo concrète de ce que devlo peut activer pour vous : comptes prioritaires, signaux exploitables, séquences à lancer et conditions nécessaires pour générer des rendez-vous qualifiés.",
 
   deliverablesTitle: "Ce que vous recevez",
   deliverables: [
@@ -979,7 +979,7 @@ export const consultationContent = {
     "Industriels, immobilier et associations B2B",
   ],
 
-  formTitle: "Planifiez votre audit gratuit",
+  formTitle: "Demandez votre démo",
   formSubtitle:
     "Notre équipe prépare une première lecture de votre potentiel de leads avant l'appel.",
 
@@ -990,18 +990,18 @@ export const consultationContent = {
   },
 
   postForm:
-    "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec les prochaines étapes pour cadrer votre potentiel de leads qualifiés.",
+    "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec les prochaines étapes pour cadrer votre démo et votre potentiel de leads qualifiés.",
 
   faqs: [
     {
       question: "Est-ce vraiment gratuit ?",
       answer:
-        "Oui, l'audit est gratuit et sans engagement. Vous recevez une première lecture de votre ICP, de votre marché adressable et des prochaines actions à prioriser, sans obligation de travailler avec nous.",
+        "Oui, la démo et l'audit sont gratuits et sans engagement. Vous recevez une première lecture de votre ICP, de votre marché adressable et des prochaines actions à prioriser, sans obligation de travailler avec nous.",
     },
     {
       question: "Combien de temps dure la consultation ?",
       answer:
-        "La consultation dure environ 30 minutes. Avant l'appel, notre équipe prépare déjà une première analyse de votre marché. Pendant l'appel, nous validons les hypothèses, les contraintes et les priorités de lancement.",
+        "La démo dure environ 30 minutes. Avant l'appel, notre équipe prépare déjà une première analyse de votre marché. Pendant l'appel, nous validons les hypothèses, les contraintes et les priorités de lancement.",
     },
     {
       question: "Quels résultats puis-je attendre ?",

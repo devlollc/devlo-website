@@ -17,7 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 const breadcrumbItems = [
   { name: "Accueil", path: "/" },
-  { name: "Consultation gratuite", path: "/consultation" },
+  { name: "Demande de démo", path: "/consultation" },
 ];
 
 export default function Page() {
